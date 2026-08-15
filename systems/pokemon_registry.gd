@@ -20,7 +20,7 @@ extends Node
 ## listing only, so nothing is loaded off disk until you actually ask for a
 ## Pokémon. Meshes and textures come in one species at a time and stay cached.
 
-const DIR := "res://data_structures/Pokemons/"
+const DIR := "res://data/pokemon/"
 
 ## id -> res:// path. Built once in _ready.
 var _paths: Dictionary[String, String] = {}

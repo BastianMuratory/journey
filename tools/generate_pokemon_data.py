@@ -14,7 +14,7 @@ keys those by slug (the filename) as well as by dex, so they stay reachable.
 
 WHAT IT WRITES
 --------------
-data_structures/Pokemons/<slug>.tres for each assets/pokemons/<slug>/, with:
+data/pokemon/<slug>.tres for each assets/pokemons/<slug>/, with:
 
     dex_number, display_name        read from the folder name
     mesh                            -> <slug>/model.obj
@@ -64,9 +64,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import classify_body_types as classify  # noqa: E402  (needs the path above)
 
 ASSET_DIR = "assets/pokemons"
-DATA_DIR = "data_structures/Pokemons"
+DATA_DIR = "data/pokemon"
 PLAN_FILE = "tools/import_plan.json"
-SCRIPT_PATH = "res://data_structures/pokemon_data.gd"
+SCRIPT_PATH = "res://data/pokemon_data.gd"
 # Stable across the project; every existing .tres already points at it.
 SCRIPT_UID = "uid://8hbuolxqt8i1"
 

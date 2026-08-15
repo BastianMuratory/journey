@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://bjghrftm0m85s" path="res://assets/pokemons/0006_charizard_clone/model.obj" id="1_mesh"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 6
+display_name = "Charizard (Clone)"
+mesh = ExtResource("1_mesh")
+model_scale = 1.0
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

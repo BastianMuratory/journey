@@ -27,7 +27,7 @@ extends Node3D
 ## They are a viewing aid and are never saved.
 ##
 ## Body type edits ARE saved, by Ctrl+S, to two places: the species' own .tres so
-## the game picks it up immediately, and tools/body_type_overrides.json so that
+## the game picks it up immediately, and data/body_type_overrides.json so that
 ## re-running tools/classify_body_types.py will not undo your work.
 
 ## How many species stand side by side in grid mode.
@@ -39,12 +39,12 @@ const PAGE_STRIDE := 25
 ## How long a status message stays on screen.
 const MESSAGE_SECONDS := 4.0
 
-const POKEMON_SCENE := preload("res://game_scenes/pokemon.tscn")
+const POKEMON_SCENE := preload("res://entities/pokemon/pokemon.tscn")
 const MAIN_MENU_SCENE := "res://game_scenes/main_menu/main_menu.tscn"
-const DATA_DIR := "res://data_structures/Pokemons/"
+const DATA_DIR := "res://data/pokemon/"
 ## Read by tools/classify_body_types.py, which treats it as the highest-priority
 ## source for these fields.
-const OVERRIDES_PATH := "res://tools/body_type_overrides.json"
+const OVERRIDES_PATH := "res://data/body_type_overrides.json"
 
 @onready var _camera: Camera3D = $Camera3D
 

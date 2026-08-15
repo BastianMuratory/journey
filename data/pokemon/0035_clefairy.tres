@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://b8ri2o0w4bso8" path="res://assets/pokemons/0035_clefairy/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://crnuy06wd8m5q" path="res://assets/pokemons/0035_clefairy/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Resource" path="res://data/pokemon/0036_clefable.tres" id="4_evo"]
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 35
+display_name = "Clefairy"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

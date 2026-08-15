@@ -1,0 +1,161 @@
+{
+  "_comment": "Hand edits from the animation test scene, keyed by species id. tools/classify_body_types.py reads this first and will not overwrite anything listed here.",
+  "species": {
+    "0065_alakazam": {
+      "body_type": "HOVER",
+      "hover_height": 0.18
+    },
+    "0076_golem": {
+      "body_type": "BIPED",
+      "hover_height": 0.0
+    },
+    "0079_slowpoke": {
+      "body_type": "SERPENTINE",
+      "hover_height": 0.0
+    },
+    "0083_farfetchd": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0088_grimer": {
+      "body_type": "SERPENTINE",
+      "hover_height": 0.0
+    },
+    "0089_muk": {
+      "body_type": "SERPENTINE",
+      "hover_height": 0.0
+    },
+    "0120_staryu": {
+      "body_type": "BIPED",
+      "hover_height": 0.0
+    },
+    "0121_starmie": {
+      "body_type": "BIPED",
+      "hover_height": 0.0
+    },
+    "0129_magikarp": {
+      "body_type": "QUADRUPED",
+      "hover_height": 0.0
+    },
+    "0131_lapras": {
+      "body_type": "BIPED",
+      "hover_height": 0.0
+    },
+    "0144_articuno": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0144_articuno_galarian": {
+      "body_type": "HOVER",
+      "hover_height": 0.18
+    },
+    "0145_zapdos": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0146_moltres": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0146_moltres_galarian": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0150_mewtwo": {
+      "body_type": "HOVER",
+      "hover_height": 0.18
+    },
+    "0150_mewtwo_armored": {
+      "body_type": "HOVER",
+      "hover_height": 0.18
+    },
+    "0194_wooper": {
+      "body_type": "BIPED",
+      "hover_height": 0.0
+    },
+    "0194_wooper_paldean": {
+      "body_type": "BIPED",
+      "hover_height": 0.0
+    },
+    "0195_quagsire": {
+      "body_type": "BIPED",
+      "hover_height": 0.0
+    },
+    "0260_swampert": {
+      "body_type": "QUADRUPED",
+      "hover_height": 0.0
+    },
+    "0319_sharpedo": {
+      "body_type": "HOVER",
+      "hover_height": 0.18
+    },
+    "0321_wailord": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0376_metagross": {
+      "body_type": "BIPED",
+      "hover_height": 0.0
+    },
+    "0382_kyogre": {
+      "body_type": "HOVER",
+      "hover_height": 0.18
+    },
+    "0386_deoxys_speed": {
+      "body_type": "HOVER",
+      "hover_height": 0.18
+    },
+    "0442_spiritomb": {
+      "body_type": "QUADRUPED",
+      "hover_height": 0.0
+    },
+    "0479_rotom": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0479_rotom_fan": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0479_rotom_frost": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0479_rotom_heat": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0479_rotom_mow": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0479_rotom_wash": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0487_giratina": {
+      "body_type": "QUADRUPED",
+      "hover_height": 0.0
+    },
+    "0547_whimsicott": {
+      "body_type": "FLYER",
+      "hover_height": 0.4
+    },
+    "0635_hydreigon": {
+      "body_type": "HOVER",
+      "hover_height": 0.18
+    },
+    "0980_clodsire": {
+      "body_type": "SERPENTINE",
+      "hover_height": 0.0
+    },
+    "1007_koraidon": {
+      "body_type": "BIPED",
+      "hover_height": 0.0
+    },
+    "1008_miraidon": {
+      "body_type": "SERPENTINE",
+      "hover_height": 0.0
+    }
+  }
+}

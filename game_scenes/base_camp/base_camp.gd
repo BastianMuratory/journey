@@ -9,7 +9,7 @@ extends Node3D
 ##
 ## Space bar evolves; space again rewinds so you can watch it a second time.
 
-const POKEMON_SCENE := preload("res://game_scenes/pokemon.tscn")
+const POKEMON_SCENE := preload("res://entities/pokemon/pokemon.tscn")
 
 ## Which species the camp starts with. 551 = Sandile.
 const SANDILE_DEX_NUMBER := 551
@@ -56,7 +56,7 @@ func _add_pokemon(dex: int, marker: Marker3D) -> void:
 	var e := Entry.new()
 	e.base_data = data
 	# Prefer the mega form, fall back to the normal evolution.
-	e.evolved_data = data.mega_evolves_into if data.mega_evolves_into != null else data.evolves_into
+	e.evolved_data = data.mega_evolves_into if data.mega_evolves_into != null else data.first_evolution()
 	e.pokemon = spawn_pokemon(data, marker)
 	e.mega = _attach_mega(e)
 	_entries.append(e)

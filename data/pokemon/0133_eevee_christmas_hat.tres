@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=12 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://ji2bpraq5x6v" path="res://assets/pokemons/0133_eevee_christmas_hat/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://dvl4ye3qsb17f" path="res://assets/pokemons/0133_eevee_christmas_hat/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Resource" path="res://data/pokemon/0134_vaporeon.tres" id="4_evo"]
+[ext_resource type="Resource" path="res://data/pokemon/0135_jolteon.tres" id="5_evo"]
+[ext_resource type="Resource" path="res://data/pokemon/0136_flareon.tres" id="6_evo"]
+[ext_resource type="Resource" path="res://data/pokemon/0196_espeon.tres" id="7_evo"]
+[ext_resource type="Resource" path="res://data/pokemon/0197_umbreon.tres" id="8_evo"]
+[ext_resource type="Resource" path="res://data/pokemon/0470_leafeon.tres" id="9_evo"]
+[ext_resource type="Resource" path="res://data/pokemon/0471_glaceon.tres" id="10_evo"]
+[ext_resource type="Resource" path="res://data/pokemon/0700_sylveon.tres" id="11_evo"]
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 133
+display_name = "Eevee (Christmas Hat)"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo"), ExtResource("5_evo"), ExtResource("6_evo"), ExtResource("7_evo"), ExtResource("8_evo"), ExtResource("9_evo"), ExtResource("10_evo"), ExtResource("11_evo")])
+body_type = 1
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

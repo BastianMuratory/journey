@@ -16,7 +16,7 @@ dex number so alternate forms and costumes inherit from their base form.
 
 WHAT IT WRITES
 --------------
-Into each data_structures/Pokemons/*.tres:
+Into each data/pokemon/*.tres:
 
     body_type         which animation set to play
     anim_speed_scale  tempo -- heavy species move slower, small ones twitchier
@@ -57,13 +57,13 @@ from pathlib import Path
 # Configuration
 # --------------------------------------------------------------------------
 
-DATA_DIR = "data_structures/Pokemons"
+DATA_DIR = "data/pokemon"
 ASSET_DIR = "assets/pokemons"
 JSON_FILE = "tools/body_types.json"
 # Hand edits made in the animation test scene land here, keyed by species slug.
 # They beat everything in this file, so tuning done by eye in the game survives
 # a re-run rather than being quietly reverted.
-OVERRIDES_FILE = "tools/body_type_overrides.json"
+OVERRIDES_FILE = "data/body_type_overrides.json"
 
 # Must match the order of PokemonData.BodyType. Godot stores enums as ints, so
 # reordering the enum without reordering this will silently mislabel everything.

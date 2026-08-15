@@ -40,7 +40,7 @@ Every species with a `PokemonData` is browsable here, alternate forms and costum
 | `R` | Reset the multipliers |
 | `Esc` | Back to the main menu |
 
-Speed and amplitude are viewing aids and are never saved. Body type edits are: `Ctrl+S` writes them into the species' own `.tres` so the game uses them immediately, and records them in `tools/body_type_overrides.json`, which `classify_body_types.py` reads as its highest-priority source — so a re-classify never undoes work you did by eye.
+Speed and amplitude are viewing aids and are never saved. Body type edits are: `Ctrl+S` writes them into the species' own `.tres` so the game uses them immediately, and records them in `data/body_type_overrides.json`, which `classify_body_types.py` reads as its highest-priority source — so a re-classify never undoes work you did by eye.
 
 ## Animation
 
@@ -86,20 +86,37 @@ PokemonRegistry.get_forms(25)                          # every id sharing the de
 PokemonRegistry.get_all_ids()                          # everything, dex order
 ```
 
-Two scripts maintain that folder, both with a read-only `plan` and a dry-run `apply`:
+Three scripts maintain that folder, all with a read-only plan and an explicit `--apply`:
 
 - `tools/generate_pokemon_data.py` — creates a `.tres` for any asset folder that lacks one. Existing files are left alone by default, so hand-set evolution links survive; `--refresh-animation` updates only the animation fields.
 - `tools/classify_body_types.py` — sets `body_type` and the animation tuning on every `.tres`.
+- `tools/link_evolutions.py` — sets `evolves_into` on every `.tres` that has a target in the project.
 
-Priority runs overrides file → the script's per-dex tables → body-type defaults. Anything you edit in the animation test scene lands in `tools/body_type_overrides.json` and wins, so hand-tuning and re-classifying don't fight.
+Priority runs overrides file → the script's per-dex tables → body-type defaults. Anything you edit in the animation test scene lands in `data/body_type_overrides.json` and wins, so hand-tuning and re-classifying don't fight.
+
+### Evolution links
+
+`evolves_into` is an `Array[PokemonData]`, because evolution branches — Eevee has eight targets, Clamperl two. The array is in dex order. Most code wants one of them and should say so:
+
+```gdscript
+eevee.can_evolve()                # true
+eevee.has_branching_evolution()   # true -- the caller has to pick
+eevee.first_evolution()           # Vaporeon, the lowest dex
+eevee.evolves_into                # all eight, dex order
+```
+
+Forms keep their own suffix across the evolution when a file exists for it — Alolan Vulpix → Alolan Ninetales, Hisuian Zorua → Hisuian Zoroark, sunglasses Exeggcute → sunglasses Exeggutor. Otherwise they fall back to the base form, so Ash-cap Pikachu evolves into an ordinary Raichu.
+
+A species whose evolution has no model in the project is left empty rather than pointed somewhere wrong — there is no Steelix here, so Onix has no link. Deliberate deviations live in `MANUAL_LINKS` at the top of the script; that is where Sandile → Krookodile is kept, skipping Krokorok so the base camp demo stays dramatic. Rewriting is idempotent, and files that already have a link are skipped unless you pass `--overwrite`.
 
 ## What's in here
 
 ```
 assets/            3D models and textures (maps, Pokémon, cooking pots)
-game_scenes/       main_menu, base_camp, animation_test, the shared pokemon scene
+data/              PokemonData + ItemData, and one .tres per species in pokemon/
+entities/pokemon/  the shared Pokémon scene, instanced by everything else
+game_scenes/       main_menu, base_camp, animation_test
 systems/animation/ PokemonAnimator
 systems/vfx/       mega_evolution effect + energy shader
-data_structures/   PokemonData + one .tres per species
-tools/             asset import and classification scripts
+tools/             asset import, classification and evolution-linking scripts
 ```

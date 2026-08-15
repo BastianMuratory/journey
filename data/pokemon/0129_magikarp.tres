@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/pokemons/0129_magikarp/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" path="res://assets/pokemons/0129_magikarp/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Resource" path="res://data/pokemon/0130_gyarados.tres" id="4_evo"]
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 129
+display_name = "Magikarp"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+body_type = 1
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"
