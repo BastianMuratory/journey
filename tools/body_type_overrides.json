@@ -1,0 +1,4 @@
+{
+  "_comment": "Hand edits from the animation test scene (Ctrl+S), keyed by species id. tools/classify_body_types.py reads this first and will not overwrite anything listed here, so tuning done by eye in the game survives a re-classify. body_type accepts a name (BIPED, QUADRUPED, HOVER, FLYER, SERPENTINE) or the raw enum index. Safe to edit by hand; safe to delete an entry to hand a species back to the classifier.",
+  "species": {}
+}

@@ -1,0 +1,122 @@
+{
+  "_comment": "Edit the 'renames' values to change target filenames. Remove an entry to leave that file alone. Entries in 'deletes' are removed permanently. 'issues' is advisory only and is ignored by apply.",
+  "creature_root": "assets/pokemons",
+  "creatures": [
+    {
+      "folder": "assets/pokemons/0001_bulbasaur",
+      "dex": "0001",
+      "slug": "bulbasaur",
+      "renames": {
+        "bulbasaur.mtl": "model.mtl",
+        "bulbasaur.obj": "model.obj",
+        "bulbasaur.png": "albedo.png",
+        "bulbasaur_s.mtl": "model_shiny.mtl",
+        "bulbasaur_s.obj": "model_shiny.obj",
+        "bulbasaur_s.png": "albedo_shiny.png"
+      },
+      "deletes": [
+        "bulbasaur.ply",
+        "bulbasaur_s.ply",
+        "bulbasaur_s copy.mtl"
+      ],
+      "issues": [
+        "duplicate removed: bulbasaur_s copy.mtl"
+      ]
+    },
+    {
+      "folder": "assets/pokemons/0010_caterpie",
+      "dex": "0010",
+      "slug": "caterpie",
+      "renames": {
+        "010 - Caterpie.mtl": "model.mtl",
+        "caterpie.obj": "model.obj",
+        "caterpie.png": "albedo.png",
+        "010 - Caterpie - Shiny.mtl": "model_shiny.mtl",
+        "caterpie_s.obj": "model_shiny.obj",
+        "caterpie_s.png": "albedo_shiny.png"
+      },
+      "deletes": [
+        "010 - Caterpie - Shiny.ply",
+        "010 - Caterpie.ply"
+      ],
+      "issues": []
+    },
+    {
+      "folder": "assets/pokemons/0011_metapod",
+      "dex": "0011",
+      "slug": "metapod",
+      "renames": {
+        "011 - Metapod.mtl": "model.mtl",
+        "011 - Metapod.obj": "model.obj",
+        "011 - Metapod.png": "albedo.png",
+        "011 - Metapod - Shiny.mtl": "model_shiny.mtl",
+        "011 - Metapod - Shiny.obj": "model_shiny.obj",
+        "011 - Metapod - Shiny.png": "albedo_shiny.png"
+      },
+      "deletes": [
+        "011 - Metapod - Shiny.ply",
+        "011 - Metapod.ply"
+      ],
+      "issues": []
+    },
+    {
+      "folder": "assets/pokemons/0384_rayquaza",
+      "dex": "0384",
+      "slug": "rayquaza",
+      "renames": {
+        "pq0384.mtl": "model.mtl",
+        "rayquaza.obj": "model.obj",
+        "rayquaza.png": "albedo.png",
+        "rayquaza_s.png": "albedo_shiny.png"
+      },
+      "deletes": [],
+      "issues": [
+        "shiny texture present but no shiny mesh -- the texture is unused until you swap it on at runtime"
+      ]
+    },
+    {
+      "folder": "assets/pokemons/0493_arceus",
+      "dex": "0493",
+      "slug": "arceus",
+      "renames": {
+        "pq0493.mtl": "model.mtl",
+        "pq0493.obj": "model.obj",
+        "pq0493.png": "albedo.png"
+      },
+      "deletes": [],
+      "issues": [
+        "AMBIGUOUS: pq0493S.png and pq0493.png are both base .png -- keeping pq0493.png, delete or rename the other by hand"
+      ]
+    },
+    {
+      "folder": "assets/pokemons/0551_sandile",
+      "dex": "0551",
+      "slug": "sandile",
+      "renames": {
+        "pq0551.mtl": "model.mtl",
+        "sandile.obj": "model.obj",
+        "sandile.png": "albedo.png",
+        "sandile_s.png": "albedo_shiny.png"
+      },
+      "deletes": [],
+      "issues": [
+        "shiny texture present but no shiny mesh -- the texture is unused until you swap it on at runtime"
+      ]
+    },
+    {
+      "folder": "assets/pokemons/0553_krookodile",
+      "dex": "0553",
+      "slug": "krookodile",
+      "renames": {
+        "krookodile.mtl": "model.mtl",
+        "krookodile.obj": "model.obj",
+        "krookodile.png": "albedo.png",
+        "krookodile_s.png": "albedo_shiny.png"
+      },
+      "deletes": [],
+      "issues": [
+        "shiny texture present but no shiny mesh -- the texture is unused until you swap it on at runtime"
+      ]
+    }
+  ]
+}
