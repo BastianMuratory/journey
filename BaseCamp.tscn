@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://hkbwr68qqvqe"]
+
+[ext_resource type="ArrayMesh" uid="uid://dls7nc5btmx11" path="res://assets/maps/0472_Base Camp (First Steppe)/Base Camp (01 - First Steppe).obj" id="1_3rti4"]
+[ext_resource type="ArrayMesh" uid="uid://baedbt7ksrv50" path="res://assets/Cooking Pot/cauldron_basic.obj" id="3_hx4en"]
+[ext_resource type="ArrayMesh" uid="uid://qbpwxqarrtto" path="res://assets/Pokemon/0347_#0551 Sandile/pq0551.obj" id="4_e0mhu"]
+
+[sub_resource type="Environment" id="Environment_amm8a"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 0.980392, 0.941176, 1)
+ambient_light_energy = 1.1
+adjustment_enabled = true
+adjustment_contrast = 1.05
+adjustment_saturation = 1.25
+
+[node name="Node3D" type="Node3D"]
+
+[node name="BaseCamp(01-FirstSteppe)" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_3rti4")
+
+[node name="Camera pots" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.599661, 0.374709, 0, 0.529919, 0.848048, -0.707107, -0.599661, 0.374709, 8, 15, 8)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.992219, -0.101986, 0.0714114, 2.27507e-10, 0.573576, 0.819152, -0.124502, -0.812778, 0.569114, 4.05056, 29.5199, 32.9324)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_amm8a")
+
+[node name="CauldronBasic" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197091, 0, -5.94508)
+mesh = ExtResource("3_hx4en")
+
+[node name="Pq0551" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.91197, 0, 0.410257, 0, 1, 0, -0.410257, 0, 0.91197, -10.1105, 0, 3.02855)
+mesh = ExtResource("4_e0mhu")

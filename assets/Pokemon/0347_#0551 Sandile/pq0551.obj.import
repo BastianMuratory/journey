@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qbpwxqarrtto"
+path="res://.godot/imported/pq0551.obj-69746d8adcb11225f6031d8a40194d8e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pq0551.obj-69746d8adcb11225f6031d8a40194d8e.mesh"]
+
+source_file="res://assets/Pokemon/0347_#0551 Sandile/pq0551.obj"
+dest_files=["res://.godot/imported/pq0551.obj-69746d8adcb11225f6031d8a40194d8e.mesh", "res://.godot/imported/pq0551.obj-69746d8adcb11225f6031d8a40194d8e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
