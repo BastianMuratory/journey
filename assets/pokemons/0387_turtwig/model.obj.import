@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cu86yq4g8llqs"
+path="res://.godot/imported/model.obj-7383472326d5b3a9f9faa07df9d1f2bc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-7383472326d5b3a9f9faa07df9d1f2bc.mesh"]
+
+source_file="res://assets/pokemons/0387_turtwig/model.obj"
+dest_files=["res://.godot/imported/model.obj-7383472326d5b3a9f9faa07df9d1f2bc.mesh", "res://.godot/imported/model.obj-7383472326d5b3a9f9faa07df9d1f2bc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

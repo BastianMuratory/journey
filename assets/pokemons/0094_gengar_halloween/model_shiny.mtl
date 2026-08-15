@@ -1,0 +1,43 @@
+# imported by tools/import_pokemons.py from pq0094halloween.mtl
+# Blender 3.6.1 MTL File: 'pq0094halloween.blend'
+# www.blender.org
+
+newmtl pq0094halloween - Shiny
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd albedo_shiny.png
+
+newmtl pq0094halloween_fx - Shiny
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd albedo_shiny.png
+
+newmtl pq0094halloween_hitodama - Shiny
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd albedo_shiny.png
+map_Ke pq0094halloween_hitodama.png
+map_d albedo_shiny.png
+
+newmtl pq0094halloween_obj - Shiny
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd albedo_shiny.png

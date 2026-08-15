@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b4ybs1mb7j5xc"
+path="res://.godot/imported/model_shiny.obj-62d5b7d8579c72479e82f576d83ffcce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model_shiny.obj-62d5b7d8579c72479e82f576d83ffcce.mesh"]
+
+source_file="res://assets/pokemons/0328_trapinch/model_shiny.obj"
+dest_files=["res://.godot/imported/model_shiny.obj-62d5b7d8579c72479e82f576d83ffcce.mesh", "res://.godot/imported/model_shiny.obj-62d5b7d8579c72479e82f576d83ffcce.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

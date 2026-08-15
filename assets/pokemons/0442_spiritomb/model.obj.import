@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://coydml11lcmhk"
+path="res://.godot/imported/model.obj-e92c95982db2aecd2d077a76d5fd6ac9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-e92c95982db2aecd2d077a76d5fd6ac9.mesh"]
+
+source_file="res://assets/pokemons/0442_spiritomb/model.obj"
+dest_files=["res://.godot/imported/model.obj-e92c95982db2aecd2d077a76d5fd6ac9.mesh", "res://.godot/imported/model.obj-e92c95982db2aecd2d077a76d5fd6ac9.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

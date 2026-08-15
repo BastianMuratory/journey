@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://di3av8y4nrb8p"
+path="res://.godot/imported/model.obj-0d021f66c9ff9fe7275685f4ed148b02.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-0d021f66c9ff9fe7275685f4ed148b02.mesh"]
+
+source_file="res://assets/pokemons/0657_frogadier/model.obj"
+dest_files=["res://.godot/imported/model.obj-0d021f66c9ff9fe7275685f4ed148b02.mesh", "res://.godot/imported/model.obj-0d021f66c9ff9fe7275685f4ed148b02.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

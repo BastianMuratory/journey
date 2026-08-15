@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c4ics5pjaymo2"
+path="res://.godot/imported/model_shiny.obj-2d8daef1b47f54f894165646e7834743.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model_shiny.obj-2d8daef1b47f54f894165646e7834743.mesh"]
+
+source_file="res://assets/pokemons/0094_gengar_halloween/model_shiny.obj"
+dest_files=["res://.godot/imported/model_shiny.obj-2d8daef1b47f54f894165646e7834743.mesh", "res://.godot/imported/model_shiny.obj-2d8daef1b47f54f894165646e7834743.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

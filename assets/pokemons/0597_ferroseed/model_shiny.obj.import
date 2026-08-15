@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://m7jrcxqepg7d"
+path="res://.godot/imported/model_shiny.obj-04c715a27b48de46480993191c39c031.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model_shiny.obj-04c715a27b48de46480993191c39c031.mesh"]
+
+source_file="res://assets/pokemons/0597_ferroseed/model_shiny.obj"
+dest_files=["res://.godot/imported/model_shiny.obj-04c715a27b48de46480993191c39c031.mesh", "res://.godot/imported/model_shiny.obj-04c715a27b48de46480993191c39c031.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

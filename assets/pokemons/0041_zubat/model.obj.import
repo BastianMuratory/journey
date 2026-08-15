@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cccuiiuskril2"
+path="res://.godot/imported/model.obj-428ac5c20f3ada344d804ca954476b05.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-428ac5c20f3ada344d804ca954476b05.mesh"]
+
+source_file="res://assets/pokemons/0041_zubat/model.obj"
+dest_files=["res://.godot/imported/model.obj-428ac5c20f3ada344d804ca954476b05.mesh", "res://.godot/imported/model.obj-428ac5c20f3ada344d804ca954476b05.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

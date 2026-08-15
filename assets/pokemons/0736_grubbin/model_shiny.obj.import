@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7jjuuuh1xxj8"
+path="res://.godot/imported/model_shiny.obj-bd9973630184af545c7828962ca1adbe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model_shiny.obj-bd9973630184af545c7828962ca1adbe.mesh"]
+
+source_file="res://assets/pokemons/0736_grubbin/model_shiny.obj"
+dest_files=["res://.godot/imported/model_shiny.obj-bd9973630184af545c7828962ca1adbe.mesh", "res://.godot/imported/model_shiny.obj-bd9973630184af545c7828962ca1adbe.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

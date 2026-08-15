@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://x0fxmb85idy1"
+path="res://.godot/imported/model.obj-87ec61734e7cac2cac2148df84052dec.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-87ec61734e7cac2cac2148df84052dec.mesh"]
+
+source_file="res://assets/pokemons/0018_pidgeot/model.obj"
+dest_files=["res://.godot/imported/model.obj-87ec61734e7cac2cac2148df84052dec.mesh", "res://.godot/imported/model.obj-87ec61734e7cac2cac2148df84052dec.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

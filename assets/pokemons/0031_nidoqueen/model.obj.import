@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djln1ha63yvx4"
+path="res://.godot/imported/model.obj-96193f3d815cc94fd5d39e98c7de496d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-96193f3d815cc94fd5d39e98c7de496d.mesh"]
+
+source_file="res://assets/pokemons/0031_nidoqueen/model.obj"
+dest_files=["res://.godot/imported/model.obj-96193f3d815cc94fd5d39e98c7de496d.mesh", "res://.godot/imported/model.obj-96193f3d815cc94fd5d39e98c7de496d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

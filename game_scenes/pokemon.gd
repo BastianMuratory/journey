@@ -45,7 +45,6 @@ func set_species(new_data: PokemonData) -> void:
 		return
 	data = new_data
 
-
 func _apply() -> void:
 	if data == null:
 		mesh = null

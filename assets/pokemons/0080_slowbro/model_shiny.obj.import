@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dv3kb8peb3j7q"
+path="res://.godot/imported/model_shiny.obj-04f1b5d485fd3b56413a50c5cc840c7f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model_shiny.obj-04f1b5d485fd3b56413a50c5cc840c7f.mesh"]
+
+source_file="res://assets/pokemons/0080_slowbro/model_shiny.obj"
+dest_files=["res://.godot/imported/model_shiny.obj-04f1b5d485fd3b56413a50c5cc840c7f.mesh", "res://.godot/imported/model_shiny.obj-04f1b5d485fd3b56413a50c5cc840c7f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bdjwlby6aelct"
+path="res://.godot/imported/model.obj-f5266541b682432e2f37b7b3435290ae.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-f5266541b682432e2f37b7b3435290ae.mesh"]
+
+source_file="res://assets/pokemons/0148_dragonair/model.obj"
+dest_files=["res://.godot/imported/model.obj-f5266541b682432e2f37b7b3435290ae.mesh", "res://.godot/imported/model.obj-f5266541b682432e2f37b7b3435290ae.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

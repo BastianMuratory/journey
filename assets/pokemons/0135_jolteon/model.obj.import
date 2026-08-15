@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dpdiump1nrfgn"
+path="res://.godot/imported/model.obj-a8a41d2d1ea9caabbd2af7fc6ba922d4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-a8a41d2d1ea9caabbd2af7fc6ba922d4.mesh"]
+
+source_file="res://assets/pokemons/0135_jolteon/model.obj"
+dest_files=["res://.godot/imported/model.obj-a8a41d2d1ea9caabbd2af7fc6ba922d4.mesh", "res://.godot/imported/model.obj-a8a41d2d1ea9caabbd2af7fc6ba922d4.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

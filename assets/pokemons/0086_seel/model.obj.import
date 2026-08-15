@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d1dc1siqg3yeh"
+path="res://.godot/imported/model.obj-9d9c26ec21fa1662b818bd5fb88d3ffb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-9d9c26ec21fa1662b818bd5fb88d3ffb.mesh"]
+
+source_file="res://assets/pokemons/0086_seel/model.obj"
+dest_files=["res://.godot/imported/model.obj-9d9c26ec21fa1662b818bd5fb88d3ffb.mesh", "res://.godot/imported/model.obj-9d9c26ec21fa1662b818bd5fb88d3ffb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

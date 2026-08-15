@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://duyna5ar5l2c6"
+path="res://.godot/imported/model_shiny.obj-349dae063c65d1589f166491e3828299.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model_shiny.obj-349dae063c65d1589f166491e3828299.mesh"]
+
+source_file="res://assets/pokemons/0378_regice/model_shiny.obj"
+dest_files=["res://.godot/imported/model_shiny.obj-349dae063c65d1589f166491e3828299.mesh", "res://.godot/imported/model_shiny.obj-349dae063c65d1589f166491e3828299.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

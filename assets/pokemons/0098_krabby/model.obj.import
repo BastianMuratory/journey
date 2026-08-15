@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cgx7mgv8rl0qe"
+path="res://.godot/imported/model.obj-be5a5b03623d1fd1946274518f4f6911.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-be5a5b03623d1fd1946274518f4f6911.mesh"]
+
+source_file="res://assets/pokemons/0098_krabby/model.obj"
+dest_files=["res://.godot/imported/model.obj-be5a5b03623d1fd1946274518f4f6911.mesh", "res://.godot/imported/model.obj-be5a5b03623d1fd1946274518f4f6911.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

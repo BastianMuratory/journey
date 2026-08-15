@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cf6gmj264luuo"
+path="res://.godot/imported/model.obj-b9a5ec9be01e4f21c17cb1e0412afde2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-b9a5ec9be01e4f21c17cb1e0412afde2.mesh"]
+
+source_file="res://assets/pokemons/0003_venusaur_clone/model.obj"
+dest_files=["res://.godot/imported/model.obj-b9a5ec9be01e4f21c17cb1e0412afde2.mesh", "res://.godot/imported/model.obj-b9a5ec9be01e4f21c17cb1e0412afde2.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

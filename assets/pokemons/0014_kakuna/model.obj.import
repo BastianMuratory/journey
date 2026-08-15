@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d1rvv20ag2x16"
+path="res://.godot/imported/model.obj-8fbcb79a00e1ac824236ec92acd1b53e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-8fbcb79a00e1ac824236ec92acd1b53e.mesh"]
+
+source_file="res://assets/pokemons/0014_kakuna/model.obj"
+dest_files=["res://.godot/imported/model.obj-8fbcb79a00e1ac824236ec92acd1b53e.mesh", "res://.godot/imported/model.obj-8fbcb79a00e1ac824236ec92acd1b53e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

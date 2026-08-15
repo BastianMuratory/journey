@@ -1,0 +1,23 @@
+# imported by tools/import_pokemons.py from pq0133sakura.mtl
+# Blender 3.6.1 MTL File: 'pq0133sakura.blend'
+# www.blender.org
+
+newmtl pq0133sakura - Shiny
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd albedo_shiny.png
+
+newmtl pq0133sakura_obj - Shiny
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd albedo_shiny.png

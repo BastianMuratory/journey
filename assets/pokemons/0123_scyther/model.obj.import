@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c23a7aie6r5tx"
+path="res://.godot/imported/model.obj-278a0ba28d8c6cc2e52f5a4ded3642a7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-278a0ba28d8c6cc2e52f5a4ded3642a7.mesh"]
+
+source_file="res://assets/pokemons/0123_scyther/model.obj"
+dest_files=["res://.godot/imported/model.obj-278a0ba28d8c6cc2e52f5a4ded3642a7.mesh", "res://.godot/imported/model.obj-278a0ba28d8c6cc2e52f5a4ded3642a7.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

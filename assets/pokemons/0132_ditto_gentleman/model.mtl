@@ -1,0 +1,23 @@
+# imported by tools/import_pokemons.py from pq0132gentleman.mtl
+# Blender 3.6.1 MTL File: 'pq0132gentleman.blend'
+# www.blender.org
+
+newmtl pq0132gentleman
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd albedo.png
+
+newmtl pq0132gentleman_obj
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd albedo.png

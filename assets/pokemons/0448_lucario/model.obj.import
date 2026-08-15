@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c284vff6rru1j"
+path="res://.godot/imported/model.obj-cc34a725e9b87b78fefc5f771e4c1c9f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-cc34a725e9b87b78fefc5f771e4c1c9f.mesh"]
+
+source_file="res://assets/pokemons/0448_lucario/model.obj"
+dest_files=["res://.godot/imported/model.obj-cc34a725e9b87b78fefc5f771e4c1c9f.mesh", "res://.godot/imported/model.obj-cc34a725e9b87b78fefc5f771e4c1c9f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dswbro6ydh8ci"
+path="res://.godot/imported/model.obj-1b1d398db492705195393396b0320152.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-1b1d398db492705195393396b0320152.mesh"]
+
+source_file="res://assets/pokemons/0635_hydreigon/model.obj"
+dest_files=["res://.godot/imported/model.obj-1b1d398db492705195393396b0320152.mesh", "res://.godot/imported/model.obj-1b1d398db492705195393396b0320152.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

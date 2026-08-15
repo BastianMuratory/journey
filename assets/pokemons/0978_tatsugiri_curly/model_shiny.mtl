@@ -1,0 +1,13 @@
+# imported by tools/import_pokemons.py from pq0978c.mtl
+# Blender 4.2.0 MTL File: 'pq0978c.blend'
+# www.blender.org
+
+newmtl pq0978c - Shiny
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd albedo_shiny.png
