@@ -15,6 +15,10 @@ run/main_scene="uid://bw285vjy5x27t"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PokemonRegistry="*res://systems/pokemon_registry.gd"
+
 [input]
 
 mega_evolve={

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://6r1xtnwsp0sa"]
+
+[ext_resource type="Script" uid="uid://dijj1xikscedn" path="res://game_scenes/pokemon.gd" id="1_5dwry"]
+
+[node name="Pokemon" type="MeshInstance3D"]
+script = ExtResource("1_5dwry")
