@@ -74,6 +74,10 @@ func _attach_mega(e: Entry) -> MegaEvolution:
 	# Capture this entry, so the effect evolves its own Pokémon rather than
 	# whichever one happens to be in a global.
 	mega.evolved.connect(func() -> void: e.pokemon.set_species(e.evolved_data))
+	# The effect rumbles the model itself, so park the idle wobble for the
+	# duration -- two things shaking the same creature reads as neither.
+	mega.charge_started.connect(func() -> void: e.pokemon.animator.stop())
+	mega.finished.connect(func() -> void: e.pokemon.animator.resume())
 	e.pokemon.add_child(mega)
 	return mega
 

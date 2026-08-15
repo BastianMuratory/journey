@@ -43,6 +43,11 @@ layout_mode = 2
 text = "OPTIONS"
 flat = true
 
+[node name="AnimationTestButton" type="Button" parent="MarginContainer/MenuOptions"]
+layout_mode = 2
+text = "ANIMATION TEST"
+flat = true
+
 [node name="QuitButton" type="Button" parent="MarginContainer/MenuOptions"]
 layout_mode = 2
 text = "QUIT

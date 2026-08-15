@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtjmal2xvccgp"]
+
+[ext_resource type="Script" uid="uid://ccca3jauj1xr3" path="res://game_scenes/animation_test/animation_test.gd" id="1_test"]
+
+[sub_resource type="Environment" id="Environment_test"]
+ambient_light_source = 2
+ambient_light_color = Color(0.878431, 0.909804, 1, 1)
+ambient_light_energy = 0.9
+adjustment_enabled = true
+adjustment_contrast = 1.05
+adjustment_saturation = 1.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_test"]
+albedo_color = Color(0.215686, 0.247059, 0.231373, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_test"]
+size = Vector2(80, 80)
+
+[node name="AnimationTest" type="Node3D"]
+script = ExtResource("1_test")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_test")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, 0, 0.5, 0.383022, 0.642788, -0.663414, -0.321394, 0.766044, 0.55667, 0, 15, 0)
+light_energy = 1.1
+shadow_enabled = true
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_test")
+mesh = SubResource("PlaneMesh_test")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 3, 10)

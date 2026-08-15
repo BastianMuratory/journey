@@ -183,7 +183,32 @@ func _build_sphere() -> void:
 func _resolve_target() -> MeshInstance3D:
 	if not target_path.is_empty():
 		return get_node_or_null(target_path) as MeshInstance3D
-	return get_parent() as MeshInstance3D
+
+	var parent := get_parent()
+	var direct := parent as MeshInstance3D
+	if direct != null:
+		return direct
+
+	# Parent isn't a mesh itself -- e.g. a [Pokemon], which keeps its mesh on a
+	# child so the animator can own the transform in between. Take the first
+	# MeshInstance3D under it, which is that model.
+	if parent != null:
+		return _first_mesh_under(parent)
+	return null
+
+
+## Depth-first search for a mesh, skipping this effect's own energy sphere.
+func _first_mesh_under(node: Node) -> MeshInstance3D:
+	for child in node.get_children():
+		if child == self:
+			continue
+		var mesh_child := child as MeshInstance3D
+		if mesh_child != null:
+			return mesh_child
+		var found := _first_mesh_under(child)
+		if found != null:
+			return found
+	return null
 
 
 ## Centres and sizes the sphere on the larger of the two forms, so the swap is

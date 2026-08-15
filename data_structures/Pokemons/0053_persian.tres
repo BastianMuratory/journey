@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://clw3jhhuxf2r1" path="res://assets/pokemons/0053_persian/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://w7le1sp52pqh" path="res://assets/pokemons/0053_persian/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data_structures/pokemon_data.gd" id="3_script"]
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 53
+display_name = "Persian"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+body_type = 1
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

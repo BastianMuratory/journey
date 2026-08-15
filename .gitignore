@@ -12,8 +12,15 @@ export_credentials.cfg
 
 # Mono-specific ignores
 .mono/
-data_*/
 mono_crash.*.json
+# NOTE: the stock Godot template also lists "data_*/" here, meaning the data
+# folder that sits beside an exported Mono binary. Do not add it back -- it
+# silently swallows data_structures/, which is project source.
 
 # other stuff you don't want pushed into the repo
+# The scripts in tools/ are source and belong in the repo; only the files they
+# generate are ignored, since re-running the scripts rebuilds them.
 tools/*
+
+# Raw rips staged for tools/import_pokemons.py. Large, and not ours to ship.
+Pokemons_not_ready/

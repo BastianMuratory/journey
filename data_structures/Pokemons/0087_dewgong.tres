@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://4our6i668iqt" path="res://assets/pokemons/0087_dewgong/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://de676mij1dcjt" path="res://assets/pokemons/0087_dewgong/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data_structures/pokemon_data.gd" id="3_script"]
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 87
+display_name = "Dewgong"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+body_type = 1
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"
