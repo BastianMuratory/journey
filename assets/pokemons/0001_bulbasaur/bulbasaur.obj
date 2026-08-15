@@ -1,5 +1,6 @@
-mtllib 001 - Bulbasaur.mtl
-o 001 - Bulbasaur
+# reimported: mtl specular zeroed (Ks 1,1,1 imported as metallic=1.0 -> black)
+mtllib bulbasaure.mtl
+o bulbasaure
 v -0.48801 -7.62939E-08 0.14808
 v -0.29037 0 0.14808
 v -0.29037 0.37707 0.14808
@@ -1386,7 +1387,7 @@ vt 0.875 0.875
 vt 0.875 0.875
 vt 0.875 0.875
 vt 0.875 0.875
-usemtl Material 001 - Bulbasaur
+usemtl Material bulbasaure
 s off
 f 1/1 3/3 2/2
 f 1/1 4/4 3/3

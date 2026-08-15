@@ -3,28 +3,31 @@ extends Node3D
 ## Base camp sandbox. Space bar mega evolves Sandile into Krookodile.
 
 ## Held so the effect can be replayed -- see [method _reset].
-@onready var _mega: MegaEvolution = $Sandile/MegaEvolution
+@onready var _mega: MegaEvolution = $Sandile/MegaEvolutionKrookodile
 @onready var _sandile: MeshInstance3D = $Sandile
 
-var _original_mesh: Mesh
+@onready var _mega2: MegaEvolution = $Caterpie/MegaEvolutionRayquaza
+@onready var _caterpie: MeshInstance3D = $Caterpie
 
+var _pairs: Array[Dictionary] = []
 
 func _ready() -> void:
-	_original_mesh = _sandile.mesh
-
+	for m in [_sandile, _caterpie]:
+		_pairs.append({"node": m, "mega": m.get_node("MegaEvolution"), "mesh": m.mesh})
 
 func _unhandled_input(event: InputEvent) -> void:
-	if not _is_evolve_pressed(event):
-		return
+	if not _is_evolve_pressed(event): return
+	
 	get_viewport().set_input_as_handled()
-
-	if _mega.is_playing:
-		return
-	if _sandile.mesh != _original_mesh:
-		# Already evolved -- space bar rewinds so you can watch it again.
-		_reset()
-		return
-	_mega.trigger()
+	
+	for p in _pairs:
+		print(p)
+		if p.mega.is_playing: continue
+		if p.node.mesh != p.mesh:
+			p.node.mesh = p.mesh          # rewind
+			p.node.scale = Vector3.ONE
+		else:
+			p.mega.trigger()
 
 
 ## Prefers the "mega_evolve" input action (rebindable in Project Settings) and
@@ -37,5 +40,4 @@ func _is_evolve_pressed(event: InputEvent) -> bool:
 
 
 func _reset() -> void:
-	_sandile.mesh = _original_mesh
 	_sandile.scale = Vector3.ONE
