@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw285vjy5x27t"]
+
+[ext_resource type="Script" uid="uid://cmanjt7vllm4o" path="res://game_scenes/main_menu/main_menu.gd" id="1_6bdo1"]
+[ext_resource type="Texture2D" uid="uid://ct42fjvor7cf6" path="res://assets/maps/base_camp/Pokemon-Quest-Title-Screen.jpg" id="1_454la"]
+
+[node name="MainMenuNode" type="Node2D"]
+script = ExtResource("1_6bdo1")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleScreen" type="Sprite2D" parent="Background"]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.675)
+texture = ExtResource("1_454la")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 40
+
+[node name="MenuOptions" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 2
+
+[node name="PlayButton" type="Button" parent="MarginContainer/MenuOptions"]
+layout_mode = 2
+text = "PLAY"
+flat = true
+
+[node name="OptionButton" type="Button" parent="MarginContainer/MenuOptions"]
+layout_mode = 2
+text = "OPTIONS"
+flat = true
+
+[node name="QuitButton" type="Button" parent="MarginContainer/MenuOptions"]
+layout_mode = 2
+text = "QUIT
+"
+flat = true

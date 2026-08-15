@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://hkbwr68qqvqe"]
+
+[ext_resource type="Script" uid="uid://bx04tvydy5dop" path="res://game_scenes/base_camp/base_camp.gd" id="1_kyqny"]
+[ext_resource type="ArrayMesh" uid="uid://dls7nc5btmx11" path="res://assets/maps/base_camp/base_camp.obj" id="2_56lis"]
+[ext_resource type="ArrayMesh" uid="uid://baedbt7ksrv50" path="res://assets/cooking_pot/cauldron_basic.obj" id="3_a7uuf"]
+[ext_resource type="ArrayMesh" uid="uid://qbpwxqarrtto" path="res://assets/pokemons/0551_sandile/sandile.obj" id="4_7nyor"]
+[ext_resource type="Script" uid="uid://c8eji6pgfh32h" path="res://systems/vfx/mega_evolution.gd" id="5_gtktn"]
+[ext_resource type="ArrayMesh" uid="uid://l408x6t310rc" path="res://assets/pokemons/0553_krookodile/krookodile.obj" id="6_6e835"]
+
+[sub_resource type="Environment" id="Environment_amm8a"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 0.980392, 0.941176, 1)
+ambient_light_energy = 1.1
+adjustment_enabled = true
+adjustment_contrast = 1.05
+adjustment_saturation = 1.25
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_kyqny")
+
+[node name="BaseCamp(01-FirstSteppe)" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_56lis")
+
+[node name="Camera pots" type="Camera3D" parent="."]
+transform = Transform3D(0.712752, -0.552589, 0.432007, 0.0494375, 0.653953, 0.754918, -0.699672, -0.516712, 0.493425, 10.3289, 16.7834, 9.37976)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.992219, -0.101986, 0.0714114, 2.27507e-10, 0.573576, 0.819152, -0.124502, -0.812778, 0.569114, 4.05056, 29.5199, 32.9324)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_amm8a")
+
+[node name="CauldronBasic" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197091, 0, -5.94508)
+mesh = ExtResource("3_a7uuf")
+
+[node name="Sandile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.31031, 0, 3.38231)
+mesh = ExtResource("4_7nyor")
+
+[node name="MegaEvolution" type="Node3D" parent="Sandile"]
+script = ExtResource("5_gtktn")
+evolved_mesh = ExtResource("6_6e835")
