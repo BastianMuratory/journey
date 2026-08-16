@@ -21,11 +21,17 @@ tools/base_stats.json, keyed by resource slug:
     "0001_bulbasaur": {
         "base_hp": 45, "base_attack": 49, "base_defense": 49,
         "base_special_attack": 65, "base_special_defense": 65,
-        "base_speed": 45, "source": "1"
+        "base_speed": 45,
+        "type1": "grass", "type2": "poison", "source": "1"
     }
 
-"source" is the PokeAPI key the numbers came from, so a wrong-looking spread is
-traceable back to what was asked for.
+Types are stored by name rather than as enum numbers so the file stays readable
+in review; tools/add_base_stats.py maps them onto PokemonData.Type. "type2" is
+null for the single-typed majority. "source" is the PokeAPI key the entry came
+from, so a wrong-looking spread is traceable back to what was asked for.
+
+An entry that predates types (stats only) counts as incomplete and is re-fetched
+without needing --force.
 
 FORMS
 -----
@@ -81,6 +87,15 @@ STAT_FIELDS = {
     "speed": "base_speed",
 }
 FIELDS = tuple(STAT_FIELDS.values())
+
+# Every type PokeAPI can return that PokemonData.Type knows about. "unknown" and
+# "shadow" exist in the API for oddities that no species carries, so a species
+# reporting one is a bug worth failing on rather than silently typing as NONE.
+KNOWN_TYPES = frozenset({
+    "normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost",
+    "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon",
+    "dark", "fairy",
+})
 
 DEX_LINE = re.compile(r"^\s*dex_number\s*=\s*(?P<dex>\d+)\s*$")
 
@@ -192,22 +207,35 @@ def plan_keys(
     return keys, unlisted
 
 
-def fetch(key: str, timeout: float) -> dict[str, int]:
+def fetch(key: str, timeout: float) -> dict:
     request = urllib.request.Request(API.format(key=key), headers={"User-Agent": UA})
     with urllib.request.urlopen(request, timeout=timeout) as response:
         payload = json.loads(response.read().decode("utf-8"))
 
-    stats: dict[str, int] = {}
-    for entry in payload.get("stats", []):
-        name = entry.get("stat", {}).get("name")
+    entry: dict = {}
+    for stat in payload.get("stats", []):
+        name = stat.get("stat", {}).get("name")
         field = STAT_FIELDS.get(name)
         if field:
-            stats[field] = int(entry["base_stat"])
+            entry[field] = int(stat["base_stat"])
 
-    missing = [f for f in FIELDS if f not in stats]
+    missing = [f for f in FIELDS if f not in entry]
     if missing:
         raise ValueError(f"response for {key!r} is missing {', '.join(missing)}")
-    return stats
+
+    # slot 1 is the primary type, slot 2 the secondary. Sorting rather than
+    # trusting the order keeps a reshuffled response from swapping them.
+    slots = sorted(payload.get("types", []), key=lambda t: t.get("slot", 99))
+    names = [t.get("type", {}).get("name") for t in slots]
+    unknown = [n for n in names if n not in KNOWN_TYPES]
+    if unknown:
+        raise ValueError(f"response for {key!r} has unknown type(s) {', '.join(map(str, unknown))}")
+    if not names:
+        raise ValueError(f"response for {key!r} has no types")
+
+    entry["type1"] = names[0]
+    entry["type2"] = names[1] if len(names) > 1 else None
+    return entry
 
 
 def load_existing(root: Path) -> dict[str, dict]:
@@ -220,6 +248,15 @@ def load_existing(root: Path) -> dict[str, dict]:
         sys.exit(f"error: {OUT_FILE} is not valid JSON ({error}); delete it to start over")
     species = data.get("species", {})
     return species if isinstance(species, dict) else {}
+
+
+def is_complete(entry: dict) -> bool:
+    """
+    An entry written before types existed carries the six stats and nothing else.
+    Treating it as incomplete means adding types is an ordinary re-run rather
+    than a --force that throws away the whole file.
+    """
+    return all(f in entry for f in FIELDS) and "type1" in entry
 
 
 def write_json(root: Path, species: dict[str, dict]) -> None:
@@ -253,10 +290,12 @@ def command_plan(root: Path, only: str | None) -> int:
     keys, unlisted = plan_keys(paths, variants, cosmetic)
     have = load_existing(root)
 
-    fresh = sorted(slug for slug in keys if slug not in have)
+    fresh = sorted(slug for slug in keys if not is_complete(have.get(slug, {})))
+    stale = sorted(slug for slug in fresh if slug in have)
     print(C.bold(f"{len(paths)} resources, {len(set(keys.values()))} distinct PokeAPI keys"))
-    print(f"  already in {OUT_FILE}: {len(keys) - len(fresh)}")
-    print(f"  to fetch:             {len(fresh)}")
+    print(f"  already complete in {OUT_FILE}: {len(keys) - len(fresh)}")
+    print(f"  to fetch:                       {len(fresh)}"
+          + (f"  ({len(stale)} of them incomplete, e.g. missing types)" if stale else ""))
     for slug in fresh[:20]:
         print(C.dim(f"    {slug:32s} -> {keys[slug]}"))
     if len(fresh) > 20:
@@ -278,7 +317,10 @@ def command_fetch(root: Path, only: str | None, force: bool, delay: float) -> in
     keys, unlisted = plan_keys(paths, variants, cosmetic)
     species = load_existing(root)
 
-    wanted = {slug: key for slug, key in keys.items() if force or slug not in species}
+    wanted = {
+        slug: key for slug, key in keys.items()
+        if force or not is_complete(species.get(slug, {}))
+    }
     if not wanted:
         print(C.green(f"nothing to do -- {len(keys)} resources already in {OUT_FILE}"))
         report_unlisted(unlisted)
@@ -286,7 +328,7 @@ def command_fetch(root: Path, only: str | None, force: bool, delay: float) -> in
 
     # Many slugs share a key (every costume points at its base species), so the
     # cache turns 410 resources into far fewer requests.
-    cache: dict[str, dict[str, int]] = {}
+    cache: dict[str, dict] = {}
     failed: list[tuple[str, str]] = []
     done = 0
 
@@ -301,11 +343,12 @@ def command_fetch(root: Path, only: str | None, force: bool, delay: float) -> in
                 print(C.red(f"  {slug:32s} -> {key}  FAILED ({error})"))
                 continue
             time.sleep(delay)
-        stats = cache[key]
-        species[slug] = {**stats, "source": key}
+        entry = cache[key]
+        species[slug] = {**entry, "source": key}
         done += 1
-        total = stats["base_hp"] + sum(stats[f] for f in FIELDS[1:])
-        print(f"  {slug:32s} -> {key:24s} BST {total}")
+        total = sum(entry[f] for f in FIELDS)
+        typing = "/".join(t for t in (entry["type1"], entry["type2"]) if t)
+        print(f"  {slug:32s} -> {key:24s} BST {total:<4d} {typing}")
 
     write_json(root, species)
     print(C.green(f"\nwrote {OUT_FILE} -- {len(species)} resources total, {done} new"))

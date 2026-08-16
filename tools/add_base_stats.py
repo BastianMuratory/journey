@@ -16,11 +16,15 @@ texture references that a regeneration would throw away.
 WHAT IT WRITES
 --------------
 Into each data/pokemon/*.tres, at the end of the [resource] block (just before
-the metadata/ lines, which is where the Stats group sits in the declaration
-order of pokemon_data.gd):
+the metadata/ lines, which is where the Type and Stats groups sit in the
+declaration order of pokemon_data.gd):
 
+    type1, type2,
     base_hp, base_attack, base_defense,
     base_special_attack, base_special_defense, base_speed
+
+Types are stored by name in the JSON and written here as the PokemonData.Type
+enum value Godot expects. type2 is 0 (NONE) for single-typed species.
 
 Existing values are overwritten, so re-running is idempotent and safe. Anything
 you hand-tune in the Godot inspector WILL be overwritten -- edit
@@ -59,7 +63,7 @@ STATS_FILE = "tools/base_stats.json"
 
 # Declaration order in pokemon_data.gd's Stats group. The block is written in
 # this order so the .tres files stay readable and diff cleanly.
-FIELDS = (
+STAT_FIELDS = (
     "base_hp",
     "base_attack",
     "base_defense",
@@ -67,6 +71,22 @@ FIELDS = (
     "base_special_defense",
     "base_speed",
 )
+TYPE_FIELDS = ("type1", "type2")
+
+# Everything this script owns, in the order pokemon_data.gd declares it: the
+# Type group, then the Stats group.
+FIELDS = TYPE_FIELDS + STAT_FIELDS
+
+# MUST match the order of PokemonData.Type. Godot stores enums as plain ints, so
+# reordering the enum without reordering this list will silently mistype every
+# resource on the next --apply. Index 0 is NONE, meaning "no second type".
+TYPE_ORDER = (
+    None,
+    "normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost",
+    "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon",
+    "dark", "fairy",
+)
+TYPE_VALUES = {name: index for index, name in enumerate(TYPE_ORDER) if name}
 
 RESOURCE_HEADER = re.compile(r"^\s*\[resource\]\s*$")
 SECTION_HEADER = re.compile(r"^\s*\[")
@@ -109,6 +129,34 @@ def find_project_root(start: Path) -> Path:
     sys.exit("error: could not locate project.godot -- run this from inside the project")
 
 
+def verify_type_enum(root: Path) -> None:
+    """
+    Fail loudly if PokemonData.Type and TYPE_ORDER have drifted apart.
+
+    Godot stores an enum as a bare int, so a reordered enum would not break
+    anything visibly -- every resource would just quietly come out mistyped.
+    Reading the real enum out of the script turns that into an error instead.
+    """
+    path = root / "data" / "pokemon_data.gd"
+    if not path.is_file():
+        return
+
+    match = re.search(r"enum\s+Type\s*\{(.*?)\}", path.read_text(encoding="utf-8"), re.S)
+    if match is None:
+        print(C.yellow("warning: could not find enum Type in pokemon_data.gd; not checked"))
+        return
+
+    members = [m.strip().lower() for m in match.group(1).replace("\n", " ").split(",") if m.strip()]
+    expected = ["none" if name is None else name for name in TYPE_ORDER]
+    if members != expected:
+        sys.exit(
+            "error: PokemonData.Type and TYPE_ORDER disagree.\n"
+            f"       script: {', '.join(members)}\n"
+            f"       tool:   {', '.join(expected)}\n"
+            "       Fix one to match the other before writing any resource."
+        )
+
+
 def load_stats(root: Path) -> dict[str, dict]:
     path = root / STATS_FILE
     if not path.is_file():
@@ -126,12 +174,31 @@ def load_stats(root: Path) -> dict[str, dict]:
         sys.exit(f"error: {STATS_FILE} has no species -- re-run the downloader")
 
     clean: dict[str, dict] = {}
+    stale: list[str] = []
     for slug, entry in species.items():
-        missing = [f for f in FIELDS if f not in entry]
+        missing = [f for f in STAT_FIELDS if f not in entry]
         if missing:
             print(C.yellow(f"warning: {slug} is missing {', '.join(missing)}; skipping"))
             continue
-        clean[slug] = {f: int(entry[f]) for f in FIELDS}
+        if "type1" not in entry:
+            # Written before types existed. Skipped rather than typed as NONE,
+            # so a half-updated JSON cannot quietly blank out a typing.
+            stale.append(slug)
+            continue
+
+        values = {f: int(entry[f]) for f in STAT_FIELDS}
+        try:
+            values["type1"] = TYPE_VALUES[entry["type1"]]
+            values["type2"] = TYPE_VALUES[entry["type2"]] if entry.get("type2") else 0
+        except KeyError as error:
+            print(C.red(f"error: {slug} has an unknown type {error}; skipping"))
+            continue
+        clean[slug] = values
+
+    if stale:
+        print(C.yellow(f"{len(stale)} entr(ies) in {STATS_FILE} predate types and were "
+                       f"skipped, e.g. {', '.join(stale[:4])}"))
+        print(C.dim("  Run: python tools/download_base_stats.py fetch"))
     return clean
 
 
@@ -140,6 +207,22 @@ def data_files(root: Path, only: str | None) -> list[Path]:
     if only:
         paths = [p for p in paths if only in p.name]
     return paths
+
+
+def show(field: str, value) -> str:
+    """A type reads better as its name than as the enum number in a diff."""
+    if value is None:
+        return "unset"
+    if field in TYPE_FIELDS:
+        index = int(value)
+        name = TYPE_ORDER[index] if 0 <= index < len(TYPE_ORDER) else None
+        return name or "none"
+    return str(value)
+
+
+def typing_of(values: dict[str, int]) -> str:
+    names = [TYPE_ORDER[values[f]] for f in TYPE_FIELDS if values.get(f)]
+    return "/".join(names) if names else "?"
 
 
 def current_values(text: str) -> dict[str, int]:
@@ -201,23 +284,29 @@ def rewrite(text: str, stats: dict[str, int]) -> str:
 
 
 def command_plan(root: Path, only: str | None) -> int:
+    verify_type_enum(root)
     paths = data_files(root, only)
     stats = load_stats(root)
 
-    filled, empty, gaps = 0, 0, []
+    correct, partial, empty, gaps = 0, 0, 0, []
     for path in paths:
-        if path.stem not in stats:
+        wanted = stats.get(path.stem)
+        if wanted is None:
             gaps.append(path.stem)
             continue
-        if current_values(path.read_text(encoding="utf-8")):
-            filled += 1
+        before = current_values(path.read_text(encoding="utf-8"))
+        if before == wanted:
+            correct += 1
+        elif before:
+            partial += 1
         else:
             empty += 1
 
     print(C.bold(f"{len(paths)} resources, {len(stats)} entries in {STATS_FILE}"))
-    print(f"  already carry stats: {filled}")
-    print(f"  would be filled in:  {empty}")
-    print(f"  no data available:   {len(gaps)}")
+    print(f"  already correct:    {correct}")
+    print(f"  partial or stale:   {partial}")
+    print(f"  nothing written yet:{empty:4d}")
+    print(f"  no data available:  {len(gaps)}")
 
     if gaps:
         print(C.yellow(f"\n{len(gaps)} resource(s) have no entry in {STATS_FILE}:"))
@@ -233,6 +322,7 @@ def command_plan(root: Path, only: str | None) -> int:
 
 
 def command_apply(root: Path, only: str | None, execute: bool) -> int:
+    verify_type_enum(root)
     paths = data_files(root, only)
     stats = load_stats(root)
 
@@ -251,16 +341,17 @@ def command_apply(root: Path, only: str | None, execute: bool) -> int:
             continue
 
         changed += 1
-        total = sum(wanted.values())
         if before and before != wanted:
             delta = ", ".join(
-                f"{f.removeprefix('base_')} {before.get(f, '-')}->{wanted[f]}"
+                f"{f.removeprefix('base_')} {show(f, before.get(f))}->{show(f, wanted[f])}"
                 for f in FIELDS if before.get(f) != wanted[f]
             )
             print(f"  {path.stem:32s} {C.yellow('update')}  {delta}")
         else:
-            spread = "/".join(str(wanted[f]) for f in FIELDS)
-            print(f"  {path.stem:32s} {C.green('fill')}    {spread}  BST {total}")
+            spread = "/".join(str(wanted[f]) for f in STAT_FIELDS)
+            total = sum(wanted[f] for f in STAT_FIELDS)
+            print(f"  {path.stem:32s} {C.green('fill')}    {typing_of(wanted):16s} "
+                  f"{spread}  BST {total}")
 
         if execute:
             path.write_text(updated, encoding="utf-8")

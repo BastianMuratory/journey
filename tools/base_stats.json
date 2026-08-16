@@ -1,6 +1,6 @@
 {
   "_comment": "Base stats from PokeAPI, keyed by data/pokemon resource slug. Regenerate with tools/download_base_stats.py fetch; apply with tools/add_base_stats.py apply --execute.",
-  "_generated": "2026-08-16T19:43:38Z",
+  "_generated": "2026-08-16T20:28:16Z",
   "_source": "https://pokeapi.co/api/v2/pokemon/",
   "species": {
     "0001_bulbasaur": {
@@ -10,6 +10,8 @@
       "base_special_attack": 65,
       "base_special_defense": 65,
       "base_speed": 45,
+      "type1": "grass",
+      "type2": "poison",
       "source": "1"
     },
     "0002_ivysaur": {
@@ -19,6 +21,8 @@
       "base_special_attack": 80,
       "base_special_defense": 80,
       "base_speed": 60,
+      "type1": "grass",
+      "type2": "poison",
       "source": "2"
     },
     "0003_venusaur": {
@@ -28,6 +32,8 @@
       "base_special_attack": 100,
       "base_special_defense": 100,
       "base_speed": 80,
+      "type1": "grass",
+      "type2": "poison",
       "source": "3"
     },
     "0003_venusaur_clone": {
@@ -37,6 +43,8 @@
       "base_special_attack": 100,
       "base_special_defense": 100,
       "base_speed": 80,
+      "type1": "grass",
+      "type2": "poison",
       "source": "3"
     },
     "0004_charmander": {
@@ -46,6 +54,8 @@
       "base_special_attack": 60,
       "base_special_defense": 50,
       "base_speed": 65,
+      "type1": "fire",
+      "type2": null,
       "source": "4"
     },
     "0005_charmeleon": {
@@ -55,6 +65,8 @@
       "base_special_attack": 80,
       "base_special_defense": 65,
       "base_speed": 80,
+      "type1": "fire",
+      "type2": null,
       "source": "5"
     },
     "0006_charizard": {
@@ -64,6 +76,8 @@
       "base_special_attack": 109,
       "base_special_defense": 85,
       "base_speed": 100,
+      "type1": "fire",
+      "type2": "flying",
       "source": "6"
     },
     "0006_charizard_clone": {
@@ -73,6 +87,8 @@
       "base_special_attack": 109,
       "base_special_defense": 85,
       "base_speed": 100,
+      "type1": "fire",
+      "type2": "flying",
       "source": "6"
     },
     "0007_squirtle": {
@@ -82,6 +98,8 @@
       "base_special_attack": 50,
       "base_special_defense": 64,
       "base_speed": 43,
+      "type1": "water",
+      "type2": null,
       "source": "7"
     },
     "0008_wartortle": {
@@ -91,6 +109,8 @@
       "base_special_attack": 65,
       "base_special_defense": 80,
       "base_speed": 58,
+      "type1": "water",
+      "type2": null,
       "source": "8"
     },
     "0009_blastoise": {
@@ -100,6 +120,8 @@
       "base_special_attack": 85,
       "base_special_defense": 105,
       "base_speed": 78,
+      "type1": "water",
+      "type2": null,
       "source": "9"
     },
     "0009_blastoise_clone": {
@@ -109,6 +131,8 @@
       "base_special_attack": 85,
       "base_special_defense": 105,
       "base_speed": 78,
+      "type1": "water",
+      "type2": null,
       "source": "9"
     },
     "0010_caterpie": {
@@ -118,6 +142,8 @@
       "base_special_attack": 20,
       "base_special_defense": 20,
       "base_speed": 45,
+      "type1": "bug",
+      "type2": null,
       "source": "10"
     },
     "0011_metapod": {
@@ -127,6 +153,8 @@
       "base_special_attack": 25,
       "base_special_defense": 25,
       "base_speed": 30,
+      "type1": "bug",
+      "type2": null,
       "source": "11"
     },
     "0012_butterfree": {
@@ -136,6 +164,8 @@
       "base_special_attack": 90,
       "base_special_defense": 80,
       "base_speed": 70,
+      "type1": "bug",
+      "type2": "flying",
       "source": "12"
     },
     "0013_weedle": {
@@ -145,6 +175,8 @@
       "base_special_attack": 20,
       "base_special_defense": 20,
       "base_speed": 50,
+      "type1": "bug",
+      "type2": "poison",
       "source": "13"
     },
     "0014_kakuna": {
@@ -154,6 +186,8 @@
       "base_special_attack": 25,
       "base_special_defense": 25,
       "base_speed": 35,
+      "type1": "bug",
+      "type2": "poison",
       "source": "14"
     },
     "0015_beedrill": {
@@ -163,6 +197,8 @@
       "base_special_attack": 45,
       "base_special_defense": 80,
       "base_speed": 75,
+      "type1": "bug",
+      "type2": "poison",
       "source": "15"
     },
     "0016_pidgey": {
@@ -172,6 +208,8 @@
       "base_special_attack": 35,
       "base_special_defense": 35,
       "base_speed": 56,
+      "type1": "normal",
+      "type2": "flying",
       "source": "16"
     },
     "0017_pidgeotto": {
@@ -181,6 +219,8 @@
       "base_special_attack": 50,
       "base_special_defense": 50,
       "base_speed": 71,
+      "type1": "normal",
+      "type2": "flying",
       "source": "17"
     },
     "0018_pidgeot": {
@@ -190,6 +230,8 @@
       "base_special_attack": 70,
       "base_special_defense": 70,
       "base_speed": 101,
+      "type1": "normal",
+      "type2": "flying",
       "source": "18"
     },
     "0019_rattata": {
@@ -199,6 +241,8 @@
       "base_special_attack": 25,
       "base_special_defense": 35,
       "base_speed": 72,
+      "type1": "normal",
+      "type2": null,
       "source": "19"
     },
     "0020_raticate": {
@@ -208,6 +252,8 @@
       "base_special_attack": 50,
       "base_special_defense": 70,
       "base_speed": 97,
+      "type1": "normal",
+      "type2": null,
       "source": "20"
     },
     "0021_spearow": {
@@ -217,6 +263,8 @@
       "base_special_attack": 31,
       "base_special_defense": 31,
       "base_speed": 70,
+      "type1": "normal",
+      "type2": "flying",
       "source": "21"
     },
     "0022_fearow": {
@@ -226,6 +274,8 @@
       "base_special_attack": 61,
       "base_special_defense": 61,
       "base_speed": 100,
+      "type1": "normal",
+      "type2": "flying",
       "source": "22"
     },
     "0023_ekans": {
@@ -235,6 +285,8 @@
       "base_special_attack": 40,
       "base_special_defense": 54,
       "base_speed": 55,
+      "type1": "poison",
+      "type2": null,
       "source": "23"
     },
     "0024_arbok": {
@@ -244,6 +296,8 @@
       "base_special_attack": 65,
       "base_special_defense": 79,
       "base_speed": 80,
+      "type1": "poison",
+      "type2": null,
       "source": "24"
     },
     "0025_pikachu": {
@@ -253,6 +307,8 @@
       "base_special_attack": 50,
       "base_special_defense": 50,
       "base_speed": 90,
+      "type1": "electric",
+      "type2": null,
       "source": "25"
     },
     "0025_pikachu_ash_cap": {
@@ -262,6 +318,8 @@
       "base_special_attack": 50,
       "base_special_defense": 50,
       "base_speed": 90,
+      "type1": "electric",
+      "type2": null,
       "source": "25"
     },
     "0025_pikachu_explorer": {
@@ -271,6 +329,8 @@
       "base_special_attack": 50,
       "base_special_defense": 50,
       "base_speed": 90,
+      "type1": "electric",
+      "type2": null,
       "source": "25"
     },
     "0026_raichu": {
@@ -280,6 +340,8 @@
       "base_special_attack": 90,
       "base_special_defense": 80,
       "base_speed": 110,
+      "type1": "electric",
+      "type2": null,
       "source": "26"
     },
     "0027_sandshrew": {
@@ -289,6 +351,8 @@
       "base_special_attack": 20,
       "base_special_defense": 30,
       "base_speed": 40,
+      "type1": "ground",
+      "type2": null,
       "source": "27"
     },
     "0028_sandslash": {
@@ -298,6 +362,8 @@
       "base_special_attack": 45,
       "base_special_defense": 55,
       "base_speed": 65,
+      "type1": "ground",
+      "type2": null,
       "source": "28"
     },
     "0029_nidoran_f": {
@@ -307,6 +373,8 @@
       "base_special_attack": 40,
       "base_special_defense": 40,
       "base_speed": 41,
+      "type1": "poison",
+      "type2": null,
       "source": "29"
     },
     "0030_nidorina": {
@@ -316,6 +384,8 @@
       "base_special_attack": 55,
       "base_special_defense": 55,
       "base_speed": 56,
+      "type1": "poison",
+      "type2": null,
       "source": "30"
     },
     "0031_nidoqueen": {
@@ -325,6 +395,8 @@
       "base_special_attack": 75,
       "base_special_defense": 85,
       "base_speed": 76,
+      "type1": "poison",
+      "type2": "ground",
       "source": "31"
     },
     "0031_nidoqueen_bride": {
@@ -334,6 +406,8 @@
       "base_special_attack": 75,
       "base_special_defense": 85,
       "base_speed": 76,
+      "type1": "poison",
+      "type2": "ground",
       "source": "31"
     },
     "0032_nidoran_m": {
@@ -343,6 +417,8 @@
       "base_special_attack": 40,
       "base_special_defense": 40,
       "base_speed": 50,
+      "type1": "poison",
+      "type2": null,
       "source": "32"
     },
     "0033_nidorino": {
@@ -352,6 +428,8 @@
       "base_special_attack": 55,
       "base_special_defense": 55,
       "base_speed": 65,
+      "type1": "poison",
+      "type2": null,
       "source": "33"
     },
     "0034_nidoking_groom": {
@@ -361,6 +439,8 @@
       "base_special_attack": 85,
       "base_special_defense": 75,
       "base_speed": 85,
+      "type1": "poison",
+      "type2": "ground",
       "source": "34"
     },
     "0035_clefairy": {
@@ -370,6 +450,8 @@
       "base_special_attack": 60,
       "base_special_defense": 65,
       "base_speed": 35,
+      "type1": "fairy",
+      "type2": null,
       "source": "35"
     },
     "0036_clefable": {
@@ -379,6 +461,8 @@
       "base_special_attack": 95,
       "base_special_defense": 90,
       "base_speed": 60,
+      "type1": "fairy",
+      "type2": null,
       "source": "36"
     },
     "0037_vulpix": {
@@ -388,6 +472,8 @@
       "base_special_attack": 50,
       "base_special_defense": 65,
       "base_speed": 65,
+      "type1": "fire",
+      "type2": null,
       "source": "37"
     },
     "0037_vulpix_alolan": {
@@ -397,6 +483,8 @@
       "base_special_attack": 50,
       "base_special_defense": 65,
       "base_speed": 65,
+      "type1": "ice",
+      "type2": null,
       "source": "vulpix-alola"
     },
     "0038_ninetales": {
@@ -406,6 +494,8 @@
       "base_special_attack": 81,
       "base_special_defense": 100,
       "base_speed": 100,
+      "type1": "fire",
+      "type2": null,
       "source": "38"
     },
     "0038_ninetales_alolan": {
@@ -415,6 +505,8 @@
       "base_special_attack": 81,
       "base_special_defense": 100,
       "base_speed": 109,
+      "type1": "ice",
+      "type2": "fairy",
       "source": "ninetales-alola"
     },
     "0038_ninetales_suit": {
@@ -424,6 +516,8 @@
       "base_special_attack": 81,
       "base_special_defense": 100,
       "base_speed": 100,
+      "type1": "fire",
+      "type2": null,
       "source": "38"
     },
     "0039_jigglypuff": {
@@ -433,6 +527,8 @@
       "base_special_attack": 45,
       "base_special_defense": 25,
       "base_speed": 20,
+      "type1": "normal",
+      "type2": "fairy",
       "source": "39"
     },
     "0040_wigglytuff": {
@@ -442,6 +538,8 @@
       "base_special_attack": 85,
       "base_special_defense": 50,
       "base_speed": 45,
+      "type1": "normal",
+      "type2": "fairy",
       "source": "40"
     },
     "0041_zubat": {
@@ -451,6 +549,8 @@
       "base_special_attack": 30,
       "base_special_defense": 40,
       "base_speed": 55,
+      "type1": "poison",
+      "type2": "flying",
       "source": "41"
     },
     "0042_golbat": {
@@ -460,6 +560,8 @@
       "base_special_attack": 65,
       "base_special_defense": 75,
       "base_speed": 90,
+      "type1": "poison",
+      "type2": "flying",
       "source": "42"
     },
     "0043_oddish": {
@@ -469,6 +571,8 @@
       "base_special_attack": 75,
       "base_special_defense": 65,
       "base_speed": 30,
+      "type1": "grass",
+      "type2": "poison",
       "source": "43"
     },
     "0044_gloom": {
@@ -478,6 +582,8 @@
       "base_special_attack": 85,
       "base_special_defense": 75,
       "base_speed": 40,
+      "type1": "grass",
+      "type2": "poison",
       "source": "44"
     },
     "0045_vileplume": {
@@ -487,6 +593,8 @@
       "base_special_attack": 110,
       "base_special_defense": 90,
       "base_speed": 50,
+      "type1": "grass",
+      "type2": "poison",
       "source": "45"
     },
     "0046_paras": {
@@ -496,6 +604,8 @@
       "base_special_attack": 45,
       "base_special_defense": 55,
       "base_speed": 25,
+      "type1": "bug",
+      "type2": "grass",
       "source": "46"
     },
     "0047_parasect": {
@@ -505,6 +615,8 @@
       "base_special_attack": 60,
       "base_special_defense": 80,
       "base_speed": 30,
+      "type1": "bug",
+      "type2": "grass",
       "source": "47"
     },
     "0048_venonat": {
@@ -514,6 +626,8 @@
       "base_special_attack": 40,
       "base_special_defense": 55,
       "base_speed": 45,
+      "type1": "bug",
+      "type2": "poison",
       "source": "48"
     },
     "0049_venomoth": {
@@ -523,6 +637,8 @@
       "base_special_attack": 90,
       "base_special_defense": 75,
       "base_speed": 90,
+      "type1": "bug",
+      "type2": "poison",
       "source": "49"
     },
     "0050_diglett": {
@@ -532,6 +648,8 @@
       "base_special_attack": 35,
       "base_special_defense": 45,
       "base_speed": 95,
+      "type1": "ground",
+      "type2": null,
       "source": "50"
     },
     "0051_dugtrio": {
@@ -541,6 +659,8 @@
       "base_special_attack": 50,
       "base_special_defense": 70,
       "base_speed": 120,
+      "type1": "ground",
+      "type2": null,
       "source": "51"
     },
     "0052_meowth": {
@@ -550,6 +670,8 @@
       "base_special_attack": 40,
       "base_special_defense": 40,
       "base_speed": 90,
+      "type1": "normal",
+      "type2": null,
       "source": "52"
     },
     "0053_persian": {
@@ -559,6 +681,8 @@
       "base_special_attack": 65,
       "base_special_defense": 65,
       "base_speed": 115,
+      "type1": "normal",
+      "type2": null,
       "source": "53"
     },
     "0054_psyduck": {
@@ -568,6 +692,8 @@
       "base_special_attack": 65,
       "base_special_defense": 50,
       "base_speed": 55,
+      "type1": "water",
+      "type2": null,
       "source": "54"
     },
     "0055_golduck": {
@@ -577,6 +703,8 @@
       "base_special_attack": 95,
       "base_special_defense": 80,
       "base_speed": 85,
+      "type1": "water",
+      "type2": null,
       "source": "55"
     },
     "0056_mankey": {
@@ -586,6 +714,8 @@
       "base_special_attack": 35,
       "base_special_defense": 45,
       "base_speed": 70,
+      "type1": "fighting",
+      "type2": null,
       "source": "56"
     },
     "0057_primeape": {
@@ -595,6 +725,8 @@
       "base_special_attack": 60,
       "base_special_defense": 70,
       "base_speed": 95,
+      "type1": "fighting",
+      "type2": null,
       "source": "57"
     },
     "0058_growlithe": {
@@ -604,6 +736,8 @@
       "base_special_attack": 70,
       "base_special_defense": 50,
       "base_speed": 60,
+      "type1": "fire",
+      "type2": null,
       "source": "58"
     },
     "0059_arcanine": {
@@ -613,6 +747,8 @@
       "base_special_attack": 100,
       "base_special_defense": 80,
       "base_speed": 95,
+      "type1": "fire",
+      "type2": null,
       "source": "59"
     },
     "0059_arcanine_postman": {
@@ -622,6 +758,8 @@
       "base_special_attack": 100,
       "base_special_defense": 80,
       "base_speed": 95,
+      "type1": "fire",
+      "type2": null,
       "source": "59"
     },
     "0060_poliwag": {
@@ -631,6 +769,8 @@
       "base_special_attack": 40,
       "base_special_defense": 40,
       "base_speed": 90,
+      "type1": "water",
+      "type2": null,
       "source": "60"
     },
     "0061_poliwhirl": {
@@ -640,6 +780,8 @@
       "base_special_attack": 50,
       "base_special_defense": 50,
       "base_speed": 90,
+      "type1": "water",
+      "type2": null,
       "source": "61"
     },
     "0062_poliwrath": {
@@ -649,6 +791,8 @@
       "base_special_attack": 70,
       "base_special_defense": 90,
       "base_speed": 70,
+      "type1": "water",
+      "type2": "fighting",
       "source": "62"
     },
     "0063_abra": {
@@ -658,6 +802,8 @@
       "base_special_attack": 105,
       "base_special_defense": 55,
       "base_speed": 90,
+      "type1": "psychic",
+      "type2": null,
       "source": "63"
     },
     "0064_kadabra": {
@@ -667,6 +813,8 @@
       "base_special_attack": 120,
       "base_special_defense": 70,
       "base_speed": 105,
+      "type1": "psychic",
+      "type2": null,
       "source": "64"
     },
     "0065_alakazam": {
@@ -676,6 +824,8 @@
       "base_special_attack": 135,
       "base_special_defense": 95,
       "base_speed": 120,
+      "type1": "psychic",
+      "type2": null,
       "source": "65"
     },
     "0066_machop": {
@@ -685,6 +835,8 @@
       "base_special_attack": 35,
       "base_special_defense": 35,
       "base_speed": 35,
+      "type1": "fighting",
+      "type2": null,
       "source": "66"
     },
     "0067_machoke": {
@@ -694,6 +846,8 @@
       "base_special_attack": 50,
       "base_special_defense": 60,
       "base_speed": 45,
+      "type1": "fighting",
+      "type2": null,
       "source": "67"
     },
     "0068_machamp": {
@@ -703,6 +857,8 @@
       "base_special_attack": 65,
       "base_special_defense": 85,
       "base_speed": 55,
+      "type1": "fighting",
+      "type2": null,
       "source": "68"
     },
     "0069_bellsprout": {
@@ -712,6 +868,8 @@
       "base_special_attack": 70,
       "base_special_defense": 30,
       "base_speed": 40,
+      "type1": "grass",
+      "type2": "poison",
       "source": "69"
     },
     "0070_weepinbell": {
@@ -721,6 +879,8 @@
       "base_special_attack": 85,
       "base_special_defense": 45,
       "base_speed": 55,
+      "type1": "grass",
+      "type2": "poison",
       "source": "70"
     },
     "0071_victreebel": {
@@ -730,6 +890,8 @@
       "base_special_attack": 100,
       "base_special_defense": 70,
       "base_speed": 70,
+      "type1": "grass",
+      "type2": "poison",
       "source": "71"
     },
     "0072_tentacool": {
@@ -739,6 +901,8 @@
       "base_special_attack": 50,
       "base_special_defense": 100,
       "base_speed": 70,
+      "type1": "water",
+      "type2": "poison",
       "source": "72"
     },
     "0073_tentacruel": {
@@ -748,6 +912,8 @@
       "base_special_attack": 80,
       "base_special_defense": 120,
       "base_speed": 100,
+      "type1": "water",
+      "type2": "poison",
       "source": "73"
     },
     "0074_geodude": {
@@ -757,6 +923,8 @@
       "base_special_attack": 30,
       "base_special_defense": 30,
       "base_speed": 20,
+      "type1": "rock",
+      "type2": "ground",
       "source": "74"
     },
     "0075_graveler": {
@@ -766,6 +934,8 @@
       "base_special_attack": 45,
       "base_special_defense": 45,
       "base_speed": 35,
+      "type1": "rock",
+      "type2": "ground",
       "source": "75"
     },
     "0076_golem": {
@@ -775,6 +945,8 @@
       "base_special_attack": 55,
       "base_special_defense": 65,
       "base_speed": 45,
+      "type1": "rock",
+      "type2": "ground",
       "source": "76"
     },
     "0077_ponyta": {
@@ -784,6 +956,8 @@
       "base_special_attack": 65,
       "base_special_defense": 65,
       "base_speed": 90,
+      "type1": "fire",
+      "type2": null,
       "source": "77"
     },
     "0078_rapidash": {
@@ -793,6 +967,8 @@
       "base_special_attack": 80,
       "base_special_defense": 80,
       "base_speed": 105,
+      "type1": "fire",
+      "type2": null,
       "source": "78"
     },
     "0079_slowpoke": {
@@ -802,6 +978,8 @@
       "base_special_attack": 40,
       "base_special_defense": 40,
       "base_speed": 15,
+      "type1": "water",
+      "type2": "psychic",
       "source": "79"
     },
     "0080_slowbro": {
@@ -811,6 +989,8 @@
       "base_special_attack": 100,
       "base_special_defense": 80,
       "base_speed": 30,
+      "type1": "water",
+      "type2": "psychic",
       "source": "80"
     },
     "0081_magnemite": {
@@ -820,6 +1000,8 @@
       "base_special_attack": 95,
       "base_special_defense": 55,
       "base_speed": 45,
+      "type1": "electric",
+      "type2": "steel",
       "source": "81"
     },
     "0082_magneton": {
@@ -829,6 +1011,8 @@
       "base_special_attack": 120,
       "base_special_defense": 70,
       "base_speed": 70,
+      "type1": "electric",
+      "type2": "steel",
       "source": "82"
     },
     "0083_farfetchd": {
@@ -838,6 +1022,8 @@
       "base_special_attack": 58,
       "base_special_defense": 62,
       "base_speed": 60,
+      "type1": "normal",
+      "type2": "flying",
       "source": "83"
     },
     "0084_doduo": {
@@ -847,6 +1033,8 @@
       "base_special_attack": 35,
       "base_special_defense": 35,
       "base_speed": 75,
+      "type1": "normal",
+      "type2": "flying",
       "source": "84"
     },
     "0085_dodrio": {
@@ -856,6 +1044,8 @@
       "base_special_attack": 60,
       "base_special_defense": 60,
       "base_speed": 110,
+      "type1": "normal",
+      "type2": "flying",
       "source": "85"
     },
     "0086_seel": {
@@ -865,6 +1055,8 @@
       "base_special_attack": 45,
       "base_special_defense": 70,
       "base_speed": 45,
+      "type1": "water",
+      "type2": null,
       "source": "86"
     },
     "0087_dewgong": {
@@ -874,6 +1066,8 @@
       "base_special_attack": 70,
       "base_special_defense": 95,
       "base_speed": 70,
+      "type1": "water",
+      "type2": "ice",
       "source": "87"
     },
     "0088_grimer": {
@@ -883,6 +1077,8 @@
       "base_special_attack": 40,
       "base_special_defense": 50,
       "base_speed": 25,
+      "type1": "poison",
+      "type2": null,
       "source": "88"
     },
     "0089_muk": {
@@ -892,6 +1088,8 @@
       "base_special_attack": 65,
       "base_special_defense": 100,
       "base_speed": 50,
+      "type1": "poison",
+      "type2": null,
       "source": "89"
     },
     "0090_shellder": {
@@ -901,6 +1099,8 @@
       "base_special_attack": 45,
       "base_special_defense": 25,
       "base_speed": 40,
+      "type1": "water",
+      "type2": null,
       "source": "90"
     },
     "0091_cloyster": {
@@ -910,6 +1110,8 @@
       "base_special_attack": 85,
       "base_special_defense": 45,
       "base_speed": 70,
+      "type1": "water",
+      "type2": "ice",
       "source": "91"
     },
     "0092_gastly": {
@@ -919,6 +1121,8 @@
       "base_special_attack": 100,
       "base_special_defense": 35,
       "base_speed": 80,
+      "type1": "ghost",
+      "type2": "poison",
       "source": "92"
     },
     "0093_haunter": {
@@ -928,6 +1132,8 @@
       "base_special_attack": 115,
       "base_special_defense": 55,
       "base_speed": 95,
+      "type1": "ghost",
+      "type2": "poison",
       "source": "93"
     },
     "0094_gengar": {
@@ -937,6 +1143,8 @@
       "base_special_attack": 130,
       "base_special_defense": 75,
       "base_speed": 110,
+      "type1": "ghost",
+      "type2": "poison",
       "source": "94"
     },
     "0094_gengar_halloween": {
@@ -946,6 +1154,8 @@
       "base_special_attack": 130,
       "base_special_defense": 75,
       "base_speed": 110,
+      "type1": "ghost",
+      "type2": "poison",
       "source": "94"
     },
     "0095_onix": {
@@ -955,6 +1165,8 @@
       "base_special_attack": 30,
       "base_special_defense": 45,
       "base_speed": 70,
+      "type1": "rock",
+      "type2": "ground",
       "source": "95"
     },
     "0096_drowzee": {
@@ -964,6 +1176,8 @@
       "base_special_attack": 43,
       "base_special_defense": 90,
       "base_speed": 42,
+      "type1": "psychic",
+      "type2": null,
       "source": "96"
     },
     "0097_hypno": {
@@ -973,6 +1187,8 @@
       "base_special_attack": 73,
       "base_special_defense": 115,
       "base_speed": 67,
+      "type1": "psychic",
+      "type2": null,
       "source": "97"
     },
     "0098_krabby": {
@@ -982,6 +1198,8 @@
       "base_special_attack": 25,
       "base_special_defense": 25,
       "base_speed": 50,
+      "type1": "water",
+      "type2": null,
       "source": "98"
     },
     "0099_kingler": {
@@ -991,6 +1209,8 @@
       "base_special_attack": 50,
       "base_special_defense": 50,
       "base_speed": 75,
+      "type1": "water",
+      "type2": null,
       "source": "99"
     },
     "0100_voltorb": {
@@ -1000,6 +1220,8 @@
       "base_special_attack": 55,
       "base_special_defense": 55,
       "base_speed": 100,
+      "type1": "electric",
+      "type2": null,
       "source": "100"
     },
     "0101_electrode": {
@@ -1009,6 +1231,8 @@
       "base_special_attack": 80,
       "base_special_defense": 80,
       "base_speed": 150,
+      "type1": "electric",
+      "type2": null,
       "source": "101"
     },
     "0102_exeggcute": {
@@ -1018,6 +1242,8 @@
       "base_special_attack": 60,
       "base_special_defense": 45,
       "base_speed": 40,
+      "type1": "grass",
+      "type2": "psychic",
       "source": "102"
     },
     "0102_exeggcute_sunglasses": {
@@ -1027,6 +1253,8 @@
       "base_special_attack": 60,
       "base_special_defense": 45,
       "base_speed": 40,
+      "type1": "grass",
+      "type2": "psychic",
       "source": "102"
     },
     "0103_exeggutor": {
@@ -1036,6 +1264,8 @@
       "base_special_attack": 125,
       "base_special_defense": 75,
       "base_speed": 55,
+      "type1": "grass",
+      "type2": "psychic",
       "source": "103"
     },
     "0103_exeggutor_alolan": {
@@ -1045,6 +1275,8 @@
       "base_special_attack": 125,
       "base_special_defense": 75,
       "base_speed": 45,
+      "type1": "grass",
+      "type2": "dragon",
       "source": "exeggutor-alola"
     },
     "0103_exeggutor_sunglasses": {
@@ -1054,6 +1286,8 @@
       "base_special_attack": 125,
       "base_special_defense": 75,
       "base_speed": 55,
+      "type1": "grass",
+      "type2": "psychic",
       "source": "103"
     },
     "0104_cubone": {
@@ -1063,6 +1297,8 @@
       "base_special_attack": 40,
       "base_special_defense": 50,
       "base_speed": 35,
+      "type1": "ground",
+      "type2": null,
       "source": "104"
     },
     "0105_marowak": {
@@ -1072,6 +1308,8 @@
       "base_special_attack": 50,
       "base_special_defense": 80,
       "base_speed": 45,
+      "type1": "ground",
+      "type2": null,
       "source": "105"
     },
     "0106_hitmonlee": {
@@ -1081,6 +1319,8 @@
       "base_special_attack": 35,
       "base_special_defense": 110,
       "base_speed": 87,
+      "type1": "fighting",
+      "type2": null,
       "source": "106"
     },
     "0107_hitmonchan": {
@@ -1090,6 +1330,8 @@
       "base_special_attack": 35,
       "base_special_defense": 110,
       "base_speed": 76,
+      "type1": "fighting",
+      "type2": null,
       "source": "107"
     },
     "0108_lickitung": {
@@ -1099,6 +1341,8 @@
       "base_special_attack": 60,
       "base_special_defense": 75,
       "base_speed": 30,
+      "type1": "normal",
+      "type2": null,
       "source": "108"
     },
     "0109_koffing": {
@@ -1108,6 +1352,8 @@
       "base_special_attack": 60,
       "base_special_defense": 45,
       "base_speed": 35,
+      "type1": "poison",
+      "type2": null,
       "source": "109"
     },
     "0110_weezing": {
@@ -1117,6 +1363,8 @@
       "base_special_attack": 85,
       "base_special_defense": 70,
       "base_speed": 60,
+      "type1": "poison",
+      "type2": null,
       "source": "110"
     },
     "0111_rhyhorn": {
@@ -1126,6 +1374,8 @@
       "base_special_attack": 30,
       "base_special_defense": 30,
       "base_speed": 25,
+      "type1": "ground",
+      "type2": "rock",
       "source": "111"
     },
     "0112_rhydon": {
@@ -1135,6 +1385,8 @@
       "base_special_attack": 45,
       "base_special_defense": 45,
       "base_speed": 40,
+      "type1": "ground",
+      "type2": "rock",
       "source": "112"
     },
     "0113_chansey": {
@@ -1144,6 +1396,8 @@
       "base_special_attack": 35,
       "base_special_defense": 105,
       "base_speed": 50,
+      "type1": "normal",
+      "type2": null,
       "source": "113"
     },
     "0114_tangela": {
@@ -1153,6 +1407,8 @@
       "base_special_attack": 100,
       "base_special_defense": 40,
       "base_speed": 60,
+      "type1": "grass",
+      "type2": null,
       "source": "114"
     },
     "0114_tangela_garland": {
@@ -1162,6 +1418,8 @@
       "base_special_attack": 100,
       "base_special_defense": 40,
       "base_speed": 60,
+      "type1": "grass",
+      "type2": null,
       "source": "114"
     },
     "0115_kangaskhan": {
@@ -1171,6 +1429,8 @@
       "base_special_attack": 40,
       "base_special_defense": 80,
       "base_speed": 90,
+      "type1": "normal",
+      "type2": null,
       "source": "115"
     },
     "0116_horsea": {
@@ -1180,6 +1440,8 @@
       "base_special_attack": 70,
       "base_special_defense": 25,
       "base_speed": 60,
+      "type1": "water",
+      "type2": null,
       "source": "116"
     },
     "0117_seadra": {
@@ -1189,6 +1451,8 @@
       "base_special_attack": 95,
       "base_special_defense": 45,
       "base_speed": 85,
+      "type1": "water",
+      "type2": null,
       "source": "117"
     },
     "0118_goldeen": {
@@ -1198,6 +1462,8 @@
       "base_special_attack": 35,
       "base_special_defense": 50,
       "base_speed": 63,
+      "type1": "water",
+      "type2": null,
       "source": "118"
     },
     "0119_seaking": {
@@ -1207,6 +1473,8 @@
       "base_special_attack": 65,
       "base_special_defense": 80,
       "base_speed": 68,
+      "type1": "water",
+      "type2": null,
       "source": "119"
     },
     "0120_staryu": {
@@ -1216,6 +1484,8 @@
       "base_special_attack": 70,
       "base_special_defense": 55,
       "base_speed": 85,
+      "type1": "water",
+      "type2": null,
       "source": "120"
     },
     "0121_starmie": {
@@ -1225,6 +1495,8 @@
       "base_special_attack": 100,
       "base_special_defense": 85,
       "base_speed": 115,
+      "type1": "water",
+      "type2": "psychic",
       "source": "121"
     },
     "0122_mr_mime": {
@@ -1234,6 +1506,8 @@
       "base_special_attack": 100,
       "base_special_defense": 120,
       "base_speed": 90,
+      "type1": "psychic",
+      "type2": "fairy",
       "source": "122"
     },
     "0123_scyther": {
@@ -1243,6 +1517,8 @@
       "base_special_attack": 55,
       "base_special_defense": 80,
       "base_speed": 105,
+      "type1": "bug",
+      "type2": "flying",
       "source": "123"
     },
     "0124_jynx": {
@@ -1252,6 +1528,8 @@
       "base_special_attack": 115,
       "base_special_defense": 95,
       "base_speed": 95,
+      "type1": "ice",
+      "type2": "psychic",
       "source": "124"
     },
     "0125_electabuzz": {
@@ -1261,6 +1539,8 @@
       "base_special_attack": 95,
       "base_special_defense": 85,
       "base_speed": 105,
+      "type1": "electric",
+      "type2": null,
       "source": "125"
     },
     "0126_magmar": {
@@ -1270,6 +1550,8 @@
       "base_special_attack": 100,
       "base_special_defense": 85,
       "base_speed": 93,
+      "type1": "fire",
+      "type2": null,
       "source": "126"
     },
     "0126_magmar_hiphop": {
@@ -1279,6 +1561,8 @@
       "base_special_attack": 100,
       "base_special_defense": 85,
       "base_speed": 93,
+      "type1": "fire",
+      "type2": null,
       "source": "126"
     },
     "0127_pinsir": {
@@ -1288,6 +1572,8 @@
       "base_special_attack": 55,
       "base_special_defense": 70,
       "base_speed": 85,
+      "type1": "bug",
+      "type2": null,
       "source": "127"
     },
     "0128_tauros": {
@@ -1297,6 +1583,8 @@
       "base_special_attack": 40,
       "base_special_defense": 70,
       "base_speed": 110,
+      "type1": "normal",
+      "type2": null,
       "source": "128"
     },
     "0129_magikarp": {
@@ -1306,6 +1594,8 @@
       "base_special_attack": 15,
       "base_special_defense": 20,
       "base_speed": 80,
+      "type1": "water",
+      "type2": null,
       "source": "129"
     },
     "0130_gyarados": {
@@ -1315,6 +1605,8 @@
       "base_special_attack": 60,
       "base_special_defense": 100,
       "base_speed": 81,
+      "type1": "water",
+      "type2": "flying",
       "source": "130"
     },
     "0131_lapras": {
@@ -1324,6 +1616,8 @@
       "base_special_attack": 85,
       "base_special_defense": 95,
       "base_speed": 60,
+      "type1": "water",
+      "type2": "ice",
       "source": "131"
     },
     "0132_ditto": {
@@ -1333,6 +1627,8 @@
       "base_special_attack": 48,
       "base_special_defense": 48,
       "base_speed": 48,
+      "type1": "normal",
+      "type2": null,
       "source": "132"
     },
     "0132_ditto_baseball_cap": {
@@ -1342,6 +1638,8 @@
       "base_special_attack": 48,
       "base_special_defense": 48,
       "base_speed": 48,
+      "type1": "normal",
+      "type2": null,
       "source": "132"
     },
     "0132_ditto_gentleman": {
@@ -1351,6 +1649,8 @@
       "base_special_attack": 48,
       "base_special_defense": 48,
       "base_speed": 48,
+      "type1": "normal",
+      "type2": null,
       "source": "132"
     },
     "0133_eevee": {
@@ -1360,6 +1660,8 @@
       "base_special_attack": 45,
       "base_special_defense": 65,
       "base_speed": 55,
+      "type1": "normal",
+      "type2": null,
       "source": "133"
     },
     "0133_eevee_christmas_hat": {
@@ -1369,6 +1671,8 @@
       "base_special_attack": 45,
       "base_special_defense": 65,
       "base_speed": 55,
+      "type1": "normal",
+      "type2": null,
       "source": "133"
     },
     "0133_eevee_sakura": {
@@ -1378,6 +1682,8 @@
       "base_special_attack": 45,
       "base_special_defense": 65,
       "base_speed": 55,
+      "type1": "normal",
+      "type2": null,
       "source": "133"
     },
     "0134_vaporeon": {
@@ -1387,6 +1693,8 @@
       "base_special_attack": 110,
       "base_special_defense": 95,
       "base_speed": 65,
+      "type1": "water",
+      "type2": null,
       "source": "134"
     },
     "0135_jolteon": {
@@ -1396,6 +1704,8 @@
       "base_special_attack": 110,
       "base_special_defense": 95,
       "base_speed": 130,
+      "type1": "electric",
+      "type2": null,
       "source": "135"
     },
     "0136_flareon": {
@@ -1405,6 +1715,8 @@
       "base_special_attack": 95,
       "base_special_defense": 110,
       "base_speed": 65,
+      "type1": "fire",
+      "type2": null,
       "source": "136"
     },
     "0137_porygon": {
@@ -1414,6 +1726,8 @@
       "base_special_attack": 85,
       "base_special_defense": 75,
       "base_speed": 40,
+      "type1": "normal",
+      "type2": null,
       "source": "137"
     },
     "0138_omanyte": {
@@ -1423,6 +1737,8 @@
       "base_special_attack": 90,
       "base_special_defense": 55,
       "base_speed": 35,
+      "type1": "rock",
+      "type2": "water",
       "source": "138"
     },
     "0139_omastar": {
@@ -1432,6 +1748,8 @@
       "base_special_attack": 115,
       "base_special_defense": 70,
       "base_speed": 55,
+      "type1": "rock",
+      "type2": "water",
       "source": "139"
     },
     "0139_omastar_thick_glasses": {
@@ -1441,6 +1759,8 @@
       "base_special_attack": 115,
       "base_special_defense": 70,
       "base_speed": 55,
+      "type1": "rock",
+      "type2": "water",
       "source": "139"
     },
     "0140_kabuto": {
@@ -1450,6 +1770,8 @@
       "base_special_attack": 55,
       "base_special_defense": 45,
       "base_speed": 55,
+      "type1": "rock",
+      "type2": "water",
       "source": "140"
     },
     "0141_kabutops": {
@@ -1459,6 +1781,8 @@
       "base_special_attack": 65,
       "base_special_defense": 70,
       "base_speed": 80,
+      "type1": "rock",
+      "type2": "water",
       "source": "141"
     },
     "0142_aerodactyl": {
@@ -1468,6 +1792,8 @@
       "base_special_attack": 60,
       "base_special_defense": 75,
       "base_speed": 130,
+      "type1": "rock",
+      "type2": "flying",
       "source": "142"
     },
     "0143_snorlax": {
@@ -1477,6 +1803,8 @@
       "base_special_attack": 65,
       "base_special_defense": 110,
       "base_speed": 30,
+      "type1": "normal",
+      "type2": null,
       "source": "143"
     },
     "0144_articuno": {
@@ -1486,6 +1814,8 @@
       "base_special_attack": 95,
       "base_special_defense": 125,
       "base_speed": 85,
+      "type1": "ice",
+      "type2": "flying",
       "source": "144"
     },
     "0144_articuno_galarian": {
@@ -1495,6 +1825,8 @@
       "base_special_attack": 125,
       "base_special_defense": 100,
       "base_speed": 95,
+      "type1": "psychic",
+      "type2": "flying",
       "source": "articuno-galar"
     },
     "0145_zapdos": {
@@ -1504,6 +1836,8 @@
       "base_special_attack": 125,
       "base_special_defense": 90,
       "base_speed": 100,
+      "type1": "electric",
+      "type2": "flying",
       "source": "145"
     },
     "0145_zapdos_galarian": {
@@ -1513,6 +1847,8 @@
       "base_special_attack": 85,
       "base_special_defense": 90,
       "base_speed": 100,
+      "type1": "fighting",
+      "type2": "flying",
       "source": "zapdos-galar"
     },
     "0146_moltres": {
@@ -1522,6 +1858,8 @@
       "base_special_attack": 125,
       "base_special_defense": 85,
       "base_speed": 90,
+      "type1": "fire",
+      "type2": "flying",
       "source": "146"
     },
     "0146_moltres_galarian": {
@@ -1531,6 +1869,8 @@
       "base_special_attack": 100,
       "base_special_defense": 125,
       "base_speed": 90,
+      "type1": "dark",
+      "type2": "flying",
       "source": "moltres-galar"
     },
     "0147_dratini": {
@@ -1540,6 +1880,8 @@
       "base_special_attack": 50,
       "base_special_defense": 50,
       "base_speed": 50,
+      "type1": "dragon",
+      "type2": null,
       "source": "147"
     },
     "0148_dragonair": {
@@ -1549,6 +1891,8 @@
       "base_special_attack": 70,
       "base_special_defense": 70,
       "base_speed": 70,
+      "type1": "dragon",
+      "type2": null,
       "source": "148"
     },
     "0149_dragonite": {
@@ -1558,6 +1902,8 @@
       "base_special_attack": 100,
       "base_special_defense": 100,
       "base_speed": 80,
+      "type1": "dragon",
+      "type2": "flying",
       "source": "149"
     },
     "0150_mewtwo": {
@@ -1567,6 +1913,8 @@
       "base_special_attack": 154,
       "base_special_defense": 90,
       "base_speed": 130,
+      "type1": "psychic",
+      "type2": null,
       "source": "150"
     },
     "0150_mewtwo_armored": {
@@ -1576,6 +1924,8 @@
       "base_special_attack": 154,
       "base_special_defense": 90,
       "base_speed": 130,
+      "type1": "psychic",
+      "type2": null,
       "source": "150"
     },
     "0151_mew": {
@@ -1585,6 +1935,8 @@
       "base_special_attack": 100,
       "base_special_defense": 100,
       "base_speed": 100,
+      "type1": "psychic",
+      "type2": null,
       "source": "151"
     },
     "0152_chikorita": {
@@ -1594,6 +1946,8 @@
       "base_special_attack": 49,
       "base_special_defense": 65,
       "base_speed": 45,
+      "type1": "grass",
+      "type2": null,
       "source": "152"
     },
     "0153_bayleef": {
@@ -1603,6 +1957,8 @@
       "base_special_attack": 63,
       "base_special_defense": 80,
       "base_speed": 60,
+      "type1": "grass",
+      "type2": null,
       "source": "153"
     },
     "0154_meganium": {
@@ -1612,6 +1968,8 @@
       "base_special_attack": 83,
       "base_special_defense": 100,
       "base_speed": 80,
+      "type1": "grass",
+      "type2": null,
       "source": "154"
     },
     "0155_cyndaquil": {
@@ -1621,6 +1979,8 @@
       "base_special_attack": 60,
       "base_special_defense": 50,
       "base_speed": 65,
+      "type1": "fire",
+      "type2": null,
       "source": "155"
     },
     "0156_quilava": {
@@ -1630,6 +1990,8 @@
       "base_special_attack": 80,
       "base_special_defense": 65,
       "base_speed": 80,
+      "type1": "fire",
+      "type2": null,
       "source": "156"
     },
     "0157_typhlosion": {
@@ -1639,6 +2001,8 @@
       "base_special_attack": 109,
       "base_special_defense": 85,
       "base_speed": 100,
+      "type1": "fire",
+      "type2": null,
       "source": "157"
     },
     "0158_totodile": {
@@ -1648,6 +2012,8 @@
       "base_special_attack": 44,
       "base_special_defense": 48,
       "base_speed": 43,
+      "type1": "water",
+      "type2": null,
       "source": "158"
     },
     "0159_croconaw": {
@@ -1657,6 +2023,8 @@
       "base_special_attack": 59,
       "base_special_defense": 63,
       "base_speed": 58,
+      "type1": "water",
+      "type2": null,
       "source": "159"
     },
     "0160_feraligatr": {
@@ -1666,6 +2034,8 @@
       "base_special_attack": 79,
       "base_special_defense": 83,
       "base_speed": 78,
+      "type1": "water",
+      "type2": null,
       "source": "160"
     },
     "0170_chinchou": {
@@ -1675,6 +2045,8 @@
       "base_special_attack": 56,
       "base_special_defense": 56,
       "base_speed": 67,
+      "type1": "water",
+      "type2": "electric",
       "source": "170"
     },
     "0171_lanturn": {
@@ -1684,6 +2056,8 @@
       "base_special_attack": 76,
       "base_special_defense": 76,
       "base_speed": 67,
+      "type1": "water",
+      "type2": "electric",
       "source": "171"
     },
     "0175_togepi": {
@@ -1693,6 +2067,8 @@
       "base_special_attack": 40,
       "base_special_defense": 65,
       "base_speed": 20,
+      "type1": "fairy",
+      "type2": null,
       "source": "175"
     },
     "0176_togetic": {
@@ -1702,6 +2078,8 @@
       "base_special_attack": 80,
       "base_special_defense": 105,
       "base_speed": 40,
+      "type1": "fairy",
+      "type2": "flying",
       "source": "176"
     },
     "0177_natu": {
@@ -1711,6 +2089,8 @@
       "base_special_attack": 70,
       "base_special_defense": 45,
       "base_speed": 70,
+      "type1": "psychic",
+      "type2": "flying",
       "source": "177"
     },
     "0178_xatu": {
@@ -1720,6 +2100,8 @@
       "base_special_attack": 95,
       "base_special_defense": 70,
       "base_speed": 95,
+      "type1": "psychic",
+      "type2": "flying",
       "source": "178"
     },
     "0183_marill": {
@@ -1729,6 +2111,8 @@
       "base_special_attack": 20,
       "base_special_defense": 50,
       "base_speed": 40,
+      "type1": "water",
+      "type2": "fairy",
       "source": "183"
     },
     "0184_azumarill": {
@@ -1738,6 +2122,8 @@
       "base_special_attack": 60,
       "base_special_defense": 80,
       "base_speed": 50,
+      "type1": "water",
+      "type2": "fairy",
       "source": "184"
     },
     "0194_wooper": {
@@ -1747,6 +2133,8 @@
       "base_special_attack": 25,
       "base_special_defense": 25,
       "base_speed": 15,
+      "type1": "water",
+      "type2": "ground",
       "source": "194"
     },
     "0194_wooper_paldean": {
@@ -1756,6 +2144,8 @@
       "base_special_attack": 25,
       "base_special_defense": 25,
       "base_speed": 15,
+      "type1": "poison",
+      "type2": "ground",
       "source": "wooper-paldea"
     },
     "0195_quagsire": {
@@ -1765,6 +2155,8 @@
       "base_special_attack": 65,
       "base_special_defense": 65,
       "base_speed": 35,
+      "type1": "water",
+      "type2": "ground",
       "source": "195"
     },
     "0196_espeon": {
@@ -1774,6 +2166,8 @@
       "base_special_attack": 130,
       "base_special_defense": 95,
       "base_speed": 110,
+      "type1": "psychic",
+      "type2": null,
       "source": "196"
     },
     "0197_umbreon": {
@@ -1783,6 +2177,8 @@
       "base_special_attack": 60,
       "base_special_defense": 130,
       "base_speed": 65,
+      "type1": "dark",
+      "type2": null,
       "source": "197"
     },
     "0200_misdreavus": {
@@ -1792,6 +2188,8 @@
       "base_special_attack": 85,
       "base_special_defense": 85,
       "base_speed": 85,
+      "type1": "ghost",
+      "type2": null,
       "source": "200"
     },
     "0202_wobbuffet": {
@@ -1801,6 +2199,8 @@
       "base_special_attack": 33,
       "base_special_defense": 58,
       "base_speed": 33,
+      "type1": "psychic",
+      "type2": null,
       "source": "202"
     },
     "0207_gligar": {
@@ -1810,6 +2210,8 @@
       "base_special_attack": 35,
       "base_special_defense": 65,
       "base_speed": 85,
+      "type1": "ground",
+      "type2": "flying",
       "source": "207"
     },
     "0212_scizor": {
@@ -1819,6 +2221,8 @@
       "base_special_attack": 55,
       "base_special_defense": 80,
       "base_speed": 65,
+      "type1": "bug",
+      "type2": "steel",
       "source": "212"
     },
     "0214_heracross": {
@@ -1828,6 +2232,8 @@
       "base_special_attack": 40,
       "base_special_defense": 95,
       "base_speed": 85,
+      "type1": "bug",
+      "type2": "fighting",
       "source": "214"
     },
     "0215_sneasel": {
@@ -1837,6 +2243,8 @@
       "base_special_attack": 35,
       "base_special_defense": 75,
       "base_speed": 115,
+      "type1": "dark",
+      "type2": "ice",
       "source": "215"
     },
     "0222_corsola": {
@@ -1846,6 +2254,8 @@
       "base_special_attack": 65,
       "base_special_defense": 95,
       "base_speed": 35,
+      "type1": "water",
+      "type2": "rock",
       "source": "222"
     },
     "0223_remoraid": {
@@ -1855,6 +2265,8 @@
       "base_special_attack": 65,
       "base_special_defense": 35,
       "base_speed": 65,
+      "type1": "water",
+      "type2": null,
       "source": "223"
     },
     "0224_octillery": {
@@ -1864,6 +2276,8 @@
       "base_special_attack": 105,
       "base_special_defense": 75,
       "base_speed": 45,
+      "type1": "water",
+      "type2": null,
       "source": "224"
     },
     "0225_delibird": {
@@ -1873,6 +2287,8 @@
       "base_special_attack": 65,
       "base_special_defense": 45,
       "base_speed": 75,
+      "type1": "ice",
+      "type2": "flying",
       "source": "225"
     },
     "0227_skarmory": {
@@ -1882,6 +2298,8 @@
       "base_special_attack": 40,
       "base_special_defense": 70,
       "base_speed": 70,
+      "type1": "steel",
+      "type2": "flying",
       "source": "227"
     },
     "0228_houndour": {
@@ -1891,6 +2309,8 @@
       "base_special_attack": 80,
       "base_special_defense": 50,
       "base_speed": 65,
+      "type1": "dark",
+      "type2": "fire",
       "source": "228"
     },
     "0229_houndoom": {
@@ -1900,6 +2320,8 @@
       "base_special_attack": 110,
       "base_special_defense": 80,
       "base_speed": 95,
+      "type1": "dark",
+      "type2": "fire",
       "source": "229"
     },
     "0231_phanpy": {
@@ -1909,6 +2331,8 @@
       "base_special_attack": 40,
       "base_special_defense": 40,
       "base_speed": 40,
+      "type1": "ground",
+      "type2": null,
       "source": "231"
     },
     "0232_donphan": {
@@ -1918,6 +2342,8 @@
       "base_special_attack": 60,
       "base_special_defense": 60,
       "base_speed": 50,
+      "type1": "ground",
+      "type2": null,
       "source": "232"
     },
     "0242_blissey": {
@@ -1927,6 +2353,8 @@
       "base_special_attack": 75,
       "base_special_defense": 135,
       "base_speed": 55,
+      "type1": "normal",
+      "type2": null,
       "source": "242"
     },
     "0243_raikou": {
@@ -1936,6 +2364,8 @@
       "base_special_attack": 115,
       "base_special_defense": 100,
       "base_speed": 115,
+      "type1": "electric",
+      "type2": null,
       "source": "243"
     },
     "0244_entei": {
@@ -1945,6 +2375,8 @@
       "base_special_attack": 90,
       "base_special_defense": 75,
       "base_speed": 100,
+      "type1": "fire",
+      "type2": null,
       "source": "244"
     },
     "0245_suicune": {
@@ -1954,6 +2386,8 @@
       "base_special_attack": 90,
       "base_special_defense": 115,
       "base_speed": 85,
+      "type1": "water",
+      "type2": null,
       "source": "245"
     },
     "0246_larvitar": {
@@ -1963,6 +2397,8 @@
       "base_special_attack": 45,
       "base_special_defense": 50,
       "base_speed": 41,
+      "type1": "rock",
+      "type2": "ground",
       "source": "246"
     },
     "0247_pupitar": {
@@ -1972,6 +2408,8 @@
       "base_special_attack": 65,
       "base_special_defense": 70,
       "base_speed": 51,
+      "type1": "rock",
+      "type2": "ground",
       "source": "247"
     },
     "0248_tyranitar": {
@@ -1981,6 +2419,8 @@
       "base_special_attack": 95,
       "base_special_defense": 100,
       "base_speed": 61,
+      "type1": "rock",
+      "type2": "dark",
       "source": "248"
     },
     "0249_lugia": {
@@ -1990,6 +2430,8 @@
       "base_special_attack": 90,
       "base_special_defense": 154,
       "base_speed": 110,
+      "type1": "psychic",
+      "type2": "flying",
       "source": "249"
     },
     "0250_ho_oh": {
@@ -1999,6 +2441,8 @@
       "base_special_attack": 110,
       "base_special_defense": 154,
       "base_speed": 90,
+      "type1": "fire",
+      "type2": "flying",
       "source": "250"
     },
     "0251_celebi": {
@@ -2008,6 +2452,8 @@
       "base_special_attack": 100,
       "base_special_defense": 100,
       "base_speed": 100,
+      "type1": "psychic",
+      "type2": "grass",
       "source": "251"
     },
     "0252_treecko": {
@@ -2017,6 +2463,8 @@
       "base_special_attack": 65,
       "base_special_defense": 55,
       "base_speed": 70,
+      "type1": "grass",
+      "type2": null,
       "source": "252"
     },
     "0253_grovyle": {
@@ -2026,6 +2474,8 @@
       "base_special_attack": 85,
       "base_special_defense": 65,
       "base_speed": 95,
+      "type1": "grass",
+      "type2": null,
       "source": "253"
     },
     "0254_sceptile": {
@@ -2035,6 +2485,8 @@
       "base_special_attack": 105,
       "base_special_defense": 85,
       "base_speed": 120,
+      "type1": "grass",
+      "type2": null,
       "source": "254"
     },
     "0255_torchic": {
@@ -2044,6 +2496,8 @@
       "base_special_attack": 70,
       "base_special_defense": 50,
       "base_speed": 45,
+      "type1": "fire",
+      "type2": null,
       "source": "255"
     },
     "0256_combusken": {
@@ -2053,6 +2507,8 @@
       "base_special_attack": 85,
       "base_special_defense": 60,
       "base_speed": 55,
+      "type1": "fire",
+      "type2": "fighting",
       "source": "256"
     },
     "0257_blaziken": {
@@ -2062,6 +2518,8 @@
       "base_special_attack": 110,
       "base_special_defense": 70,
       "base_speed": 80,
+      "type1": "fire",
+      "type2": "fighting",
       "source": "257"
     },
     "0258_mudkip": {
@@ -2071,6 +2529,8 @@
       "base_special_attack": 50,
       "base_special_defense": 50,
       "base_speed": 40,
+      "type1": "water",
+      "type2": null,
       "source": "258"
     },
     "0259_marshtomp": {
@@ -2080,6 +2540,8 @@
       "base_special_attack": 60,
       "base_special_defense": 70,
       "base_speed": 50,
+      "type1": "water",
+      "type2": "ground",
       "source": "259"
     },
     "0260_swampert": {
@@ -2089,6 +2551,8 @@
       "base_special_attack": 85,
       "base_special_defense": 90,
       "base_speed": 60,
+      "type1": "water",
+      "type2": "ground",
       "source": "260"
     },
     "0270_lotad": {
@@ -2098,6 +2562,8 @@
       "base_special_attack": 40,
       "base_special_defense": 50,
       "base_speed": 30,
+      "type1": "water",
+      "type2": "grass",
       "source": "270"
     },
     "0271_lombre": {
@@ -2107,6 +2573,8 @@
       "base_special_attack": 60,
       "base_special_defense": 70,
       "base_speed": 50,
+      "type1": "water",
+      "type2": "grass",
       "source": "271"
     },
     "0272_ludicolo": {
@@ -2116,6 +2584,8 @@
       "base_special_attack": 90,
       "base_special_defense": 100,
       "base_speed": 70,
+      "type1": "water",
+      "type2": "grass",
       "source": "272"
     },
     "0276_taillow": {
@@ -2125,6 +2595,8 @@
       "base_special_attack": 30,
       "base_special_defense": 30,
       "base_speed": 85,
+      "type1": "normal",
+      "type2": "flying",
       "source": "276"
     },
     "0277_swellow": {
@@ -2134,6 +2606,8 @@
       "base_special_attack": 75,
       "base_special_defense": 50,
       "base_speed": 125,
+      "type1": "normal",
+      "type2": "flying",
       "source": "277"
     },
     "0278_wingull": {
@@ -2143,6 +2617,8 @@
       "base_special_attack": 55,
       "base_special_defense": 30,
       "base_speed": 85,
+      "type1": "water",
+      "type2": "flying",
       "source": "278"
     },
     "0279_pelipper": {
@@ -2152,6 +2628,8 @@
       "base_special_attack": 95,
       "base_special_defense": 70,
       "base_speed": 65,
+      "type1": "water",
+      "type2": "flying",
       "source": "279"
     },
     "0280_ralts": {
@@ -2161,6 +2639,8 @@
       "base_special_attack": 45,
       "base_special_defense": 35,
       "base_speed": 40,
+      "type1": "psychic",
+      "type2": "fairy",
       "source": "280"
     },
     "0281_kirlia": {
@@ -2170,6 +2650,8 @@
       "base_special_attack": 65,
       "base_special_defense": 55,
       "base_speed": 50,
+      "type1": "psychic",
+      "type2": "fairy",
       "source": "281"
     },
     "0282_gardevoir": {
@@ -2179,6 +2661,8 @@
       "base_special_attack": 125,
       "base_special_defense": 115,
       "base_speed": 80,
+      "type1": "psychic",
+      "type2": "fairy",
       "source": "282"
     },
     "0302_sableye": {
@@ -2188,6 +2672,8 @@
       "base_special_attack": 65,
       "base_special_defense": 65,
       "base_speed": 50,
+      "type1": "dark",
+      "type2": "ghost",
       "source": "302"
     },
     "0303_mawile": {
@@ -2197,6 +2683,8 @@
       "base_special_attack": 55,
       "base_special_defense": 55,
       "base_speed": 50,
+      "type1": "steel",
+      "type2": "fairy",
       "source": "303"
     },
     "0311_plusle": {
@@ -2206,6 +2694,8 @@
       "base_special_attack": 85,
       "base_special_defense": 75,
       "base_speed": 95,
+      "type1": "electric",
+      "type2": null,
       "source": "311"
     },
     "0312_minun": {
@@ -2215,6 +2705,8 @@
       "base_special_attack": 75,
       "base_special_defense": 85,
       "base_speed": 95,
+      "type1": "electric",
+      "type2": null,
       "source": "312"
     },
     "0318_carvanha": {
@@ -2224,6 +2716,8 @@
       "base_special_attack": 65,
       "base_special_defense": 20,
       "base_speed": 65,
+      "type1": "water",
+      "type2": "dark",
       "source": "318"
     },
     "0319_sharpedo": {
@@ -2233,6 +2727,8 @@
       "base_special_attack": 95,
       "base_special_defense": 40,
       "base_speed": 95,
+      "type1": "water",
+      "type2": "dark",
       "source": "319"
     },
     "0320_wailmer": {
@@ -2242,6 +2738,8 @@
       "base_special_attack": 70,
       "base_special_defense": 35,
       "base_speed": 60,
+      "type1": "water",
+      "type2": null,
       "source": "320"
     },
     "0321_wailord": {
@@ -2251,6 +2749,8 @@
       "base_special_attack": 90,
       "base_special_defense": 45,
       "base_speed": 60,
+      "type1": "water",
+      "type2": null,
       "source": "321"
     },
     "0322_numel": {
@@ -2260,6 +2760,8 @@
       "base_special_attack": 65,
       "base_special_defense": 45,
       "base_speed": 35,
+      "type1": "fire",
+      "type2": "ground",
       "source": "322"
     },
     "0323_camerupt": {
@@ -2269,6 +2771,8 @@
       "base_special_attack": 105,
       "base_special_defense": 75,
       "base_speed": 40,
+      "type1": "fire",
+      "type2": "ground",
       "source": "323"
     },
     "0324_torkoal": {
@@ -2278,6 +2782,8 @@
       "base_special_attack": 85,
       "base_special_defense": 70,
       "base_speed": 20,
+      "type1": "fire",
+      "type2": null,
       "source": "324"
     },
     "0328_trapinch": {
@@ -2287,6 +2793,8 @@
       "base_special_attack": 45,
       "base_special_defense": 45,
       "base_speed": 10,
+      "type1": "ground",
+      "type2": null,
       "source": "328"
     },
     "0329_vibrava": {
@@ -2296,6 +2804,8 @@
       "base_special_attack": 50,
       "base_special_defense": 50,
       "base_speed": 70,
+      "type1": "ground",
+      "type2": "dragon",
       "source": "329"
     },
     "0330_flygon": {
@@ -2305,6 +2815,8 @@
       "base_special_attack": 80,
       "base_special_defense": 80,
       "base_speed": 100,
+      "type1": "ground",
+      "type2": "dragon",
       "source": "330"
     },
     "0331_cacnea": {
@@ -2314,6 +2826,8 @@
       "base_special_attack": 85,
       "base_special_defense": 40,
       "base_speed": 35,
+      "type1": "grass",
+      "type2": null,
       "source": "331"
     },
     "0332_cacturne": {
@@ -2323,6 +2837,8 @@
       "base_special_attack": 115,
       "base_special_defense": 60,
       "base_speed": 55,
+      "type1": "grass",
+      "type2": "dark",
       "source": "332"
     },
     "0333_swablu": {
@@ -2332,6 +2848,8 @@
       "base_special_attack": 40,
       "base_special_defense": 75,
       "base_speed": 50,
+      "type1": "normal",
+      "type2": "flying",
       "source": "333"
     },
     "0334_altaria": {
@@ -2341,6 +2859,8 @@
       "base_special_attack": 70,
       "base_special_defense": 105,
       "base_speed": 80,
+      "type1": "dragon",
+      "type2": "flying",
       "source": "334"
     },
     "0337_lunatone": {
@@ -2350,6 +2870,8 @@
       "base_special_attack": 95,
       "base_special_defense": 85,
       "base_speed": 70,
+      "type1": "rock",
+      "type2": "psychic",
       "source": "337"
     },
     "0338_solrock": {
@@ -2359,6 +2881,8 @@
       "base_special_attack": 55,
       "base_special_defense": 65,
       "base_speed": 70,
+      "type1": "rock",
+      "type2": "psychic",
       "source": "338"
     },
     "0341_corphish": {
@@ -2368,6 +2892,8 @@
       "base_special_attack": 50,
       "base_special_defense": 35,
       "base_speed": 35,
+      "type1": "water",
+      "type2": null,
       "source": "341"
     },
     "0342_crawdaunt": {
@@ -2377,6 +2903,8 @@
       "base_special_attack": 90,
       "base_special_defense": 55,
       "base_speed": 55,
+      "type1": "water",
+      "type2": "dark",
       "source": "342"
     },
     "0343_baltoy": {
@@ -2386,6 +2914,8 @@
       "base_special_attack": 40,
       "base_special_defense": 70,
       "base_speed": 55,
+      "type1": "ground",
+      "type2": "psychic",
       "source": "343"
     },
     "0344_claydol": {
@@ -2395,6 +2925,8 @@
       "base_special_attack": 70,
       "base_special_defense": 120,
       "base_speed": 75,
+      "type1": "ground",
+      "type2": "psychic",
       "source": "344"
     },
     "0349_feebas": {
@@ -2404,6 +2936,8 @@
       "base_special_attack": 10,
       "base_special_defense": 55,
       "base_speed": 80,
+      "type1": "water",
+      "type2": null,
       "source": "349"
     },
     "0350_milotic": {
@@ -2413,6 +2947,8 @@
       "base_special_attack": 100,
       "base_special_defense": 125,
       "base_speed": 81,
+      "type1": "water",
+      "type2": null,
       "source": "350"
     },
     "0357_tropius": {
@@ -2422,6 +2958,8 @@
       "base_special_attack": 72,
       "base_special_defense": 87,
       "base_speed": 51,
+      "type1": "grass",
+      "type2": "flying",
       "source": "357"
     },
     "0359_absol": {
@@ -2431,6 +2969,8 @@
       "base_special_attack": 75,
       "base_special_defense": 60,
       "base_speed": 75,
+      "type1": "dark",
+      "type2": null,
       "source": "359"
     },
     "0366_clamperl": {
@@ -2440,6 +2980,8 @@
       "base_special_attack": 74,
       "base_special_defense": 55,
       "base_speed": 32,
+      "type1": "water",
+      "type2": null,
       "source": "366"
     },
     "0367_huntail": {
@@ -2449,6 +2991,8 @@
       "base_special_attack": 94,
       "base_special_defense": 75,
       "base_speed": 52,
+      "type1": "water",
+      "type2": null,
       "source": "367"
     },
     "0368_gorebyss": {
@@ -2458,6 +3002,8 @@
       "base_special_attack": 114,
       "base_special_defense": 75,
       "base_speed": 52,
+      "type1": "water",
+      "type2": null,
       "source": "368"
     },
     "0370_luvdisc": {
@@ -2467,6 +3013,8 @@
       "base_special_attack": 40,
       "base_special_defense": 65,
       "base_speed": 97,
+      "type1": "water",
+      "type2": null,
       "source": "370"
     },
     "0371_bagon": {
@@ -2476,6 +3024,8 @@
       "base_special_attack": 40,
       "base_special_defense": 30,
       "base_speed": 50,
+      "type1": "dragon",
+      "type2": null,
       "source": "371"
     },
     "0372_shelgon": {
@@ -2485,6 +3035,8 @@
       "base_special_attack": 60,
       "base_special_defense": 50,
       "base_speed": 50,
+      "type1": "dragon",
+      "type2": null,
       "source": "372"
     },
     "0373_salamence": {
@@ -2494,6 +3046,8 @@
       "base_special_attack": 110,
       "base_special_defense": 80,
       "base_speed": 100,
+      "type1": "dragon",
+      "type2": "flying",
       "source": "373"
     },
     "0374_beldum": {
@@ -2503,6 +3057,8 @@
       "base_special_attack": 35,
       "base_special_defense": 60,
       "base_speed": 30,
+      "type1": "steel",
+      "type2": "psychic",
       "source": "374"
     },
     "0375_metang": {
@@ -2512,6 +3068,8 @@
       "base_special_attack": 55,
       "base_special_defense": 80,
       "base_speed": 50,
+      "type1": "steel",
+      "type2": "psychic",
       "source": "375"
     },
     "0376_metagross": {
@@ -2521,6 +3079,8 @@
       "base_special_attack": 95,
       "base_special_defense": 90,
       "base_speed": 70,
+      "type1": "steel",
+      "type2": "psychic",
       "source": "376"
     },
     "0377_regirock": {
@@ -2530,6 +3090,8 @@
       "base_special_attack": 50,
       "base_special_defense": 100,
       "base_speed": 50,
+      "type1": "rock",
+      "type2": null,
       "source": "377"
     },
     "0378_regice": {
@@ -2539,6 +3101,8 @@
       "base_special_attack": 100,
       "base_special_defense": 200,
       "base_speed": 50,
+      "type1": "ice",
+      "type2": null,
       "source": "378"
     },
     "0379_registeel": {
@@ -2548,6 +3112,8 @@
       "base_special_attack": 75,
       "base_special_defense": 150,
       "base_speed": 50,
+      "type1": "steel",
+      "type2": null,
       "source": "379"
     },
     "0380_latias": {
@@ -2557,6 +3123,8 @@
       "base_special_attack": 110,
       "base_special_defense": 130,
       "base_speed": 110,
+      "type1": "dragon",
+      "type2": "psychic",
       "source": "380"
     },
     "0381_latios": {
@@ -2566,6 +3134,8 @@
       "base_special_attack": 130,
       "base_special_defense": 110,
       "base_speed": 110,
+      "type1": "dragon",
+      "type2": "psychic",
       "source": "381"
     },
     "0382_kyogre": {
@@ -2575,6 +3145,8 @@
       "base_special_attack": 150,
       "base_special_defense": 140,
       "base_speed": 90,
+      "type1": "water",
+      "type2": null,
       "source": "382"
     },
     "0383_groudon": {
@@ -2584,6 +3156,8 @@
       "base_special_attack": 100,
       "base_special_defense": 90,
       "base_speed": 90,
+      "type1": "ground",
+      "type2": null,
       "source": "383"
     },
     "0384_rayquaza": {
@@ -2593,6 +3167,8 @@
       "base_special_attack": 150,
       "base_special_defense": 90,
       "base_speed": 95,
+      "type1": "dragon",
+      "type2": "flying",
       "source": "384"
     },
     "0385_jirachi": {
@@ -2602,6 +3178,8 @@
       "base_special_attack": 100,
       "base_special_defense": 100,
       "base_speed": 100,
+      "type1": "steel",
+      "type2": "psychic",
       "source": "385"
     },
     "0386_deoxys_attack": {
@@ -2611,6 +3189,8 @@
       "base_special_attack": 180,
       "base_special_defense": 20,
       "base_speed": 150,
+      "type1": "psychic",
+      "type2": null,
       "source": "deoxys-attack"
     },
     "0386_deoxys_defense": {
@@ -2620,6 +3200,8 @@
       "base_special_attack": 70,
       "base_special_defense": 160,
       "base_speed": 90,
+      "type1": "psychic",
+      "type2": null,
       "source": "deoxys-defense"
     },
     "0386_deoxys_normal": {
@@ -2629,6 +3211,8 @@
       "base_special_attack": 150,
       "base_special_defense": 50,
       "base_speed": 150,
+      "type1": "psychic",
+      "type2": null,
       "source": "deoxys-normal"
     },
     "0386_deoxys_speed": {
@@ -2638,6 +3222,8 @@
       "base_special_attack": 95,
       "base_special_defense": 90,
       "base_speed": 180,
+      "type1": "psychic",
+      "type2": null,
       "source": "deoxys-speed"
     },
     "0387_turtwig": {
@@ -2647,6 +3233,8 @@
       "base_special_attack": 45,
       "base_special_defense": 55,
       "base_speed": 31,
+      "type1": "grass",
+      "type2": null,
       "source": "387"
     },
     "0388_grotle": {
@@ -2656,6 +3244,8 @@
       "base_special_attack": 55,
       "base_special_defense": 65,
       "base_speed": 36,
+      "type1": "grass",
+      "type2": null,
       "source": "388"
     },
     "0389_torterra": {
@@ -2665,6 +3255,8 @@
       "base_special_attack": 75,
       "base_special_defense": 85,
       "base_speed": 56,
+      "type1": "grass",
+      "type2": "ground",
       "source": "389"
     },
     "0390_chimchar": {
@@ -2674,6 +3266,8 @@
       "base_special_attack": 58,
       "base_special_defense": 44,
       "base_speed": 61,
+      "type1": "fire",
+      "type2": null,
       "source": "390"
     },
     "0391_monferno": {
@@ -2683,6 +3277,8 @@
       "base_special_attack": 78,
       "base_special_defense": 52,
       "base_speed": 81,
+      "type1": "fire",
+      "type2": "fighting",
       "source": "391"
     },
     "0392_infernape": {
@@ -2692,6 +3288,8 @@
       "base_special_attack": 104,
       "base_special_defense": 71,
       "base_speed": 108,
+      "type1": "fire",
+      "type2": "fighting",
       "source": "392"
     },
     "0393_piplup": {
@@ -2701,6 +3299,8 @@
       "base_special_attack": 61,
       "base_special_defense": 56,
       "base_speed": 40,
+      "type1": "water",
+      "type2": null,
       "source": "393"
     },
     "0394_prinplup": {
@@ -2710,6 +3310,8 @@
       "base_special_attack": 81,
       "base_special_defense": 76,
       "base_speed": 50,
+      "type1": "water",
+      "type2": null,
       "source": "394"
     },
     "0395_empoleon": {
@@ -2719,6 +3321,8 @@
       "base_special_attack": 111,
       "base_special_defense": 101,
       "base_speed": 60,
+      "type1": "water",
+      "type2": "steel",
       "source": "395"
     },
     "0399_bidoof": {
@@ -2728,6 +3332,8 @@
       "base_special_attack": 35,
       "base_special_defense": 40,
       "base_speed": 31,
+      "type1": "normal",
+      "type2": null,
       "source": "399"
     },
     "0400_bibarel": {
@@ -2737,6 +3343,8 @@
       "base_special_attack": 55,
       "base_special_defense": 60,
       "base_speed": 71,
+      "type1": "normal",
+      "type2": "water",
       "source": "400"
     },
     "0425_drifloon": {
@@ -2746,6 +3354,8 @@
       "base_special_attack": 60,
       "base_special_defense": 44,
       "base_speed": 70,
+      "type1": "ghost",
+      "type2": "flying",
       "source": "425"
     },
     "0426_drifblim": {
@@ -2755,6 +3365,8 @@
       "base_special_attack": 90,
       "base_special_defense": 54,
       "base_speed": 80,
+      "type1": "ghost",
+      "type2": "flying",
       "source": "426"
     },
     "0429_mismagius": {
@@ -2764,6 +3376,8 @@
       "base_special_attack": 105,
       "base_special_defense": 105,
       "base_speed": 105,
+      "type1": "ghost",
+      "type2": null,
       "source": "429"
     },
     "0442_spiritomb": {
@@ -2773,6 +3387,8 @@
       "base_special_attack": 92,
       "base_special_defense": 108,
       "base_speed": 35,
+      "type1": "ghost",
+      "type2": "dark",
       "source": "442"
     },
     "0443_gible": {
@@ -2782,6 +3398,8 @@
       "base_special_attack": 40,
       "base_special_defense": 45,
       "base_speed": 42,
+      "type1": "dragon",
+      "type2": "ground",
       "source": "443"
     },
     "0444_gabite": {
@@ -2791,6 +3409,8 @@
       "base_special_attack": 50,
       "base_special_defense": 55,
       "base_speed": 82,
+      "type1": "dragon",
+      "type2": "ground",
       "source": "444"
     },
     "0445_garchomp": {
@@ -2800,6 +3420,8 @@
       "base_special_attack": 80,
       "base_special_defense": 85,
       "base_speed": 102,
+      "type1": "dragon",
+      "type2": "ground",
       "source": "445"
     },
     "0448_lucario": {
@@ -2809,6 +3431,8 @@
       "base_special_attack": 115,
       "base_special_defense": 70,
       "base_speed": 90,
+      "type1": "fighting",
+      "type2": "steel",
       "source": "448"
     },
     "0461_weavile": {
@@ -2818,6 +3442,8 @@
       "base_special_attack": 45,
       "base_special_defense": 85,
       "base_speed": 125,
+      "type1": "dark",
+      "type2": "ice",
       "source": "461"
     },
     "0465_tangrowth": {
@@ -2827,6 +3453,8 @@
       "base_special_attack": 110,
       "base_special_defense": 50,
       "base_speed": 50,
+      "type1": "grass",
+      "type2": null,
       "source": "465"
     },
     "0468_togekiss": {
@@ -2836,6 +3464,8 @@
       "base_special_attack": 120,
       "base_special_defense": 115,
       "base_speed": 80,
+      "type1": "fairy",
+      "type2": "flying",
       "source": "468"
     },
     "0470_leafeon": {
@@ -2845,6 +3475,8 @@
       "base_special_attack": 60,
       "base_special_defense": 65,
       "base_speed": 95,
+      "type1": "grass",
+      "type2": null,
       "source": "470"
     },
     "0471_glaceon": {
@@ -2854,6 +3486,8 @@
       "base_special_attack": 130,
       "base_special_defense": 95,
       "base_speed": 65,
+      "type1": "ice",
+      "type2": null,
       "source": "471"
     },
     "0472_gliscor": {
@@ -2863,6 +3497,8 @@
       "base_special_attack": 45,
       "base_special_defense": 75,
       "base_speed": 95,
+      "type1": "ground",
+      "type2": "flying",
       "source": "472"
     },
     "0479_rotom": {
@@ -2872,6 +3508,8 @@
       "base_special_attack": 95,
       "base_special_defense": 77,
       "base_speed": 91,
+      "type1": "electric",
+      "type2": "ghost",
       "source": "479"
     },
     "0479_rotom_fan": {
@@ -2881,6 +3519,8 @@
       "base_special_attack": 105,
       "base_special_defense": 107,
       "base_speed": 86,
+      "type1": "electric",
+      "type2": "flying",
       "source": "rotom-fan"
     },
     "0479_rotom_frost": {
@@ -2890,6 +3530,8 @@
       "base_special_attack": 105,
       "base_special_defense": 107,
       "base_speed": 86,
+      "type1": "electric",
+      "type2": "ice",
       "source": "rotom-frost"
     },
     "0479_rotom_heat": {
@@ -2899,6 +3541,8 @@
       "base_special_attack": 105,
       "base_special_defense": 107,
       "base_speed": 86,
+      "type1": "electric",
+      "type2": "fire",
       "source": "rotom-heat"
     },
     "0479_rotom_mow": {
@@ -2908,6 +3552,8 @@
       "base_special_attack": 105,
       "base_special_defense": 107,
       "base_speed": 86,
+      "type1": "electric",
+      "type2": "grass",
       "source": "rotom-mow"
     },
     "0479_rotom_wash": {
@@ -2917,6 +3563,8 @@
       "base_special_attack": 105,
       "base_special_defense": 107,
       "base_speed": 86,
+      "type1": "electric",
+      "type2": "water",
       "source": "rotom-wash"
     },
     "0480_uxie": {
@@ -2926,6 +3574,8 @@
       "base_special_attack": 75,
       "base_special_defense": 130,
       "base_speed": 95,
+      "type1": "psychic",
+      "type2": null,
       "source": "480"
     },
     "0481_mesprit": {
@@ -2935,6 +3585,8 @@
       "base_special_attack": 105,
       "base_special_defense": 105,
       "base_speed": 80,
+      "type1": "psychic",
+      "type2": null,
       "source": "481"
     },
     "0482_azelf": {
@@ -2944,6 +3596,8 @@
       "base_special_attack": 125,
       "base_special_defense": 70,
       "base_speed": 115,
+      "type1": "psychic",
+      "type2": null,
       "source": "482"
     },
     "0483_dialga": {
@@ -2953,6 +3607,8 @@
       "base_special_attack": 150,
       "base_special_defense": 100,
       "base_speed": 90,
+      "type1": "steel",
+      "type2": "dragon",
       "source": "483"
     },
     "0484_palkia": {
@@ -2962,6 +3618,8 @@
       "base_special_attack": 150,
       "base_special_defense": 120,
       "base_speed": 100,
+      "type1": "water",
+      "type2": "dragon",
       "source": "484"
     },
     "0486_regigigas": {
@@ -2971,6 +3629,8 @@
       "base_special_attack": 80,
       "base_special_defense": 110,
       "base_speed": 100,
+      "type1": "normal",
+      "type2": null,
       "source": "486"
     },
     "0487_giratina": {
@@ -2980,6 +3640,8 @@
       "base_special_attack": 100,
       "base_special_defense": 120,
       "base_speed": 90,
+      "type1": "ghost",
+      "type2": "dragon",
       "source": "487"
     },
     "0488_cresselia": {
@@ -2989,6 +3651,8 @@
       "base_special_attack": 75,
       "base_special_defense": 120,
       "base_speed": 85,
+      "type1": "psychic",
+      "type2": null,
       "source": "488"
     },
     "0489_phione": {
@@ -2998,6 +3662,8 @@
       "base_special_attack": 80,
       "base_special_defense": 80,
       "base_speed": 80,
+      "type1": "water",
+      "type2": null,
       "source": "489"
     },
     "0490_manaphy": {
@@ -3007,6 +3673,8 @@
       "base_special_attack": 100,
       "base_special_defense": 100,
       "base_speed": 100,
+      "type1": "water",
+      "type2": null,
       "source": "490"
     },
     "0491_darkrai": {
@@ -3016,6 +3684,8 @@
       "base_special_attack": 135,
       "base_special_defense": 90,
       "base_speed": 125,
+      "type1": "dark",
+      "type2": null,
       "source": "491"
     },
     "0492_shaymin_land": {
@@ -3025,6 +3695,8 @@
       "base_special_attack": 100,
       "base_special_defense": 100,
       "base_speed": 100,
+      "type1": "grass",
+      "type2": null,
       "source": "shaymin-land"
     },
     "0492_shaymin_sky": {
@@ -3034,6 +3706,8 @@
       "base_special_attack": 120,
       "base_special_defense": 75,
       "base_speed": 127,
+      "type1": "grass",
+      "type2": "flying",
       "source": "shaymin-sky"
     },
     "0493_arceus": {
@@ -3043,6 +3717,8 @@
       "base_special_attack": 120,
       "base_special_defense": 120,
       "base_speed": 120,
+      "type1": "normal",
+      "type2": null,
       "source": "493"
     },
     "0529_drilbur": {
@@ -3052,6 +3728,8 @@
       "base_special_attack": 30,
       "base_special_defense": 45,
       "base_speed": 68,
+      "type1": "ground",
+      "type2": null,
       "source": "529"
     },
     "0530_excadrill": {
@@ -3061,6 +3739,8 @@
       "base_special_attack": 50,
       "base_special_defense": 65,
       "base_speed": 88,
+      "type1": "ground",
+      "type2": "steel",
       "source": "530"
     },
     "0532_timburr": {
@@ -3070,6 +3750,8 @@
       "base_special_attack": 25,
       "base_special_defense": 35,
       "base_speed": 35,
+      "type1": "fighting",
+      "type2": null,
       "source": "532"
     },
     "0533_gurdurr": {
@@ -3079,6 +3761,8 @@
       "base_special_attack": 40,
       "base_special_defense": 50,
       "base_speed": 40,
+      "type1": "fighting",
+      "type2": null,
       "source": "533"
     },
     "0534_conkeldurr": {
@@ -3088,6 +3772,8 @@
       "base_special_attack": 55,
       "base_special_defense": 65,
       "base_speed": 45,
+      "type1": "fighting",
+      "type2": null,
       "source": "534"
     },
     "0546_cottonee": {
@@ -3097,6 +3783,8 @@
       "base_special_attack": 37,
       "base_special_defense": 50,
       "base_speed": 66,
+      "type1": "grass",
+      "type2": "fairy",
       "source": "546"
     },
     "0547_whimsicott": {
@@ -3106,6 +3794,8 @@
       "base_special_attack": 77,
       "base_special_defense": 75,
       "base_speed": 116,
+      "type1": "grass",
+      "type2": "fairy",
       "source": "547"
     },
     "0551_sandile": {
@@ -3115,6 +3805,8 @@
       "base_special_attack": 35,
       "base_special_defense": 35,
       "base_speed": 65,
+      "type1": "ground",
+      "type2": "dark",
       "source": "551"
     },
     "0552_krokorok": {
@@ -3124,6 +3816,8 @@
       "base_special_attack": 45,
       "base_special_defense": 45,
       "base_speed": 74,
+      "type1": "ground",
+      "type2": "dark",
       "source": "552"
     },
     "0553_krookodile": {
@@ -3133,6 +3827,8 @@
       "base_special_attack": 65,
       "base_special_defense": 70,
       "base_speed": 92,
+      "type1": "ground",
+      "type2": "dark",
       "source": "553"
     },
     "0570_zorua": {
@@ -3142,6 +3838,8 @@
       "base_special_attack": 80,
       "base_special_defense": 40,
       "base_speed": 65,
+      "type1": "dark",
+      "type2": null,
       "source": "570"
     },
     "0570_zorua_hisuian": {
@@ -3151,6 +3849,8 @@
       "base_special_attack": 85,
       "base_special_defense": 40,
       "base_speed": 70,
+      "type1": "normal",
+      "type2": "ghost",
       "source": "zorua-hisui"
     },
     "0571_zoroark": {
@@ -3160,6 +3860,8 @@
       "base_special_attack": 120,
       "base_special_defense": 60,
       "base_speed": 105,
+      "type1": "dark",
+      "type2": null,
       "source": "571"
     },
     "0571_zoroark_hisuian": {
@@ -3169,6 +3871,8 @@
       "base_special_attack": 125,
       "base_special_defense": 60,
       "base_speed": 110,
+      "type1": "normal",
+      "type2": "ghost",
       "source": "zoroark-hisui"
     },
     "0587_emolga": {
@@ -3178,6 +3882,8 @@
       "base_special_attack": 75,
       "base_special_defense": 60,
       "base_speed": 103,
+      "type1": "electric",
+      "type2": "flying",
       "source": "587"
     },
     "0597_ferroseed": {
@@ -3187,6 +3893,8 @@
       "base_special_attack": 24,
       "base_special_defense": 86,
       "base_speed": 10,
+      "type1": "grass",
+      "type2": "steel",
       "source": "597"
     },
     "0598_ferrothorn": {
@@ -3196,6 +3904,8 @@
       "base_special_attack": 54,
       "base_special_defense": 116,
       "base_speed": 20,
+      "type1": "grass",
+      "type2": "steel",
       "source": "598"
     },
     "0599_klink": {
@@ -3205,6 +3915,8 @@
       "base_special_attack": 45,
       "base_special_defense": 60,
       "base_speed": 30,
+      "type1": "steel",
+      "type2": null,
       "source": "599"
     },
     "0600_klang": {
@@ -3214,6 +3926,8 @@
       "base_special_attack": 70,
       "base_special_defense": 85,
       "base_speed": 50,
+      "type1": "steel",
+      "type2": null,
       "source": "600"
     },
     "0601_klinklang": {
@@ -3223,6 +3937,8 @@
       "base_special_attack": 70,
       "base_special_defense": 85,
       "base_speed": 90,
+      "type1": "steel",
+      "type2": null,
       "source": "601"
     },
     "0607_litwick": {
@@ -3232,6 +3948,8 @@
       "base_special_attack": 65,
       "base_special_defense": 55,
       "base_speed": 20,
+      "type1": "ghost",
+      "type2": "fire",
       "source": "607"
     },
     "0608_lampent": {
@@ -3241,6 +3959,8 @@
       "base_special_attack": 95,
       "base_special_defense": 60,
       "base_speed": 55,
+      "type1": "ghost",
+      "type2": "fire",
       "source": "608"
     },
     "0609_chandelure": {
@@ -3250,6 +3970,8 @@
       "base_special_attack": 145,
       "base_special_defense": 90,
       "base_speed": 80,
+      "type1": "ghost",
+      "type2": "fire",
       "source": "609"
     },
     "0633_deino": {
@@ -3259,6 +3981,8 @@
       "base_special_attack": 45,
       "base_special_defense": 50,
       "base_speed": 38,
+      "type1": "dark",
+      "type2": "dragon",
       "source": "633"
     },
     "0634_zweilous": {
@@ -3268,6 +3992,8 @@
       "base_special_attack": 65,
       "base_special_defense": 70,
       "base_speed": 58,
+      "type1": "dark",
+      "type2": "dragon",
       "source": "634"
     },
     "0635_hydreigon": {
@@ -3277,6 +4003,8 @@
       "base_special_attack": 125,
       "base_special_defense": 90,
       "base_speed": 98,
+      "type1": "dark",
+      "type2": "dragon",
       "source": "635"
     },
     "0643_reshiram": {
@@ -3286,6 +4014,8 @@
       "base_special_attack": 150,
       "base_special_defense": 120,
       "base_speed": 90,
+      "type1": "dragon",
+      "type2": "fire",
       "source": "643"
     },
     "0644_zekrom": {
@@ -3295,6 +4025,8 @@
       "base_special_attack": 120,
       "base_special_defense": 100,
       "base_speed": 90,
+      "type1": "dragon",
+      "type2": "electric",
       "source": "644"
     },
     "0646_kyurem": {
@@ -3304,6 +4036,8 @@
       "base_special_attack": 130,
       "base_special_defense": 90,
       "base_speed": 95,
+      "type1": "dragon",
+      "type2": "ice",
       "source": "646"
     },
     "0656_froakie": {
@@ -3313,6 +4047,8 @@
       "base_special_attack": 62,
       "base_special_defense": 44,
       "base_speed": 71,
+      "type1": "water",
+      "type2": null,
       "source": "656"
     },
     "0657_frogadier": {
@@ -3322,6 +4058,8 @@
       "base_special_attack": 83,
       "base_special_defense": 56,
       "base_speed": 97,
+      "type1": "water",
+      "type2": null,
       "source": "657"
     },
     "0658_greninja": {
@@ -3331,6 +4069,8 @@
       "base_special_attack": 103,
       "base_special_defense": 71,
       "base_speed": 122,
+      "type1": "water",
+      "type2": "dark",
       "source": "658"
     },
     "0700_sylveon": {
@@ -3340,6 +4080,8 @@
       "base_special_attack": 110,
       "base_special_defense": 130,
       "base_speed": 60,
+      "type1": "fairy",
+      "type2": null,
       "source": "700"
     },
     "0702_dedenne": {
@@ -3349,6 +4091,8 @@
       "base_special_attack": 81,
       "base_special_defense": 67,
       "base_speed": 101,
+      "type1": "electric",
+      "type2": "fairy",
       "source": "702"
     },
     "0707_klefki": {
@@ -3358,6 +4102,8 @@
       "base_special_attack": 80,
       "base_special_defense": 87,
       "base_speed": 75,
+      "type1": "steel",
+      "type2": "fairy",
       "source": "707"
     },
     "0710_pumpkaboo": {
@@ -3367,6 +4113,8 @@
       "base_special_attack": 44,
       "base_special_defense": 55,
       "base_speed": 51,
+      "type1": "ghost",
+      "type2": "grass",
       "source": "710"
     },
     "0711_gourgeist": {
@@ -3376,6 +4124,8 @@
       "base_special_attack": 58,
       "base_special_defense": 75,
       "base_speed": 84,
+      "type1": "ghost",
+      "type2": "grass",
       "source": "711"
     },
     "0718_zygarde": {
@@ -3385,6 +4135,8 @@
       "base_special_attack": 81,
       "base_special_defense": 95,
       "base_speed": 95,
+      "type1": "dragon",
+      "type2": "ground",
       "source": "718"
     },
     "0736_grubbin": {
@@ -3394,6 +4146,8 @@
       "base_special_attack": 55,
       "base_special_defense": 45,
       "base_speed": 46,
+      "type1": "bug",
+      "type2": null,
       "source": "736"
     },
     "0737_charjabug": {
@@ -3403,6 +4157,8 @@
       "base_special_attack": 55,
       "base_special_defense": 75,
       "base_speed": 36,
+      "type1": "bug",
+      "type2": "electric",
       "source": "737"
     },
     "0738_vikavolt": {
@@ -3412,6 +4168,8 @@
       "base_special_attack": 145,
       "base_special_defense": 75,
       "base_speed": 43,
+      "type1": "bug",
+      "type2": "electric",
       "source": "738"
     },
     "0767_wimpod": {
@@ -3421,6 +4179,8 @@
       "base_special_attack": 20,
       "base_special_defense": 30,
       "base_speed": 80,
+      "type1": "bug",
+      "type2": "water",
       "source": "767"
     },
     "0768_golisopod": {
@@ -3430,6 +4190,8 @@
       "base_special_attack": 60,
       "base_special_defense": 90,
       "base_speed": 40,
+      "type1": "bug",
+      "type2": "water",
       "source": "768"
     },
     "0769_sandygast": {
@@ -3439,6 +4201,8 @@
       "base_special_attack": 70,
       "base_special_defense": 45,
       "base_speed": 15,
+      "type1": "ghost",
+      "type2": "ground",
       "source": "769"
     },
     "0770_palossand": {
@@ -3448,6 +4212,8 @@
       "base_special_attack": 100,
       "base_special_defense": 75,
       "base_speed": 35,
+      "type1": "ghost",
+      "type2": "ground",
       "source": "770"
     },
     "0771_pyukumuku": {
@@ -3457,6 +4223,8 @@
       "base_special_attack": 30,
       "base_special_defense": 130,
       "base_speed": 5,
+      "type1": "water",
+      "type2": null,
       "source": "771"
     },
     "0778_mimikyu": {
@@ -3466,6 +4234,8 @@
       "base_special_attack": 50,
       "base_special_defense": 105,
       "base_speed": 96,
+      "type1": "ghost",
+      "type2": "fairy",
       "source": "778"
     },
     "0791_solgaleo": {
@@ -3475,6 +4245,8 @@
       "base_special_attack": 113,
       "base_special_defense": 89,
       "base_speed": 97,
+      "type1": "psychic",
+      "type2": "steel",
       "source": "791"
     },
     "0792_lunala": {
@@ -3484,6 +4256,8 @@
       "base_special_attack": 137,
       "base_special_defense": 107,
       "base_speed": 97,
+      "type1": "psychic",
+      "type2": "ghost",
       "source": "792"
     },
     "0800_necrozma": {
@@ -3493,6 +4267,8 @@
       "base_special_attack": 127,
       "base_special_defense": 89,
       "base_speed": 79,
+      "type1": "psychic",
+      "type2": null,
       "source": "800"
     },
     "0807_zeraora": {
@@ -3502,6 +4278,8 @@
       "base_special_attack": 102,
       "base_special_defense": 80,
       "base_speed": 143,
+      "type1": "electric",
+      "type2": null,
       "source": "807"
     },
     "0845_cramorant": {
@@ -3511,6 +4289,8 @@
       "base_special_attack": 85,
       "base_special_defense": 95,
       "base_speed": 85,
+      "type1": "flying",
+      "type2": "water",
       "source": "845"
     },
     "0878_cufant": {
@@ -3520,6 +4300,8 @@
       "base_special_attack": 40,
       "base_special_defense": 49,
       "base_speed": 40,
+      "type1": "steel",
+      "type2": null,
       "source": "878"
     },
     "0879_copperajah": {
@@ -3529,6 +4311,8 @@
       "base_special_attack": 80,
       "base_special_defense": 69,
       "base_speed": 30,
+      "type1": "steel",
+      "type2": null,
       "source": "879"
     },
     "0884_duraludon": {
@@ -3538,6 +4322,8 @@
       "base_special_attack": 120,
       "base_special_defense": 50,
       "base_speed": 85,
+      "type1": "steel",
+      "type2": "dragon",
       "source": "884"
     },
     "0885_dreepy": {
@@ -3547,6 +4333,8 @@
       "base_special_attack": 40,
       "base_special_defense": 30,
       "base_speed": 82,
+      "type1": "dragon",
+      "type2": "ghost",
       "source": "885"
     },
     "0886_drakloak": {
@@ -3556,6 +4344,8 @@
       "base_special_attack": 60,
       "base_special_defense": 50,
       "base_speed": 102,
+      "type1": "dragon",
+      "type2": "ghost",
       "source": "886"
     },
     "0887_dragapult": {
@@ -3565,6 +4355,8 @@
       "base_special_attack": 100,
       "base_special_defense": 75,
       "base_speed": 142,
+      "type1": "dragon",
+      "type2": "ghost",
       "source": "887"
     },
     "0888_zacian": {
@@ -3574,6 +4366,8 @@
       "base_special_attack": 80,
       "base_special_defense": 115,
       "base_speed": 138,
+      "type1": "fairy",
+      "type2": null,
       "source": "888"
     },
     "0889_zamazenta": {
@@ -3583,6 +4377,8 @@
       "base_special_attack": 80,
       "base_special_defense": 115,
       "base_speed": 138,
+      "type1": "fighting",
+      "type2": null,
       "source": "889"
     },
     "0890_eternatus": {
@@ -3592,6 +4388,8 @@
       "base_special_attack": 145,
       "base_special_defense": 95,
       "base_speed": 130,
+      "type1": "poison",
+      "type2": "dragon",
       "source": "890"
     },
     "0924_tandemaus": {
@@ -3601,6 +4399,8 @@
       "base_special_attack": 40,
       "base_special_defense": 45,
       "base_speed": 75,
+      "type1": "normal",
+      "type2": null,
       "source": "924"
     },
     "0925_maushold": {
@@ -3610,6 +4410,8 @@
       "base_special_attack": 65,
       "base_special_defense": 75,
       "base_speed": 111,
+      "type1": "normal",
+      "type2": null,
       "source": "925"
     },
     "0977_dondozo": {
@@ -3619,6 +4421,8 @@
       "base_special_attack": 65,
       "base_special_defense": 65,
       "base_speed": 35,
+      "type1": "water",
+      "type2": null,
       "source": "977"
     },
     "0978_tatsugiri_curly": {
@@ -3628,6 +4432,8 @@
       "base_special_attack": 120,
       "base_special_defense": 95,
       "base_speed": 82,
+      "type1": "dragon",
+      "type2": "water",
       "source": "tatsugiri-curly"
     },
     "0978_tatsugiri_droopy": {
@@ -3637,6 +4443,8 @@
       "base_special_attack": 120,
       "base_special_defense": 95,
       "base_speed": 82,
+      "type1": "dragon",
+      "type2": "water",
       "source": "tatsugiri-droopy"
     },
     "0978_tatsugiri_stretchy": {
@@ -3646,6 +4454,8 @@
       "base_special_attack": 120,
       "base_special_defense": 95,
       "base_speed": 82,
+      "type1": "dragon",
+      "type2": "water",
       "source": "tatsugiri-stretchy"
     },
     "0980_clodsire": {
@@ -3655,6 +4465,8 @@
       "base_special_attack": 45,
       "base_special_defense": 100,
       "base_speed": 20,
+      "type1": "poison",
+      "type2": "ground",
       "source": "980"
     },
     "0999_gimmighoul": {
@@ -3664,6 +4476,8 @@
       "base_special_attack": 75,
       "base_special_defense": 70,
       "base_speed": 10,
+      "type1": "ghost",
+      "type2": null,
       "source": "999"
     },
     "1000_gholdengo": {
@@ -3673,6 +4487,8 @@
       "base_special_attack": 133,
       "base_special_defense": 91,
       "base_speed": 84,
+      "type1": "steel",
+      "type2": "ghost",
       "source": "1000"
     },
     "1007_koraidon": {
@@ -3682,6 +4498,8 @@
       "base_special_attack": 85,
       "base_special_defense": 100,
       "base_speed": 135,
+      "type1": "fighting",
+      "type2": "dragon",
       "source": "1007"
     },
     "1008_miraidon": {
@@ -3691,6 +4509,8 @@
       "base_special_attack": 135,
       "base_special_defense": 115,
       "base_speed": 135,
+      "type1": "electric",
+      "type2": "dragon",
       "source": "1008"
     }
   }

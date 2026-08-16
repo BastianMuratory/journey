@@ -1,6 +1,29 @@
 class_name PokemonData
 extends Resource
 
+
+enum Type {
+	NONE,
+	NORMAL,
+	FIGHTING,
+	FLYING,
+	POISON,
+	GROUND,
+	ROCK,
+	BUG,
+	GHOST,
+	STEEL,
+	FIRE,
+	WATER,
+	GRASS,
+	ELECTRIC,
+	PSYCHIC,
+	ICE,
+	DRAGON,
+	DARK,
+	FAIRY,
+}
+
 ## Decides which idle and run animation the [PokemonAnimator] plays
 enum BodyType {
 	BIPED,
@@ -36,6 +59,11 @@ enum BodyType {
 @export_group("MegaEvolution")
 @export var mega_evolves_into: PokemonData
 
+## Elemental typing. type2 stays NONE for the single-typed majority.
+@export_group("Type")
+@export var type1: Type = Type.NONE
+@export var type2: Type = Type.NONE
+
 @export_group("Stats")
 @export var base_hp: int = 0
 @export var base_attack: int = 0
@@ -51,6 +79,26 @@ func get_preview(shiny: bool = false) -> Texture2D:
 
 func has_shiny_preview() -> bool:
 	return preview_shiny != null
+
+func has_second_type() -> bool:
+	return type2 != Type.NONE
+
+func has_type(wanted: Type) -> bool:
+	return wanted != Type.NONE and (type1 == wanted or type2 == wanted)
+
+## The typing as a list, one entry for single-typed species. Handy for damage
+## code that wants to loop rather than branch on has_second_type().
+func types() -> Array[Type]:
+	var out: Array[Type] = []
+	if type1 != Type.NONE:
+		out.append(type1)
+	if type2 != Type.NONE:
+		out.append(type2)
+	return out
+
+## "Grass", "Fairy" -- for UI labels.
+static func type_name(value: Type) -> String:
+	return String(Type.keys()[value]).capitalize()
 
 func has_icon() -> bool:
 	return icon != null
@@ -72,11 +120,6 @@ func is_airborne() -> bool:
 	return body_type == BodyType.HOVER or body_type == BodyType.FLYER
 
 
-## The resting altitude a body type gets when nothing overrides it
-##
-## Mirrored in tools/classify_body_types.py (DEFAULT_HOVER_HEIGHT). 
-## If you change a number here, change it there too, or a re-classify will silently
-## disagree with what the editor hands out.
 static func default_hover_height(type: BodyType) -> float:
 	match type:
 		BodyType.HOVER:
