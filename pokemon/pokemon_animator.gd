@@ -47,6 +47,11 @@ const ATTACK_TIME := 0.52
 const HIT_TIME := 0.42
 const SPIN_TIME := 0.55
 
+## Wing beats per second, idling and flying. One phase drives both the wings and
+## the body's bob, so a creature never bobs against its own stroke.
+const IDLE_BEAT := 1.6
+const RUN_BEAT := 2.4
+
 @export_group("Target")
 ## The pivot this animator owns. Everything is written relative to
 ## [member rest_position], so the pivot must not be moved by anything else.
@@ -80,6 +85,30 @@ const SPIN_TIME := 0.55
 ## Set false if the white hit flash fights your art style.
 @export var flash_on_hit := true
 
+@export_group("Wings")
+## The wing-bending material, handed over by [PokemonModel] for species that
+## have wings. While this is set the animator writes the stroke into it every
+## frame, and stops faking the beat with whole-body squash. Null means wingless,
+## which is the case for everything but the flyers.
+@export var wing_material: ShaderMaterial:
+	set(value):
+		wing_material = value
+		if value == null:
+			_wing_fold = 0.0
+			_wing_twist = 0.0
+		else:
+			_write_wings()
+## The same bend for the additive flash pass. Without it the flash would sit on
+## the wings' rest pose while the wings themselves are mid-stroke.
+@export var wing_flash_material: ShaderMaterial
+## Whether the wings beat either side of rest or fold shut and open again.
+@export var wing_motion: PokemonData.WingMotion = PokemonData.WingMotion.FLAP
+## How far the wings travel, in radians: half the stroke when flapping, the whole
+## closed angle when folding. Set from [member PokemonData.flap_degrees].
+@export var flap_radians := 0.0
+## How far the wing feathers as it moves, in radians.
+@export var twist_radians := 0.0
+
 ## Which looping animation plays when no one-shot is running.
 var loop: Anim = Anim.IDLE:
 	set(value):
@@ -103,6 +132,11 @@ var is_one_shot_playing: bool:
 
 # --- loop state ---
 var _phase := 0.0
+## Wing beat, integrated rather than derived from [member _phase], so that going
+## from idle to flying speeds the beat up instead of jumping it.
+var _wing_phase := 0.0
+var _wing_fold := 0.0
+var _wing_twist := 0.0
 
 # --- one-shot state ---
 var _shot_active := false
@@ -133,6 +167,10 @@ func _process(delta: float) -> void:
 
 	var dt := delta * speed_scale
 	_phase += dt
+	# Beats faster in flight, and keeps beating through a one-shot -- a bird
+	# lunging at something does not stop flying to do it.
+	var beat_rate := RUN_BEAT if (loop == Anim.RUN or _shot_active) else IDLE_BEAT
+	_wing_phase = fposmod(_wing_phase + dt * TAU * beat_rate, TAU)
 
 	# 1. One-shot first: it reports how hard it wants to suppress the loop.
 	var shot_off := Vector3.ZERO
@@ -165,6 +203,11 @@ func _process(delta: float) -> void:
 	target.rotation = _rot * keep + shot_rot
 	target.scale = Vector3.ONE.lerp(_scl, keep) * shot_scl
 
+	# 3. Wings run underneath all of that: they are the mesh deforming, not the
+	# pivot moving, so nothing above interferes with them.
+	if wing_material != null:
+		_pose_wings()
+
 
 # ---------------------------------------------------------------- public API
 
@@ -179,6 +222,9 @@ func configure(data: PokemonData, world_height: float) -> void:
 	amplitude = data.anim_amplitude
 	hover_height = data.hover_height
 	height = world_height
+	wing_motion = data.wing_motion
+	flap_radians = deg_to_rad(data.flap_degrees)
+	twist_radians = deg_to_rad(data.flap_twist_degrees)
 
 
 ## Back to the looping idle, cancelling any one-shot.
@@ -221,6 +267,11 @@ func stop() -> void:
 		target.rotation = Vector3.ZERO
 		target.scale = Vector3.ONE
 	_set_flash(0.0)
+	# Wings out flat too, so a cutscene or the evolution VFX inherits a pose it
+	# can predict rather than whatever half-stroke it interrupted.
+	_wing_fold = 0.0
+	_wing_twist = 0.0
+	_write_wings()
 
 
 ## Resumes after [method stop].
@@ -269,10 +320,12 @@ func _pose_idle(t: float) -> void:
 		PokemonData.BodyType.FLYER:
 			# Slow bank riding on a much faster wing beat.
 			w = t * TAU * 0.28
-			beat = t * TAU * 1.6
+			beat = _wing_phase
 			_off.y = hover_height * h + sin(w) * 0.035 * h * a + sin(beat) * 0.045 * h * a
-			# Wings pull in on the downstroke and spread on the up.
-			_scl = Vector3(1.0 - sin(beat) * 0.05 * a, 1.0 + sin(beat) * 0.03 * a, 1.0)
+			if wing_material == null:
+				# No wings to bend, so the beat is faked on the whole body:
+				# it pulls in on the downstroke and spreads on the up.
+				_scl = Vector3(1.0 - sin(beat) * 0.05 * a, 1.0 + sin(beat) * 0.03 * a, 1.0)
 			_rot.z = sin(w * 0.7) * deg_to_rad(5.0) * a
 			_rot.y = sin(w * 0.41) * deg_to_rad(4.0) * a
 
@@ -326,12 +379,13 @@ func _pose_run(t: float) -> void:
 		PokemonData.BodyType.FLYER:
 			# Hard forward lean and a wing beat you can actually count.
 			w = t * TAU * 0.60
-			beat = t * TAU * 2.4
+			beat = _wing_phase
 			_off.y = hover_height * h + sin(beat) * 0.085 * h * a
 			_rot.x = _lean(15.0)
 			_rot.z = sin(w) * deg_to_rad(10.0) * a
 			_rot.y = sin(w) * deg_to_rad(5.0) * a
-			_scl = Vector3(1.0 - sin(beat) * 0.09 * a, 1.0 + sin(beat) * 0.05 * a, 1.0)
+			if wing_material == null:
+				_scl = Vector3(1.0 - sin(beat) * 0.09 * a, 1.0 + sin(beat) * 0.05 * a, 1.0)
 
 		PokemonData.BodyType.SERPENTINE:
 			# Slithers: the yaw wave leads, the roll follows a beat behind.
@@ -340,6 +394,54 @@ func _pose_run(t: float) -> void:
 			_rot.y = sin(w) * deg_to_rad(16.0) * a
 			_rot.z = sin(w - 1.0) * deg_to_rad(10.0) * a
 			_rot.x = _lean(5.0)
+
+
+## The wing stroke, written into the shader that bends the mesh.
+func _pose_wings() -> void:
+	if wing_motion == PokemonData.WingMotion.FOLD:
+		_pose_fold()
+	else:
+		_pose_flap()
+	_write_wings()
+
+
+## Beating: a stroke either side of rest.
+##
+## A plain sine reads as a metronome, so a second harmonic goes in to make the
+## downstroke quicker than the recovery -- the asymmetry is most of what makes a
+## wing beat look like a wing beat. The twist runs a quarter cycle behind, so the
+## wing is flattest where it moves fastest and feathers as it turns over.
+func _pose_flap() -> void:
+	var stroke := (sin(_wing_phase) + 0.15 * sin(_wing_phase * 2.0)) / 1.08
+	# Negative, so the wings are at the bottom of the stroke exactly when the
+	# FLYER poses have the body at the top of its bob. Lift comes from the
+	# downstroke; wings rising while the body rises reads as a creature being
+	# lifted by something else.
+	_wing_fold = -flap_radians * stroke * amplitude
+	_wing_twist = twist_radians * cos(_wing_phase) * amplitude
+
+
+## Folding: shut and open again, resting open.
+##
+## A raised cosine rather than a sine, so the cycle starts and ends at exactly
+## zero -- fully open -- with the closed pose in the middle. A sine would leave
+## the wings half shut at rest and fold them inside out on the way past.
+func _pose_fold() -> void:
+	var shut := 0.5 - 0.5 * cos(_wing_phase)
+	_wing_fold = flap_radians * shut * amplitude
+	# Peaks halfway shut and unwinds by the time it is open again, so the wing
+	# rolls as it closes instead of arriving twisted.
+	_wing_twist = twist_radians * sin(_wing_phase) * amplitude
+
+
+func _write_wings() -> void:
+	if wing_material != null:
+		wing_material.set_shader_parameter("fold", _wing_fold)
+		wing_material.set_shader_parameter("twist", _wing_twist)
+	# The flash pass has to agree with the pass underneath it, always.
+	if wing_flash_material != null:
+		wing_flash_material.set_shader_parameter("fold", _wing_fold)
+		wing_flash_material.set_shader_parameter("twist", _wing_twist)
 
 
 # ----------------------------------------------------------- one-shot poses
@@ -492,8 +594,19 @@ func _cancel_one_shot() -> void:
 
 ## Additive white overlay. Uses [member GeometryInstance3D.material_overlay] so
 ## the mesh's own imported .mtl material is left completely alone.
+##
+## Winged species flash through [member wing_flash_material] instead, because an
+## overlay is a second draw of the same mesh with its own vertex stage: an
+## ordinary white overlay would flash the wings where they are resting, not where
+## they actually are.
 func _set_flash(strength: float) -> void:
 	if not flash_on_hit or flash_target == null:
+		return
+
+	if wing_flash_material != null:
+		var alpha := clampf(strength, 0.0, 1.0) * 0.75
+		wing_flash_material.set_shader_parameter("flash_color", Color(1.0, 1.0, 1.0, alpha))
+		flash_target.material_overlay = wing_flash_material if alpha > 0.0 else null
 		return
 
 	if strength <= 0.001:

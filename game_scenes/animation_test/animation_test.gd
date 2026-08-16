@@ -16,7 +16,9 @@ extends Node3D
 ## Up, Down       animation speed
 ## [ ]            animation amplitude
 ## , .            hover height
-## Shift          x5 step on speed, amplitude and hover
+## W, Shift+W     cycle which wing field - and = move
+## - =            adjust that wing field
+## Shift          x5 step on every tuning key above
 ## R, Shift+R     revert this species / every edited species
 ## Ctrl+S         save edits to disk
 ## G              grid mode -- a row of species, all animating together
@@ -24,16 +26,23 @@ extends Node3D
 ## Esc            back to the main menu
 ## [/codeblock]
 ##
-## The four tuning keys edit the focused species' [PokemonData] in place, so what
-## you see is exactly what the game will play -- there is no preview multiplier
+## The tuning keys edit the focused species' [PokemonData] in place, so what you
+## see is exactly what the game will play -- there is no preview multiplier
 ## sitting between the two. In grid mode the focused species is the leftmost one,
 ## the same one B applies to, so there is never any doubt what is being edited.
+##
+## The wing fields describe a crease and what happens either side of it:
+## [code]mode[/code] beats or folds, [code]axis[/code] turns the crease (X gives
+## a mirrored pair of wings, Y folds the top down, Z folds the back forward), and
+## the rest are the measurements tools/detect_wings.py takes off the mesh.
+## Winding [code]angle[/code] up from zero gives wings to a species that did not
+## have them; winding it back to zero takes them away again.
 ##
 ## Edits are held in memory until Ctrl+S, which writes them to two places: the
 ## species' own .tres so the game picks them up immediately, and
 ## data/body_type_overrides.json so that re-running
-## tools/classify_body_types.py will not undo your work. R puts a species back to
-## what is on disk, however many nudges ago that was.
+## tools/classify_body_types.py or tools/detect_wings.py will not undo your work.
+## R puts a species back to what is on disk, however many nudges ago that was.
 
 ## How many species stand side by side in grid mode.
 const GRID_COUNT := 6
@@ -56,6 +65,26 @@ const COARSE_STEP := 5.0
 ## the baseline snapshot, the revert and the overrides file must agree on them.
 const TUNED_FIELDS := [
 	"body_type", "anim_speed_scale", "anim_amplitude", "hover_height",
+	"wing_motion", "fold_axis", "wing_hinge", "flap_degrees",
+	"flap_twist_degrees", "wing_root_height", "wing_curve",
+]
+
+## The wing fields, in the order W cycles them, with the range and step each one
+## exports on [PokemonData]. There are seven of them and only one key pair, so W
+## picks which one - and = move, rather than spending fourteen keys on it.
+##
+## An entry with [code]names[/code] is an enum: - and = wrap through the list
+## instead of walking a range, and the panel shows the name rather than the
+## index. Everything else is a fraction or an angle relative to the mesh's own
+## size, so what you tune on screen is what tools/detect_wings.py would write.
+const WING_FIELDS := [
+	{"field": "wing_motion", "label": "mode", "names": ["flap", "fold"]},
+	{"field": "fold_axis", "label": "axis", "names": ["X", "Y", "Z"]},
+	{"field": "flap_degrees", "label": "angle", "step": 1.0, "low": -180.0, "high": 180.0},
+	{"field": "wing_hinge", "label": "crease", "step": 0.01, "low": 0.0, "high": 1.0},
+	{"field": "flap_twist_degrees", "label": "twist", "step": 1.0, "low": 0.0, "high": 45.0},
+	{"field": "wing_root_height", "label": "root", "step": 0.01, "low": 0.0, "high": 1.0},
+	{"field": "wing_curve", "label": "curve", "step": 0.1, "low": 0.5, "high": 3.0},
 ]
 
 const POKEMON_MODEL_SCENE := preload("res://pokemon/pokemon_model.tscn")
@@ -83,6 +112,8 @@ var _meta: Dictionary[String, Dictionary] = {}
 
 var _shiny := false
 var _grid := false
+## Which entry of [constant WING_FIELDS] the - and = keys currently move.
+var _wing_field := 0
 
 ## id -> the [constant TUNED_FIELDS] values that species had on disk, snapshotted
 ## just before its first edit of the session.
@@ -314,6 +345,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		KEY_BRACKETLEFT: _nudge("anim_amplitude", -1, AMPLITUDE_STEP, 0.0, 3.0, key.shift_pressed)
 		KEY_PERIOD: _nudge("hover_height", 1, HOVER_STEP, 0.0, 2.0, key.shift_pressed)
 		KEY_COMMA: _nudge("hover_height", -1, HOVER_STEP, 0.0, 2.0, key.shift_pressed)
+		KEY_O: _cycle_wing_field(-1 if key.shift_pressed else 1)
+		KEY_P: _nudge_wing(10, key.shift_pressed)
+		KEY_M: _nudge_wing(-10, key.shift_pressed)
 		KEY_G:
 			_grid = not _grid
 			_respawn()
@@ -383,9 +417,10 @@ func _focused_id() -> String:
 
 
 ## Moves one float field on the focused species by [param direction] steps,
-## clamped to the same range [PokemonData] exports.
+## clamped to the same range [PokemonData] exports. [param reshape] re-measures
+## the model afterwards, which the wing fields need and the rest do not.
 func _nudge(field: String, direction: int, step: float, low: float, high: float,
-		coarse: bool) -> void:
+		coarse: bool, reshape := false) -> void:
 	var id := _focused_id()
 	if id == "":
 		return
@@ -399,7 +434,41 @@ func _nudge(field: String, direction: int, step: float, low: float, high: float,
 	# Snapped to the step, so a long run of presses lands on round numbers
 	# instead of accumulating float error into the .tres.
 	data.set(field, snappedf(clampf(moved, low, high), step))
-	_after_edit(id)
+	_after_edit(id, reshape)
+
+
+## Moves whichever wing field W has selected. Separate from [method _nudge] only
+## because the range and step come from [constant WING_FIELDS] rather than the
+## call site, and because a wing edit has to re-measure the crease on the model.
+func _nudge_wing(direction: int, coarse: bool) -> void:
+	var entry: Dictionary = WING_FIELDS[_wing_field]
+	if entry.has("names"):
+		_cycle_enum(entry["field"], direction, (entry["names"] as Array).size())
+		return
+	_nudge(entry["field"], direction, entry["step"], entry["low"], entry["high"], coarse,
+		true)
+
+
+## Wraps an enum field round to the next value. Kept apart from [method _nudge]
+## because clamping an enum at its ends would mean pressing - five times to get
+## back to where + took you, and because the value has to stay an int -- a float
+## would come back out of the .tres as one.
+func _cycle_enum(field: String, direction: int, count: int) -> void:
+	var id := _focused_id()
+	if id == "":
+		return
+	var data := PokemonRegistry.get_pokemon_by_id(id)
+	if data == null:
+		return
+
+	_snapshot(id, data)
+	data.set(field, wrapi(int(data.get(field)) + direction, 0, count))
+	_after_edit(id, true)
+
+
+func _cycle_wing_field(step: int) -> void:
+	_wing_field = wrapi(_wing_field + step, 0, WING_FIELDS.size())
+	_refresh_info()
 
 
 func _cycle_body_type(step: int) -> void:
@@ -460,6 +529,9 @@ func _sync_animators() -> void:
 		pokemon.animator.speed_scale = data.anim_speed_scale
 		pokemon.animator.amplitude = data.anim_amplitude
 		pokemon.animator.hover_height = data.hover_height
+		pokemon.animator.wing_motion = data.wing_motion
+		pokemon.animator.flap_radians = deg_to_rad(data.flap_degrees)
+		pokemon.animator.twist_radians = deg_to_rad(data.flap_twist_degrees)
 
 
 ## Drops a species from the pending set once it has been nudged back to exactly
@@ -574,6 +646,11 @@ func _patch_tres(path: String, data: PokemonData) -> bool:
 	var lines := text.split("\n")
 	var written: Dictionary[String, bool] = {}
 	var in_resource := false
+	# Where to put a field the file does not have yet. Godot writes metadata/
+	# last, so anything of ours goes in ahead of it; failing that, after the last
+	# value in [resource].
+	var metadata_index := -1
+	var last_value_index := -1
 
 	for i in lines.size():
 		var line := lines[i]
@@ -584,25 +661,32 @@ func _patch_tres(path: String, data: PokemonData) -> bool:
 			continue
 		if not in_resource:
 			continue
+		if metadata_index < 0 and line.begins_with("metadata/"):
+			metadata_index = i
 		var equals := line.find("=")
 		if equals < 0:
 			continue
+		last_value_index = i
 		var field := line.substr(0, equals).strip_edges()
 		if not wanted.has(field) or written.has(field):
 			continue
 		lines[i] = wanted[field]
 		written[field] = true
 
-	# A missing field means the file is not shaped the way we think it is, so
-	# write nothing rather than a half-updated species.
+	# Species that have never had wings have no line to patch, so the missing
+	# ones get inserted rather than refused -- winding the stroke up off zero on
+	# a Charizard is a perfectly reasonable thing to do here, and it has to save.
 	if written.size() != TUNED_FIELDS.size():
-		var missing := PackedStringArray()
+		if metadata_index < 0 and last_value_index < 0:
+			push_error("AnimationTest: %s has no [resource] values -- left alone" % path)
+			return false
+		var insert_at := metadata_index if metadata_index >= 0 else last_value_index + 1
+		var added := PackedStringArray()
 		for field: String in TUNED_FIELDS:
 			if not written.has(field):
-				missing.append(field)
-		push_error("AnimationTest: %s has no line for %s -- left alone"
-			% [path, ", ".join(missing)])
-		return false
+				added.append(wanted[field])
+		for offset in added.size():
+			lines.insert(insert_at + offset, added[offset])
 
 	var file := FileAccess.open(path, FileAccess.WRITE)
 	if file == null:
@@ -629,14 +713,19 @@ func _write_overrides() -> bool:
 		var data := PokemonRegistry.get_pokemon_by_id(id)
 		if data == null:
 			continue
-		# All four fields go in, not just the ones that moved: the point of an
-		# entry here is to pin down exactly what you saw on screen, and a partial
-		# one would let the script's tables fill in the rest on the next run.
+		# Every managed field goes in, not just the ones that moved: the point of
+		# an entry here is to pin down exactly what you saw on screen, and a
+		# partial one would let the scripts' tables fill in the rest next run.
 		species[id] = {
 			"body_type": _body_name(data.body_type),
 			"anim_speed_scale": data.anim_speed_scale,
 			"anim_amplitude": data.anim_amplitude,
 			"hover_height": data.hover_height,
+			"wing_hinge": data.wing_hinge,
+			"flap_degrees": data.flap_degrees,
+			"flap_twist_degrees": data.flap_twist_degrees,
+			"wing_root_height": data.wing_root_height,
+			"wing_curve": data.wing_curve,
 		}
 
 	doc["_comment"] = ("Hand edits from the animation test scene, keyed by species id. "
@@ -731,6 +820,7 @@ func _build_hud() -> void:
 <- ->  species     PgUp/PgDn  x25     /  search
 B / Shift+B  body type     up/dn  speed
 [ ]  amplitude     , .  hover     Shift  x5 step
+W  wing field     - =  adjust it
 R  revert     Shift+R  revert all     Ctrl+S  save
 G  grid     S  shiny     Esc  menu"""
 	help.add_theme_color_override("font_color", Color(0.65, 0.65, 0.7))
@@ -852,12 +942,50 @@ func _refresh_info() -> void:
 			_was(data, baseline, "anim_amplitude")],
 		"hover       %.2f%s" % [data.hover_height,
 			_was(data, baseline, "hover_height")],
+		"wings       %s" % _wing_summary(data, baseline),
 	]
 	if _grid:
 		lines.append("grid        %d species" % _spawned.size())
 	if not _pending.is_empty():
 		lines.append("unsaved     %d species  (Ctrl+S)" % _pending.size())
 	_info.text = "\n".join(lines)
+
+
+## The wing fields over two lines, the one W has selected in brackets: what the
+## wings do on the first, the numbers describing the crease on the second.
+##
+## Species with no wings still show the line, because giving one wings is done by
+## winding the angle up off zero and there would otherwise be nothing to aim at.
+func _wing_summary(data: PokemonData, baseline: Dictionary) -> String:
+	var parts := PackedStringArray()
+	for index in WING_FIELDS.size():
+		var entry: Dictionary = WING_FIELDS[index]
+		var field: String = entry["field"]
+		var text := ""
+		if entry.has("names"):
+			var names: Array = entry["names"]
+			text = "%s %s" % [entry["label"], names[int(data.get(field))]]
+		else:
+			# As many decimals as the field's own step can express, no more: an
+			# angle that moves a degree at a time has no business showing
+			# hundredths.
+			var step: float = entry["step"]
+			var format := "%s %.0f"
+			if step < 0.1:
+				format = "%s %.2f"
+			elif step < 1.0:
+				format = "%s %.1f"
+			text = format % [entry["label"], float(data.get(field))]
+		if index == _wing_field:
+			text = "[%s]%s" % [text, _was(data, baseline, field)]
+		parts.append(text)
+
+	# Split rather than wrapped: seven fields on one line runs off the panel, and
+	# what the wings do reads differently from where the crease sits.
+	var summary := "  ".join(parts.slice(0, 3)) + "\n            " + "  ".join(parts.slice(3))
+	if not data.has_wings():
+		summary += "   -- not moving"
+	return summary
 
 
 ## "  (was 1.00)" for a field edited this session, "" for one still at its
@@ -870,6 +998,10 @@ func _was(data: PokemonData, baseline: Dictionary, field: String) -> String:
 		return ""
 	if field == "body_type":
 		return "  (was %s)" % _body_name(int(before))
+	for entry: Dictionary in WING_FIELDS:
+		if entry["field"] == field and entry.has("names"):
+			var names: Array = entry["names"]
+			return "  (was %s)" % names[int(before)]
 	return "  (was %.2f)" % before
 
 
