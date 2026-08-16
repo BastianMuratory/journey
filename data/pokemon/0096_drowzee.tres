@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cuobh2lteh2su" path="res://assets/pokemons/0096_drowzee/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://dlgtawmsd2vhp" path="res://assets/pokemons/0096_drowzee/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
 [ext_resource type="Resource" path="res://data/pokemon/0097_hypno.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://bmgkolluu7tde" path="res://assets/pokemons/0096_drowzee/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://cygp1vacegvvi" path="res://assets/pokemons/0096_drowzee/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://b1qoaghl4kiws" path="res://assets/pokemons/0096_drowzee/preview_shiny.png" id="7_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -12,9 +15,18 @@ display_name = "Drowzee"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
 evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
 body_type = 0
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.0
+base_hp = 60
+base_attack = 48
+base_defense = 45
+base_special_attack = 43
+base_special_defense = 90
+base_speed = 42
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

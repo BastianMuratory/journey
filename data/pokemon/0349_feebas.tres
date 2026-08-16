@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://rl521oclhchr" path="res://assets/pokemons/0349_feebas/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cviqoxr88d6oy" path="res://assets/pokemons/0349_feebas/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
 [ext_resource type="Resource" path="res://data/pokemon/0350_milotic.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://biyn1xhxk2568" path="res://assets/pokemons/0349_feebas/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://d3ley72nwfvfo" path="res://assets/pokemons/0349_feebas/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://d2bojld0ebayu" path="res://assets/pokemons/0349_feebas/preview_shiny.png" id="7_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -12,9 +15,18 @@ display_name = "Feebas"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
 evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
 body_type = 1
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.0
+base_hp = 20
+base_attack = 15
+base_defense = 20
+base_special_attack = 10
+base_special_defense = 55
+base_speed = 80
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

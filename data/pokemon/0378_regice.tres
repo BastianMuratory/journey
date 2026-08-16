@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://c4nkmtdp26jl8" path="res://assets/pokemons/0378_regice/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://dv04aasci54l5" path="res://assets/pokemons/0378_regice/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://bkadqfrktjxnj" path="res://assets/pokemons/0378_regice/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://cvfyn1vta1f66" path="res://assets/pokemons/0378_regice/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://bu2hragbir1bp" path="res://assets/pokemons/0378_regice/preview_shiny.png" id="6_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -11,8 +14,17 @@ display_name = "Regice"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
 body_type = 0
 anim_speed_scale = 0.65
 anim_amplitude = 0.6
 hover_height = 0.0
+base_hp = 80
+base_attack = 50
+base_defense = 100
+base_special_attack = 100
+base_special_defense = 200
+base_speed = 50
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://bgxi0vnmwnci0" path="res://assets/pokemons/0028_sandslash/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://hidew8rh3cmc" path="res://assets/pokemons/0028_sandslash/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://ch8vya4ih4mbj" path="res://assets/pokemons/0028_sandslash/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://c2g1r2sw7jhiq" path="res://assets/pokemons/0028_sandslash/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://nvv4ww28u4ty" path="res://assets/pokemons/0028_sandslash/preview_shiny.png" id="6_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -11,8 +14,17 @@ display_name = "Sandslash"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
 body_type = 0
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.0
+base_hp = 75
+base_attack = 100
+base_defense = 110
+base_special_attack = 45
+base_special_defense = 55
+base_speed = 65
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

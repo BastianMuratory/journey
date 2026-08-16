@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://v2v1a6wkjmit" path="res://assets/pokemons/0277_swellow/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://b24ean7d0xu7k" path="res://assets/pokemons/0277_swellow/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://bawgr3p65lq85" path="res://assets/pokemons/0277_swellow/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://d0ih7gipjjbu8" path="res://assets/pokemons/0277_swellow/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://1fxjoffloiee" path="res://assets/pokemons/0277_swellow/preview_shiny.png" id="6_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -11,8 +14,17 @@ display_name = "Swellow"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
 body_type = 3
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.4
+base_hp = 60
+base_attack = 85
+base_defense = 60
+base_special_attack = 75
+base_special_defense = 50
+base_speed = 125
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -1,0 +1,69 @@
+{
+  "_comment": [
+    "How each alternate form in data/pokemon resolves to a PokeAPI entry, for",
+    "tools/download_base_stats.py.",
+    "",
+    "Anything not named here is looked up by its dex number, which returns the",
+    "species' default form -- correct for every plain species file.",
+    "",
+    "variants: forms that really do have their own stat spread. The value is the",
+    "  PokeAPI slug (https://pokeapi.co/api/v2/pokemon/<slug>/).",
+    "cosmetic: forms that are a costume or a re-skin over the base species and so",
+    "  inherit its stats. Listed rather than omitted so the fetcher can tell an",
+    "  intentional inherit from a form somebody forgot to classify -- an unlisted",
+    "  form is reported as a warning instead of silently taking base stats."
+  ],
+
+  "variants": {
+    "0037_vulpix_alolan": "vulpix-alola",
+    "0038_ninetales_alolan": "ninetales-alola",
+    "0103_exeggutor_alolan": "exeggutor-alola",
+    "0144_articuno_galarian": "articuno-galar",
+    "0145_zapdos_galarian": "zapdos-galar",
+    "0146_moltres_galarian": "moltres-galar",
+    "0194_wooper_paldean": "wooper-paldea",
+    "0570_zorua_hisuian": "zorua-hisui",
+    "0571_zoroark_hisuian": "zoroark-hisui",
+
+    "0386_deoxys_normal": "deoxys-normal",
+    "0386_deoxys_attack": "deoxys-attack",
+    "0386_deoxys_defense": "deoxys-defense",
+    "0386_deoxys_speed": "deoxys-speed",
+
+    "0479_rotom_heat": "rotom-heat",
+    "0479_rotom_wash": "rotom-wash",
+    "0479_rotom_frost": "rotom-frost",
+    "0479_rotom_fan": "rotom-fan",
+    "0479_rotom_mow": "rotom-mow",
+
+    "0492_shaymin_land": "shaymin-land",
+    "0492_shaymin_sky": "shaymin-sky",
+
+    "0978_tatsugiri_curly": "tatsugiri-curly",
+    "0978_tatsugiri_droopy": "tatsugiri-droopy",
+    "0978_tatsugiri_stretchy": "tatsugiri-stretchy"
+  },
+
+  "cosmetic": [
+    "0003_venusaur_clone",
+    "0006_charizard_clone",
+    "0009_blastoise_clone",
+    "0025_pikachu_ash_cap",
+    "0025_pikachu_explorer",
+    "0031_nidoqueen_bride",
+    "0034_nidoking_groom",
+    "0038_ninetales_suit",
+    "0059_arcanine_postman",
+    "0094_gengar_halloween",
+    "0102_exeggcute_sunglasses",
+    "0103_exeggutor_sunglasses",
+    "0114_tangela_garland",
+    "0126_magmar_hiphop",
+    "0132_ditto_baseball_cap",
+    "0132_ditto_gentleman",
+    "0133_eevee_christmas_hat",
+    "0133_eevee_sakura",
+    "0139_omastar_thick_glasses",
+    "0150_mewtwo_armored"
+  ]
+}

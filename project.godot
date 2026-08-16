@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-PokemonRegistry="*res://systems/pokemon_registry.gd"
+PokemonRegistry="*res://pokemon/pokemon_registry.gd"
 
 [display]
 

@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://c37p04xmmwtrc" path="res://assets/pokemons/0215_sneasel/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://dhvtfeuu1nlqa" path="res://assets/pokemons/0215_sneasel/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
 [ext_resource type="Resource" path="res://data/pokemon/0461_weavile.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://cf5umkbyf7wbo" path="res://assets/pokemons/0215_sneasel/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://uld7wm71m4x4" path="res://assets/pokemons/0215_sneasel/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://qm02adv610c4" path="res://assets/pokemons/0215_sneasel/preview_shiny.png" id="7_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -12,9 +15,18 @@ display_name = "Sneasel"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
 evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
 body_type = 0
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.0
+base_hp = 55
+base_attack = 95
+base_defense = 55
+base_special_attack = 35
+base_special_defense = 75
+base_speed = 115
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

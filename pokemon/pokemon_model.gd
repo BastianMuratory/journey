@@ -1,10 +1,10 @@
-class_name Pokemon
+class_name PokemonModel
 extends Node3D
 
 ## A Pokémon in the world. Reconfigures itself from whatever [PokemonData] it
 ## is given, so one scene covers every species:
 ## [codeblock]
-## var p := POKEMON_SCENE.instantiate() as Pokemon
+## var p := POKEMON_MODEL_SCENE.instantiate() as PokemonModel
 ## p.data = PokemonRegistry.get_pokemon(551)
 ## add_child(p)
 ## p.animator.moving = true
@@ -12,7 +12,7 @@ extends Node3D
 ##
 ## The node tree exists to keep three things from fighting over one transform:
 ## [codeblock]
-## Pokemon            (Node3D)         <- gameplay moves this, freely
+## PokemonModel       (Node3D)         <- gameplay moves this, freely
 ## ├── AnimPivot      (Node3D)         <- owned by the animator, nothing else
 ## │   └── Model      (MeshInstance3D) <- the mesh, and model_scale
 ## └── Animator       (PokemonAnimator)

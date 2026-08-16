@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3 uid="uid://b3ojwq4vgmyjq"]
 
 [ext_resource type="ArrayMesh" uid="uid://d1rvv20ag2x16" path="res://assets/pokemons/0014_kakuna/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://b5rd6n1s3vkkn" path="res://assets/pokemons/0014_kakuna/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
 [ext_resource type="Resource" path="res://data/pokemon/0015_beedrill.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://cswuyrkci1doo" path="res://assets/pokemons/0014_kakuna/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://d3tc7r7n3wu0o" path="res://assets/pokemons/0014_kakuna/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://blmc7xnrn8kii" path="res://assets/pokemons/0014_kakuna/preview_shiny.png" id="7_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -12,9 +15,18 @@ display_name = "Kakuna"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
-evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
 body_type = 0
 anim_speed_scale = 0.6
 anim_amplitude = 0.45
 hover_height = 0.0
+evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+base_hp = 45
+base_attack = 25
+base_defense = 50
+base_special_attack = 25
+base_special_defense = 25
+base_speed = 35
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

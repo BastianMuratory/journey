@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://6r1xtnwsp0sa"]
+
+[ext_resource type="Script" uid="uid://dijj1xikscedn" path="res://pokemon/pokemon_model.gd" id="1_mp370"]
+[ext_resource type="Script" uid="uid://b70ebonnb8gl2" path="res://pokemon/pokemon_animator.gd" id="2_khsv5"]
+
+[node name="PokemonModel" type="Node3D"]
+script = ExtResource("1_mp370")
+
+[node name="AnimPivot" type="Node3D" parent="."]
+
+[node name="Model" type="MeshInstance3D" parent="AnimPivot"]
+
+[node name="Animator" type="Node" parent="."]
+script = ExtResource("2_khsv5")

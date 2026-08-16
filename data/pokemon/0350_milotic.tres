@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://boacedn41566r" path="res://assets/pokemons/0350_milotic/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://kxvltwanb16s" path="res://assets/pokemons/0350_milotic/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://b2ibiu0s4urix" path="res://assets/pokemons/0350_milotic/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://dcbxpiypto61g" path="res://assets/pokemons/0350_milotic/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://can5gm5u7eu23" path="res://assets/pokemons/0350_milotic/preview_shiny.png" id="6_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -11,8 +14,17 @@ display_name = "Milotic"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
 body_type = 4
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.0
+base_hp = 95
+base_attack = 60
+base_defense = 79
+base_special_attack = 100
+base_special_defense = 125
+base_speed = 81
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

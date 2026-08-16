@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://gjmwc0808la1" path="res://assets/pokemons/0153_bayleef/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://ditcv8wuegg6v" path="res://assets/pokemons/0153_bayleef/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
 [ext_resource type="Resource" path="res://data/pokemon/0154_meganium.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://c6ov6pmx0t22j" path="res://assets/pokemons/0153_bayleef/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://3jccor6xx7t6" path="res://assets/pokemons/0153_bayleef/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://ryjp3gb3i5br" path="res://assets/pokemons/0153_bayleef/preview_shiny.png" id="7_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -12,9 +15,18 @@ display_name = "Bayleef"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
 evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
 body_type = 1
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.0
+base_hp = 60
+base_attack = 62
+base_defense = 80
+base_special_attack = 63
+base_special_defense = 80
+base_speed = 60
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

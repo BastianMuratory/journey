@@ -1,0 +1,3697 @@
+{
+  "_comment": "Base stats from PokeAPI, keyed by data/pokemon resource slug. Regenerate with tools/download_base_stats.py fetch; apply with tools/add_base_stats.py apply --execute.",
+  "_generated": "2026-08-16T19:43:38Z",
+  "_source": "https://pokeapi.co/api/v2/pokemon/",
+  "species": {
+    "0001_bulbasaur": {
+      "base_hp": 45,
+      "base_attack": 49,
+      "base_defense": 49,
+      "base_special_attack": 65,
+      "base_special_defense": 65,
+      "base_speed": 45,
+      "source": "1"
+    },
+    "0002_ivysaur": {
+      "base_hp": 60,
+      "base_attack": 62,
+      "base_defense": 63,
+      "base_special_attack": 80,
+      "base_special_defense": 80,
+      "base_speed": 60,
+      "source": "2"
+    },
+    "0003_venusaur": {
+      "base_hp": 80,
+      "base_attack": 82,
+      "base_defense": 83,
+      "base_special_attack": 100,
+      "base_special_defense": 100,
+      "base_speed": 80,
+      "source": "3"
+    },
+    "0003_venusaur_clone": {
+      "base_hp": 80,
+      "base_attack": 82,
+      "base_defense": 83,
+      "base_special_attack": 100,
+      "base_special_defense": 100,
+      "base_speed": 80,
+      "source": "3"
+    },
+    "0004_charmander": {
+      "base_hp": 39,
+      "base_attack": 52,
+      "base_defense": 43,
+      "base_special_attack": 60,
+      "base_special_defense": 50,
+      "base_speed": 65,
+      "source": "4"
+    },
+    "0005_charmeleon": {
+      "base_hp": 58,
+      "base_attack": 64,
+      "base_defense": 58,
+      "base_special_attack": 80,
+      "base_special_defense": 65,
+      "base_speed": 80,
+      "source": "5"
+    },
+    "0006_charizard": {
+      "base_hp": 78,
+      "base_attack": 84,
+      "base_defense": 78,
+      "base_special_attack": 109,
+      "base_special_defense": 85,
+      "base_speed": 100,
+      "source": "6"
+    },
+    "0006_charizard_clone": {
+      "base_hp": 78,
+      "base_attack": 84,
+      "base_defense": 78,
+      "base_special_attack": 109,
+      "base_special_defense": 85,
+      "base_speed": 100,
+      "source": "6"
+    },
+    "0007_squirtle": {
+      "base_hp": 44,
+      "base_attack": 48,
+      "base_defense": 65,
+      "base_special_attack": 50,
+      "base_special_defense": 64,
+      "base_speed": 43,
+      "source": "7"
+    },
+    "0008_wartortle": {
+      "base_hp": 59,
+      "base_attack": 63,
+      "base_defense": 80,
+      "base_special_attack": 65,
+      "base_special_defense": 80,
+      "base_speed": 58,
+      "source": "8"
+    },
+    "0009_blastoise": {
+      "base_hp": 79,
+      "base_attack": 83,
+      "base_defense": 100,
+      "base_special_attack": 85,
+      "base_special_defense": 105,
+      "base_speed": 78,
+      "source": "9"
+    },
+    "0009_blastoise_clone": {
+      "base_hp": 79,
+      "base_attack": 83,
+      "base_defense": 100,
+      "base_special_attack": 85,
+      "base_special_defense": 105,
+      "base_speed": 78,
+      "source": "9"
+    },
+    "0010_caterpie": {
+      "base_hp": 45,
+      "base_attack": 30,
+      "base_defense": 35,
+      "base_special_attack": 20,
+      "base_special_defense": 20,
+      "base_speed": 45,
+      "source": "10"
+    },
+    "0011_metapod": {
+      "base_hp": 50,
+      "base_attack": 20,
+      "base_defense": 55,
+      "base_special_attack": 25,
+      "base_special_defense": 25,
+      "base_speed": 30,
+      "source": "11"
+    },
+    "0012_butterfree": {
+      "base_hp": 60,
+      "base_attack": 45,
+      "base_defense": 50,
+      "base_special_attack": 90,
+      "base_special_defense": 80,
+      "base_speed": 70,
+      "source": "12"
+    },
+    "0013_weedle": {
+      "base_hp": 40,
+      "base_attack": 35,
+      "base_defense": 30,
+      "base_special_attack": 20,
+      "base_special_defense": 20,
+      "base_speed": 50,
+      "source": "13"
+    },
+    "0014_kakuna": {
+      "base_hp": 45,
+      "base_attack": 25,
+      "base_defense": 50,
+      "base_special_attack": 25,
+      "base_special_defense": 25,
+      "base_speed": 35,
+      "source": "14"
+    },
+    "0015_beedrill": {
+      "base_hp": 65,
+      "base_attack": 90,
+      "base_defense": 40,
+      "base_special_attack": 45,
+      "base_special_defense": 80,
+      "base_speed": 75,
+      "source": "15"
+    },
+    "0016_pidgey": {
+      "base_hp": 40,
+      "base_attack": 45,
+      "base_defense": 40,
+      "base_special_attack": 35,
+      "base_special_defense": 35,
+      "base_speed": 56,
+      "source": "16"
+    },
+    "0017_pidgeotto": {
+      "base_hp": 63,
+      "base_attack": 60,
+      "base_defense": 55,
+      "base_special_attack": 50,
+      "base_special_defense": 50,
+      "base_speed": 71,
+      "source": "17"
+    },
+    "0018_pidgeot": {
+      "base_hp": 83,
+      "base_attack": 80,
+      "base_defense": 75,
+      "base_special_attack": 70,
+      "base_special_defense": 70,
+      "base_speed": 101,
+      "source": "18"
+    },
+    "0019_rattata": {
+      "base_hp": 30,
+      "base_attack": 56,
+      "base_defense": 35,
+      "base_special_attack": 25,
+      "base_special_defense": 35,
+      "base_speed": 72,
+      "source": "19"
+    },
+    "0020_raticate": {
+      "base_hp": 55,
+      "base_attack": 81,
+      "base_defense": 60,
+      "base_special_attack": 50,
+      "base_special_defense": 70,
+      "base_speed": 97,
+      "source": "20"
+    },
+    "0021_spearow": {
+      "base_hp": 40,
+      "base_attack": 60,
+      "base_defense": 30,
+      "base_special_attack": 31,
+      "base_special_defense": 31,
+      "base_speed": 70,
+      "source": "21"
+    },
+    "0022_fearow": {
+      "base_hp": 65,
+      "base_attack": 90,
+      "base_defense": 65,
+      "base_special_attack": 61,
+      "base_special_defense": 61,
+      "base_speed": 100,
+      "source": "22"
+    },
+    "0023_ekans": {
+      "base_hp": 35,
+      "base_attack": 60,
+      "base_defense": 44,
+      "base_special_attack": 40,
+      "base_special_defense": 54,
+      "base_speed": 55,
+      "source": "23"
+    },
+    "0024_arbok": {
+      "base_hp": 60,
+      "base_attack": 95,
+      "base_defense": 69,
+      "base_special_attack": 65,
+      "base_special_defense": 79,
+      "base_speed": 80,
+      "source": "24"
+    },
+    "0025_pikachu": {
+      "base_hp": 35,
+      "base_attack": 55,
+      "base_defense": 40,
+      "base_special_attack": 50,
+      "base_special_defense": 50,
+      "base_speed": 90,
+      "source": "25"
+    },
+    "0025_pikachu_ash_cap": {
+      "base_hp": 35,
+      "base_attack": 55,
+      "base_defense": 40,
+      "base_special_attack": 50,
+      "base_special_defense": 50,
+      "base_speed": 90,
+      "source": "25"
+    },
+    "0025_pikachu_explorer": {
+      "base_hp": 35,
+      "base_attack": 55,
+      "base_defense": 40,
+      "base_special_attack": 50,
+      "base_special_defense": 50,
+      "base_speed": 90,
+      "source": "25"
+    },
+    "0026_raichu": {
+      "base_hp": 60,
+      "base_attack": 90,
+      "base_defense": 55,
+      "base_special_attack": 90,
+      "base_special_defense": 80,
+      "base_speed": 110,
+      "source": "26"
+    },
+    "0027_sandshrew": {
+      "base_hp": 50,
+      "base_attack": 75,
+      "base_defense": 85,
+      "base_special_attack": 20,
+      "base_special_defense": 30,
+      "base_speed": 40,
+      "source": "27"
+    },
+    "0028_sandslash": {
+      "base_hp": 75,
+      "base_attack": 100,
+      "base_defense": 110,
+      "base_special_attack": 45,
+      "base_special_defense": 55,
+      "base_speed": 65,
+      "source": "28"
+    },
+    "0029_nidoran_f": {
+      "base_hp": 55,
+      "base_attack": 47,
+      "base_defense": 52,
+      "base_special_attack": 40,
+      "base_special_defense": 40,
+      "base_speed": 41,
+      "source": "29"
+    },
+    "0030_nidorina": {
+      "base_hp": 70,
+      "base_attack": 62,
+      "base_defense": 67,
+      "base_special_attack": 55,
+      "base_special_defense": 55,
+      "base_speed": 56,
+      "source": "30"
+    },
+    "0031_nidoqueen": {
+      "base_hp": 90,
+      "base_attack": 92,
+      "base_defense": 87,
+      "base_special_attack": 75,
+      "base_special_defense": 85,
+      "base_speed": 76,
+      "source": "31"
+    },
+    "0031_nidoqueen_bride": {
+      "base_hp": 90,
+      "base_attack": 92,
+      "base_defense": 87,
+      "base_special_attack": 75,
+      "base_special_defense": 85,
+      "base_speed": 76,
+      "source": "31"
+    },
+    "0032_nidoran_m": {
+      "base_hp": 46,
+      "base_attack": 57,
+      "base_defense": 40,
+      "base_special_attack": 40,
+      "base_special_defense": 40,
+      "base_speed": 50,
+      "source": "32"
+    },
+    "0033_nidorino": {
+      "base_hp": 61,
+      "base_attack": 72,
+      "base_defense": 57,
+      "base_special_attack": 55,
+      "base_special_defense": 55,
+      "base_speed": 65,
+      "source": "33"
+    },
+    "0034_nidoking_groom": {
+      "base_hp": 81,
+      "base_attack": 102,
+      "base_defense": 77,
+      "base_special_attack": 85,
+      "base_special_defense": 75,
+      "base_speed": 85,
+      "source": "34"
+    },
+    "0035_clefairy": {
+      "base_hp": 70,
+      "base_attack": 45,
+      "base_defense": 48,
+      "base_special_attack": 60,
+      "base_special_defense": 65,
+      "base_speed": 35,
+      "source": "35"
+    },
+    "0036_clefable": {
+      "base_hp": 95,
+      "base_attack": 70,
+      "base_defense": 73,
+      "base_special_attack": 95,
+      "base_special_defense": 90,
+      "base_speed": 60,
+      "source": "36"
+    },
+    "0037_vulpix": {
+      "base_hp": 38,
+      "base_attack": 41,
+      "base_defense": 40,
+      "base_special_attack": 50,
+      "base_special_defense": 65,
+      "base_speed": 65,
+      "source": "37"
+    },
+    "0037_vulpix_alolan": {
+      "base_hp": 38,
+      "base_attack": 41,
+      "base_defense": 40,
+      "base_special_attack": 50,
+      "base_special_defense": 65,
+      "base_speed": 65,
+      "source": "vulpix-alola"
+    },
+    "0038_ninetales": {
+      "base_hp": 73,
+      "base_attack": 76,
+      "base_defense": 75,
+      "base_special_attack": 81,
+      "base_special_defense": 100,
+      "base_speed": 100,
+      "source": "38"
+    },
+    "0038_ninetales_alolan": {
+      "base_hp": 73,
+      "base_attack": 67,
+      "base_defense": 75,
+      "base_special_attack": 81,
+      "base_special_defense": 100,
+      "base_speed": 109,
+      "source": "ninetales-alola"
+    },
+    "0038_ninetales_suit": {
+      "base_hp": 73,
+      "base_attack": 76,
+      "base_defense": 75,
+      "base_special_attack": 81,
+      "base_special_defense": 100,
+      "base_speed": 100,
+      "source": "38"
+    },
+    "0039_jigglypuff": {
+      "base_hp": 115,
+      "base_attack": 45,
+      "base_defense": 20,
+      "base_special_attack": 45,
+      "base_special_defense": 25,
+      "base_speed": 20,
+      "source": "39"
+    },
+    "0040_wigglytuff": {
+      "base_hp": 140,
+      "base_attack": 70,
+      "base_defense": 45,
+      "base_special_attack": 85,
+      "base_special_defense": 50,
+      "base_speed": 45,
+      "source": "40"
+    },
+    "0041_zubat": {
+      "base_hp": 40,
+      "base_attack": 45,
+      "base_defense": 35,
+      "base_special_attack": 30,
+      "base_special_defense": 40,
+      "base_speed": 55,
+      "source": "41"
+    },
+    "0042_golbat": {
+      "base_hp": 75,
+      "base_attack": 80,
+      "base_defense": 70,
+      "base_special_attack": 65,
+      "base_special_defense": 75,
+      "base_speed": 90,
+      "source": "42"
+    },
+    "0043_oddish": {
+      "base_hp": 45,
+      "base_attack": 50,
+      "base_defense": 55,
+      "base_special_attack": 75,
+      "base_special_defense": 65,
+      "base_speed": 30,
+      "source": "43"
+    },
+    "0044_gloom": {
+      "base_hp": 60,
+      "base_attack": 65,
+      "base_defense": 70,
+      "base_special_attack": 85,
+      "base_special_defense": 75,
+      "base_speed": 40,
+      "source": "44"
+    },
+    "0045_vileplume": {
+      "base_hp": 75,
+      "base_attack": 80,
+      "base_defense": 85,
+      "base_special_attack": 110,
+      "base_special_defense": 90,
+      "base_speed": 50,
+      "source": "45"
+    },
+    "0046_paras": {
+      "base_hp": 35,
+      "base_attack": 70,
+      "base_defense": 55,
+      "base_special_attack": 45,
+      "base_special_defense": 55,
+      "base_speed": 25,
+      "source": "46"
+    },
+    "0047_parasect": {
+      "base_hp": 60,
+      "base_attack": 95,
+      "base_defense": 80,
+      "base_special_attack": 60,
+      "base_special_defense": 80,
+      "base_speed": 30,
+      "source": "47"
+    },
+    "0048_venonat": {
+      "base_hp": 60,
+      "base_attack": 55,
+      "base_defense": 50,
+      "base_special_attack": 40,
+      "base_special_defense": 55,
+      "base_speed": 45,
+      "source": "48"
+    },
+    "0049_venomoth": {
+      "base_hp": 70,
+      "base_attack": 65,
+      "base_defense": 60,
+      "base_special_attack": 90,
+      "base_special_defense": 75,
+      "base_speed": 90,
+      "source": "49"
+    },
+    "0050_diglett": {
+      "base_hp": 10,
+      "base_attack": 55,
+      "base_defense": 25,
+      "base_special_attack": 35,
+      "base_special_defense": 45,
+      "base_speed": 95,
+      "source": "50"
+    },
+    "0051_dugtrio": {
+      "base_hp": 35,
+      "base_attack": 100,
+      "base_defense": 50,
+      "base_special_attack": 50,
+      "base_special_defense": 70,
+      "base_speed": 120,
+      "source": "51"
+    },
+    "0052_meowth": {
+      "base_hp": 40,
+      "base_attack": 45,
+      "base_defense": 35,
+      "base_special_attack": 40,
+      "base_special_defense": 40,
+      "base_speed": 90,
+      "source": "52"
+    },
+    "0053_persian": {
+      "base_hp": 65,
+      "base_attack": 70,
+      "base_defense": 60,
+      "base_special_attack": 65,
+      "base_special_defense": 65,
+      "base_speed": 115,
+      "source": "53"
+    },
+    "0054_psyduck": {
+      "base_hp": 50,
+      "base_attack": 52,
+      "base_defense": 48,
+      "base_special_attack": 65,
+      "base_special_defense": 50,
+      "base_speed": 55,
+      "source": "54"
+    },
+    "0055_golduck": {
+      "base_hp": 80,
+      "base_attack": 82,
+      "base_defense": 78,
+      "base_special_attack": 95,
+      "base_special_defense": 80,
+      "base_speed": 85,
+      "source": "55"
+    },
+    "0056_mankey": {
+      "base_hp": 40,
+      "base_attack": 80,
+      "base_defense": 35,
+      "base_special_attack": 35,
+      "base_special_defense": 45,
+      "base_speed": 70,
+      "source": "56"
+    },
+    "0057_primeape": {
+      "base_hp": 65,
+      "base_attack": 105,
+      "base_defense": 60,
+      "base_special_attack": 60,
+      "base_special_defense": 70,
+      "base_speed": 95,
+      "source": "57"
+    },
+    "0058_growlithe": {
+      "base_hp": 55,
+      "base_attack": 70,
+      "base_defense": 45,
+      "base_special_attack": 70,
+      "base_special_defense": 50,
+      "base_speed": 60,
+      "source": "58"
+    },
+    "0059_arcanine": {
+      "base_hp": 90,
+      "base_attack": 110,
+      "base_defense": 80,
+      "base_special_attack": 100,
+      "base_special_defense": 80,
+      "base_speed": 95,
+      "source": "59"
+    },
+    "0059_arcanine_postman": {
+      "base_hp": 90,
+      "base_attack": 110,
+      "base_defense": 80,
+      "base_special_attack": 100,
+      "base_special_defense": 80,
+      "base_speed": 95,
+      "source": "59"
+    },
+    "0060_poliwag": {
+      "base_hp": 40,
+      "base_attack": 50,
+      "base_defense": 40,
+      "base_special_attack": 40,
+      "base_special_defense": 40,
+      "base_speed": 90,
+      "source": "60"
+    },
+    "0061_poliwhirl": {
+      "base_hp": 65,
+      "base_attack": 65,
+      "base_defense": 65,
+      "base_special_attack": 50,
+      "base_special_defense": 50,
+      "base_speed": 90,
+      "source": "61"
+    },
+    "0062_poliwrath": {
+      "base_hp": 90,
+      "base_attack": 95,
+      "base_defense": 95,
+      "base_special_attack": 70,
+      "base_special_defense": 90,
+      "base_speed": 70,
+      "source": "62"
+    },
+    "0063_abra": {
+      "base_hp": 25,
+      "base_attack": 20,
+      "base_defense": 15,
+      "base_special_attack": 105,
+      "base_special_defense": 55,
+      "base_speed": 90,
+      "source": "63"
+    },
+    "0064_kadabra": {
+      "base_hp": 40,
+      "base_attack": 35,
+      "base_defense": 30,
+      "base_special_attack": 120,
+      "base_special_defense": 70,
+      "base_speed": 105,
+      "source": "64"
+    },
+    "0065_alakazam": {
+      "base_hp": 55,
+      "base_attack": 50,
+      "base_defense": 45,
+      "base_special_attack": 135,
+      "base_special_defense": 95,
+      "base_speed": 120,
+      "source": "65"
+    },
+    "0066_machop": {
+      "base_hp": 70,
+      "base_attack": 80,
+      "base_defense": 50,
+      "base_special_attack": 35,
+      "base_special_defense": 35,
+      "base_speed": 35,
+      "source": "66"
+    },
+    "0067_machoke": {
+      "base_hp": 80,
+      "base_attack": 100,
+      "base_defense": 70,
+      "base_special_attack": 50,
+      "base_special_defense": 60,
+      "base_speed": 45,
+      "source": "67"
+    },
+    "0068_machamp": {
+      "base_hp": 90,
+      "base_attack": 130,
+      "base_defense": 80,
+      "base_special_attack": 65,
+      "base_special_defense": 85,
+      "base_speed": 55,
+      "source": "68"
+    },
+    "0069_bellsprout": {
+      "base_hp": 50,
+      "base_attack": 75,
+      "base_defense": 35,
+      "base_special_attack": 70,
+      "base_special_defense": 30,
+      "base_speed": 40,
+      "source": "69"
+    },
+    "0070_weepinbell": {
+      "base_hp": 65,
+      "base_attack": 90,
+      "base_defense": 50,
+      "base_special_attack": 85,
+      "base_special_defense": 45,
+      "base_speed": 55,
+      "source": "70"
+    },
+    "0071_victreebel": {
+      "base_hp": 80,
+      "base_attack": 105,
+      "base_defense": 65,
+      "base_special_attack": 100,
+      "base_special_defense": 70,
+      "base_speed": 70,
+      "source": "71"
+    },
+    "0072_tentacool": {
+      "base_hp": 40,
+      "base_attack": 40,
+      "base_defense": 35,
+      "base_special_attack": 50,
+      "base_special_defense": 100,
+      "base_speed": 70,
+      "source": "72"
+    },
+    "0073_tentacruel": {
+      "base_hp": 80,
+      "base_attack": 70,
+      "base_defense": 65,
+      "base_special_attack": 80,
+      "base_special_defense": 120,
+      "base_speed": 100,
+      "source": "73"
+    },
+    "0074_geodude": {
+      "base_hp": 40,
+      "base_attack": 80,
+      "base_defense": 100,
+      "base_special_attack": 30,
+      "base_special_defense": 30,
+      "base_speed": 20,
+      "source": "74"
+    },
+    "0075_graveler": {
+      "base_hp": 55,
+      "base_attack": 95,
+      "base_defense": 115,
+      "base_special_attack": 45,
+      "base_special_defense": 45,
+      "base_speed": 35,
+      "source": "75"
+    },
+    "0076_golem": {
+      "base_hp": 80,
+      "base_attack": 120,
+      "base_defense": 130,
+      "base_special_attack": 55,
+      "base_special_defense": 65,
+      "base_speed": 45,
+      "source": "76"
+    },
+    "0077_ponyta": {
+      "base_hp": 50,
+      "base_attack": 85,
+      "base_defense": 55,
+      "base_special_attack": 65,
+      "base_special_defense": 65,
+      "base_speed": 90,
+      "source": "77"
+    },
+    "0078_rapidash": {
+      "base_hp": 65,
+      "base_attack": 100,
+      "base_defense": 70,
+      "base_special_attack": 80,
+      "base_special_defense": 80,
+      "base_speed": 105,
+      "source": "78"
+    },
+    "0079_slowpoke": {
+      "base_hp": 90,
+      "base_attack": 65,
+      "base_defense": 65,
+      "base_special_attack": 40,
+      "base_special_defense": 40,
+      "base_speed": 15,
+      "source": "79"
+    },
+    "0080_slowbro": {
+      "base_hp": 95,
+      "base_attack": 75,
+      "base_defense": 110,
+      "base_special_attack": 100,
+      "base_special_defense": 80,
+      "base_speed": 30,
+      "source": "80"
+    },
+    "0081_magnemite": {
+      "base_hp": 25,
+      "base_attack": 35,
+      "base_defense": 70,
+      "base_special_attack": 95,
+      "base_special_defense": 55,
+      "base_speed": 45,
+      "source": "81"
+    },
+    "0082_magneton": {
+      "base_hp": 50,
+      "base_attack": 60,
+      "base_defense": 95,
+      "base_special_attack": 120,
+      "base_special_defense": 70,
+      "base_speed": 70,
+      "source": "82"
+    },
+    "0083_farfetchd": {
+      "base_hp": 52,
+      "base_attack": 90,
+      "base_defense": 55,
+      "base_special_attack": 58,
+      "base_special_defense": 62,
+      "base_speed": 60,
+      "source": "83"
+    },
+    "0084_doduo": {
+      "base_hp": 35,
+      "base_attack": 85,
+      "base_defense": 45,
+      "base_special_attack": 35,
+      "base_special_defense": 35,
+      "base_speed": 75,
+      "source": "84"
+    },
+    "0085_dodrio": {
+      "base_hp": 60,
+      "base_attack": 110,
+      "base_defense": 70,
+      "base_special_attack": 60,
+      "base_special_defense": 60,
+      "base_speed": 110,
+      "source": "85"
+    },
+    "0086_seel": {
+      "base_hp": 65,
+      "base_attack": 45,
+      "base_defense": 55,
+      "base_special_attack": 45,
+      "base_special_defense": 70,
+      "base_speed": 45,
+      "source": "86"
+    },
+    "0087_dewgong": {
+      "base_hp": 90,
+      "base_attack": 70,
+      "base_defense": 80,
+      "base_special_attack": 70,
+      "base_special_defense": 95,
+      "base_speed": 70,
+      "source": "87"
+    },
+    "0088_grimer": {
+      "base_hp": 80,
+      "base_attack": 80,
+      "base_defense": 50,
+      "base_special_attack": 40,
+      "base_special_defense": 50,
+      "base_speed": 25,
+      "source": "88"
+    },
+    "0089_muk": {
+      "base_hp": 105,
+      "base_attack": 105,
+      "base_defense": 75,
+      "base_special_attack": 65,
+      "base_special_defense": 100,
+      "base_speed": 50,
+      "source": "89"
+    },
+    "0090_shellder": {
+      "base_hp": 30,
+      "base_attack": 65,
+      "base_defense": 100,
+      "base_special_attack": 45,
+      "base_special_defense": 25,
+      "base_speed": 40,
+      "source": "90"
+    },
+    "0091_cloyster": {
+      "base_hp": 50,
+      "base_attack": 95,
+      "base_defense": 180,
+      "base_special_attack": 85,
+      "base_special_defense": 45,
+      "base_speed": 70,
+      "source": "91"
+    },
+    "0092_gastly": {
+      "base_hp": 30,
+      "base_attack": 35,
+      "base_defense": 30,
+      "base_special_attack": 100,
+      "base_special_defense": 35,
+      "base_speed": 80,
+      "source": "92"
+    },
+    "0093_haunter": {
+      "base_hp": 45,
+      "base_attack": 50,
+      "base_defense": 45,
+      "base_special_attack": 115,
+      "base_special_defense": 55,
+      "base_speed": 95,
+      "source": "93"
+    },
+    "0094_gengar": {
+      "base_hp": 60,
+      "base_attack": 65,
+      "base_defense": 60,
+      "base_special_attack": 130,
+      "base_special_defense": 75,
+      "base_speed": 110,
+      "source": "94"
+    },
+    "0094_gengar_halloween": {
+      "base_hp": 60,
+      "base_attack": 65,
+      "base_defense": 60,
+      "base_special_attack": 130,
+      "base_special_defense": 75,
+      "base_speed": 110,
+      "source": "94"
+    },
+    "0095_onix": {
+      "base_hp": 35,
+      "base_attack": 45,
+      "base_defense": 160,
+      "base_special_attack": 30,
+      "base_special_defense": 45,
+      "base_speed": 70,
+      "source": "95"
+    },
+    "0096_drowzee": {
+      "base_hp": 60,
+      "base_attack": 48,
+      "base_defense": 45,
+      "base_special_attack": 43,
+      "base_special_defense": 90,
+      "base_speed": 42,
+      "source": "96"
+    },
+    "0097_hypno": {
+      "base_hp": 85,
+      "base_attack": 73,
+      "base_defense": 70,
+      "base_special_attack": 73,
+      "base_special_defense": 115,
+      "base_speed": 67,
+      "source": "97"
+    },
+    "0098_krabby": {
+      "base_hp": 30,
+      "base_attack": 105,
+      "base_defense": 90,
+      "base_special_attack": 25,
+      "base_special_defense": 25,
+      "base_speed": 50,
+      "source": "98"
+    },
+    "0099_kingler": {
+      "base_hp": 55,
+      "base_attack": 130,
+      "base_defense": 115,
+      "base_special_attack": 50,
+      "base_special_defense": 50,
+      "base_speed": 75,
+      "source": "99"
+    },
+    "0100_voltorb": {
+      "base_hp": 40,
+      "base_attack": 30,
+      "base_defense": 50,
+      "base_special_attack": 55,
+      "base_special_defense": 55,
+      "base_speed": 100,
+      "source": "100"
+    },
+    "0101_electrode": {
+      "base_hp": 60,
+      "base_attack": 50,
+      "base_defense": 70,
+      "base_special_attack": 80,
+      "base_special_defense": 80,
+      "base_speed": 150,
+      "source": "101"
+    },
+    "0102_exeggcute": {
+      "base_hp": 60,
+      "base_attack": 40,
+      "base_defense": 80,
+      "base_special_attack": 60,
+      "base_special_defense": 45,
+      "base_speed": 40,
+      "source": "102"
+    },
+    "0102_exeggcute_sunglasses": {
+      "base_hp": 60,
+      "base_attack": 40,
+      "base_defense": 80,
+      "base_special_attack": 60,
+      "base_special_defense": 45,
+      "base_speed": 40,
+      "source": "102"
+    },
+    "0103_exeggutor": {
+      "base_hp": 95,
+      "base_attack": 95,
+      "base_defense": 85,
+      "base_special_attack": 125,
+      "base_special_defense": 75,
+      "base_speed": 55,
+      "source": "103"
+    },
+    "0103_exeggutor_alolan": {
+      "base_hp": 95,
+      "base_attack": 105,
+      "base_defense": 85,
+      "base_special_attack": 125,
+      "base_special_defense": 75,
+      "base_speed": 45,
+      "source": "exeggutor-alola"
+    },
+    "0103_exeggutor_sunglasses": {
+      "base_hp": 95,
+      "base_attack": 95,
+      "base_defense": 85,
+      "base_special_attack": 125,
+      "base_special_defense": 75,
+      "base_speed": 55,
+      "source": "103"
+    },
+    "0104_cubone": {
+      "base_hp": 50,
+      "base_attack": 50,
+      "base_defense": 95,
+      "base_special_attack": 40,
+      "base_special_defense": 50,
+      "base_speed": 35,
+      "source": "104"
+    },
+    "0105_marowak": {
+      "base_hp": 60,
+      "base_attack": 80,
+      "base_defense": 110,
+      "base_special_attack": 50,
+      "base_special_defense": 80,
+      "base_speed": 45,
+      "source": "105"
+    },
+    "0106_hitmonlee": {
+      "base_hp": 50,
+      "base_attack": 120,
+      "base_defense": 53,
+      "base_special_attack": 35,
+      "base_special_defense": 110,
+      "base_speed": 87,
+      "source": "106"
+    },
+    "0107_hitmonchan": {
+      "base_hp": 50,
+      "base_attack": 105,
+      "base_defense": 79,
+      "base_special_attack": 35,
+      "base_special_defense": 110,
+      "base_speed": 76,
+      "source": "107"
+    },
+    "0108_lickitung": {
+      "base_hp": 90,
+      "base_attack": 55,
+      "base_defense": 75,
+      "base_special_attack": 60,
+      "base_special_defense": 75,
+      "base_speed": 30,
+      "source": "108"
+    },
+    "0109_koffing": {
+      "base_hp": 40,
+      "base_attack": 65,
+      "base_defense": 95,
+      "base_special_attack": 60,
+      "base_special_defense": 45,
+      "base_speed": 35,
+      "source": "109"
+    },
+    "0110_weezing": {
+      "base_hp": 65,
+      "base_attack": 90,
+      "base_defense": 120,
+      "base_special_attack": 85,
+      "base_special_defense": 70,
+      "base_speed": 60,
+      "source": "110"
+    },
+    "0111_rhyhorn": {
+      "base_hp": 80,
+      "base_attack": 85,
+      "base_defense": 95,
+      "base_special_attack": 30,
+      "base_special_defense": 30,
+      "base_speed": 25,
+      "source": "111"
+    },
+    "0112_rhydon": {
+      "base_hp": 105,
+      "base_attack": 130,
+      "base_defense": 120,
+      "base_special_attack": 45,
+      "base_special_defense": 45,
+      "base_speed": 40,
+      "source": "112"
+    },
+    "0113_chansey": {
+      "base_hp": 250,
+      "base_attack": 5,
+      "base_defense": 5,
+      "base_special_attack": 35,
+      "base_special_defense": 105,
+      "base_speed": 50,
+      "source": "113"
+    },
+    "0114_tangela": {
+      "base_hp": 65,
+      "base_attack": 55,
+      "base_defense": 115,
+      "base_special_attack": 100,
+      "base_special_defense": 40,
+      "base_speed": 60,
+      "source": "114"
+    },
+    "0114_tangela_garland": {
+      "base_hp": 65,
+      "base_attack": 55,
+      "base_defense": 115,
+      "base_special_attack": 100,
+      "base_special_defense": 40,
+      "base_speed": 60,
+      "source": "114"
+    },
+    "0115_kangaskhan": {
+      "base_hp": 105,
+      "base_attack": 95,
+      "base_defense": 80,
+      "base_special_attack": 40,
+      "base_special_defense": 80,
+      "base_speed": 90,
+      "source": "115"
+    },
+    "0116_horsea": {
+      "base_hp": 30,
+      "base_attack": 40,
+      "base_defense": 70,
+      "base_special_attack": 70,
+      "base_special_defense": 25,
+      "base_speed": 60,
+      "source": "116"
+    },
+    "0117_seadra": {
+      "base_hp": 55,
+      "base_attack": 65,
+      "base_defense": 95,
+      "base_special_attack": 95,
+      "base_special_defense": 45,
+      "base_speed": 85,
+      "source": "117"
+    },
+    "0118_goldeen": {
+      "base_hp": 45,
+      "base_attack": 67,
+      "base_defense": 60,
+      "base_special_attack": 35,
+      "base_special_defense": 50,
+      "base_speed": 63,
+      "source": "118"
+    },
+    "0119_seaking": {
+      "base_hp": 80,
+      "base_attack": 92,
+      "base_defense": 65,
+      "base_special_attack": 65,
+      "base_special_defense": 80,
+      "base_speed": 68,
+      "source": "119"
+    },
+    "0120_staryu": {
+      "base_hp": 30,
+      "base_attack": 45,
+      "base_defense": 55,
+      "base_special_attack": 70,
+      "base_special_defense": 55,
+      "base_speed": 85,
+      "source": "120"
+    },
+    "0121_starmie": {
+      "base_hp": 60,
+      "base_attack": 75,
+      "base_defense": 85,
+      "base_special_attack": 100,
+      "base_special_defense": 85,
+      "base_speed": 115,
+      "source": "121"
+    },
+    "0122_mr_mime": {
+      "base_hp": 40,
+      "base_attack": 45,
+      "base_defense": 65,
+      "base_special_attack": 100,
+      "base_special_defense": 120,
+      "base_speed": 90,
+      "source": "122"
+    },
+    "0123_scyther": {
+      "base_hp": 70,
+      "base_attack": 110,
+      "base_defense": 80,
+      "base_special_attack": 55,
+      "base_special_defense": 80,
+      "base_speed": 105,
+      "source": "123"
+    },
+    "0124_jynx": {
+      "base_hp": 65,
+      "base_attack": 50,
+      "base_defense": 35,
+      "base_special_attack": 115,
+      "base_special_defense": 95,
+      "base_speed": 95,
+      "source": "124"
+    },
+    "0125_electabuzz": {
+      "base_hp": 65,
+      "base_attack": 83,
+      "base_defense": 57,
+      "base_special_attack": 95,
+      "base_special_defense": 85,
+      "base_speed": 105,
+      "source": "125"
+    },
+    "0126_magmar": {
+      "base_hp": 65,
+      "base_attack": 95,
+      "base_defense": 57,
+      "base_special_attack": 100,
+      "base_special_defense": 85,
+      "base_speed": 93,
+      "source": "126"
+    },
+    "0126_magmar_hiphop": {
+      "base_hp": 65,
+      "base_attack": 95,
+      "base_defense": 57,
+      "base_special_attack": 100,
+      "base_special_defense": 85,
+      "base_speed": 93,
+      "source": "126"
+    },
+    "0127_pinsir": {
+      "base_hp": 65,
+      "base_attack": 125,
+      "base_defense": 100,
+      "base_special_attack": 55,
+      "base_special_defense": 70,
+      "base_speed": 85,
+      "source": "127"
+    },
+    "0128_tauros": {
+      "base_hp": 75,
+      "base_attack": 100,
+      "base_defense": 95,
+      "base_special_attack": 40,
+      "base_special_defense": 70,
+      "base_speed": 110,
+      "source": "128"
+    },
+    "0129_magikarp": {
+      "base_hp": 20,
+      "base_attack": 10,
+      "base_defense": 55,
+      "base_special_attack": 15,
+      "base_special_defense": 20,
+      "base_speed": 80,
+      "source": "129"
+    },
+    "0130_gyarados": {
+      "base_hp": 95,
+      "base_attack": 125,
+      "base_defense": 79,
+      "base_special_attack": 60,
+      "base_special_defense": 100,
+      "base_speed": 81,
+      "source": "130"
+    },
+    "0131_lapras": {
+      "base_hp": 130,
+      "base_attack": 85,
+      "base_defense": 80,
+      "base_special_attack": 85,
+      "base_special_defense": 95,
+      "base_speed": 60,
+      "source": "131"
+    },
+    "0132_ditto": {
+      "base_hp": 48,
+      "base_attack": 48,
+      "base_defense": 48,
+      "base_special_attack": 48,
+      "base_special_defense": 48,
+      "base_speed": 48,
+      "source": "132"
+    },
+    "0132_ditto_baseball_cap": {
+      "base_hp": 48,
+      "base_attack": 48,
+      "base_defense": 48,
+      "base_special_attack": 48,
+      "base_special_defense": 48,
+      "base_speed": 48,
+      "source": "132"
+    },
+    "0132_ditto_gentleman": {
+      "base_hp": 48,
+      "base_attack": 48,
+      "base_defense": 48,
+      "base_special_attack": 48,
+      "base_special_defense": 48,
+      "base_speed": 48,
+      "source": "132"
+    },
+    "0133_eevee": {
+      "base_hp": 55,
+      "base_attack": 55,
+      "base_defense": 50,
+      "base_special_attack": 45,
+      "base_special_defense": 65,
+      "base_speed": 55,
+      "source": "133"
+    },
+    "0133_eevee_christmas_hat": {
+      "base_hp": 55,
+      "base_attack": 55,
+      "base_defense": 50,
+      "base_special_attack": 45,
+      "base_special_defense": 65,
+      "base_speed": 55,
+      "source": "133"
+    },
+    "0133_eevee_sakura": {
+      "base_hp": 55,
+      "base_attack": 55,
+      "base_defense": 50,
+      "base_special_attack": 45,
+      "base_special_defense": 65,
+      "base_speed": 55,
+      "source": "133"
+    },
+    "0134_vaporeon": {
+      "base_hp": 130,
+      "base_attack": 65,
+      "base_defense": 60,
+      "base_special_attack": 110,
+      "base_special_defense": 95,
+      "base_speed": 65,
+      "source": "134"
+    },
+    "0135_jolteon": {
+      "base_hp": 65,
+      "base_attack": 65,
+      "base_defense": 60,
+      "base_special_attack": 110,
+      "base_special_defense": 95,
+      "base_speed": 130,
+      "source": "135"
+    },
+    "0136_flareon": {
+      "base_hp": 65,
+      "base_attack": 130,
+      "base_defense": 60,
+      "base_special_attack": 95,
+      "base_special_defense": 110,
+      "base_speed": 65,
+      "source": "136"
+    },
+    "0137_porygon": {
+      "base_hp": 65,
+      "base_attack": 60,
+      "base_defense": 70,
+      "base_special_attack": 85,
+      "base_special_defense": 75,
+      "base_speed": 40,
+      "source": "137"
+    },
+    "0138_omanyte": {
+      "base_hp": 35,
+      "base_attack": 40,
+      "base_defense": 100,
+      "base_special_attack": 90,
+      "base_special_defense": 55,
+      "base_speed": 35,
+      "source": "138"
+    },
+    "0139_omastar": {
+      "base_hp": 70,
+      "base_attack": 60,
+      "base_defense": 125,
+      "base_special_attack": 115,
+      "base_special_defense": 70,
+      "base_speed": 55,
+      "source": "139"
+    },
+    "0139_omastar_thick_glasses": {
+      "base_hp": 70,
+      "base_attack": 60,
+      "base_defense": 125,
+      "base_special_attack": 115,
+      "base_special_defense": 70,
+      "base_speed": 55,
+      "source": "139"
+    },
+    "0140_kabuto": {
+      "base_hp": 30,
+      "base_attack": 80,
+      "base_defense": 90,
+      "base_special_attack": 55,
+      "base_special_defense": 45,
+      "base_speed": 55,
+      "source": "140"
+    },
+    "0141_kabutops": {
+      "base_hp": 60,
+      "base_attack": 115,
+      "base_defense": 105,
+      "base_special_attack": 65,
+      "base_special_defense": 70,
+      "base_speed": 80,
+      "source": "141"
+    },
+    "0142_aerodactyl": {
+      "base_hp": 80,
+      "base_attack": 105,
+      "base_defense": 65,
+      "base_special_attack": 60,
+      "base_special_defense": 75,
+      "base_speed": 130,
+      "source": "142"
+    },
+    "0143_snorlax": {
+      "base_hp": 160,
+      "base_attack": 110,
+      "base_defense": 65,
+      "base_special_attack": 65,
+      "base_special_defense": 110,
+      "base_speed": 30,
+      "source": "143"
+    },
+    "0144_articuno": {
+      "base_hp": 90,
+      "base_attack": 85,
+      "base_defense": 100,
+      "base_special_attack": 95,
+      "base_special_defense": 125,
+      "base_speed": 85,
+      "source": "144"
+    },
+    "0144_articuno_galarian": {
+      "base_hp": 90,
+      "base_attack": 85,
+      "base_defense": 85,
+      "base_special_attack": 125,
+      "base_special_defense": 100,
+      "base_speed": 95,
+      "source": "articuno-galar"
+    },
+    "0145_zapdos": {
+      "base_hp": 90,
+      "base_attack": 90,
+      "base_defense": 85,
+      "base_special_attack": 125,
+      "base_special_defense": 90,
+      "base_speed": 100,
+      "source": "145"
+    },
+    "0145_zapdos_galarian": {
+      "base_hp": 90,
+      "base_attack": 125,
+      "base_defense": 90,
+      "base_special_attack": 85,
+      "base_special_defense": 90,
+      "base_speed": 100,
+      "source": "zapdos-galar"
+    },
+    "0146_moltres": {
+      "base_hp": 90,
+      "base_attack": 100,
+      "base_defense": 90,
+      "base_special_attack": 125,
+      "base_special_defense": 85,
+      "base_speed": 90,
+      "source": "146"
+    },
+    "0146_moltres_galarian": {
+      "base_hp": 90,
+      "base_attack": 85,
+      "base_defense": 90,
+      "base_special_attack": 100,
+      "base_special_defense": 125,
+      "base_speed": 90,
+      "source": "moltres-galar"
+    },
+    "0147_dratini": {
+      "base_hp": 41,
+      "base_attack": 64,
+      "base_defense": 45,
+      "base_special_attack": 50,
+      "base_special_defense": 50,
+      "base_speed": 50,
+      "source": "147"
+    },
+    "0148_dragonair": {
+      "base_hp": 61,
+      "base_attack": 84,
+      "base_defense": 65,
+      "base_special_attack": 70,
+      "base_special_defense": 70,
+      "base_speed": 70,
+      "source": "148"
+    },
+    "0149_dragonite": {
+      "base_hp": 91,
+      "base_attack": 134,
+      "base_defense": 95,
+      "base_special_attack": 100,
+      "base_special_defense": 100,
+      "base_speed": 80,
+      "source": "149"
+    },
+    "0150_mewtwo": {
+      "base_hp": 106,
+      "base_attack": 110,
+      "base_defense": 90,
+      "base_special_attack": 154,
+      "base_special_defense": 90,
+      "base_speed": 130,
+      "source": "150"
+    },
+    "0150_mewtwo_armored": {
+      "base_hp": 106,
+      "base_attack": 110,
+      "base_defense": 90,
+      "base_special_attack": 154,
+      "base_special_defense": 90,
+      "base_speed": 130,
+      "source": "150"
+    },
+    "0151_mew": {
+      "base_hp": 100,
+      "base_attack": 100,
+      "base_defense": 100,
+      "base_special_attack": 100,
+      "base_special_defense": 100,
+      "base_speed": 100,
+      "source": "151"
+    },
+    "0152_chikorita": {
+      "base_hp": 45,
+      "base_attack": 49,
+      "base_defense": 65,
+      "base_special_attack": 49,
+      "base_special_defense": 65,
+      "base_speed": 45,
+      "source": "152"
+    },
+    "0153_bayleef": {
+      "base_hp": 60,
+      "base_attack": 62,
+      "base_defense": 80,
+      "base_special_attack": 63,
+      "base_special_defense": 80,
+      "base_speed": 60,
+      "source": "153"
+    },
+    "0154_meganium": {
+      "base_hp": 80,
+      "base_attack": 82,
+      "base_defense": 100,
+      "base_special_attack": 83,
+      "base_special_defense": 100,
+      "base_speed": 80,
+      "source": "154"
+    },
+    "0155_cyndaquil": {
+      "base_hp": 39,
+      "base_attack": 52,
+      "base_defense": 43,
+      "base_special_attack": 60,
+      "base_special_defense": 50,
+      "base_speed": 65,
+      "source": "155"
+    },
+    "0156_quilava": {
+      "base_hp": 58,
+      "base_attack": 64,
+      "base_defense": 58,
+      "base_special_attack": 80,
+      "base_special_defense": 65,
+      "base_speed": 80,
+      "source": "156"
+    },
+    "0157_typhlosion": {
+      "base_hp": 78,
+      "base_attack": 84,
+      "base_defense": 78,
+      "base_special_attack": 109,
+      "base_special_defense": 85,
+      "base_speed": 100,
+      "source": "157"
+    },
+    "0158_totodile": {
+      "base_hp": 50,
+      "base_attack": 65,
+      "base_defense": 64,
+      "base_special_attack": 44,
+      "base_special_defense": 48,
+      "base_speed": 43,
+      "source": "158"
+    },
+    "0159_croconaw": {
+      "base_hp": 65,
+      "base_attack": 80,
+      "base_defense": 80,
+      "base_special_attack": 59,
+      "base_special_defense": 63,
+      "base_speed": 58,
+      "source": "159"
+    },
+    "0160_feraligatr": {
+      "base_hp": 85,
+      "base_attack": 105,
+      "base_defense": 100,
+      "base_special_attack": 79,
+      "base_special_defense": 83,
+      "base_speed": 78,
+      "source": "160"
+    },
+    "0170_chinchou": {
+      "base_hp": 75,
+      "base_attack": 38,
+      "base_defense": 38,
+      "base_special_attack": 56,
+      "base_special_defense": 56,
+      "base_speed": 67,
+      "source": "170"
+    },
+    "0171_lanturn": {
+      "base_hp": 125,
+      "base_attack": 58,
+      "base_defense": 58,
+      "base_special_attack": 76,
+      "base_special_defense": 76,
+      "base_speed": 67,
+      "source": "171"
+    },
+    "0175_togepi": {
+      "base_hp": 35,
+      "base_attack": 20,
+      "base_defense": 65,
+      "base_special_attack": 40,
+      "base_special_defense": 65,
+      "base_speed": 20,
+      "source": "175"
+    },
+    "0176_togetic": {
+      "base_hp": 55,
+      "base_attack": 40,
+      "base_defense": 85,
+      "base_special_attack": 80,
+      "base_special_defense": 105,
+      "base_speed": 40,
+      "source": "176"
+    },
+    "0177_natu": {
+      "base_hp": 40,
+      "base_attack": 50,
+      "base_defense": 45,
+      "base_special_attack": 70,
+      "base_special_defense": 45,
+      "base_speed": 70,
+      "source": "177"
+    },
+    "0178_xatu": {
+      "base_hp": 65,
+      "base_attack": 75,
+      "base_defense": 70,
+      "base_special_attack": 95,
+      "base_special_defense": 70,
+      "base_speed": 95,
+      "source": "178"
+    },
+    "0183_marill": {
+      "base_hp": 70,
+      "base_attack": 20,
+      "base_defense": 50,
+      "base_special_attack": 20,
+      "base_special_defense": 50,
+      "base_speed": 40,
+      "source": "183"
+    },
+    "0184_azumarill": {
+      "base_hp": 100,
+      "base_attack": 50,
+      "base_defense": 80,
+      "base_special_attack": 60,
+      "base_special_defense": 80,
+      "base_speed": 50,
+      "source": "184"
+    },
+    "0194_wooper": {
+      "base_hp": 55,
+      "base_attack": 45,
+      "base_defense": 45,
+      "base_special_attack": 25,
+      "base_special_defense": 25,
+      "base_speed": 15,
+      "source": "194"
+    },
+    "0194_wooper_paldean": {
+      "base_hp": 55,
+      "base_attack": 45,
+      "base_defense": 45,
+      "base_special_attack": 25,
+      "base_special_defense": 25,
+      "base_speed": 15,
+      "source": "wooper-paldea"
+    },
+    "0195_quagsire": {
+      "base_hp": 95,
+      "base_attack": 85,
+      "base_defense": 85,
+      "base_special_attack": 65,
+      "base_special_defense": 65,
+      "base_speed": 35,
+      "source": "195"
+    },
+    "0196_espeon": {
+      "base_hp": 65,
+      "base_attack": 65,
+      "base_defense": 60,
+      "base_special_attack": 130,
+      "base_special_defense": 95,
+      "base_speed": 110,
+      "source": "196"
+    },
+    "0197_umbreon": {
+      "base_hp": 95,
+      "base_attack": 65,
+      "base_defense": 110,
+      "base_special_attack": 60,
+      "base_special_defense": 130,
+      "base_speed": 65,
+      "source": "197"
+    },
+    "0200_misdreavus": {
+      "base_hp": 60,
+      "base_attack": 60,
+      "base_defense": 60,
+      "base_special_attack": 85,
+      "base_special_defense": 85,
+      "base_speed": 85,
+      "source": "200"
+    },
+    "0202_wobbuffet": {
+      "base_hp": 190,
+      "base_attack": 33,
+      "base_defense": 58,
+      "base_special_attack": 33,
+      "base_special_defense": 58,
+      "base_speed": 33,
+      "source": "202"
+    },
+    "0207_gligar": {
+      "base_hp": 65,
+      "base_attack": 75,
+      "base_defense": 105,
+      "base_special_attack": 35,
+      "base_special_defense": 65,
+      "base_speed": 85,
+      "source": "207"
+    },
+    "0212_scizor": {
+      "base_hp": 70,
+      "base_attack": 130,
+      "base_defense": 100,
+      "base_special_attack": 55,
+      "base_special_defense": 80,
+      "base_speed": 65,
+      "source": "212"
+    },
+    "0214_heracross": {
+      "base_hp": 80,
+      "base_attack": 125,
+      "base_defense": 75,
+      "base_special_attack": 40,
+      "base_special_defense": 95,
+      "base_speed": 85,
+      "source": "214"
+    },
+    "0215_sneasel": {
+      "base_hp": 55,
+      "base_attack": 95,
+      "base_defense": 55,
+      "base_special_attack": 35,
+      "base_special_defense": 75,
+      "base_speed": 115,
+      "source": "215"
+    },
+    "0222_corsola": {
+      "base_hp": 65,
+      "base_attack": 55,
+      "base_defense": 95,
+      "base_special_attack": 65,
+      "base_special_defense": 95,
+      "base_speed": 35,
+      "source": "222"
+    },
+    "0223_remoraid": {
+      "base_hp": 35,
+      "base_attack": 65,
+      "base_defense": 35,
+      "base_special_attack": 65,
+      "base_special_defense": 35,
+      "base_speed": 65,
+      "source": "223"
+    },
+    "0224_octillery": {
+      "base_hp": 75,
+      "base_attack": 105,
+      "base_defense": 75,
+      "base_special_attack": 105,
+      "base_special_defense": 75,
+      "base_speed": 45,
+      "source": "224"
+    },
+    "0225_delibird": {
+      "base_hp": 45,
+      "base_attack": 55,
+      "base_defense": 45,
+      "base_special_attack": 65,
+      "base_special_defense": 45,
+      "base_speed": 75,
+      "source": "225"
+    },
+    "0227_skarmory": {
+      "base_hp": 65,
+      "base_attack": 80,
+      "base_defense": 140,
+      "base_special_attack": 40,
+      "base_special_defense": 70,
+      "base_speed": 70,
+      "source": "227"
+    },
+    "0228_houndour": {
+      "base_hp": 45,
+      "base_attack": 60,
+      "base_defense": 30,
+      "base_special_attack": 80,
+      "base_special_defense": 50,
+      "base_speed": 65,
+      "source": "228"
+    },
+    "0229_houndoom": {
+      "base_hp": 75,
+      "base_attack": 90,
+      "base_defense": 50,
+      "base_special_attack": 110,
+      "base_special_defense": 80,
+      "base_speed": 95,
+      "source": "229"
+    },
+    "0231_phanpy": {
+      "base_hp": 90,
+      "base_attack": 60,
+      "base_defense": 60,
+      "base_special_attack": 40,
+      "base_special_defense": 40,
+      "base_speed": 40,
+      "source": "231"
+    },
+    "0232_donphan": {
+      "base_hp": 90,
+      "base_attack": 120,
+      "base_defense": 120,
+      "base_special_attack": 60,
+      "base_special_defense": 60,
+      "base_speed": 50,
+      "source": "232"
+    },
+    "0242_blissey": {
+      "base_hp": 255,
+      "base_attack": 10,
+      "base_defense": 10,
+      "base_special_attack": 75,
+      "base_special_defense": 135,
+      "base_speed": 55,
+      "source": "242"
+    },
+    "0243_raikou": {
+      "base_hp": 90,
+      "base_attack": 85,
+      "base_defense": 75,
+      "base_special_attack": 115,
+      "base_special_defense": 100,
+      "base_speed": 115,
+      "source": "243"
+    },
+    "0244_entei": {
+      "base_hp": 115,
+      "base_attack": 115,
+      "base_defense": 85,
+      "base_special_attack": 90,
+      "base_special_defense": 75,
+      "base_speed": 100,
+      "source": "244"
+    },
+    "0245_suicune": {
+      "base_hp": 100,
+      "base_attack": 75,
+      "base_defense": 115,
+      "base_special_attack": 90,
+      "base_special_defense": 115,
+      "base_speed": 85,
+      "source": "245"
+    },
+    "0246_larvitar": {
+      "base_hp": 50,
+      "base_attack": 64,
+      "base_defense": 50,
+      "base_special_attack": 45,
+      "base_special_defense": 50,
+      "base_speed": 41,
+      "source": "246"
+    },
+    "0247_pupitar": {
+      "base_hp": 70,
+      "base_attack": 84,
+      "base_defense": 70,
+      "base_special_attack": 65,
+      "base_special_defense": 70,
+      "base_speed": 51,
+      "source": "247"
+    },
+    "0248_tyranitar": {
+      "base_hp": 100,
+      "base_attack": 134,
+      "base_defense": 110,
+      "base_special_attack": 95,
+      "base_special_defense": 100,
+      "base_speed": 61,
+      "source": "248"
+    },
+    "0249_lugia": {
+      "base_hp": 106,
+      "base_attack": 90,
+      "base_defense": 130,
+      "base_special_attack": 90,
+      "base_special_defense": 154,
+      "base_speed": 110,
+      "source": "249"
+    },
+    "0250_ho_oh": {
+      "base_hp": 106,
+      "base_attack": 130,
+      "base_defense": 90,
+      "base_special_attack": 110,
+      "base_special_defense": 154,
+      "base_speed": 90,
+      "source": "250"
+    },
+    "0251_celebi": {
+      "base_hp": 100,
+      "base_attack": 100,
+      "base_defense": 100,
+      "base_special_attack": 100,
+      "base_special_defense": 100,
+      "base_speed": 100,
+      "source": "251"
+    },
+    "0252_treecko": {
+      "base_hp": 40,
+      "base_attack": 45,
+      "base_defense": 35,
+      "base_special_attack": 65,
+      "base_special_defense": 55,
+      "base_speed": 70,
+      "source": "252"
+    },
+    "0253_grovyle": {
+      "base_hp": 50,
+      "base_attack": 65,
+      "base_defense": 45,
+      "base_special_attack": 85,
+      "base_special_defense": 65,
+      "base_speed": 95,
+      "source": "253"
+    },
+    "0254_sceptile": {
+      "base_hp": 70,
+      "base_attack": 85,
+      "base_defense": 65,
+      "base_special_attack": 105,
+      "base_special_defense": 85,
+      "base_speed": 120,
+      "source": "254"
+    },
+    "0255_torchic": {
+      "base_hp": 45,
+      "base_attack": 60,
+      "base_defense": 40,
+      "base_special_attack": 70,
+      "base_special_defense": 50,
+      "base_speed": 45,
+      "source": "255"
+    },
+    "0256_combusken": {
+      "base_hp": 60,
+      "base_attack": 85,
+      "base_defense": 60,
+      "base_special_attack": 85,
+      "base_special_defense": 60,
+      "base_speed": 55,
+      "source": "256"
+    },
+    "0257_blaziken": {
+      "base_hp": 80,
+      "base_attack": 120,
+      "base_defense": 70,
+      "base_special_attack": 110,
+      "base_special_defense": 70,
+      "base_speed": 80,
+      "source": "257"
+    },
+    "0258_mudkip": {
+      "base_hp": 50,
+      "base_attack": 70,
+      "base_defense": 50,
+      "base_special_attack": 50,
+      "base_special_defense": 50,
+      "base_speed": 40,
+      "source": "258"
+    },
+    "0259_marshtomp": {
+      "base_hp": 70,
+      "base_attack": 85,
+      "base_defense": 70,
+      "base_special_attack": 60,
+      "base_special_defense": 70,
+      "base_speed": 50,
+      "source": "259"
+    },
+    "0260_swampert": {
+      "base_hp": 100,
+      "base_attack": 110,
+      "base_defense": 90,
+      "base_special_attack": 85,
+      "base_special_defense": 90,
+      "base_speed": 60,
+      "source": "260"
+    },
+    "0270_lotad": {
+      "base_hp": 40,
+      "base_attack": 30,
+      "base_defense": 30,
+      "base_special_attack": 40,
+      "base_special_defense": 50,
+      "base_speed": 30,
+      "source": "270"
+    },
+    "0271_lombre": {
+      "base_hp": 60,
+      "base_attack": 50,
+      "base_defense": 50,
+      "base_special_attack": 60,
+      "base_special_defense": 70,
+      "base_speed": 50,
+      "source": "271"
+    },
+    "0272_ludicolo": {
+      "base_hp": 80,
+      "base_attack": 70,
+      "base_defense": 70,
+      "base_special_attack": 90,
+      "base_special_defense": 100,
+      "base_speed": 70,
+      "source": "272"
+    },
+    "0276_taillow": {
+      "base_hp": 40,
+      "base_attack": 55,
+      "base_defense": 30,
+      "base_special_attack": 30,
+      "base_special_defense": 30,
+      "base_speed": 85,
+      "source": "276"
+    },
+    "0277_swellow": {
+      "base_hp": 60,
+      "base_attack": 85,
+      "base_defense": 60,
+      "base_special_attack": 75,
+      "base_special_defense": 50,
+      "base_speed": 125,
+      "source": "277"
+    },
+    "0278_wingull": {
+      "base_hp": 40,
+      "base_attack": 30,
+      "base_defense": 30,
+      "base_special_attack": 55,
+      "base_special_defense": 30,
+      "base_speed": 85,
+      "source": "278"
+    },
+    "0279_pelipper": {
+      "base_hp": 60,
+      "base_attack": 50,
+      "base_defense": 100,
+      "base_special_attack": 95,
+      "base_special_defense": 70,
+      "base_speed": 65,
+      "source": "279"
+    },
+    "0280_ralts": {
+      "base_hp": 28,
+      "base_attack": 25,
+      "base_defense": 25,
+      "base_special_attack": 45,
+      "base_special_defense": 35,
+      "base_speed": 40,
+      "source": "280"
+    },
+    "0281_kirlia": {
+      "base_hp": 38,
+      "base_attack": 35,
+      "base_defense": 35,
+      "base_special_attack": 65,
+      "base_special_defense": 55,
+      "base_speed": 50,
+      "source": "281"
+    },
+    "0282_gardevoir": {
+      "base_hp": 68,
+      "base_attack": 65,
+      "base_defense": 65,
+      "base_special_attack": 125,
+      "base_special_defense": 115,
+      "base_speed": 80,
+      "source": "282"
+    },
+    "0302_sableye": {
+      "base_hp": 50,
+      "base_attack": 75,
+      "base_defense": 75,
+      "base_special_attack": 65,
+      "base_special_defense": 65,
+      "base_speed": 50,
+      "source": "302"
+    },
+    "0303_mawile": {
+      "base_hp": 50,
+      "base_attack": 85,
+      "base_defense": 85,
+      "base_special_attack": 55,
+      "base_special_defense": 55,
+      "base_speed": 50,
+      "source": "303"
+    },
+    "0311_plusle": {
+      "base_hp": 60,
+      "base_attack": 50,
+      "base_defense": 40,
+      "base_special_attack": 85,
+      "base_special_defense": 75,
+      "base_speed": 95,
+      "source": "311"
+    },
+    "0312_minun": {
+      "base_hp": 60,
+      "base_attack": 40,
+      "base_defense": 50,
+      "base_special_attack": 75,
+      "base_special_defense": 85,
+      "base_speed": 95,
+      "source": "312"
+    },
+    "0318_carvanha": {
+      "base_hp": 45,
+      "base_attack": 90,
+      "base_defense": 20,
+      "base_special_attack": 65,
+      "base_special_defense": 20,
+      "base_speed": 65,
+      "source": "318"
+    },
+    "0319_sharpedo": {
+      "base_hp": 70,
+      "base_attack": 120,
+      "base_defense": 40,
+      "base_special_attack": 95,
+      "base_special_defense": 40,
+      "base_speed": 95,
+      "source": "319"
+    },
+    "0320_wailmer": {
+      "base_hp": 130,
+      "base_attack": 70,
+      "base_defense": 35,
+      "base_special_attack": 70,
+      "base_special_defense": 35,
+      "base_speed": 60,
+      "source": "320"
+    },
+    "0321_wailord": {
+      "base_hp": 170,
+      "base_attack": 90,
+      "base_defense": 45,
+      "base_special_attack": 90,
+      "base_special_defense": 45,
+      "base_speed": 60,
+      "source": "321"
+    },
+    "0322_numel": {
+      "base_hp": 60,
+      "base_attack": 60,
+      "base_defense": 40,
+      "base_special_attack": 65,
+      "base_special_defense": 45,
+      "base_speed": 35,
+      "source": "322"
+    },
+    "0323_camerupt": {
+      "base_hp": 70,
+      "base_attack": 100,
+      "base_defense": 70,
+      "base_special_attack": 105,
+      "base_special_defense": 75,
+      "base_speed": 40,
+      "source": "323"
+    },
+    "0324_torkoal": {
+      "base_hp": 70,
+      "base_attack": 85,
+      "base_defense": 140,
+      "base_special_attack": 85,
+      "base_special_defense": 70,
+      "base_speed": 20,
+      "source": "324"
+    },
+    "0328_trapinch": {
+      "base_hp": 45,
+      "base_attack": 100,
+      "base_defense": 45,
+      "base_special_attack": 45,
+      "base_special_defense": 45,
+      "base_speed": 10,
+      "source": "328"
+    },
+    "0329_vibrava": {
+      "base_hp": 50,
+      "base_attack": 70,
+      "base_defense": 50,
+      "base_special_attack": 50,
+      "base_special_defense": 50,
+      "base_speed": 70,
+      "source": "329"
+    },
+    "0330_flygon": {
+      "base_hp": 80,
+      "base_attack": 100,
+      "base_defense": 80,
+      "base_special_attack": 80,
+      "base_special_defense": 80,
+      "base_speed": 100,
+      "source": "330"
+    },
+    "0331_cacnea": {
+      "base_hp": 50,
+      "base_attack": 85,
+      "base_defense": 40,
+      "base_special_attack": 85,
+      "base_special_defense": 40,
+      "base_speed": 35,
+      "source": "331"
+    },
+    "0332_cacturne": {
+      "base_hp": 70,
+      "base_attack": 115,
+      "base_defense": 60,
+      "base_special_attack": 115,
+      "base_special_defense": 60,
+      "base_speed": 55,
+      "source": "332"
+    },
+    "0333_swablu": {
+      "base_hp": 45,
+      "base_attack": 40,
+      "base_defense": 60,
+      "base_special_attack": 40,
+      "base_special_defense": 75,
+      "base_speed": 50,
+      "source": "333"
+    },
+    "0334_altaria": {
+      "base_hp": 75,
+      "base_attack": 70,
+      "base_defense": 90,
+      "base_special_attack": 70,
+      "base_special_defense": 105,
+      "base_speed": 80,
+      "source": "334"
+    },
+    "0337_lunatone": {
+      "base_hp": 90,
+      "base_attack": 55,
+      "base_defense": 65,
+      "base_special_attack": 95,
+      "base_special_defense": 85,
+      "base_speed": 70,
+      "source": "337"
+    },
+    "0338_solrock": {
+      "base_hp": 90,
+      "base_attack": 95,
+      "base_defense": 85,
+      "base_special_attack": 55,
+      "base_special_defense": 65,
+      "base_speed": 70,
+      "source": "338"
+    },
+    "0341_corphish": {
+      "base_hp": 43,
+      "base_attack": 80,
+      "base_defense": 65,
+      "base_special_attack": 50,
+      "base_special_defense": 35,
+      "base_speed": 35,
+      "source": "341"
+    },
+    "0342_crawdaunt": {
+      "base_hp": 63,
+      "base_attack": 120,
+      "base_defense": 85,
+      "base_special_attack": 90,
+      "base_special_defense": 55,
+      "base_speed": 55,
+      "source": "342"
+    },
+    "0343_baltoy": {
+      "base_hp": 40,
+      "base_attack": 40,
+      "base_defense": 55,
+      "base_special_attack": 40,
+      "base_special_defense": 70,
+      "base_speed": 55,
+      "source": "343"
+    },
+    "0344_claydol": {
+      "base_hp": 60,
+      "base_attack": 70,
+      "base_defense": 105,
+      "base_special_attack": 70,
+      "base_special_defense": 120,
+      "base_speed": 75,
+      "source": "344"
+    },
+    "0349_feebas": {
+      "base_hp": 20,
+      "base_attack": 15,
+      "base_defense": 20,
+      "base_special_attack": 10,
+      "base_special_defense": 55,
+      "base_speed": 80,
+      "source": "349"
+    },
+    "0350_milotic": {
+      "base_hp": 95,
+      "base_attack": 60,
+      "base_defense": 79,
+      "base_special_attack": 100,
+      "base_special_defense": 125,
+      "base_speed": 81,
+      "source": "350"
+    },
+    "0357_tropius": {
+      "base_hp": 99,
+      "base_attack": 68,
+      "base_defense": 83,
+      "base_special_attack": 72,
+      "base_special_defense": 87,
+      "base_speed": 51,
+      "source": "357"
+    },
+    "0359_absol": {
+      "base_hp": 65,
+      "base_attack": 130,
+      "base_defense": 60,
+      "base_special_attack": 75,
+      "base_special_defense": 60,
+      "base_speed": 75,
+      "source": "359"
+    },
+    "0366_clamperl": {
+      "base_hp": 35,
+      "base_attack": 64,
+      "base_defense": 85,
+      "base_special_attack": 74,
+      "base_special_defense": 55,
+      "base_speed": 32,
+      "source": "366"
+    },
+    "0367_huntail": {
+      "base_hp": 55,
+      "base_attack": 104,
+      "base_defense": 105,
+      "base_special_attack": 94,
+      "base_special_defense": 75,
+      "base_speed": 52,
+      "source": "367"
+    },
+    "0368_gorebyss": {
+      "base_hp": 55,
+      "base_attack": 84,
+      "base_defense": 105,
+      "base_special_attack": 114,
+      "base_special_defense": 75,
+      "base_speed": 52,
+      "source": "368"
+    },
+    "0370_luvdisc": {
+      "base_hp": 43,
+      "base_attack": 30,
+      "base_defense": 55,
+      "base_special_attack": 40,
+      "base_special_defense": 65,
+      "base_speed": 97,
+      "source": "370"
+    },
+    "0371_bagon": {
+      "base_hp": 45,
+      "base_attack": 75,
+      "base_defense": 60,
+      "base_special_attack": 40,
+      "base_special_defense": 30,
+      "base_speed": 50,
+      "source": "371"
+    },
+    "0372_shelgon": {
+      "base_hp": 65,
+      "base_attack": 95,
+      "base_defense": 100,
+      "base_special_attack": 60,
+      "base_special_defense": 50,
+      "base_speed": 50,
+      "source": "372"
+    },
+    "0373_salamence": {
+      "base_hp": 95,
+      "base_attack": 135,
+      "base_defense": 80,
+      "base_special_attack": 110,
+      "base_special_defense": 80,
+      "base_speed": 100,
+      "source": "373"
+    },
+    "0374_beldum": {
+      "base_hp": 40,
+      "base_attack": 55,
+      "base_defense": 80,
+      "base_special_attack": 35,
+      "base_special_defense": 60,
+      "base_speed": 30,
+      "source": "374"
+    },
+    "0375_metang": {
+      "base_hp": 60,
+      "base_attack": 75,
+      "base_defense": 100,
+      "base_special_attack": 55,
+      "base_special_defense": 80,
+      "base_speed": 50,
+      "source": "375"
+    },
+    "0376_metagross": {
+      "base_hp": 80,
+      "base_attack": 135,
+      "base_defense": 130,
+      "base_special_attack": 95,
+      "base_special_defense": 90,
+      "base_speed": 70,
+      "source": "376"
+    },
+    "0377_regirock": {
+      "base_hp": 80,
+      "base_attack": 100,
+      "base_defense": 200,
+      "base_special_attack": 50,
+      "base_special_defense": 100,
+      "base_speed": 50,
+      "source": "377"
+    },
+    "0378_regice": {
+      "base_hp": 80,
+      "base_attack": 50,
+      "base_defense": 100,
+      "base_special_attack": 100,
+      "base_special_defense": 200,
+      "base_speed": 50,
+      "source": "378"
+    },
+    "0379_registeel": {
+      "base_hp": 80,
+      "base_attack": 75,
+      "base_defense": 150,
+      "base_special_attack": 75,
+      "base_special_defense": 150,
+      "base_speed": 50,
+      "source": "379"
+    },
+    "0380_latias": {
+      "base_hp": 80,
+      "base_attack": 80,
+      "base_defense": 90,
+      "base_special_attack": 110,
+      "base_special_defense": 130,
+      "base_speed": 110,
+      "source": "380"
+    },
+    "0381_latios": {
+      "base_hp": 80,
+      "base_attack": 90,
+      "base_defense": 80,
+      "base_special_attack": 130,
+      "base_special_defense": 110,
+      "base_speed": 110,
+      "source": "381"
+    },
+    "0382_kyogre": {
+      "base_hp": 100,
+      "base_attack": 100,
+      "base_defense": 90,
+      "base_special_attack": 150,
+      "base_special_defense": 140,
+      "base_speed": 90,
+      "source": "382"
+    },
+    "0383_groudon": {
+      "base_hp": 100,
+      "base_attack": 150,
+      "base_defense": 140,
+      "base_special_attack": 100,
+      "base_special_defense": 90,
+      "base_speed": 90,
+      "source": "383"
+    },
+    "0384_rayquaza": {
+      "base_hp": 105,
+      "base_attack": 150,
+      "base_defense": 90,
+      "base_special_attack": 150,
+      "base_special_defense": 90,
+      "base_speed": 95,
+      "source": "384"
+    },
+    "0385_jirachi": {
+      "base_hp": 100,
+      "base_attack": 100,
+      "base_defense": 100,
+      "base_special_attack": 100,
+      "base_special_defense": 100,
+      "base_speed": 100,
+      "source": "385"
+    },
+    "0386_deoxys_attack": {
+      "base_hp": 50,
+      "base_attack": 180,
+      "base_defense": 20,
+      "base_special_attack": 180,
+      "base_special_defense": 20,
+      "base_speed": 150,
+      "source": "deoxys-attack"
+    },
+    "0386_deoxys_defense": {
+      "base_hp": 50,
+      "base_attack": 70,
+      "base_defense": 160,
+      "base_special_attack": 70,
+      "base_special_defense": 160,
+      "base_speed": 90,
+      "source": "deoxys-defense"
+    },
+    "0386_deoxys_normal": {
+      "base_hp": 50,
+      "base_attack": 150,
+      "base_defense": 50,
+      "base_special_attack": 150,
+      "base_special_defense": 50,
+      "base_speed": 150,
+      "source": "deoxys-normal"
+    },
+    "0386_deoxys_speed": {
+      "base_hp": 50,
+      "base_attack": 95,
+      "base_defense": 90,
+      "base_special_attack": 95,
+      "base_special_defense": 90,
+      "base_speed": 180,
+      "source": "deoxys-speed"
+    },
+    "0387_turtwig": {
+      "base_hp": 55,
+      "base_attack": 68,
+      "base_defense": 64,
+      "base_special_attack": 45,
+      "base_special_defense": 55,
+      "base_speed": 31,
+      "source": "387"
+    },
+    "0388_grotle": {
+      "base_hp": 75,
+      "base_attack": 89,
+      "base_defense": 85,
+      "base_special_attack": 55,
+      "base_special_defense": 65,
+      "base_speed": 36,
+      "source": "388"
+    },
+    "0389_torterra": {
+      "base_hp": 95,
+      "base_attack": 109,
+      "base_defense": 105,
+      "base_special_attack": 75,
+      "base_special_defense": 85,
+      "base_speed": 56,
+      "source": "389"
+    },
+    "0390_chimchar": {
+      "base_hp": 44,
+      "base_attack": 58,
+      "base_defense": 44,
+      "base_special_attack": 58,
+      "base_special_defense": 44,
+      "base_speed": 61,
+      "source": "390"
+    },
+    "0391_monferno": {
+      "base_hp": 64,
+      "base_attack": 78,
+      "base_defense": 52,
+      "base_special_attack": 78,
+      "base_special_defense": 52,
+      "base_speed": 81,
+      "source": "391"
+    },
+    "0392_infernape": {
+      "base_hp": 76,
+      "base_attack": 104,
+      "base_defense": 71,
+      "base_special_attack": 104,
+      "base_special_defense": 71,
+      "base_speed": 108,
+      "source": "392"
+    },
+    "0393_piplup": {
+      "base_hp": 53,
+      "base_attack": 51,
+      "base_defense": 53,
+      "base_special_attack": 61,
+      "base_special_defense": 56,
+      "base_speed": 40,
+      "source": "393"
+    },
+    "0394_prinplup": {
+      "base_hp": 64,
+      "base_attack": 66,
+      "base_defense": 68,
+      "base_special_attack": 81,
+      "base_special_defense": 76,
+      "base_speed": 50,
+      "source": "394"
+    },
+    "0395_empoleon": {
+      "base_hp": 84,
+      "base_attack": 86,
+      "base_defense": 88,
+      "base_special_attack": 111,
+      "base_special_defense": 101,
+      "base_speed": 60,
+      "source": "395"
+    },
+    "0399_bidoof": {
+      "base_hp": 59,
+      "base_attack": 45,
+      "base_defense": 40,
+      "base_special_attack": 35,
+      "base_special_defense": 40,
+      "base_speed": 31,
+      "source": "399"
+    },
+    "0400_bibarel": {
+      "base_hp": 79,
+      "base_attack": 85,
+      "base_defense": 60,
+      "base_special_attack": 55,
+      "base_special_defense": 60,
+      "base_speed": 71,
+      "source": "400"
+    },
+    "0425_drifloon": {
+      "base_hp": 90,
+      "base_attack": 50,
+      "base_defense": 34,
+      "base_special_attack": 60,
+      "base_special_defense": 44,
+      "base_speed": 70,
+      "source": "425"
+    },
+    "0426_drifblim": {
+      "base_hp": 150,
+      "base_attack": 80,
+      "base_defense": 44,
+      "base_special_attack": 90,
+      "base_special_defense": 54,
+      "base_speed": 80,
+      "source": "426"
+    },
+    "0429_mismagius": {
+      "base_hp": 60,
+      "base_attack": 60,
+      "base_defense": 60,
+      "base_special_attack": 105,
+      "base_special_defense": 105,
+      "base_speed": 105,
+      "source": "429"
+    },
+    "0442_spiritomb": {
+      "base_hp": 50,
+      "base_attack": 92,
+      "base_defense": 108,
+      "base_special_attack": 92,
+      "base_special_defense": 108,
+      "base_speed": 35,
+      "source": "442"
+    },
+    "0443_gible": {
+      "base_hp": 58,
+      "base_attack": 70,
+      "base_defense": 45,
+      "base_special_attack": 40,
+      "base_special_defense": 45,
+      "base_speed": 42,
+      "source": "443"
+    },
+    "0444_gabite": {
+      "base_hp": 68,
+      "base_attack": 90,
+      "base_defense": 65,
+      "base_special_attack": 50,
+      "base_special_defense": 55,
+      "base_speed": 82,
+      "source": "444"
+    },
+    "0445_garchomp": {
+      "base_hp": 108,
+      "base_attack": 130,
+      "base_defense": 95,
+      "base_special_attack": 80,
+      "base_special_defense": 85,
+      "base_speed": 102,
+      "source": "445"
+    },
+    "0448_lucario": {
+      "base_hp": 70,
+      "base_attack": 110,
+      "base_defense": 70,
+      "base_special_attack": 115,
+      "base_special_defense": 70,
+      "base_speed": 90,
+      "source": "448"
+    },
+    "0461_weavile": {
+      "base_hp": 70,
+      "base_attack": 120,
+      "base_defense": 65,
+      "base_special_attack": 45,
+      "base_special_defense": 85,
+      "base_speed": 125,
+      "source": "461"
+    },
+    "0465_tangrowth": {
+      "base_hp": 100,
+      "base_attack": 100,
+      "base_defense": 125,
+      "base_special_attack": 110,
+      "base_special_defense": 50,
+      "base_speed": 50,
+      "source": "465"
+    },
+    "0468_togekiss": {
+      "base_hp": 85,
+      "base_attack": 50,
+      "base_defense": 95,
+      "base_special_attack": 120,
+      "base_special_defense": 115,
+      "base_speed": 80,
+      "source": "468"
+    },
+    "0470_leafeon": {
+      "base_hp": 65,
+      "base_attack": 110,
+      "base_defense": 130,
+      "base_special_attack": 60,
+      "base_special_defense": 65,
+      "base_speed": 95,
+      "source": "470"
+    },
+    "0471_glaceon": {
+      "base_hp": 65,
+      "base_attack": 60,
+      "base_defense": 110,
+      "base_special_attack": 130,
+      "base_special_defense": 95,
+      "base_speed": 65,
+      "source": "471"
+    },
+    "0472_gliscor": {
+      "base_hp": 75,
+      "base_attack": 95,
+      "base_defense": 125,
+      "base_special_attack": 45,
+      "base_special_defense": 75,
+      "base_speed": 95,
+      "source": "472"
+    },
+    "0479_rotom": {
+      "base_hp": 50,
+      "base_attack": 50,
+      "base_defense": 77,
+      "base_special_attack": 95,
+      "base_special_defense": 77,
+      "base_speed": 91,
+      "source": "479"
+    },
+    "0479_rotom_fan": {
+      "base_hp": 50,
+      "base_attack": 65,
+      "base_defense": 107,
+      "base_special_attack": 105,
+      "base_special_defense": 107,
+      "base_speed": 86,
+      "source": "rotom-fan"
+    },
+    "0479_rotom_frost": {
+      "base_hp": 50,
+      "base_attack": 65,
+      "base_defense": 107,
+      "base_special_attack": 105,
+      "base_special_defense": 107,
+      "base_speed": 86,
+      "source": "rotom-frost"
+    },
+    "0479_rotom_heat": {
+      "base_hp": 50,
+      "base_attack": 65,
+      "base_defense": 107,
+      "base_special_attack": 105,
+      "base_special_defense": 107,
+      "base_speed": 86,
+      "source": "rotom-heat"
+    },
+    "0479_rotom_mow": {
+      "base_hp": 50,
+      "base_attack": 65,
+      "base_defense": 107,
+      "base_special_attack": 105,
+      "base_special_defense": 107,
+      "base_speed": 86,
+      "source": "rotom-mow"
+    },
+    "0479_rotom_wash": {
+      "base_hp": 50,
+      "base_attack": 65,
+      "base_defense": 107,
+      "base_special_attack": 105,
+      "base_special_defense": 107,
+      "base_speed": 86,
+      "source": "rotom-wash"
+    },
+    "0480_uxie": {
+      "base_hp": 75,
+      "base_attack": 75,
+      "base_defense": 130,
+      "base_special_attack": 75,
+      "base_special_defense": 130,
+      "base_speed": 95,
+      "source": "480"
+    },
+    "0481_mesprit": {
+      "base_hp": 80,
+      "base_attack": 105,
+      "base_defense": 105,
+      "base_special_attack": 105,
+      "base_special_defense": 105,
+      "base_speed": 80,
+      "source": "481"
+    },
+    "0482_azelf": {
+      "base_hp": 75,
+      "base_attack": 125,
+      "base_defense": 70,
+      "base_special_attack": 125,
+      "base_special_defense": 70,
+      "base_speed": 115,
+      "source": "482"
+    },
+    "0483_dialga": {
+      "base_hp": 100,
+      "base_attack": 120,
+      "base_defense": 120,
+      "base_special_attack": 150,
+      "base_special_defense": 100,
+      "base_speed": 90,
+      "source": "483"
+    },
+    "0484_palkia": {
+      "base_hp": 90,
+      "base_attack": 120,
+      "base_defense": 100,
+      "base_special_attack": 150,
+      "base_special_defense": 120,
+      "base_speed": 100,
+      "source": "484"
+    },
+    "0486_regigigas": {
+      "base_hp": 110,
+      "base_attack": 160,
+      "base_defense": 110,
+      "base_special_attack": 80,
+      "base_special_defense": 110,
+      "base_speed": 100,
+      "source": "486"
+    },
+    "0487_giratina": {
+      "base_hp": 150,
+      "base_attack": 100,
+      "base_defense": 120,
+      "base_special_attack": 100,
+      "base_special_defense": 120,
+      "base_speed": 90,
+      "source": "487"
+    },
+    "0488_cresselia": {
+      "base_hp": 120,
+      "base_attack": 70,
+      "base_defense": 110,
+      "base_special_attack": 75,
+      "base_special_defense": 120,
+      "base_speed": 85,
+      "source": "488"
+    },
+    "0489_phione": {
+      "base_hp": 80,
+      "base_attack": 80,
+      "base_defense": 80,
+      "base_special_attack": 80,
+      "base_special_defense": 80,
+      "base_speed": 80,
+      "source": "489"
+    },
+    "0490_manaphy": {
+      "base_hp": 100,
+      "base_attack": 100,
+      "base_defense": 100,
+      "base_special_attack": 100,
+      "base_special_defense": 100,
+      "base_speed": 100,
+      "source": "490"
+    },
+    "0491_darkrai": {
+      "base_hp": 70,
+      "base_attack": 90,
+      "base_defense": 90,
+      "base_special_attack": 135,
+      "base_special_defense": 90,
+      "base_speed": 125,
+      "source": "491"
+    },
+    "0492_shaymin_land": {
+      "base_hp": 100,
+      "base_attack": 100,
+      "base_defense": 100,
+      "base_special_attack": 100,
+      "base_special_defense": 100,
+      "base_speed": 100,
+      "source": "shaymin-land"
+    },
+    "0492_shaymin_sky": {
+      "base_hp": 100,
+      "base_attack": 103,
+      "base_defense": 75,
+      "base_special_attack": 120,
+      "base_special_defense": 75,
+      "base_speed": 127,
+      "source": "shaymin-sky"
+    },
+    "0493_arceus": {
+      "base_hp": 120,
+      "base_attack": 120,
+      "base_defense": 120,
+      "base_special_attack": 120,
+      "base_special_defense": 120,
+      "base_speed": 120,
+      "source": "493"
+    },
+    "0529_drilbur": {
+      "base_hp": 60,
+      "base_attack": 85,
+      "base_defense": 40,
+      "base_special_attack": 30,
+      "base_special_defense": 45,
+      "base_speed": 68,
+      "source": "529"
+    },
+    "0530_excadrill": {
+      "base_hp": 110,
+      "base_attack": 135,
+      "base_defense": 60,
+      "base_special_attack": 50,
+      "base_special_defense": 65,
+      "base_speed": 88,
+      "source": "530"
+    },
+    "0532_timburr": {
+      "base_hp": 75,
+      "base_attack": 80,
+      "base_defense": 55,
+      "base_special_attack": 25,
+      "base_special_defense": 35,
+      "base_speed": 35,
+      "source": "532"
+    },
+    "0533_gurdurr": {
+      "base_hp": 85,
+      "base_attack": 105,
+      "base_defense": 85,
+      "base_special_attack": 40,
+      "base_special_defense": 50,
+      "base_speed": 40,
+      "source": "533"
+    },
+    "0534_conkeldurr": {
+      "base_hp": 105,
+      "base_attack": 140,
+      "base_defense": 95,
+      "base_special_attack": 55,
+      "base_special_defense": 65,
+      "base_speed": 45,
+      "source": "534"
+    },
+    "0546_cottonee": {
+      "base_hp": 40,
+      "base_attack": 27,
+      "base_defense": 60,
+      "base_special_attack": 37,
+      "base_special_defense": 50,
+      "base_speed": 66,
+      "source": "546"
+    },
+    "0547_whimsicott": {
+      "base_hp": 60,
+      "base_attack": 67,
+      "base_defense": 85,
+      "base_special_attack": 77,
+      "base_special_defense": 75,
+      "base_speed": 116,
+      "source": "547"
+    },
+    "0551_sandile": {
+      "base_hp": 50,
+      "base_attack": 72,
+      "base_defense": 35,
+      "base_special_attack": 35,
+      "base_special_defense": 35,
+      "base_speed": 65,
+      "source": "551"
+    },
+    "0552_krokorok": {
+      "base_hp": 60,
+      "base_attack": 82,
+      "base_defense": 45,
+      "base_special_attack": 45,
+      "base_special_defense": 45,
+      "base_speed": 74,
+      "source": "552"
+    },
+    "0553_krookodile": {
+      "base_hp": 95,
+      "base_attack": 117,
+      "base_defense": 80,
+      "base_special_attack": 65,
+      "base_special_defense": 70,
+      "base_speed": 92,
+      "source": "553"
+    },
+    "0570_zorua": {
+      "base_hp": 40,
+      "base_attack": 65,
+      "base_defense": 40,
+      "base_special_attack": 80,
+      "base_special_defense": 40,
+      "base_speed": 65,
+      "source": "570"
+    },
+    "0570_zorua_hisuian": {
+      "base_hp": 35,
+      "base_attack": 60,
+      "base_defense": 40,
+      "base_special_attack": 85,
+      "base_special_defense": 40,
+      "base_speed": 70,
+      "source": "zorua-hisui"
+    },
+    "0571_zoroark": {
+      "base_hp": 60,
+      "base_attack": 105,
+      "base_defense": 60,
+      "base_special_attack": 120,
+      "base_special_defense": 60,
+      "base_speed": 105,
+      "source": "571"
+    },
+    "0571_zoroark_hisuian": {
+      "base_hp": 55,
+      "base_attack": 100,
+      "base_defense": 60,
+      "base_special_attack": 125,
+      "base_special_defense": 60,
+      "base_speed": 110,
+      "source": "zoroark-hisui"
+    },
+    "0587_emolga": {
+      "base_hp": 55,
+      "base_attack": 75,
+      "base_defense": 60,
+      "base_special_attack": 75,
+      "base_special_defense": 60,
+      "base_speed": 103,
+      "source": "587"
+    },
+    "0597_ferroseed": {
+      "base_hp": 44,
+      "base_attack": 50,
+      "base_defense": 91,
+      "base_special_attack": 24,
+      "base_special_defense": 86,
+      "base_speed": 10,
+      "source": "597"
+    },
+    "0598_ferrothorn": {
+      "base_hp": 74,
+      "base_attack": 94,
+      "base_defense": 131,
+      "base_special_attack": 54,
+      "base_special_defense": 116,
+      "base_speed": 20,
+      "source": "598"
+    },
+    "0599_klink": {
+      "base_hp": 40,
+      "base_attack": 55,
+      "base_defense": 70,
+      "base_special_attack": 45,
+      "base_special_defense": 60,
+      "base_speed": 30,
+      "source": "599"
+    },
+    "0600_klang": {
+      "base_hp": 60,
+      "base_attack": 80,
+      "base_defense": 95,
+      "base_special_attack": 70,
+      "base_special_defense": 85,
+      "base_speed": 50,
+      "source": "600"
+    },
+    "0601_klinklang": {
+      "base_hp": 60,
+      "base_attack": 100,
+      "base_defense": 115,
+      "base_special_attack": 70,
+      "base_special_defense": 85,
+      "base_speed": 90,
+      "source": "601"
+    },
+    "0607_litwick": {
+      "base_hp": 50,
+      "base_attack": 30,
+      "base_defense": 55,
+      "base_special_attack": 65,
+      "base_special_defense": 55,
+      "base_speed": 20,
+      "source": "607"
+    },
+    "0608_lampent": {
+      "base_hp": 60,
+      "base_attack": 40,
+      "base_defense": 60,
+      "base_special_attack": 95,
+      "base_special_defense": 60,
+      "base_speed": 55,
+      "source": "608"
+    },
+    "0609_chandelure": {
+      "base_hp": 60,
+      "base_attack": 55,
+      "base_defense": 90,
+      "base_special_attack": 145,
+      "base_special_defense": 90,
+      "base_speed": 80,
+      "source": "609"
+    },
+    "0633_deino": {
+      "base_hp": 52,
+      "base_attack": 65,
+      "base_defense": 50,
+      "base_special_attack": 45,
+      "base_special_defense": 50,
+      "base_speed": 38,
+      "source": "633"
+    },
+    "0634_zweilous": {
+      "base_hp": 72,
+      "base_attack": 85,
+      "base_defense": 70,
+      "base_special_attack": 65,
+      "base_special_defense": 70,
+      "base_speed": 58,
+      "source": "634"
+    },
+    "0635_hydreigon": {
+      "base_hp": 92,
+      "base_attack": 105,
+      "base_defense": 90,
+      "base_special_attack": 125,
+      "base_special_defense": 90,
+      "base_speed": 98,
+      "source": "635"
+    },
+    "0643_reshiram": {
+      "base_hp": 100,
+      "base_attack": 120,
+      "base_defense": 100,
+      "base_special_attack": 150,
+      "base_special_defense": 120,
+      "base_speed": 90,
+      "source": "643"
+    },
+    "0644_zekrom": {
+      "base_hp": 100,
+      "base_attack": 150,
+      "base_defense": 120,
+      "base_special_attack": 120,
+      "base_special_defense": 100,
+      "base_speed": 90,
+      "source": "644"
+    },
+    "0646_kyurem": {
+      "base_hp": 125,
+      "base_attack": 130,
+      "base_defense": 90,
+      "base_special_attack": 130,
+      "base_special_defense": 90,
+      "base_speed": 95,
+      "source": "646"
+    },
+    "0656_froakie": {
+      "base_hp": 41,
+      "base_attack": 56,
+      "base_defense": 40,
+      "base_special_attack": 62,
+      "base_special_defense": 44,
+      "base_speed": 71,
+      "source": "656"
+    },
+    "0657_frogadier": {
+      "base_hp": 54,
+      "base_attack": 63,
+      "base_defense": 52,
+      "base_special_attack": 83,
+      "base_special_defense": 56,
+      "base_speed": 97,
+      "source": "657"
+    },
+    "0658_greninja": {
+      "base_hp": 72,
+      "base_attack": 95,
+      "base_defense": 67,
+      "base_special_attack": 103,
+      "base_special_defense": 71,
+      "base_speed": 122,
+      "source": "658"
+    },
+    "0700_sylveon": {
+      "base_hp": 95,
+      "base_attack": 65,
+      "base_defense": 65,
+      "base_special_attack": 110,
+      "base_special_defense": 130,
+      "base_speed": 60,
+      "source": "700"
+    },
+    "0702_dedenne": {
+      "base_hp": 67,
+      "base_attack": 58,
+      "base_defense": 57,
+      "base_special_attack": 81,
+      "base_special_defense": 67,
+      "base_speed": 101,
+      "source": "702"
+    },
+    "0707_klefki": {
+      "base_hp": 57,
+      "base_attack": 80,
+      "base_defense": 91,
+      "base_special_attack": 80,
+      "base_special_defense": 87,
+      "base_speed": 75,
+      "source": "707"
+    },
+    "0710_pumpkaboo": {
+      "base_hp": 49,
+      "base_attack": 66,
+      "base_defense": 70,
+      "base_special_attack": 44,
+      "base_special_defense": 55,
+      "base_speed": 51,
+      "source": "710"
+    },
+    "0711_gourgeist": {
+      "base_hp": 65,
+      "base_attack": 90,
+      "base_defense": 122,
+      "base_special_attack": 58,
+      "base_special_defense": 75,
+      "base_speed": 84,
+      "source": "711"
+    },
+    "0718_zygarde": {
+      "base_hp": 108,
+      "base_attack": 100,
+      "base_defense": 121,
+      "base_special_attack": 81,
+      "base_special_defense": 95,
+      "base_speed": 95,
+      "source": "718"
+    },
+    "0736_grubbin": {
+      "base_hp": 47,
+      "base_attack": 62,
+      "base_defense": 45,
+      "base_special_attack": 55,
+      "base_special_defense": 45,
+      "base_speed": 46,
+      "source": "736"
+    },
+    "0737_charjabug": {
+      "base_hp": 57,
+      "base_attack": 82,
+      "base_defense": 95,
+      "base_special_attack": 55,
+      "base_special_defense": 75,
+      "base_speed": 36,
+      "source": "737"
+    },
+    "0738_vikavolt": {
+      "base_hp": 77,
+      "base_attack": 70,
+      "base_defense": 90,
+      "base_special_attack": 145,
+      "base_special_defense": 75,
+      "base_speed": 43,
+      "source": "738"
+    },
+    "0767_wimpod": {
+      "base_hp": 25,
+      "base_attack": 35,
+      "base_defense": 40,
+      "base_special_attack": 20,
+      "base_special_defense": 30,
+      "base_speed": 80,
+      "source": "767"
+    },
+    "0768_golisopod": {
+      "base_hp": 75,
+      "base_attack": 125,
+      "base_defense": 140,
+      "base_special_attack": 60,
+      "base_special_defense": 90,
+      "base_speed": 40,
+      "source": "768"
+    },
+    "0769_sandygast": {
+      "base_hp": 55,
+      "base_attack": 55,
+      "base_defense": 80,
+      "base_special_attack": 70,
+      "base_special_defense": 45,
+      "base_speed": 15,
+      "source": "769"
+    },
+    "0770_palossand": {
+      "base_hp": 85,
+      "base_attack": 75,
+      "base_defense": 110,
+      "base_special_attack": 100,
+      "base_special_defense": 75,
+      "base_speed": 35,
+      "source": "770"
+    },
+    "0771_pyukumuku": {
+      "base_hp": 55,
+      "base_attack": 60,
+      "base_defense": 130,
+      "base_special_attack": 30,
+      "base_special_defense": 130,
+      "base_speed": 5,
+      "source": "771"
+    },
+    "0778_mimikyu": {
+      "base_hp": 55,
+      "base_attack": 90,
+      "base_defense": 80,
+      "base_special_attack": 50,
+      "base_special_defense": 105,
+      "base_speed": 96,
+      "source": "778"
+    },
+    "0791_solgaleo": {
+      "base_hp": 137,
+      "base_attack": 137,
+      "base_defense": 107,
+      "base_special_attack": 113,
+      "base_special_defense": 89,
+      "base_speed": 97,
+      "source": "791"
+    },
+    "0792_lunala": {
+      "base_hp": 137,
+      "base_attack": 113,
+      "base_defense": 89,
+      "base_special_attack": 137,
+      "base_special_defense": 107,
+      "base_speed": 97,
+      "source": "792"
+    },
+    "0800_necrozma": {
+      "base_hp": 97,
+      "base_attack": 107,
+      "base_defense": 101,
+      "base_special_attack": 127,
+      "base_special_defense": 89,
+      "base_speed": 79,
+      "source": "800"
+    },
+    "0807_zeraora": {
+      "base_hp": 88,
+      "base_attack": 112,
+      "base_defense": 75,
+      "base_special_attack": 102,
+      "base_special_defense": 80,
+      "base_speed": 143,
+      "source": "807"
+    },
+    "0845_cramorant": {
+      "base_hp": 70,
+      "base_attack": 85,
+      "base_defense": 55,
+      "base_special_attack": 85,
+      "base_special_defense": 95,
+      "base_speed": 85,
+      "source": "845"
+    },
+    "0878_cufant": {
+      "base_hp": 72,
+      "base_attack": 80,
+      "base_defense": 49,
+      "base_special_attack": 40,
+      "base_special_defense": 49,
+      "base_speed": 40,
+      "source": "878"
+    },
+    "0879_copperajah": {
+      "base_hp": 122,
+      "base_attack": 130,
+      "base_defense": 69,
+      "base_special_attack": 80,
+      "base_special_defense": 69,
+      "base_speed": 30,
+      "source": "879"
+    },
+    "0884_duraludon": {
+      "base_hp": 70,
+      "base_attack": 95,
+      "base_defense": 115,
+      "base_special_attack": 120,
+      "base_special_defense": 50,
+      "base_speed": 85,
+      "source": "884"
+    },
+    "0885_dreepy": {
+      "base_hp": 28,
+      "base_attack": 60,
+      "base_defense": 30,
+      "base_special_attack": 40,
+      "base_special_defense": 30,
+      "base_speed": 82,
+      "source": "885"
+    },
+    "0886_drakloak": {
+      "base_hp": 68,
+      "base_attack": 80,
+      "base_defense": 50,
+      "base_special_attack": 60,
+      "base_special_defense": 50,
+      "base_speed": 102,
+      "source": "886"
+    },
+    "0887_dragapult": {
+      "base_hp": 88,
+      "base_attack": 120,
+      "base_defense": 75,
+      "base_special_attack": 100,
+      "base_special_defense": 75,
+      "base_speed": 142,
+      "source": "887"
+    },
+    "0888_zacian": {
+      "base_hp": 92,
+      "base_attack": 120,
+      "base_defense": 115,
+      "base_special_attack": 80,
+      "base_special_defense": 115,
+      "base_speed": 138,
+      "source": "888"
+    },
+    "0889_zamazenta": {
+      "base_hp": 92,
+      "base_attack": 120,
+      "base_defense": 115,
+      "base_special_attack": 80,
+      "base_special_defense": 115,
+      "base_speed": 138,
+      "source": "889"
+    },
+    "0890_eternatus": {
+      "base_hp": 140,
+      "base_attack": 85,
+      "base_defense": 95,
+      "base_special_attack": 145,
+      "base_special_defense": 95,
+      "base_speed": 130,
+      "source": "890"
+    },
+    "0924_tandemaus": {
+      "base_hp": 50,
+      "base_attack": 50,
+      "base_defense": 45,
+      "base_special_attack": 40,
+      "base_special_defense": 45,
+      "base_speed": 75,
+      "source": "924"
+    },
+    "0925_maushold": {
+      "base_hp": 74,
+      "base_attack": 75,
+      "base_defense": 70,
+      "base_special_attack": 65,
+      "base_special_defense": 75,
+      "base_speed": 111,
+      "source": "925"
+    },
+    "0977_dondozo": {
+      "base_hp": 150,
+      "base_attack": 100,
+      "base_defense": 115,
+      "base_special_attack": 65,
+      "base_special_defense": 65,
+      "base_speed": 35,
+      "source": "977"
+    },
+    "0978_tatsugiri_curly": {
+      "base_hp": 68,
+      "base_attack": 50,
+      "base_defense": 60,
+      "base_special_attack": 120,
+      "base_special_defense": 95,
+      "base_speed": 82,
+      "source": "tatsugiri-curly"
+    },
+    "0978_tatsugiri_droopy": {
+      "base_hp": 68,
+      "base_attack": 50,
+      "base_defense": 60,
+      "base_special_attack": 120,
+      "base_special_defense": 95,
+      "base_speed": 82,
+      "source": "tatsugiri-droopy"
+    },
+    "0978_tatsugiri_stretchy": {
+      "base_hp": 68,
+      "base_attack": 50,
+      "base_defense": 60,
+      "base_special_attack": 120,
+      "base_special_defense": 95,
+      "base_speed": 82,
+      "source": "tatsugiri-stretchy"
+    },
+    "0980_clodsire": {
+      "base_hp": 130,
+      "base_attack": 75,
+      "base_defense": 60,
+      "base_special_attack": 45,
+      "base_special_defense": 100,
+      "base_speed": 20,
+      "source": "980"
+    },
+    "0999_gimmighoul": {
+      "base_hp": 45,
+      "base_attack": 30,
+      "base_defense": 70,
+      "base_special_attack": 75,
+      "base_special_defense": 70,
+      "base_speed": 10,
+      "source": "999"
+    },
+    "1000_gholdengo": {
+      "base_hp": 87,
+      "base_attack": 60,
+      "base_defense": 95,
+      "base_special_attack": 133,
+      "base_special_defense": 91,
+      "base_speed": 84,
+      "source": "1000"
+    },
+    "1007_koraidon": {
+      "base_hp": 100,
+      "base_attack": 135,
+      "base_defense": 115,
+      "base_special_attack": 85,
+      "base_special_defense": 100,
+      "base_speed": 135,
+      "source": "1007"
+    },
+    "1008_miraidon": {
+      "base_hp": 100,
+      "base_attack": 85,
+      "base_defense": 100,
+      "base_special_attack": 135,
+      "base_special_defense": 115,
+      "base_speed": 135,
+      "source": "1008"
+    }
+  }
+}

@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cibywiddntef5" path="res://assets/pokemons/0102_exeggcute/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://dbkas2sskv8pk" path="res://assets/pokemons/0102_exeggcute/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
 [ext_resource type="Resource" path="res://data/pokemon/0103_exeggutor.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://b5vlaxyexg8mo" path="res://assets/pokemons/0102_exeggcute/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://boskcxkr0wer3" path="res://assets/pokemons/0102_exeggcute/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://cjueri3kscmvk" path="res://assets/pokemons/0102_exeggcute/preview_shiny.png" id="7_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -12,9 +15,18 @@ display_name = "Exeggcute"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
 evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
 body_type = 1
 anim_speed_scale = 0.8
 anim_amplitude = 0.7
 hover_height = 0.0
+base_hp = 60
+base_attack = 40
+base_defense = 80
+base_special_attack = 60
+base_special_defense = 45
+base_speed = 40
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

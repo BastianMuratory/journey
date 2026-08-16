@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cccuiiuskril2" path="res://assets/pokemons/0041_zubat/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://bq0d1j8wrfdd1" path="res://assets/pokemons/0041_zubat/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
 [ext_resource type="Resource" path="res://data/pokemon/0042_golbat.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://68hq33i77oni" path="res://assets/pokemons/0041_zubat/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://dsy8tlet2c7xv" path="res://assets/pokemons/0041_zubat/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://b8ts523803iib" path="res://assets/pokemons/0041_zubat/preview_shiny.png" id="7_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -12,9 +15,18 @@ display_name = "Zubat"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
 evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
 body_type = 3
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.55
+base_hp = 40
+base_attack = 45
+base_defense = 35
+base_special_attack = 30
+base_special_defense = 40
+base_speed = 55
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -1,10 +1,8 @@
 extends Node
 
-## Autoload. Looks up [PokemonData] by dex number, or by id when you need a
+## this gets autoloaded. Looks up [PokemonData] by dex number, or by id when you need a
 ## specific form.
 ##
-## Registered in Project Settings -> Globals -> Autoload as [code]PokemonRegistry[/code],
-## so it is reachable from anywhere without passing references around:
 ## [codeblock]
 ## var sandile := PokemonRegistry.get_pokemon(551)
 ## var ash_cap := PokemonRegistry.get_pokemon_by_id("0025_pikachu_ash_cap")
@@ -22,16 +20,11 @@ extends Node
 
 const DIR := "res://data/pokemon/"
 
-## id -> res:// path. Built once in _ready.
-var _paths: Dictionary[String, String] = {}
-## dex number -> the id of that species' base form.
-var _base_form: Dictionary[int, String] = {}
-## dex number -> every id sharing it, base form first.
-var _forms: Dictionary[int, PackedStringArray] = {}
-## id -> loaded resource. Filled lazily by [method get_pokemon_by_id].
-var _cache: Dictionary[String, PokemonData] = {}
-## Every id, ascending. Cached because the animation browser pages through it.
-var _sorted_ids: PackedStringArray = []
+var _paths: Dictionary[String, String] = {} ## id -> res
+var _base_form: Dictionary[int, String] = {} ## dex number -> the id of that species' base form.
+var _forms: Dictionary[int, PackedStringArray] = {} ## dex number -> every id sharing it, base form first.
+var _cache: Dictionary[String, PokemonData] = {} ## id -> loaded resource. Filled lazily by [method get_pokemon_by_id].
+var _sorted_ids: PackedStringArray = [] ## Every id, ascending. Cached because the animation browser pages through it.
 
 
 func _ready() -> void:

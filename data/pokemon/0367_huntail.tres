@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://bn1gfsj64nltq" path="res://assets/pokemons/0367_huntail/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://da5ou2i2tj0eh" path="res://assets/pokemons/0367_huntail/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://dvmxm0sr1wcqf" path="res://assets/pokemons/0367_huntail/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://c6mt5o13cds8b" path="res://assets/pokemons/0367_huntail/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://dqn5iel6ce1hu" path="res://assets/pokemons/0367_huntail/preview_shiny.png" id="6_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -11,8 +14,17 @@ display_name = "Huntail"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
 body_type = 4
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.0
+base_hp = 55
+base_attack = 104
+base_defense = 105
+base_special_attack = 94
+base_special_defense = 75
+base_speed = 52
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

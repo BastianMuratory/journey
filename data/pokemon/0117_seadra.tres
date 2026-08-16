@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://pchcspciujyu" path="res://assets/pokemons/0117_seadra/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cvrj24dn5id80" path="res://assets/pokemons/0117_seadra/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://c41j47fmy4wqn" path="res://assets/pokemons/0117_seadra/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://bxuxddovh1tkh" path="res://assets/pokemons/0117_seadra/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://cptd28e4plecx" path="res://assets/pokemons/0117_seadra/preview_shiny.png" id="6_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -11,8 +14,17 @@ display_name = "Seadra"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
 body_type = 2
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.18
+base_hp = 55
+base_attack = 65
+base_defense = 95
+base_special_attack = 95
+base_special_defense = 45
+base_speed = 85
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

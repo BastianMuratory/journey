@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
 
 [ext_resource type="ArrayMesh" path="res://assets/pokemons/0120_staryu/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" path="res://assets/pokemons/0120_staryu/albedo_shiny.png" id="2_shiny"]
-[ext_resource type="Script" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
 [ext_resource type="Resource" path="res://data/pokemon/0121_starmie.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://drnh716bs248o" path="res://assets/pokemons/0120_staryu/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://d1u18xulwrmgo" path="res://assets/pokemons/0120_staryu/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://clngnmf54750r" path="res://assets/pokemons/0120_staryu/preview_shiny.png" id="7_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -12,9 +15,18 @@ display_name = "Staryu"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
 body_type = 0
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.0
 evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+base_hp = 30
+base_attack = 45
+base_defense = 55
+base_special_attack = 70
+base_special_defense = 55
+base_speed = 85
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -11,7 +11,7 @@ extends Node
 ## It never touches the Pokémon's gameplay transform. It owns a dedicated pivot
 ## node whose rest pose is known, so movement code and this can coexist:
 ## [codeblock]
-## Pokemon           (Node3D)        <- gameplay moves this
+## PokemonModel      (Node3D)        <- gameplay moves this
 ## └── AnimPivot     (Node3D)        <- this animator owns it, exclusively
 ##     └── Model     (MeshInstance3D)
 ## [/codeblock]
@@ -57,7 +57,7 @@ const SPIN_TIME := 0.55
 	set(value):
 		target = value
 		set_process(target != null)
-## Pivot pose with no animation applied. [Pokemon] sets this so the creature
+## Pivot pose with no animation applied. [PokemonModel] sets this so the creature
 ## rotates around its feet (or its middle, if it flies).
 @export var rest_position := Vector3.ZERO
 ## Mesh that gets the white flash on [method take_hit]. Optional.

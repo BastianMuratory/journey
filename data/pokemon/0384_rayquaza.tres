@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3 uid="uid://de0o5qm8ole21"]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3 uid="uid://de0o5qm8ole21"]
 
 [ext_resource type="ArrayMesh" uid="uid://bwpgdv52fo3wd" path="res://assets/pokemons/0384_rayquaza/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://ddbe0g2kwyra0" path="res://assets/pokemons/0384_rayquaza/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://ccpdx662skxg3" path="res://assets/pokemons/0384_rayquaza/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://b7xww2phul2p5" path="res://assets/pokemons/0384_rayquaza/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://dlhswwp0e721s" path="res://assets/pokemons/0384_rayquaza/preview_shiny.png" id="6_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -11,8 +14,17 @@ display_name = "Rayquaza"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
 body_type = 4
 anim_speed_scale = 0.7
 anim_amplitude = 1.0
 hover_height = 0.5
+base_hp = 105
+base_attack = 150
+base_defense = 90
+base_special_attack = 150
+base_special_defense = 90
+base_speed = 95
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

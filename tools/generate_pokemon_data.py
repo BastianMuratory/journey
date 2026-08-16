@@ -19,8 +19,16 @@ data/pokemon/<slug>.tres for each assets/pokemons/<slug>/, with:
     dex_number, display_name        read from the folder name
     mesh                            -> <slug>/model.obj
     albedo_shiny                    -> <slug>/albedo_shiny.png, when present
+    icon                            -> <slug>/icon.png, when present
+    preview                         -> <slug>/preview.png, when present
+    preview_shiny                   -> <slug>/preview_shiny.png, when present
     model_scale                     1.0
     body_type + animation fields    from tools/classify_body_types.py
+
+Every "when present" is a real gap, not a formality -- a fair number of the
+costume forms have no icon or preview yet, and the clones have no shiny render.
+tools/add_preview_textures.py backfills these onto files that already exist,
+and prints what art is still missing.
 
 Existing files are LEFT ALONE by default. The handful you wrote by hand carry
 evolution links this script knows nothing about, and regenerating them would
@@ -72,6 +80,15 @@ SCRIPT_UID = "uid://8hbuolxqt8i1"
 
 MESH_FILE = "model.obj"
 SHINY_FILE = "albedo_shiny.png"
+
+# PokemonData field -> file in the asset folder, for the UI textures. Kept in
+# declaration order so the .tres reads the same way the inspector does.
+# Mirrored in tools/add_preview_textures.py, which backfills existing files.
+UI_TEXTURES = (
+    ("icon", "icon.png"),
+    ("preview", "preview.png"),
+    ("preview_shiny", "preview_shiny.png"),
+)
 
 C = classify.C
 
@@ -154,6 +171,15 @@ def build_tres(slug: str, dex: int, name: str, folder: Path, settings: dict) -> 
         ext("Texture2D", import_uid(shiny), f"res://{ASSET_DIR}/{slug}/{SHINY_FILE}", "2_shiny")
     ext("Script", SCRIPT_UID, SCRIPT_PATH, "3_script")
 
+    ui_fields: list[str] = []
+    for index, (field, filename) in enumerate(UI_TEXTURES, start=4):
+        image = folder / filename
+        if not image.is_file():
+            continue
+        ident = f"{index}_{field}"
+        ext("Texture2D", import_uid(image), f"res://{ASSET_DIR}/{slug}/{filename}", ident)
+        ui_fields.append(f'{field} = ExtResource("{ident}")')
+
     fields.append(f'script = ExtResource("3_script")')
     fields.append(f"dex_number = {dex}")
     fields.append(f'display_name = "{name}"')
@@ -161,6 +187,7 @@ def build_tres(slug: str, dex: int, name: str, folder: Path, settings: dict) -> 
     if has_shiny:
         fields.append('albedo_shiny = ExtResource("2_shiny")')
     fields.append("model_scale = 1.0")
+    fields.extend(ui_fields)
     for key in classify.MANAGED_FIELDS:
         fields.append(f"{key} = {classify.format_value(key, settings[key])}")
     fields.append(f'metadata/_custom_type_script = "{SCRIPT_UID}"')

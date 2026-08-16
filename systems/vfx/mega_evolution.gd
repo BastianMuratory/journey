@@ -189,7 +189,7 @@ func _resolve_target() -> MeshInstance3D:
 	if direct != null:
 		return direct
 
-	# Parent isn't a mesh itself -- e.g. a [Pokemon], which keeps its mesh on a
+	# Parent isn't a mesh itself -- e.g. a [PokemonModel], which keeps its mesh on a
 	# child so the animator can own the transform in between. Take the first
 	# MeshInstance3D under it, which is that model.
 	if parent != null:

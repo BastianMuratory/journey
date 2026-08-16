@@ -9,7 +9,7 @@ extends Node3D
 ##
 ## Space bar evolves; space again rewinds so you can watch it a second time.
 
-const POKEMON_SCENE := preload("res://entities/pokemon/pokemon.tscn")
+const POKEMON_MODEL_SCENE := preload("res://pokemon/pokemon_model.tscn")
 
 ## Which species the camp starts with. 551 = Sandile.
 const SANDILE_DEX_NUMBER := 551
@@ -20,7 +20,7 @@ const CATERPIE_DEX_NUMBER := 10
 
 ## One spawned Pokémon plus the effect bolted to it.
 class Entry:
-	var pokemon: Pokemon
+	var pokemon: PokemonModel
 	var base_data: PokemonData
 	var evolved_data: PokemonData
 	var mega: MegaEvolution
@@ -34,8 +34,8 @@ func _ready() -> void:
 
 ## Instantiates the shared Pokémon scene as the given species. Reusable for
 ## anything else you want to drop into the camp.
-func spawn_pokemon(data: PokemonData, marker: Marker3D, shiny := false) -> Pokemon:
-	var p: Pokemon = POKEMON_SCENE.instantiate()
+func spawn_pokemon(data: PokemonData, marker: Marker3D, shiny := false) -> PokemonModel:
+	var p: PokemonModel = POKEMON_MODEL_SCENE.instantiate()
 	p.data = data
 	p.shiny = shiny
 	add_child(p)

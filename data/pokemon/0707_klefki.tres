@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://naf566yl2m37" path="res://assets/pokemons/0707_klefki/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://db0w4sw0g5er3" path="res://assets/pokemons/0707_klefki/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://dpsbca0dvg1iy" path="res://assets/pokemons/0707_klefki/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://c2sopib6uww3r" path="res://assets/pokemons/0707_klefki/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://kdypwxhkb5q2" path="res://assets/pokemons/0707_klefki/preview_shiny.png" id="6_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -11,8 +14,17 @@ display_name = "Klefki"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
 body_type = 2
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.18
+base_hp = 57
+base_attack = 80
+base_defense = 91
+base_special_attack = 80
+base_special_defense = 87
+base_speed = 75
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

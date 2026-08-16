@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://bunjr5ykuol7c" path="res://assets/pokemons/0924_tandemaus/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://2ifhsmvaemd6" path="res://assets/pokemons/0924_tandemaus/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
 [ext_resource type="Resource" path="res://data/pokemon/0925_maushold.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://wv85ghaqhs4q" path="res://assets/pokemons/0924_tandemaus/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://cedqjm1hk8k3h" path="res://assets/pokemons/0924_tandemaus/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://cbne1jwl1y1af" path="res://assets/pokemons/0924_tandemaus/preview_shiny.png" id="7_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -12,9 +15,18 @@ display_name = "Tandemaus"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
 evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
 body_type = 1
 anim_speed_scale = 1.35
 anim_amplitude = 1.2
 hover_height = 0.0
+base_hp = 50
+base_attack = 50
+base_defense = 45
+base_special_attack = 40
+base_special_defense = 45
+base_speed = 75
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

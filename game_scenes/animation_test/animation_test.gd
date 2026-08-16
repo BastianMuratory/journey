@@ -58,7 +58,7 @@ const TUNED_FIELDS := [
 	"body_type", "anim_speed_scale", "anim_amplitude", "hover_height",
 ]
 
-const POKEMON_SCENE := preload("res://entities/pokemon/pokemon.tscn")
+const POKEMON_MODEL_SCENE := preload("res://pokemon/pokemon_model.tscn")
 const MAIN_MENU_SCENE := "res://game_scenes/main_menu/main_menu.tscn"
 const DATA_DIR := "res://data/pokemon/"
 ## Read by tools/classify_body_types.py, which treats it as the highest-priority
@@ -95,7 +95,7 @@ var _pending: Dictionary[String, Dictionary] = {}
 ## Set by the first Esc when there are unsaved edits, so the second one leaves.
 var _exit_armed := false
 
-var _spawned: Array[Pokemon] = []
+var _spawned: Array[PokemonModel] = []
 
 var _info: Label
 var _status: Label
@@ -216,12 +216,12 @@ func _respawn() -> void:
 	_sync_list_selection()
 
 
-func _spawn(id: String) -> Pokemon:
+func _spawn(id: String) -> PokemonModel:
 	var data := PokemonRegistry.get_pokemon_by_id(id)
 	if data == null:
 		return null
 
-	var pokemon: Pokemon = POKEMON_SCENE.instantiate()
+	var pokemon: PokemonModel = POKEMON_MODEL_SCENE.instantiate()
 	pokemon.data = data
 	pokemon.shiny = _shiny
 	add_child(pokemon)
@@ -247,7 +247,7 @@ func _lay_out(widths: Array[float]) -> void:
 
 
 ## Widest horizontal extent, in world units.
-func _footprint(pokemon: Pokemon) -> float:
+func _footprint(pokemon: PokemonModel) -> float:
 	var data := pokemon.data
 	if data == null or data.mesh == null:
 		return 1.0
@@ -530,10 +530,7 @@ func _save_edits() -> void:
 		if path.is_empty() or data == null:
 			failed += 1
 			continue
-		# Saving the resource rather than rewriting the text keeps every other
-		# field -- evolution links included -- exactly as it was.
-		if ResourceSaver.save(data, path) != OK:
-			push_error("AnimationTest: could not write %s" % path)
+		if not _patch_tres(path, data):
 			failed += 1
 			continue
 		saved += 1
@@ -550,6 +547,69 @@ func _save_edits() -> void:
 	if not wrote_overrides:
 		note += " (overrides file not written)"
 	_show_message(note)
+
+
+## Writes this species' [constant TUNED_FIELDS] into its .tres by replacing those
+## four lines and leaving every other byte alone. False, with a pushed error, if
+## the file cannot be read, is missing one of the fields, or cannot be written.
+##
+## Deliberately not [method ResourceSaver.save]. That rebuilds the whole file
+## from the in-memory resource and drops the [code]uid="uid://..."[/code] off
+## every ext_resource line on the way out, leaving the mesh, texture and script
+## reachable only by their paths -- so a later asset move breaks the species
+## silently instead of following it. Patching lines in place keeps the uids, the
+## field order and the evolution links exactly as they are.
+func _patch_tres(path: String, data: PokemonData) -> bool:
+	var text := FileAccess.get_file_as_string(path)
+	if text.is_empty():
+		push_error("AnimationTest: could not read %s" % path)
+		return false
+
+	var wanted: Dictionary[String, String] = {}
+	for field: String in TUNED_FIELDS:
+		# var_to_str is what Godot writes .tres values with, so a float stays a
+		# float -- "0.0", never "0", which would come back as an int.
+		wanted[field] = "%s = %s" % [field, var_to_str(data.get(field))]
+
+	var lines := text.split("\n")
+	var written: Dictionary[String, bool] = {}
+	var in_resource := false
+
+	for i in lines.size():
+		var line := lines[i]
+		if line.begins_with("["):
+			# These fields only ever live in [resource]. The ext_resource header
+			# lines above it are the ones carrying the uids -- never touch them.
+			in_resource = line.begins_with("[resource]")
+			continue
+		if not in_resource:
+			continue
+		var equals := line.find("=")
+		if equals < 0:
+			continue
+		var field := line.substr(0, equals).strip_edges()
+		if not wanted.has(field) or written.has(field):
+			continue
+		lines[i] = wanted[field]
+		written[field] = true
+
+	# A missing field means the file is not shaped the way we think it is, so
+	# write nothing rather than a half-updated species.
+	if written.size() != TUNED_FIELDS.size():
+		var missing := PackedStringArray()
+		for field: String in TUNED_FIELDS:
+			if not written.has(field):
+				missing.append(field)
+		push_error("AnimationTest: %s has no line for %s -- left alone"
+			% [path, ", ".join(missing)])
+		return false
+
+	var file := FileAccess.open(path, FileAccess.WRITE)
+	if file == null:
+		push_error("AnimationTest: could not open %s for writing" % path)
+		return false
+	file.store_string("\n".join(lines))
+	return true
 
 
 ## Merges this session's edits into the overrides file, so a later

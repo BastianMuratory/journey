@@ -70,10 +70,10 @@ pokemon.animator.spin(2)
 await pokemon.animator.animation_finished
 ```
 
-A `Pokemon` keeps its animation on a dedicated pivot node, so gameplay can set `position` freely without the wobble stomping it, or vice versa:
+A `PokemonModel` keeps its animation on a dedicated pivot node, so gameplay can set `position` freely without the wobble stomping it, or vice versa:
 
 ```
-Pokemon            (Node3D)         <- gameplay moves this
+PokemonModel       (Node3D)         <- gameplay moves this
 ├── AnimPivot      (Node3D)         <- owned by the animator
 │   └── Model      (MeshInstance3D)
 └── Animator       (PokemonAnimator)
@@ -90,13 +90,27 @@ PokemonRegistry.get_forms(25)                          # every id sharing the de
 PokemonRegistry.get_all_ids()                          # everything, dex order
 ```
 
-Three scripts maintain that folder, all with a read-only plan and an explicit `--apply`:
+Four scripts maintain that folder, all with a read-only plan and an explicit `--apply`:
 
 - `tools/generate_pokemon_data.py` — creates a `.tres` for any asset folder that lacks one. Existing files are left alone by default, so hand-set evolution links survive; `--refresh-animation` updates only the animation fields.
 - `tools/classify_body_types.py` — sets `body_type` and the animation tuning on every `.tres`.
 - `tools/link_evolutions.py` — sets `evolves_into` on every `.tres` that has a target in the project.
+- `tools/add_preview_textures.py` — points `icon`, `preview` and `preview_shiny` at the images in the asset folder. Run it after new art lands; it only fills in what is missing, so re-running is free.
 
 Priority runs overrides file → the script's per-dex tables → body-type defaults. Anything you edit in the animation test scene lands in `data/body_type_overrides.json` and wins, so hand-tuning and re-classifying don't fight.
+
+### Portraits
+
+Every species carries its own 2D art, so UI code never builds a `res://` path by hand:
+
+```gdscript
+var species := PokemonRegistry.get_pokemon(25)
+species.icon                  # small square, for party slots and dex rows
+species.get_preview(shiny)    # full render, shiny when there is one
+species.has_shiny_preview()   # false for costume forms -- hide the toggle
+```
+
+Read the previews through `get_preview()` rather than touching `preview_shiny` directly. Only the standard forms were rendered shiny, so the costumes and the clones fall back to the ordinary preview instead of handing back a null that every call site would have to catch. `tools/missing_art.md` lists what is still missing — 29 forms have no icon or preview, 37 have no shiny render.
 
 ### Evolution links
 

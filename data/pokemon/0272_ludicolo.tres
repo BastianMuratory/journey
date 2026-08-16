@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cp37g5jotifub" path="res://assets/pokemons/0272_ludicolo/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://dbxxe0273lgck" path="res://assets/pokemons/0272_ludicolo/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://dd66n6sr34cj0" path="res://assets/pokemons/0272_ludicolo/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://b5oyado5wpn2m" path="res://assets/pokemons/0272_ludicolo/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://cedslsx5k4mem" path="res://assets/pokemons/0272_ludicolo/preview_shiny.png" id="6_preview_shiny"]
 
 [resource]
 script = ExtResource("3_script")
@@ -11,8 +14,17 @@ display_name = "Ludicolo"
 mesh = ExtResource("1_mesh")
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
 body_type = 0
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.0
+base_hp = 80
+base_attack = 70
+base_defense = 70
+base_special_attack = 90
+base_special_defense = 100
+base_speed = 70
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"
