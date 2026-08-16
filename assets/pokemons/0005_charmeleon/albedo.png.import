@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv3jnx1jnek67"
 path.s3tc="res://.godot/imported/albedo.png-bce3c4877c45aa73a14c130b97fd9095.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-bce3c4877c45aa73a14c130b97fd9095.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0005_charmeleon/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-bce3c4877c45aa73a14c130b97fd9095.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-bce3c4877c45aa73a14c130b97fd9095.s3tc.ctex", "res://.godot/imported/albedo.png-bce3c4877c45aa73a14c130b97fd9095.etc2.ctex"]
 
 [params]
 

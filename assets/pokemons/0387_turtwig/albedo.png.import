@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cthrh3imux00t"
 path.s3tc="res://.godot/imported/albedo.png-64eaf0619c9878e3e3a8aa7194ffd93e.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-64eaf0619c9878e3e3a8aa7194ffd93e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0387_turtwig/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-64eaf0619c9878e3e3a8aa7194ffd93e.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-64eaf0619c9878e3e3a8aa7194ffd93e.s3tc.ctex", "res://.godot/imported/albedo.png-64eaf0619c9878e3e3a8aa7194ffd93e.etc2.ctex"]
 
 [params]
 

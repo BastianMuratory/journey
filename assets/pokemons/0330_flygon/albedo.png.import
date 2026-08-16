@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bralcixxjrg7t"
 path.s3tc="res://.godot/imported/albedo.png-fc9dc206f09cec2e22e6fadbf069275e.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-fc9dc206f09cec2e22e6fadbf069275e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0330_flygon/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-fc9dc206f09cec2e22e6fadbf069275e.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-fc9dc206f09cec2e22e6fadbf069275e.s3tc.ctex", "res://.godot/imported/albedo.png-fc9dc206f09cec2e22e6fadbf069275e.etc2.ctex"]
 
 [params]
 

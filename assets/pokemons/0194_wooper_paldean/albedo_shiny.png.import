@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmvf4xl6xrpgw"
 path.s3tc="res://.godot/imported/albedo_shiny.png-68f0faa6c0c740dc27d6d1b5b2451968.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-68f0faa6c0c740dc27d6d1b5b2451968.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0194_wooper_paldean/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-68f0faa6c0c740dc27d6d1b5b2451968.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-68f0faa6c0c740dc27d6d1b5b2451968.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-68f0faa6c0c740dc27d6d1b5b2451968.etc2.ctex"]
 
 [params]
 

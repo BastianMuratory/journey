@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://de2fer7c8w53u"
 path.s3tc="res://.godot/imported/albedo.png-3150a70dcaf8d115f1fa2137e5e9c837.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-3150a70dcaf8d115f1fa2137e5e9c837.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0123_scyther/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-3150a70dcaf8d115f1fa2137e5e9c837.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-3150a70dcaf8d115f1fa2137e5e9c837.s3tc.ctex", "res://.godot/imported/albedo.png-3150a70dcaf8d115f1fa2137e5e9c837.etc2.ctex"]
 
 [params]
 

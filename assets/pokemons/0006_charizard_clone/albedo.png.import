@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwwhd3q7vy7ld"
 path.s3tc="res://.godot/imported/albedo.png-b526936c3749cf1ad8a4fd59cc2796e0.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-b526936c3749cf1ad8a4fd59cc2796e0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0006_charizard_clone/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-b526936c3749cf1ad8a4fd59cc2796e0.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-b526936c3749cf1ad8a4fd59cc2796e0.s3tc.ctex", "res://.godot/imported/albedo.png-b526936c3749cf1ad8a4fd59cc2796e0.etc2.ctex"]
 
 [params]
 

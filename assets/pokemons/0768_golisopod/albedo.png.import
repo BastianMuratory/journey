@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx2tmwcef74kp"
 path.s3tc="res://.godot/imported/albedo.png-5a6ed0d0d23fc63153d806bc6efa3def.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-5a6ed0d0d23fc63153d806bc6efa3def.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0768_golisopod/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-5a6ed0d0d23fc63153d806bc6efa3def.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-5a6ed0d0d23fc63153d806bc6efa3def.s3tc.ctex", "res://.godot/imported/albedo.png-5a6ed0d0d23fc63153d806bc6efa3def.etc2.ctex"]
 
 [params]
 

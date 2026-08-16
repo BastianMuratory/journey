@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cguorqgf0i0so"
 path.s3tc="res://.godot/imported/albedo_shiny.png-565a873ea3b00a05ffef018d45589bc2.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-565a873ea3b00a05ffef018d45589bc2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0006_charizard/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-565a873ea3b00a05ffef018d45589bc2.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-565a873ea3b00a05ffef018d45589bc2.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-565a873ea3b00a05ffef018d45589bc2.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsoxnpb2wngc5"
 path.s3tc="res://.godot/imported/albedo.png-0640a1023b68842b53d28a98f6d20788.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-0640a1023b68842b53d28a98f6d20788.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0004_charmander/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-0640a1023b68842b53d28a98f6d20788.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-0640a1023b68842b53d28a98f6d20788.s3tc.ctex", "res://.godot/imported/albedo.png-0640a1023b68842b53d28a98f6d20788.etc2.ctex"]
 
 [params]
 

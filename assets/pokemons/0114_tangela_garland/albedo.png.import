@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmcu3mamaydwi"
 path.s3tc="res://.godot/imported/albedo.png-97f9419c38ffe5ef18fc12fea8bb4f74.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-97f9419c38ffe5ef18fc12fea8bb4f74.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0114_tangela_garland/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-97f9419c38ffe5ef18fc12fea8bb4f74.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-97f9419c38ffe5ef18fc12fea8bb4f74.s3tc.ctex", "res://.godot/imported/albedo.png-97f9419c38ffe5ef18fc12fea8bb4f74.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfw0unffg72tx"
 path.s3tc="res://.godot/imported/albedo.png-341a67c511440913a5ef8c7b4f5a2cb2.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-341a67c511440913a5ef8c7b4f5a2cb2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0142_aerodactyl/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-341a67c511440913a5ef8c7b4f5a2cb2.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-341a67c511440913a5ef8c7b4f5a2cb2.s3tc.ctex", "res://.godot/imported/albedo.png-341a67c511440913a5ef8c7b4f5a2cb2.etc2.ctex"]
 
 [params]
 

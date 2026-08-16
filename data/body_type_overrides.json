@@ -1,6 +1,30 @@
 {
   "_comment": "Hand edits from the animation test scene, keyed by species id. tools/classify_body_types.py reads this first and will not overwrite anything listed here.",
   "species": {
+    "0013_weedle": {
+      "anim_amplitude": 1.2,
+      "anim_speed_scale": 1.0,
+      "body_type": "QUADRUPED",
+      "hover_height": 0.0
+    },
+    "0025_pikachu": {
+      "anim_amplitude": 1.15,
+      "anim_speed_scale": 1.1,
+      "body_type": "QUADRUPED",
+      "hover_height": 0.0
+    },
+    "0025_pikachu_ash_cap": {
+      "anim_amplitude": 1.15,
+      "anim_speed_scale": 1.25,
+      "body_type": "QUADRUPED",
+      "hover_height": 0.0
+    },
+    "0025_pikachu_explorer": {
+      "anim_amplitude": 1.15,
+      "anim_speed_scale": 1.25,
+      "body_type": "QUADRUPED",
+      "hover_height": 0.0
+    },
     "0065_alakazam": {
       "body_type": "HOVER",
       "hover_height": 0.18

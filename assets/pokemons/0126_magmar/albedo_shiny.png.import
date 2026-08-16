@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxq0ky78enxtt"
 path.s3tc="res://.godot/imported/albedo_shiny.png-fe5f73b0f394056bf5219ff414f0c91d.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-fe5f73b0f394056bf5219ff414f0c91d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0126_magmar/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-fe5f73b0f394056bf5219ff414f0c91d.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-fe5f73b0f394056bf5219ff414f0c91d.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-fe5f73b0f394056bf5219ff414f0c91d.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cg5db0uulf3t5"
 path.s3tc="res://.godot/imported/albedo_shiny.png-89f6a44504400ba5f5235e020bc1ed0b.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-89f6a44504400ba5f5235e020bc1ed0b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0710_pumpkaboo/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-89f6a44504400ba5f5235e020bc1ed0b.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-89f6a44504400ba5f5235e020bc1ed0b.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-89f6a44504400ba5f5235e020bc1ed0b.etc2.ctex"]
 
 [params]
 

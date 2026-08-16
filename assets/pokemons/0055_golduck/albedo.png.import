@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwert61mb1eux"
 path.s3tc="res://.godot/imported/albedo.png-7eb76466dc5bd6a3bcb6fd75e0dd417c.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-7eb76466dc5bd6a3bcb6fd75e0dd417c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0055_golduck/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-7eb76466dc5bd6a3bcb6fd75e0dd417c.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-7eb76466dc5bd6a3bcb6fd75e0dd417c.s3tc.ctex", "res://.godot/imported/albedo.png-7eb76466dc5bd6a3bcb6fd75e0dd417c.etc2.ctex"]
 
 [params]
 

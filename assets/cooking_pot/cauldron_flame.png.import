@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b380e00g3shja"
 path.s3tc="res://.godot/imported/cauldron_flame.png-b3cc80fa0e30980e553c5eaa3aa61574.s3tc.ctex"
+path.etc2="res://.godot/imported/cauldron_flame.png-b3cc80fa0e30980e553c5eaa3aa61574.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/cooking_pot/cauldron_flame.png"
-dest_files=["res://.godot/imported/cauldron_flame.png-b3cc80fa0e30980e553c5eaa3aa61574.s3tc.ctex"]
+dest_files=["res://.godot/imported/cauldron_flame.png-b3cc80fa0e30980e553c5eaa3aa61574.s3tc.ctex", "res://.godot/imported/cauldron_flame.png-b3cc80fa0e30980e553c5eaa3aa61574.etc2.ctex"]
 
 [params]
 

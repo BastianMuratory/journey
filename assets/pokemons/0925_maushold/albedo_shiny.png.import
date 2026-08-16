@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d23rmj818ciyd"
 path.s3tc="res://.godot/imported/albedo_shiny.png-1e2b71adccf4472f9613cb2dabc91f59.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-1e2b71adccf4472f9613cb2dabc91f59.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0925_maushold/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-1e2b71adccf4472f9613cb2dabc91f59.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-1e2b71adccf4472f9613cb2dabc91f59.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-1e2b71adccf4472f9613cb2dabc91f59.etc2.ctex"]
 
 [params]
 

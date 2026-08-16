@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ume54vn8erxn"
 path.s3tc="res://.godot/imported/albedo.png-e88ce618ece2dbd0013c475bd8500a2d.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-e88ce618ece2dbd0013c475bd8500a2d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0222_corsola/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-e88ce618ece2dbd0013c475bd8500a2d.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-e88ce618ece2dbd0013c475bd8500a2d.s3tc.ctex", "res://.godot/imported/albedo.png-e88ce618ece2dbd0013c475bd8500a2d.etc2.ctex"]
 
 [params]
 

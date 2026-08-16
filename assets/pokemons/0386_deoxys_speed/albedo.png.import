@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://277tym0078ac"
 path.s3tc="res://.godot/imported/albedo.png-712862e201cd127e6f50d864adc4a1f9.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-712862e201cd127e6f50d864adc4a1f9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0386_deoxys_speed/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-712862e201cd127e6f50d864adc4a1f9.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-712862e201cd127e6f50d864adc4a1f9.s3tc.ctex", "res://.godot/imported/albedo.png-712862e201cd127e6f50d864adc4a1f9.etc2.ctex"]
 
 [params]
 

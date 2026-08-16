@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://db5ktpjmd0615"
 path.s3tc="res://.godot/imported/albedo.png-66ca32b666b853d5c213813db61e10a3.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-66ca32b666b853d5c213813db61e10a3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0344_claydol/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-66ca32b666b853d5c213813db61e10a3.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-66ca32b666b853d5c213813db61e10a3.s3tc.ctex", "res://.godot/imported/albedo.png-66ca32b666b853d5c213813db61e10a3.etc2.ctex"]
 
 [params]
 

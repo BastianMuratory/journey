@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://u5tlyen7ppip"
 path.s3tc="res://.godot/imported/albedo.png-b3f21cf40215fef87ac145aec2405dcd.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-b3f21cf40215fef87ac145aec2405dcd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0159_croconaw/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-b3f21cf40215fef87ac145aec2405dcd.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-b3f21cf40215fef87ac145aec2405dcd.s3tc.ctex", "res://.godot/imported/albedo.png-b3f21cf40215fef87ac145aec2405dcd.etc2.ctex"]
 
 [params]
 

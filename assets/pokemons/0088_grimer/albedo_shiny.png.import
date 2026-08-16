@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc08lm7sw07c5"
 path.s3tc="res://.godot/imported/albedo_shiny.png-7da05619b09ee70122f604a72be68dfd.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-7da05619b09ee70122f604a72be68dfd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0088_grimer/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-7da05619b09ee70122f604a72be68dfd.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-7da05619b09ee70122f604a72be68dfd.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-7da05619b09ee70122f604a72be68dfd.etc2.ctex"]
 
 [params]
 

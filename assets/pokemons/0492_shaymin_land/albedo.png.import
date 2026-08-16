@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlqh73kwxeku1"
 path.s3tc="res://.godot/imported/albedo.png-a7dccb97279faff39a5a077a81f76b39.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-a7dccb97279faff39a5a077a81f76b39.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0492_shaymin_land/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-a7dccb97279faff39a5a077a81f76b39.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-a7dccb97279faff39a5a077a81f76b39.s3tc.ctex", "res://.godot/imported/albedo.png-a7dccb97279faff39a5a077a81f76b39.etc2.ctex"]
 
 [params]
 

@@ -1,0 +1,3660 @@
+[
+  {
+    "index": 1,
+    "name_cn": "暗袭要害",
+    "name_en": "night_slash",
+    "type": "dark",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "向前方冲撞，切斩周围的敌人，使其受到伤害。容易击中要害。",
+    "file": "001_night_slash.png"
+  },
+  {
+    "index": 2,
+    "name_cn": "暗影球",
+    "name_en": "shadow_ball",
+    "type": "ghost",
+    "category": "special",
+    "power": "380",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "朝自己的前方投掷一团黑影进行攻击，被打到的敌人会受到伤害。有时还会提高敌人受到的伤害。",
+    "file": "002_shadow_ball.png"
+  },
+  {
+    "index": 3,
+    "name_cn": "精神突进",
+    "name_en": "psycho_boost",
+    "type": "psychic",
+    "category": "special",
+    "power": "600",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "使出全部力量攻击对手，使用之后会因为反作用力，自己的攻击力大幅降低。",
+    "file": "003_psycho_boost.png"
+  },
+  {
+    "index": 4,
+    "name_cn": "暗影爪",
+    "name_en": "shadow_claw",
+    "type": "ghost",
+    "category": "physical",
+    "power": "360",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "用环绕暗影之力的爪子抓击前方的敌人，对其造成伤害。",
+    "file": "004_shadow_claw.png"
+  },
+  {
+    "index": 5,
+    "name_cn": "百万吨重拳",
+    "name_en": "mega_punch",
+    "type": "normal",
+    "category": "physical",
+    "power": "500",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "先靠近前方的敌人，然后用充满力量的拳头攻击眼前的敌人，使其受到伤害。",
+    "file": "005_mega_punch.png"
+  },
+  {
+    "index": 6,
+    "name_cn": "暴风",
+    "name_en": "hurricane",
+    "type": "flying",
+    "category": "special",
+    "power": "450",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "在自己的周围刮起狂风，从而使周围的敌人受到伤害。越靠近自身越容易让敌人陷入混乱状态。",
+    "file": "006_hurricane.png"
+  },
+  {
+    "index": 7,
+    "name_cn": "暴风雪",
+    "name_en": "blizzard",
+    "type": "ice",
+    "category": "special",
+    "power": "500",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "一边在自己的周围刮起暴风雪，一边四处移动，使周围的敌人受到伤害。有时会让敌人陷入冰冻状态。",
+    "file": "007_blizzard.png"
+  },
+  {
+    "index": 8,
+    "name_cn": "爆裂拳",
+    "name_en": "dynamic_punch",
+    "type": "fighting",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "使出浑身力气，向眼前的敌人出拳。必定会让敌人陷入混乱状态。",
+    "file": "008_dynamic_punch.png"
+  },
+  {
+    "index": 9,
+    "name_cn": "变身",
+    "name_en": "transform",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "0",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "当百变怪变身成其他宝可梦时，能够使用那只宝可梦所学习的某个招式。",
+    "file": "009_transform.png"
+  },
+  {
+    "index": 10,
+    "name_cn": "变硬",
+    "name_en": "harden",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "全身使劲，让身体变硬。可以在一定时间内降低自己所受到的伤害。",
+    "file": "010_harden.png"
+  },
+  {
+    "index": 11,
+    "name_cn": "冰冻光束",
+    "name_en": "ice_beam",
+    "type": "ice",
+    "category": "status",
+    "power": "400",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "向自己前方的敌人发射冰冻光束，使敌人受到伤害。有时会让敌人陷入冰冻状态。",
+    "file": "011_ice_beam.png"
+  },
+  {
+    "index": 12,
+    "name_cn": "根源波动",
+    "name_en": "origin_pulse",
+    "type": "water",
+    "category": "special",
+    "power": "880",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "用无数青白色且闪耀的光线攻击对手，对目标造成伤害。",
+    "file": "012_origin_pulse.png"
+  },
+  {
+    "index": 13,
+    "name_cn": "冰冻拳",
+    "name_en": "ice_punch",
+    "type": "ice",
+    "category": "physical",
+    "power": "450",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "让自己的拳头充满寒气，并朝眼前的敌人使出冰冻之拳。有时会让敌人陷入冰冻状态。",
+    "file": "013_ice_punch.png"
+  },
+  {
+    "index": 14,
+    "name_cn": "冰冻牙",
+    "name_en": "ice_fang",
+    "type": "ice",
+    "category": "physical",
+    "power": "450",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "用藏有冷气的牙齿，咬住前方的敌人，对其造成伤害。",
+    "file": "014_ice_fang.png"
+  },
+  {
+    "index": 15,
+    "name_cn": "预知未来",
+    "name_en": "future_sight",
+    "type": "psychic",
+    "category": "special",
+    "power": "400",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "向对手发送一团念力进行攻击。",
+    "file": "015_future_sight.png"
+  },
+  {
+    "index": 16,
+    "name_cn": "雷电牙",
+    "name_en": "thunder_fang",
+    "type": "electric",
+    "category": "physical",
+    "power": "350",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "用蓄满电流的牙齿咬住对手，有时会使对手陷入麻痹状态。",
+    "file": "016_thunder_fang.png"
+  },
+  {
+    "index": 17,
+    "name_cn": "薄雾球",
+    "name_en": "mist_ball",
+    "type": "psychic",
+    "category": "special",
+    "power": "540",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "用围绕着雾状羽毛的球进行攻击，有时会降低对手攻击。",
+    "file": "017_mist_ball.png"
+  },
+  {
+    "index": 18,
+    "name_cn": "洁净光芒",
+    "name_en": "luster_purge",
+    "type": "psychic",
+    "category": "special",
+    "power": "360",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "释放耀眼的光芒进行攻击，有时会降低对手的防御。",
+    "file": "018_luster_purge.png"
+  },
+  {
+    "index": 19,
+    "name_cn": "冰冻之风",
+    "name_en": "icy_wind",
+    "type": "ice",
+    "category": "special",
+    "power": "250",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "将令人冻僵的寒气吹向前方的敌人，使其受到伤害。有时会让敌人速度减慢。",
+    "file": "019_icy_wind.png"
+  },
+  {
+    "index": 20,
+    "name_cn": "冰息",
+    "name_en": "frost_breath",
+    "type": "ice",
+    "category": "special",
+    "power": "280",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "将冰冷的气息吹向对手进行攻击，造成伤害。",
+    "file": "020_frost_breath.png"
+  },
+  {
+    "index": 21,
+    "name_cn": "冰柱坠击",
+    "name_en": "icicle_crash",
+    "type": "ice",
+    "category": "physical",
+    "power": "560",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "在自己的前方落下冰柱，被打到的敌人会受到伤害。有时会让敌人陷入畏缩状态。",
+    "file": "021_icicle_crash.png"
+  },
+  {
+    "index": 22,
+    "name_cn": "雪崩",
+    "name_en": "avalanche",
+    "type": "ice",
+    "category": "physical",
+    "power": "500",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "从空中丢下大量雪块，对目标宝可梦和其周围的地方宝可梦造成伤害；容易击中要害。",
+    "file": "022_avalanche.png"
+  },
+  {
+    "index": 23,
+    "name_cn": "踩踏",
+    "name_en": "stomp",
+    "type": "normal",
+    "category": "physical",
+    "power": "270",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "用大脚踩踏前方的敌人，使其受到伤害。",
+    "file": "023_stomp.png"
+  },
+  {
+    "index": 24,
+    "name_cn": "画龙点睛",
+    "name_en": "dragon_ascent",
+    "type": "flying",
+    "category": "physical",
+    "power": "600",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "从天空中急速下降攻击对手，自己的防御会降低。",
+    "file": "024_dragon_ascent.png"
+  },
+  {
+    "index": 25,
+    "name_cn": "唱歌",
+    "name_en": "sing",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "让周围的敌人听美妙的歌声，有很高概率会让敌人陷入睡眠状态。",
+    "file": "025_sing.png"
+  },
+  {
+    "index": 26,
+    "name_cn": "超级角击",
+    "name_en": "megahorn",
+    "type": "bug",
+    "category": "physical",
+    "power": "640",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "用坚硬且华丽的角狠狠地刺向前方的敌人，使其受到大大的伤害。",
+    "file": "026_megahorn.png"
+  },
+  {
+    "index": 26,
+    "name_cn": "飞水手里剑",
+    "name_en": "water_shuriken",
+    "type": "water",
+    "category": "special",
+    "power": "600",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "用粘液制成的手里剑，连续攻击3次。",
+    "file": "026_water_shuriken.png"
+  },
+  {
+    "index": 28,
+    "name_cn": "超级吸取",
+    "name_en": "mega_drain",
+    "type": "grass",
+    "category": "special",
+    "power": "270",
+    "cooldown": "9",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "攻击前方的敌人，使其受到伤害。并且还会从给予的伤害中吸取一部分体力，用来回复自己的体力。",
+    "file": "028_mega_drain.png"
+  },
+  {
+    "index": 29,
+    "name_cn": "超音波",
+    "name_en": "supersonic",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "从身体发出特殊的音波，必定会让周围的敌人陷入混乱状态。",
+    "file": "029_supersonic.png"
+  },
+  {
+    "index": 30,
+    "name_cn": "潮旋",
+    "name_en": "whirlpool",
+    "type": "water",
+    "category": "special",
+    "power": "280",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "在自己周围掀起旋涡，使周围的敌人受到伤害。",
+    "file": "030_whirlpool.png"
+  },
+  {
+    "index": 31,
+    "name_cn": "冲浪",
+    "name_en": "surf",
+    "type": "water",
+    "category": "special",
+    "power": "480",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "掀起宽宽的波浪，并乘在上面进行猛撞。被卷入波浪的敌人，会受到伤害。",
+    "file": "031_surf.png"
+  },
+  {
+    "index": 32,
+    "name_cn": "浊流",
+    "name_en": "muddy_water",
+    "type": "water",
+    "category": "special",
+    "power": "310",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "向对手喷射浑浊的水进行攻击，造成伤害同时降低对手防御。",
+    "file": "032_muddy_water.png"
+  },
+  {
+    "index": 33,
+    "name_cn": "铁头",
+    "name_en": "iron_head",
+    "type": "steel",
+    "category": "physical",
+    "power": "480",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "用钢铁般坚硬的头部撞向敌人，对目标造成伤害的同时有几率使目标陷入畏缩状态。",
+    "file": "033_iron_head.png"
+  },
+  {
+    "index": 34,
+    "name_cn": "充电",
+    "name_en": "charge",
+    "type": "electric",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "储存电流到自己身上，在一定时间内提高给予敌人伤害的同时，让自己的能力不容易下降。",
+    "file": "034_charge.png"
+  },
+  {
+    "index": 35,
+    "name_cn": "吹飞",
+    "name_en": "whirlwind",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "在自己的周围掀起狂风，吹飞接触到的敌人。",
+    "file": "035_whirlwind.png"
+  },
+  {
+    "index": 36,
+    "name_cn": "吹捧",
+    "name_en": "flatter",
+    "type": "dark",
+    "category": "status",
+    "power": "0",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "吹捧自己前方的敌人，可能使其陷入混乱状态，有时会提高敌人的伤害。",
+    "file": "036_flatter.png"
+  },
+  {
+    "index": 37,
+    "name_cn": "催眠术",
+    "name_en": "hypnosis",
+    "type": "psychic",
+    "category": "status",
+    "power": "0",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "施以诱导睡意的暗示，有很高概率会让前方的敌人陷入睡眠状态。",
+    "file": "037_hypnosis.png"
+  },
+  {
+    "index": 38,
+    "name_cn": "打雷",
+    "name_en": "thunder",
+    "type": "electric",
+    "category": "special",
+    "power": "350",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "在自己的前方落下雷，给予打雷附近的敌人伤害。有时会让敌人陷入麻痹状态。",
+    "file": "038_thunder.png"
+  },
+  {
+    "index": 39,
+    "name_cn": "冤冤相报",
+    "name_en": "",
+    "type": "ghost",
+    "category": "special",
+    "power": "450",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "用令人毛骨悚然的怨念进行攻击，会降低对手的攻击。",
+    "file": "039.png"
+  },
+  {
+    "index": 40,
+    "name_cn": "断崖之剑",
+    "name_en": "precipice_blades",
+    "type": "ground",
+    "category": "physical",
+    "power": "750",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "将大地的力量变化为利刃攻击对手。",
+    "file": "040_precipice_blades.png"
+  },
+  {
+    "index": 41,
+    "name_cn": "大爆炸",
+    "name_en": "explosion",
+    "type": "normal",
+    "category": "physical",
+    "power": "900",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "引发大爆炸，使自己周围的敌人受到大大的伤害。但同时自己也会受到伤害而倒下。",
+    "file": "041_explosion.png"
+  },
+  {
+    "index": 42,
+    "name_cn": "大地之力",
+    "name_en": "earth_power",
+    "type": "ground",
+    "category": "special",
+    "power": "400",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "在自身周围生产岩柱，对接触到的敌人造成伤害，有概率降低对手防御。",
+    "file": "042_earth_power.png"
+  },
+  {
+    "index": 43,
+    "name_cn": "大字爆炎",
+    "name_en": "fire_blast",
+    "type": "fire",
+    "category": "special",
+    "power": "510",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "朝地面喷出火焰，画出大字形状。被打到的敌人会受到伤害。有时会让敌人陷入灼伤状态。",
+    "file": "043_fire_blast.png"
+  },
+  {
+    "index": 44,
+    "name_cn": "神圣之火",
+    "name_en": "sacred_fire",
+    "type": "fire",
+    "category": "physical",
+    "power": "700",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "用神秘的火焰烧尽对手进行攻击。有很高概率会让对手陷入灼伤状态。",
+    "file": "044_sacred_fire.png"
+  },
+  {
+    "index": 45,
+    "name_cn": "弹跳",
+    "name_en": "bounce",
+    "type": "flying",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "向前方高高地弹跳两次，被打到的敌人会受到伤害。",
+    "file": "045_bounce.png"
+  },
+  {
+    "index": 46,
+    "name_cn": "瞪眼",
+    "name_en": "leer",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "朝附近的敌人瞪眼，使其害怕。有很高概率会提高敌人受到的伤害。",
+    "file": "046_leer.png"
+  },
+  {
+    "index": 47,
+    "name_cn": "深渊翻滚",
+    "name_en": "",
+    "type": "fighting",
+    "category": "physical",
+    "power": "480",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "旋转的同时，撞击前方的敌人，让周围一切卷入其中，并给予伤害。",
+    "file": "047.png"
+  },
+  {
+    "index": 48,
+    "name_cn": "地震",
+    "name_en": "earthquake",
+    "type": "ground",
+    "category": "physical",
+    "power": "440",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "引发地震，使周围的敌人受到伤害。",
+    "file": "048_earthquake.png"
+  },
+  {
+    "index": 49,
+    "name_cn": "电光",
+    "name_en": "spark",
+    "type": "electric",
+    "category": "physical",
+    "power": "240",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "让电流覆盖自己的身体，朝前方的敌人猛撞过去。有时会让敌人陷入麻痹状态。",
+    "file": "049_spark.png"
+  },
+  {
+    "index": 50,
+    "name_cn": "电击",
+    "name_en": "thunder_shock",
+    "type": "electric",
+    "category": "special",
+    "power": "200",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "蓄满电流后，朝着前方敌人发射，使其受到伤害。有时会让敌人陷入麻痹状态。",
+    "file": "050_thunder_shock.png"
+  },
+  {
+    "index": 51,
+    "name_cn": "电气场地",
+    "name_en": "electric_terrain",
+    "type": "electric",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "将电气之力聚集到自己脚下，在一定时间内提高给予敌人的伤害。",
+    "file": "051_electric_terrain.png"
+  },
+  {
+    "index": 52,
+    "name_cn": "电网",
+    "name_en": "electroweb",
+    "type": "electric",
+    "category": "special",
+    "power": "380",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "在自己眼前撒开电网，接触到电网的敌人会在一定时间内降低移动速度。",
+    "file": "052_electroweb.png"
+  },
+  {
+    "index": 53,
+    "name_cn": "毒粉",
+    "name_en": "poison_powder",
+    "type": "poison",
+    "category": "status",
+    "power": "0",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "向自己的前方挥洒毒粉。被撒到的敌人有很高概率会陷入中毒状态。",
+    "file": "053_poison_powder.png"
+  },
+  {
+    "index": 54,
+    "name_cn": "毒液陷阱",
+    "name_en": "venom_drench",
+    "type": "poison",
+    "category": "special",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "向自己的前方喷出毒液，对敌人造成伤害。",
+    "file": "054_venom_drench.png"
+  },
+  {
+    "index": 55,
+    "name_cn": "毒针",
+    "name_en": "poison_sting",
+    "type": "poison",
+    "category": "physical",
+    "power": "225",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "飞出毒针刺向前方的敌人。被刺中的敌人有时会陷入中毒状态。",
+    "file": "055_poison_sting.png"
+  },
+  {
+    "index": 56,
+    "name_cn": "飞弹针",
+    "name_en": "pin_missile",
+    "type": "bug",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "朝自己的前方发射三根锐针，被射中的敌人会受到伤害。",
+    "file": "056_pin_missile.png"
+  },
+  {
+    "index": 57,
+    "name_cn": "制裁光砾",
+    "name_en": "judgment",
+    "type": "normal",
+    "category": "special",
+    "power": "900",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "向对手放出光弹，对其造成伤害。",
+    "file": "057_judgment.png"
+  },
+  {
+    "index": 58,
+    "name_cn": "飞膝踢",
+    "name_en": "high_jump_kick",
+    "type": "fighting",
+    "category": "physical",
+    "power": "550",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "朝前方的敌人猛撞之后跳起来使出飞膝踢踢飞。自己也会因反作用力而受到伤害。",
+    "file": "058_high_jump_kick.png"
+  },
+  {
+    "index": 59,
+    "name_cn": "飞翔",
+    "name_en": "fly",
+    "type": "flying",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "朝自己前方较远处的敌人飞去，然后俯冲给予对方伤害。",
+    "file": "059_fly.png"
+  },
+  {
+    "index": 60,
+    "name_cn": "飞叶风暴",
+    "name_en": "leaf_storm",
+    "type": "grass",
+    "category": "special",
+    "power": "360",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "用尖尖的叶片卷起风暴，对远处的敌人造成伤害。",
+    "file": "060_leaf_storm.png"
+  },
+  {
+    "index": 61,
+    "name_cn": "气旋攻击",
+    "name_en": "aeroblast",
+    "type": "flying",
+    "category": "special",
+    "power": "450",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "发射空气旋涡进行攻击。容易击中要害。",
+    "file": "061_aeroblast.png"
+  },
+  {
+    "index": 62,
+    "name_cn": "飞叶快刀",
+    "name_en": "razor_leaf",
+    "type": "grass",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "飞出叶片，切斩敌人给予伤害。容易击中要害。",
+    "file": "062_razor_leaf.png"
+  },
+  {
+    "index": 63,
+    "name_cn": "空气之刃",
+    "name_en": "",
+    "type": "flying",
+    "category": "special",
+    "power": "350",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "用连天空也能劈开的空气之刃进行攻击，对目标造成伤害，有时会使对手畏缩。",
+    "file": "063.png"
+  },
+  {
+    "index": 64,
+    "name_cn": "愤怒粉",
+    "name_en": "rage_powder",
+    "type": "bug",
+    "category": "status",
+    "power": "0",
+    "cooldown": "2",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "将令人烦躁的粉末撒在自己身上，使周围敌人的目标全部指向自己。",
+    "file": "064_rage_powder.png"
+  },
+  {
+    "index": 65,
+    "name_cn": "伏特攻击",
+    "name_en": "volt_tackle",
+    "type": "electric",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "让电流覆盖全身，朝敌人猛撞后跳起并放出电流。被击中的敌人会受到伤害，有时会让敌人陷入麻痹状态。",
+    "file": "065_volt_tackle.png"
+  },
+  {
+    "index": 66,
+    "name_cn": "伏特替换",
+    "name_en": "volt_switch",
+    "type": "electric",
+    "category": "special",
+    "power": "325",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "让电流缠绕自己的身体，向前发出电球，对接触到的敌人造成伤害。",
+    "file": "066_volt_switch.png"
+  },
+  {
+    "index": 67,
+    "name_cn": "腹鼓",
+    "name_en": "belly_drum",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "消耗自己的体力，可以在一定时间内提高自己的各项效果。",
+    "file": "067_belly_drum.png"
+  },
+  {
+    "index": 68,
+    "name_cn": "新月舞",
+    "name_en": "lunar_dance",
+    "type": "psychic",
+    "category": "status",
+    "power": "0",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石"
+    ],
+    "description": "减少自己的体力值，恢复其他宝可梦的体力值，并让自己的能力不容易下降。",
+    "file": "068_lunar_dance.png"
+  },
+  {
+    "index": 69,
+    "name_cn": "钢翼",
+    "name_en": "steel_wing",
+    "type": "steel",
+    "category": "physical",
+    "power": "350",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "朝自己前方的敌人猛撞，并用坚硬的翅膀敲打敌人，使其受到伤害。有时会降低自己所受到的伤害。",
+    "file": "069_steel_wing.png"
+  },
+  {
+    "index": 70,
+    "name_cn": "高速移动",
+    "name_en": "agility",
+    "type": "psychic",
+    "category": "status",
+    "power": "0",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "让身体放松变得轻盈，可以在一定时间内提高自己的移动速度。",
+    "file": "070_agility.png"
+  },
+  {
+    "index": 71,
+    "name_cn": "骨头回力镖",
+    "name_en": "bonemerang",
+    "type": "ground",
+    "category": "physical",
+    "power": "520",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "投掷用骨头制成的回力镖，被打到的敌人会受到伤害。",
+    "file": "071_bonemerang.png"
+  },
+  {
+    "index": 72,
+    "name_cn": "光合作用",
+    "name_en": "synthesis",
+    "type": "grass",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "储存日光，可以在一定时间内提高给予敌人的伤害。",
+    "file": "072_synthesis.png"
+  },
+  {
+    "index": 73,
+    "name_cn": "光墙",
+    "name_en": "light_screen",
+    "type": "psychic",
+    "category": "status",
+    "power": "0",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "制造出光墙，从而在一定时间内让自己的能力不容易下降。",
+    "file": "073_light_screen.png"
+  },
+  {
+    "index": 74,
+    "name_cn": "诡计",
+    "name_en": "nasty_plot",
+    "type": "dark",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "谋划诡计，激活头脑。可以在一定时间内提高给予敌人的伤害。",
+    "file": "074_nasty_plot.png"
+  },
+  {
+    "index": 75,
+    "name_cn": "磷火",
+    "name_en": "",
+    "type": "fire",
+    "category": "special",
+    "power": "65",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "让怪异的火焰覆盖全身，并攻击眼前的敌人。有很高概率会让敌人陷入灼伤状态。",
+    "file": "075.png"
+  },
+  {
+    "index": 76,
+    "name_cn": "滚动",
+    "name_en": "rollout",
+    "type": "rock",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "向前旋转移动，被撞到的敌人会受到伤害，同时提高给予敌人的伤害。",
+    "file": "076_rollout.png"
+  },
+  {
+    "index": 77,
+    "name_cn": "吼叫",
+    "name_en": "roar",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "2",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "激烈地吼叫，从而吹飞周围的敌人。",
+    "file": "077_roar.png"
+  },
+  {
+    "index": 78,
+    "name_cn": "花瓣舞",
+    "name_en": "petal_dance",
+    "type": "grass",
+    "category": "special",
+    "power": "250",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "原地旋转的同时，散落花瓣，从而使周围的敌人受到伤害。",
+    "file": "078_petal_dance.png"
+  },
+  {
+    "index": 79,
+    "name_cn": "幻象光线",
+    "name_en": "psybeam",
+    "type": "psychic",
+    "category": "special",
+    "power": "275",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "向三个方向发射神奇的光线，被射中的敌人会受到伤害。有时会让敌人陷入混乱状态。",
+    "file": "079_psybeam.png"
+  },
+  {
+    "index": 80,
+    "name_cn": "回旋踢",
+    "name_en": "rolling_kick",
+    "type": "fighting",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "原地旋转的同时，使出脚踢，从而使周围的敌人受到伤害。",
+    "file": "080_rolling_kick.png"
+  },
+  {
+    "index": 82,
+    "name_cn": "火花",
+    "name_en": "ember",
+    "type": "fire",
+    "category": "special",
+    "power": "123",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "向前方发射火花。碰撞到地面的火花，分三个方向飞溅开来。被打到的敌人会受到伤害。有时会让敌人陷入灼伤状态。",
+    "file": "082_ember.png"
+  },
+  {
+    "index": 83,
+    "name_cn": "火焰轮",
+    "name_en": "flame_wheel",
+    "type": "fire",
+    "category": "physical",
+    "power": "350",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "让火焰覆盖全身，猛撞前方的敌人。被撞到的敌人会受到伤害，有时会让敌人陷入灼伤状态。",
+    "file": "083_flame_wheel.png"
+  },
+  {
+    "index": 84,
+    "name_cn": "火焰拳",
+    "name_en": "fire_punch",
+    "type": "fire",
+    "category": "physical",
+    "power": "450",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "让自己的拳头充满火焰之力，并用灼热的拳头攻击眼前的敌人，使其受到伤害。有时会让敌人陷入灼伤状态。",
+    "file": "084_fire_punch.png"
+  },
+  {
+    "index": 85,
+    "name_cn": "火焰旋涡",
+    "name_en": "fire_spin",
+    "type": "fire",
+    "category": "special",
+    "power": "195",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "在自己周围制造火焰，像画旋涡一般发射出去。被打到的敌人会受到伤害。有时会让敌人陷入灼伤状态。",
+    "file": "085_fire_spin.png"
+  },
+  {
+    "index": 86,
+    "name_cn": "火焰牙",
+    "name_en": "fire_fang",
+    "type": "fire",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "用覆盖着火焰的牙齿，咬住前方的敌人，对其造成伤害。",
+    "file": "086_fire_fang.png"
+  },
+  {
+    "index": 87,
+    "name_cn": "极光幕",
+    "name_en": "aurora_veil",
+    "type": "ice",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "让极光之幕覆盖全身，可以在一定时间内降低自己所受到的伤害。",
+    "file": "087_aurora_veil.png"
+  },
+  {
+    "index": 88,
+    "name_cn": "急速折返",
+    "name_en": "u_turn",
+    "type": "bug",
+    "category": "physical",
+    "power": "360",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "攻击自己周围的敌人后，迅速移动到后方，从而避开敌人的反击。",
+    "file": "088_u_turn.png"
+  },
+  {
+    "index": 89,
+    "name_cn": "集沙",
+    "name_en": "shore_up",
+    "type": "ground",
+    "category": "status",
+    "power": "0",
+    "cooldown": "9",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "收集脚下的沙子，从而回复一些自己的体力。",
+    "file": "089_shore_up.png"
+  },
+  {
+    "index": 90,
+    "name_cn": "寄生种子",
+    "name_en": "leech_seed",
+    "type": "grass",
+    "category": "special",
+    "power": "360",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "在前方的地面上，种植寄生种子。种植范围内的敌人，会一点一点持续受到伤害，并且还会从给予的伤害中，吸取一部分体力，用来回复自己的体力。",
+    "file": "090_leech_seed.png"
+  },
+  {
+    "index": 91,
+    "name_cn": "加农光炮",
+    "name_en": "flash_cannon",
+    "type": "steel",
+    "category": "special",
+    "power": "451",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "将身体的光芒聚集在一点形成光线，并朝自己的前方释放出去。有时会提高敌人受到的伤害。",
+    "file": "091_flash_cannon.png"
+  },
+  {
+    "index": 92,
+    "name_cn": "尖石攻击",
+    "name_en": "stone_edge",
+    "type": "rock",
+    "category": "physical",
+    "power": "480",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "在前方生成尖尖的岩石，刺入对手造成伤害。",
+    "file": "092_stone_edge.png"
+  },
+  {
+    "index": 93,
+    "name_cn": "剑舞",
+    "name_en": "swords_dance",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "激烈地跳起战舞，可以在一定时间内提高给予敌人的伤害。",
+    "file": "093_swords_dance.png"
+  },
+  {
+    "index": 94,
+    "name_cn": "健美",
+    "name_en": "bulk_up",
+    "type": "fighting",
+    "category": "status",
+    "power": "0",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "在体内凝聚力量，从而使肌肉增厚。可以在一定时间内提高给予敌人伤害的同时，降低自己所受到的伤害。",
+    "file": "094_bulk_up.png"
+  },
+  {
+    "index": 95,
+    "name_cn": "叫声",
+    "name_en": "growl",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "发出可爱的叫声，引起周围敌人的注意，使其疏忽。有很高概率会降低敌人给予的伤害。",
+    "file": "095_growl.png"
+  },
+  {
+    "index": 96,
+    "name_cn": "恶之波动",
+    "name_en": "dark_pulse",
+    "type": "dark",
+    "category": "special",
+    "power": "420",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "从体内发出充满恶意的恐怖气场，攻击目标造成伤害，有时会使对手畏缩。",
+    "file": "096_dark_pulse.png"
+  },
+  {
+    "index": 97,
+    "name_cn": "金属音",
+    "name_en": "metal_sound",
+    "type": "steel",
+    "category": "status",
+    "power": "0",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "让自己附近的敌人听摩擦金属般讨厌的声音，有很高概率会提高敌人受到的伤害。",
+    "file": "097_metal_sound.png"
+  },
+  {
+    "index": 98,
+    "name_cn": "金属爪",
+    "name_en": "metal_claw",
+    "type": "steel",
+    "category": "physical",
+    "power": "360",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "用钢铁之爪撕裂自己前方的敌人，使其受到伤害。有时会提高给予敌人的伤害。",
+    "file": "098_metal_claw.png"
+  },
+  {
+    "index": 99,
+    "name_cn": "巨兽斩",
+    "name_en": "behemoth_blade",
+    "type": "steel",
+    "category": "physical",
+    "power": "500",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "变身为巨大的剑，挥斩对手，造成伤害。",
+    "file": "099_behemoth_blade.png"
+  },
+  {
+    "index": 100,
+    "name_cn": "巨兽弹",
+    "name_en": "behemoth_bash",
+    "type": "steel",
+    "category": "physical",
+    "power": "500",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "变身为巨大的盾，撞击对手，造成伤害。",
+    "file": "100_behemoth_bash.png"
+  },
+  {
+    "index": 101,
+    "name_cn": "近身战",
+    "name_en": "close_combat",
+    "type": "fighting",
+    "category": "physical",
+    "power": "495",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "向前方敌人的怀里扑去，给予一击，使其受到伤害。但有时也会提高自己所受到的伤害。",
+    "file": "101_close_combat.png"
+  },
+  {
+    "index": 102,
+    "name_cn": "惊吓",
+    "name_en": "astonish",
+    "type": "ghost",
+    "category": "physical",
+    "power": "320",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "惊吓眼前的敌人，吃惊的敌人会受到伤害。",
+    "file": "102_astonish.png"
+  },
+  {
+    "index": 103,
+    "name_cn": "精神冲击",
+    "name_en": "psyshock",
+    "type": "psychic",
+    "category": "special",
+    "power": "280",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "让许多光球掉落在前方，对接触到光球的敌人造成伤害。",
+    "file": "103_psyshock.png"
+  },
+  {
+    "index": 104,
+    "name_cn": "精神击破",
+    "name_en": "psystrike",
+    "type": "psychic",
+    "category": "special",
+    "power": "450",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "在自己的前方制造出大大的光球。大光球会分裂出许多小光球，并朝四周飞散开来，被打到的敌人会受到伤害。",
+    "file": "104_psystrike.png"
+  },
+  {
+    "index": 105,
+    "name_cn": "精神利刃",
+    "name_en": "psycho_cut",
+    "type": "psychic",
+    "category": "physical",
+    "power": "450",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "移动到自己的前方后用心之利刃给予敌人伤害。容易击中要害。",
+    "file": "105_psycho_cut.png"
+  },
+  {
+    "index": 106,
+    "name_cn": "精神强念",
+    "name_en": "psychic",
+    "type": "psychic",
+    "category": "special",
+    "power": "540",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "制造出神奇又强大的光线发射过去。被射中的敌人会受到伤害，有时还会提高敌人受到的伤害。",
+    "file": "106_psychic.png"
+  },
+  {
+    "index": 107,
+    "name_cn": "镜面反射",
+    "name_en": "mirror_coat",
+    "type": "psychic",
+    "category": "special",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "在自身周围制造出能反射的镜面，在持续期间按比例反弹敌人造成的伤害。",
+    "file": "107_mirror_coat.png"
+  },
+  {
+    "index": 108,
+    "name_cn": "剧毒",
+    "name_en": "toxic",
+    "type": "poison",
+    "category": "special",
+    "power": "250",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "在自己的周围挥撒剧毒，被撒到的敌人有很高概率会陷入中毒状态。",
+    "file": "108_toxic.png"
+  },
+  {
+    "index": 109,
+    "name_cn": "大晴天",
+    "name_en": "sunny_day",
+    "type": "fire",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石"
+    ],
+    "description": "使一段时间的天气变为大晴天，提高火属性招式威力，水属性的招式威力则降低。",
+    "file": "109_sunny_day.png"
+  },
+  {
+    "index": 110,
+    "name_cn": "聚气",
+    "name_en": "focus_energy",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "深深地吸口气，集中精神，使自己的攻击会变得容易击中要害。",
+    "file": "110_focus_energy.png"
+  },
+  {
+    "index": 111,
+    "name_cn": "看我嘛",
+    "name_en": "follow_me",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "2",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "引起周围敌人的注意，让对方的攻击目标都转移到自己身上。",
+    "file": "111_follow_me.png"
+  },
+  {
+    "index": 112,
+    "name_cn": "雷电拳",
+    "name_en": "thunder_punch",
+    "type": "electric",
+    "category": "physical",
+    "power": "450",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "让自己的拳头充满电流，并朝眼前的敌人使出电麻之拳。有时会让敌人陷入麻痹状态。",
+    "file": "112_thunder_punch.png"
+  },
+  {
+    "index": 113,
+    "name_cn": "连续拳",
+    "name_en": "comet_punch",
+    "type": "normal",
+    "category": "physical",
+    "power": "273",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "朝眼前的敌人连续使出快拳，使其受到伤害。",
+    "file": "113_comet_punch.png"
+  },
+  {
+    "index": 114,
+    "name_cn": "流星群",
+    "name_en": "draco_meteor",
+    "type": "dragon",
+    "category": "special",
+    "power": "600",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "在自己的周围落下几颗陨石，被砸到的敌人会受到伤害。有时会让自己给敌人的伤害降低。",
+    "file": "114_draco_meteor.png"
+  },
+  {
+    "index": 115,
+    "name_cn": "暗影之光",
+    "name_en": "moongeist_beam",
+    "type": "ghost",
+    "category": "special",
+    "power": "760",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "放出奇异的光线攻击对手。",
+    "file": "115_moongeist_beam.png"
+  },
+  {
+    "index": 116,
+    "name_cn": "龙卷风",
+    "name_en": "twister",
+    "type": "dragon",
+    "category": "special",
+    "power": "339",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "兴起几条龙卷风，朝自己的前方卷去。被打到的敌人会受到伤害。",
+    "file": "116_twister.png"
+  },
+  {
+    "index": 117,
+    "name_cn": "龙爪",
+    "name_en": "dragon_claw",
+    "type": "dragon",
+    "category": "physical",
+    "power": "400",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "蓄力后，一边旋转一边猛撞，并用尖锐的爪子给予敌人伤害。",
+    "file": "117_dragon_claw.png"
+  },
+  {
+    "index": 118,
+    "name_cn": "龙之波动",
+    "name_en": "dragon_pulse",
+    "type": "dragon",
+    "category": "special",
+    "power": "300",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "从口中发射冲击波，遭到袭击的敌人会受到伤害。",
+    "file": "118_dragon_pulse.png"
+  },
+  {
+    "index": 119,
+    "name_cn": "波导弹",
+    "name_en": "aura_sphere",
+    "type": "fighting",
+    "category": "special",
+    "power": "400",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "从体内产生出波导之力，然后向对手发出，攻击目标从而造成伤害。",
+    "file": "119_aura_sphere.png"
+  },
+  {
+    "index": 120,
+    "name_cn": "龙之俯冲",
+    "name_en": "dragon_rush",
+    "type": "dragon",
+    "category": "physical",
+    "power": "350",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "激烈地扑向较远处的敌人，使其受到伤害。",
+    "file": "120_dragon_rush.png"
+  },
+  {
+    "index": 121,
+    "name_cn": "龙之舞",
+    "name_en": "dragon_dance",
+    "type": "dragon",
+    "category": "status",
+    "power": "0",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "激烈地跳起神秘且强有力的舞蹈。可以在一定时间内提高给予敌人伤害的同时，提升移动速度。",
+    "file": "121_dragon_dance.png"
+  },
+  {
+    "index": 122,
+    "name_cn": "乱抓",
+    "name_en": "fury_swipes",
+    "type": "normal",
+    "category": "physical",
+    "power": "285",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "连续抓眼前的敌人，使其受到伤害。",
+    "file": "122_fury_swipes.png"
+  },
+  {
+    "index": 123,
+    "name_cn": "落石",
+    "name_en": "rock_throw",
+    "type": "rock",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "拿起岩石，朝自己的前方扔去，被砸到的敌人会受到伤害。",
+    "file": "123_rock_throw.png"
+  },
+  {
+    "index": 124,
+    "name_cn": "麻痹粉",
+    "name_en": "stun_spore",
+    "type": "grass",
+    "category": "status",
+    "power": "0",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "在自己的眼前撒出麻痹粉，被撒到的敌人有很高概率会陷入麻痹状态。",
+    "file": "124_stun_spore.png"
+  },
+  {
+    "index": 125,
+    "name_cn": "猛扑",
+    "name_en": "lunge",
+    "type": "bug",
+    "category": "physical",
+    "power": "350",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "朝前方的敌人猛扑过去，使其受到伤害。",
+    "file": "125_lunge.png"
+  },
+  {
+    "index": 126,
+    "name_cn": "泰山压顶",
+    "name_en": "body_slam",
+    "type": "normal",
+    "category": "physical",
+    "power": "400",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+    "file": "126_body_slam.png"
+  },
+  {
+    "index": 127,
+    "name_cn": "猛撞",
+    "name_en": "take_down",
+    "type": "normal",
+    "category": "physical",
+    "power": "180",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "以惊人的气势撞向前方的敌人，被撞到的敌人都会受到伤害。自己也会因反作用力而受到伤害。",
+    "file": "127_take_down.png"
+  },
+  {
+    "index": 128,
+    "name_cn": "蘑菇孢子",
+    "name_en": "spore",
+    "type": "grass",
+    "category": "status",
+    "power": "0",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "在自己的眼前撒出具有催眠效果的孢子，有很高概率会让敌人陷入睡眠状态。",
+    "file": "128_spore.png"
+  },
+  {
+    "index": 129,
+    "name_cn": "魔法闪耀",
+    "name_en": "dazzling_gleam",
+    "type": "fairy",
+    "category": "special",
+    "power": "370",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "一边移动，一边发射强光，被打到的敌人会受到伤害。",
+    "file": "129_dazzling_gleam.png"
+  },
+  {
+    "index": 130,
+    "name_cn": "泥巴炸弹",
+    "name_en": "mud_bomb",
+    "type": "ground",
+    "category": "special",
+    "power": "350",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "向前方投掷泥块。其碰到地面后会立刻爆裂，使周围的敌人受到伤害。有时会提高敌人受到的伤害。",
+    "file": "130_mud_bomb.png"
+  },
+  {
+    "index": 131,
+    "name_cn": "逆鳞",
+    "name_en": "outrage",
+    "type": "dragon",
+    "category": "physical",
+    "power": "555",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "横冲直撞，抓到路过的敌人就会攻击，使其受到伤害。有时会让自己陷入混乱状态。",
+    "file": "131_outrage.png"
+  },
+  {
+    "index": 132,
+    "name_cn": "攀瀑",
+    "name_en": "waterfall",
+    "type": "water",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "靠近前方的敌人，然后让水柱从敌人的脚下喷出，被打到的敌人会受到伤害。",
+    "file": "132_waterfall.png"
+  },
+  {
+    "index": 133,
+    "name_cn": "泡沫",
+    "name_en": "bubble",
+    "type": "water",
+    "category": "special",
+    "power": "200",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "向三个方向发射泡泡。被泡泡打到的敌人会受到伤害。有时还会降低敌人的移动速度。",
+    "file": "133_bubble.png"
+  },
+  {
+    "index": 134,
+    "name_cn": "喷射火焰",
+    "name_en": "flamethrower",
+    "type": "fire",
+    "category": "special",
+    "power": "400",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "在一定时间内，会连续吐出长长的火焰。遭到火焰袭击的敌人，会一点一点持续受到伤害。有时会让敌人陷入灼伤状态。",
+    "file": "134_flamethrower.png"
+  },
+  {
+    "index": 135,
+    "name_cn": "极巨炮",
+    "name_en": "dynamax_cannon",
+    "type": "dragon",
+    "category": "special",
+    "power": "690",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "从核心放出光束进行攻击，对目标造成伤害。",
+    "file": "135_dynamax_cannon.png"
+  },
+  {
+    "index": 136,
+    "name_cn": "喷烟",
+    "name_en": "lava_plume",
+    "type": "fire",
+    "category": "special",
+    "power": "320",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "在自己周围喷出熊熊烈火，使周围的敌人受到伤害。有时会让敌人陷入灼伤状态。",
+    "file": "136_lava_plume.png"
+  },
+  {
+    "index": 137,
+    "name_cn": "屏障",
+    "name_en": "barrier",
+    "type": "psychic",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "在自己的周围制造壁障，可以在一定时间内降低自己所受到的伤害。",
+    "file": "137_barrier.png"
+  },
+  {
+    "index": 138,
+    "name_cn": "破坏光线",
+    "name_en": "hyper_beam",
+    "type": "normal",
+    "category": "special",
+    "power": "500",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "蓄力后向敌人，发射强烈的光线。遭到光线攻击的敌人，会受到极大的伤害。",
+    "file": "138_hyper_beam.png"
+  },
+  {
+    "index": 139,
+    "name_cn": "移花接木",
+    "name_en": "",
+    "type": "dark",
+    "category": "physical",
+    "power": "280",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "蓄力后快速撞向前方的敌人，对被撞击的敌人造成伤害。",
+    "file": "139.png"
+  },
+  {
+    "index": 140,
+    "name_cn": "奇异之光",
+    "name_en": "confuse_ray",
+    "type": "ghost",
+    "category": "status",
+    "power": "0",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "让周围的敌人看奇怪的光，有很高概率会让敌人陷入混乱状态。",
+    "file": "140_confuse_ray.png"
+  },
+  {
+    "index": 141,
+    "name_cn": "怨恨",
+    "name_en": "spite",
+    "type": "ghost",
+    "category": "special",
+    "power": "200",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "对手使用的招式怀有怨恨，造成伤害，必定使对手畏缩。",
+    "file": "141_spite.png"
+  },
+  {
+    "index": 142,
+    "name_cn": "起风",
+    "name_en": "gust",
+    "type": "flying",
+    "category": "special",
+    "power": "300",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "让前方刮起狂风，使周围的一切卷入其中，遭到袭击的敌人会受到伤害。",
+    "file": "142_gust.png"
+  },
+  {
+    "index": 143,
+    "name_cn": "热风",
+    "name_en": "heat_wave",
+    "type": "fire",
+    "category": "special",
+    "power": "230",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "将炎热的气息吹向前方，被喷到的敌人会受到伤害。有时会让敌人陷入灼伤状态。",
+    "file": "143_heat_wave.png"
+  },
+  {
+    "index": 144,
+    "name_cn": "热水",
+    "name_en": "scald",
+    "type": "water",
+    "category": "special",
+    "power": "430",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "向前发射滚烫的热水，有一定几率灼伤对手。",
+    "file": "144_scald.png"
+  },
+  {
+    "index": 145,
+    "name_cn": "日光束",
+    "name_en": "solar_beam",
+    "type": "grass",
+    "category": "special",
+    "power": "530",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "收集日光，朝自己的前方发射出去。被击中的敌人会受到伤害。",
+    "file": "145_solar_beam.png"
+  },
+  {
+    "index": 146,
+    "name_cn": "溶化",
+    "name_en": "acid_armor",
+    "type": "poison",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "通过细胞的变化让身体变成液态，可以在一定时间内降低自己所受到的伤害。",
+    "file": "146_acid_armor.png"
+  },
+  {
+    "index": 147,
+    "name_cn": "撒娇",
+    "name_en": "charm",
+    "type": "fairy",
+    "category": "status",
+    "power": "0",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "做出撒娇般的动作，诱使附近的敌人疏忽大意。有很高概率会降低敌人给予的伤害。",
+    "file": "147_charm.png"
+  },
+  {
+    "index": 148,
+    "name_cn": "撒菱",
+    "name_en": "spikes",
+    "type": "ground",
+    "category": "physical",
+    "power": "210",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "在自己的前方撒菱，踩到的敌人会受到伤害。",
+    "file": "148_spikes.png"
+  },
+  {
+    "index": 149,
+    "name_cn": "三重攻击",
+    "name_en": "tri_attack",
+    "type": "normal",
+    "category": "special",
+    "power": "350",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "将三种力量覆盖全身，攻击前方的敌人，使其受到伤害。有时会让敌人陷入灼伤、麻痹或冰冻的状态。",
+    "file": "149_tri_attack.png"
+  },
+  {
+    "index": 150,
+    "name_cn": "沙暴",
+    "name_en": "sandstorm",
+    "type": "rock",
+    "category": "physical",
+    "power": "208",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "在自己的周围掀起沙暴，从而使敌人受到伤害。",
+    "file": "150_sandstorm.png"
+  },
+  {
+    "index": 151,
+    "name_cn": "闪光",
+    "name_en": "flash",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "2",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "突然朝周围的敌人放出耀眼的光芒，有很高概率会降低敌人的移动速度。",
+    "file": "151_flash.png"
+  },
+  {
+    "index": 152,
+    "name_cn": "闪焰冲锋",
+    "name_en": "flare_blitz",
+    "type": "fire",
+    "category": "physical",
+    "power": "360",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "在自己的前方制造出一条火焰之道，随后在上面进行猛撞，给予敌人伤害。有时会让敌人陷入灼伤状态。",
+    "file": "152_flare_blitz.png"
+  },
+  {
+    "index": 153,
+    "name_cn": "舌舔",
+    "name_en": "lick",
+    "type": "ghost",
+    "category": "physical",
+    "power": "340",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "用长长的舌头舔周围的敌人，使其受到伤害。有时会让敌人陷入麻痹状态。",
+    "file": "153_lick.png"
+  },
+  {
+    "index": 154,
+    "name_cn": "神鸟猛击",
+    "name_en": "sky_attack",
+    "type": "flying",
+    "category": "physical",
+    "power": "330",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "飞上天空，摆好姿势，然后猛撞眼前的敌人，使其受到伤害。容易击中要害。",
+    "file": "154_sky_attack.png"
+  },
+  {
+    "index": 155,
+    "name_cn": "神速",
+    "name_en": "extreme_speed",
+    "type": "normal",
+    "category": "physical",
+    "power": "360",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "以迅雷不及掩耳之势猛撞前方的敌人，使其受到伤害。",
+    "file": "155_extreme_speed.png"
+  },
+  {
+    "index": 156,
+    "name_cn": "生蛋",
+    "name_en": "soft_boiled",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "9",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "用蛋的力量回复自己的体力。",
+    "file": "156_soft_boiled.png"
+  },
+  {
+    "index": 157,
+    "name_cn": "十万伏特",
+    "name_en": "thunderbolt",
+    "type": "electric",
+    "category": "special",
+    "power": "420",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "向自己的周围放出强大电流，使周围的敌人受到伤害。有时会让敌人陷入麻痹状态。",
+    "file": "157_thunderbolt.png"
+  },
+  {
+    "index": 158,
+    "name_cn": "十字劈",
+    "name_en": "cross_chop",
+    "type": "fighting",
+    "category": "physical",
+    "power": "320",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "跳起后两手呈十字劈打前方的敌人，使其受到伤害。容易击中要害。",
+    "file": "158_cross_chop.png"
+  },
+  {
+    "index": 159,
+    "name_cn": "食梦",
+    "name_en": "dream_eater",
+    "type": "psychic",
+    "category": "special",
+    "power": "450",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "进入敌人的梦境，对其造成伤害，并从梦境中吸取能量回复自身体力。",
+    "file": "159_dream_eater.png"
+  },
+  {
+    "index": 160,
+    "name_cn": "摔打",
+    "name_en": "slam",
+    "type": "normal",
+    "category": "physical",
+    "power": "234",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "使用长长的尾巴或藤蔓进行摔打，降低敌人的防御，使附近的敌人都受到伤害。",
+    "file": "160_slam.png"
+  },
+  {
+    "index": 161,
+    "name_cn": "双针",
+    "name_en": "twineedle",
+    "type": "bug",
+    "category": "physical",
+    "power": "200",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "发射两根针，刺中对手造成2次伤害，有时会让对手陷入中毒状态。",
+    "file": "161_twineedle.png"
+  },
+  {
+    "index": 162,
+    "name_cn": "水流环",
+    "name_en": "aqua_ring",
+    "type": "water",
+    "category": "status",
+    "power": "0",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "用水制造的幕覆盖自身，从而回复自己的体力。",
+    "file": "162_aqua_ring.png"
+  },
+  {
+    "index": 163,
+    "name_cn": "水流喷射",
+    "name_en": "aqua_jet",
+    "type": "water",
+    "category": "physical",
+    "power": "201",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "以迅雷不及掩耳之势猛撞前方的敌人，使其受到伤害。",
+    "file": "163_aqua_jet.png"
+  },
+  {
+    "index": 164,
+    "name_cn": "水炮",
+    "name_en": "hydro_pump",
+    "type": "water",
+    "category": "special",
+    "power": "800",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "从自己前方的地面上喷起四道水柱，被打到的敌人会受到伤害。",
+    "file": "164_hydro_pump.png"
+  },
+  {
+    "index": 165,
+    "name_cn": "睡觉",
+    "name_en": "rest",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "9",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "在原地睡觉，从而大大地回复自己的体力。",
+    "file": "165_rest.png"
+  },
+  {
+    "index": 166,
+    "name_cn": "顺风",
+    "name_en": "tailwind",
+    "type": "flying",
+    "category": "special",
+    "power": "0",
+    "cooldown": "2",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "制造出猛烈的旋风，可以在一定时间内提高自己的移动速度。",
+    "file": "166_tailwind.png"
+  },
+  {
+    "index": 167,
+    "name_cn": "瞬间失忆",
+    "name_en": "amnesia",
+    "type": "psychic",
+    "category": "status",
+    "power": "0",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "将头脑清空，瞬间忘记某事，从而提高给予敌人伤害的同时，让自己的能力不容易下降。",
+    "file": "167_amnesia.png"
+  },
+  {
+    "index": 168,
+    "name_cn": "宇宙力量",
+    "name_en": "cosmic_power",
+    "type": "psychic",
+    "category": "status",
+    "power": "0",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "汲取宇宙中神秘的力量，提高自己的防御，同时让自己的能力不容易下降。",
+    "file": "168_cosmic_power.png"
+  },
+  {
+    "index": 169,
+    "name_cn": "瞬间移动",
+    "name_en": "teleport",
+    "type": "psychic",
+    "category": "status",
+    "power": "0",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "使用超能力进行瞬间移动。",
+    "file": "169_teleport.png"
+  },
+  {
+    "index": 170,
+    "name_cn": "碎岩",
+    "name_en": "rock_smash",
+    "type": "fighting",
+    "category": "physical",
+    "power": "150",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "发出气波，对大范围的敌人造成伤害。同时破坏周围的树木和岩石。",
+    "file": "170_rock_smash.png"
+  },
+  {
+    "index": 171,
+    "name_cn": "缩入壳中",
+    "name_en": "withdraw",
+    "type": "water",
+    "category": "status",
+    "power": "0",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "缩入坚硬的壳里，可以在一定时间内降低自己所受到的伤害。",
+    "file": "171_withdraw.png"
+  },
+  {
+    "index": 172,
+    "name_cn": "冥想",
+    "name_en": "calm_mind",
+    "type": "psychic",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "静心凝神，从而提高自己的攻击和防御。",
+    "file": "172_calm_mind.png"
+  },
+  {
+    "index": 173,
+    "name_cn": "藤鞭",
+    "name_en": "vine_whip",
+    "type": "grass",
+    "category": "physical",
+    "power": "165",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "像鞭子一样挥舞藤蔓，打向前方的敌人。被打到的敌人会受到伤害。",
+    "file": "173_vine_whip.png"
+  },
+  {
+    "index": 174,
+    "name_cn": "替身",
+    "name_en": "substitute",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "2",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "制造自己的替身，让敌人的攻击集中在替身上。",
+    "file": "174_substitute.png"
+  },
+  {
+    "index": 175,
+    "name_cn": "天使之吻",
+    "name_en": "sweet_kiss",
+    "type": "fairy",
+    "category": "status",
+    "power": "0",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "像天使般可爱地亲吻眼前的敌人，有很高概率会让敌人陷入混乱状态。",
+    "file": "175_sweet_kiss.png"
+  },
+  {
+    "index": 176,
+    "name_cn": "挑衅",
+    "name_en": "taunt",
+    "type": "dark",
+    "category": "status",
+    "power": "0",
+    "cooldown": "2",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "挑衅自己周围的敌人，使其目标指向自己。",
+    "file": "176_taunt.png"
+  },
+  {
+    "index": 177,
+    "name_cn": "铁壁",
+    "name_en": "iron_defense",
+    "type": "steel",
+    "category": "status",
+    "power": "0",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "将自己的皮肤变得坚硬如铁，可以在一定时间内降低自己所受到的伤害。",
+    "file": "177_iron_defense.png"
+  },
+  {
+    "index": 178,
+    "name_cn": "铁尾",
+    "name_en": "iron_tail",
+    "type": "steel",
+    "category": "physical",
+    "power": "400",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "挥舞坚硬的尾巴，摔打自己周围的敌人，使其受到伤害。有时会提高敌人受到的伤害。",
+    "file": "178_iron_tail.png"
+  },
+  {
+    "index": 179,
+    "name_cn": "突袭",
+    "name_en": "sucker_punch",
+    "type": "dark",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "先隐藏身影，移动到稍远的地方，然后猛撞向敌人，使其受到伤害。",
+    "file": "179_sucker_punch.png"
+  },
+  {
+    "index": 180,
+    "name_cn": "吐丝",
+    "name_en": "string_shot",
+    "type": "bug",
+    "category": "physical",
+    "power": "210",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "朝自己的前方吐出黏黏的丝，接触到的敌人有很高概率会降低移动速度。",
+    "file": "180_string_shot.png"
+  },
+  {
+    "index": 181,
+    "name_cn": "陀螺球",
+    "name_en": "gyro_ball",
+    "type": "steel",
+    "category": "physical",
+    "power": "174",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "让身体高速旋转并往前突进，击退路径上的敌人并造成伤害。",
+    "file": "181_gyro_ball.png"
+  },
+  {
+    "index": 182,
+    "name_cn": "挖洞",
+    "name_en": "dig",
+    "type": "ground",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "挖洞后潜行到前方敌人的脚下，然后从脚下扑上来给予敌人伤害。",
+    "file": "182_dig.png"
+  },
+  {
+    "index": 183,
+    "name_cn": "暗影潜袭",
+    "name_en": "shadow_force",
+    "type": "ghost",
+    "category": "physical",
+    "power": "700",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "隐身于黑暗中，随后从黑暗中出现发动攻击。",
+    "file": "183_shadow_force.png"
+  },
+  {
+    "index": 184,
+    "name_cn": "污泥炸弹",
+    "name_en": "sludge_bomb",
+    "type": "poison",
+    "category": "special",
+    "power": "380",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "发射毒块，其碰撞地面后会立刻爆裂，使周围的敌人受到伤害。有时会让敌人陷入中毒状态。",
+    "file": "184_sludge_bomb.png"
+  },
+  {
+    "index": 185,
+    "name_cn": "吸取拳",
+    "name_en": "drain_punch",
+    "type": "fighting",
+    "category": "physical",
+    "power": "360",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "向眼前的敌人出拳，使其受到伤害。而且还能通过拳头吸取敌人的力量用来回复自己的体力。",
+    "file": "185_drain_punch.png"
+  },
+  {
+    "index": 186,
+    "name_cn": "吸取之吻",
+    "name_en": "draining_kiss",
+    "type": "fairy",
+    "category": "special",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "亲吻自己眼前的敌人，吸取对方的体力，并且还会从给予的伤害中吸取一部分体力，用来回复自己的体力。",
+    "file": "186_draining_kiss.png"
+  },
+  {
+    "index": 187,
+    "name_cn": "汲取",
+    "name_en": "",
+    "type": "bug",
+    "category": "special",
+    "power": "480",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "吸取眼前敌人的血液，使其受到伤害。并且还会从给予的伤害中吸取一部分体力，用来回复自己的体力。",
+    "file": "187.png"
+  },
+  {
+    "index": 188,
+    "name_cn": "嬉闹",
+    "name_en": "play_rough",
+    "type": "fairy",
+    "category": "physical",
+    "power": "450",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "和前方的敌人嬉闹，使其受到伤害。有时还会降低敌人给予的伤害。",
+    "file": "188_play_rough.png"
+  },
+  {
+    "index": 189,
+    "name_cn": "蓄能焰袭",
+    "name_en": "flame_charge",
+    "type": "fire",
+    "category": "physical",
+    "power": "285",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "储存火焰之力，在一定时间内提高给予敌人的伤害。",
+    "file": "189_flame_charge.png"
+  },
+  {
+    "index": 190,
+    "name_cn": "岩石爆击",
+    "name_en": "rock_blast",
+    "type": "rock",
+    "category": "physical",
+    "power": "470",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "向前方发射坚硬的岩石，被砸到的敌人会受到伤害。（有概率提高招式的暴击概率）",
+    "file": "190_rock_blast.png"
+  },
+  {
+    "index": 191,
+    "name_cn": "岩石打磨",
+    "name_en": "rock_polish",
+    "type": "rock",
+    "category": "status",
+    "power": "0",
+    "cooldown": "2",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "打磨身体，减少空气阻力。可以在一定时间内提高自己的移动速度。",
+    "file": "191_rock_polish.png"
+  },
+  {
+    "index": 192,
+    "name_cn": "岩石封锁",
+    "name_en": "rock_tomb",
+    "type": "rock",
+    "category": "physical",
+    "power": "400",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "让岩石落在自己的眼前，被砸到的敌人会受到伤害。有时会降低敌人的移动速度。",
+    "file": "192_rock_tomb.png"
+  },
+  {
+    "index": 193,
+    "name_cn": "燕返",
+    "name_en": "aerial_ace",
+    "type": "flying",
+    "category": "physical",
+    "power": "320",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "向前方快速切斩两次，使其受到伤害。",
+    "file": "193_aerial_ace.png"
+  },
+  {
+    "index": 194,
+    "name_cn": "咬碎",
+    "name_en": "crunch",
+    "type": "dark",
+    "category": "physical",
+    "power": "540",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "锁定目标后咬住前方稍远处的敌人，使其受到伤害。",
+    "file": "194_crunch.png"
+  },
+  {
+    "index": 195,
+    "name_cn": "意念头锤",
+    "name_en": "zen_headbutt",
+    "type": "psychic",
+    "category": "physical",
+    "power": "275",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "将意念之力集中在前额，并撞向眼前的敌人。被打到的敌人会受到伤害。",
+    "file": "195_zen_headbutt.png"
+  },
+  {
+    "index": 196,
+    "name_cn": "银色旋风",
+    "name_en": "silver_wind",
+    "type": "bug",
+    "category": "special",
+    "power": "300",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "在风中掺入鳞粉挥撒在自己的周围。被撒到的敌人会受到伤害。有时会随机提高自己的所有能力。",
+    "file": "196_silver_wind.png"
+  },
+  {
+    "index": 197,
+    "name_cn": "隐形岩",
+    "name_en": "stealth_rock",
+    "type": "rock",
+    "category": "physical",
+    "power": "480",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "在前方地面上制造出岩柱，被打到的敌人会受到伤害。",
+    "file": "197_stealth_rock.png"
+  },
+  {
+    "index": 198,
+    "name_cn": "瑜伽姿势",
+    "name_en": "meditate",
+    "type": "psychic",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "唤醒身体深处沉睡的力量，可以在一定时间内提高给予敌人的伤害。",
+    "file": "198_meditate.png"
+  },
+  {
+    "index": 199,
+    "name_cn": "羽栖",
+    "name_en": "roost",
+    "type": "flying",
+    "category": "status",
+    "power": "0",
+    "cooldown": "9",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "让身体休息一会，从而回复一些自己的体力。",
+    "file": "199_roost.png"
+  },
+  {
+    "index": 200,
+    "name_cn": "月亮之力",
+    "name_en": "moonblast",
+    "type": "fairy",
+    "category": "special",
+    "power": "400",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "从月光中吸取能量，往前方发射出一个光球，给予接触到的敌人伤害。",
+    "file": "200_moonblast.png"
+  },
+  {
+    "index": 200,
+    "name_cn": "魅惑之声",
+    "name_en": "disarming_voice",
+    "type": "fairy",
+    "category": "special",
+    "power": "350",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "发出魅惑的叫声，给予对手精神上的伤害。",
+    "file": "200_disarming_voice.png"
+  },
+  {
+    "index": 202,
+    "name_cn": "跃起",
+    "name_en": "splash",
+    "type": "normal",
+    "category": "physical",
+    "power": "75",
+    "cooldown": "3",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "在原地跳跃。",
+    "file": "202_splash.png"
+  },
+  {
+    "index": 203,
+    "name_cn": "增强拳",
+    "name_en": "power_up_punch",
+    "type": "fighting",
+    "category": "physical",
+    "power": "275",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "用坚硬的拳头击打眼前的敌人，使其受到伤害。有很高概率会提高给予敌人的伤害。",
+    "file": "203_power_up_punch.png"
+  },
+  {
+    "index": 204,
+    "name_cn": "炸蛋",
+    "name_en": "egg_bomb",
+    "type": "normal",
+    "category": "physical",
+    "power": "360",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "向自己的周围扔蛋，被砸到的敌人会受到伤害。",
+    "file": "204_egg_bomb.png"
+  },
+  {
+    "index": 205,
+    "name_cn": "治愈波动",
+    "name_en": "heal_pulse",
+    "type": "psychic",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "放出治愈波动，回复一定的体力。<br>（技能范围内群体治疗）",
+    "file": "205_heal_pulse.png"
+  },
+  {
+    "index": 206,
+    "name_cn": "掷泥",
+    "name_en": "mud_slap",
+    "type": "ground",
+    "category": "special",
+    "power": "210",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石",
+      "恒恒石"
+    ],
+    "description": "向三个方向投掷泥块，被投中的敌人会受到伤害。有时会降低敌人的移动速度。",
+    "file": "206_mud_slap.png"
+  },
+  {
+    "index": 207,
+    "name_cn": "终极冲击",
+    "name_en": "giga_impact",
+    "type": "normal",
+    "category": "physical",
+    "power": "638",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "蓄力后使出全部的力量，突击前方的敌人。使其受到大大的伤害。",
+    "file": "207_giga_impact.png"
+  },
+  {
+    "index": 208,
+    "name_cn": "终极吸取",
+    "name_en": "giga_drain",
+    "type": "grass",
+    "category": "special",
+    "power": "360",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "对前方的对手进行攻击，造成伤害的同时，还能吸取大量HP。",
+    "file": "208_giga_drain.png"
+  },
+  {
+    "index": 209,
+    "name_cn": "种子机关枪",
+    "name_en": "bullet_seed",
+    "type": "grass",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "朝自己的前方同时发射数粒种子，被打到的敌人会受到伤害。",
+    "file": "209_bullet_seed.png"
+  },
+  {
+    "index": 210,
+    "name_cn": "抓",
+    "name_en": "scratch",
+    "type": "normal",
+    "category": "physical",
+    "power": "250",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "用坚硬且锋利的爪子抓眼前的敌人，使其受到伤害。",
+    "file": "210_scratch.png"
+  },
+  {
+    "index": 211,
+    "name_cn": "抓狂",
+    "name_en": "flail",
+    "type": "normal",
+    "category": "physical",
+    "power": "174",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "抓狂般地乱打一气，被打到的敌人会受到伤害。",
+    "file": "211_flail.png"
+  },
+  {
+    "index": 212,
+    "name_cn": "撞击",
+    "name_en": "tackle",
+    "type": "normal",
+    "category": "physical",
+    "power": "200",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "用尽全力撞向前方的敌人，使其受到伤害。",
+    "file": "212_tackle.png"
+  },
+  {
+    "index": 213,
+    "name_cn": "浊雾",
+    "name_en": "smog",
+    "type": "poison",
+    "category": "special",
+    "power": "250",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "恒恒石"
+    ],
+    "description": "向自己的周围喷洒毒雾，使敌人受到伤害。有时会让敌人陷入中毒状态。",
+    "file": "213_smog.png"
+  },
+  {
+    "index": 214,
+    "name_cn": "啄钻",
+    "name_en": "drill_peck",
+    "type": "flying",
+    "category": "physical",
+    "power": "300",
+    "cooldown": "4",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "用尖尖的鸟嘴攻击眼前的敌人，使其受到伤害。",
+    "file": "214_drill_peck.png"
+  },
+  {
+    "index": 215,
+    "name_cn": "玉石俱碎",
+    "name_en": "",
+    "type": "normal",
+    "category": "physical",
+    "power": "600",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石"
+    ],
+    "description": "靠近敌人，引发爆炸，从而使周围的敌人都受到伤害。但同时自己也会受到伤害而倒下。",
+    "file": "215.png"
+  },
+  {
+    "index": 216,
+    "name_cn": "自我激励",
+    "name_en": "work_up",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "连连石",
+      "团团石",
+      "恒恒石"
+    ],
+    "description": "激励自己，可以在一定时间内提高给予敌人伤害的同时，降低自己所受到的伤害。",
+    "file": "216_work_up.png"
+  },
+  {
+    "index": 217,
+    "name_cn": "十字剪",
+    "name_en": "x_scissor",
+    "type": "bug",
+    "category": "physical",
+    "power": "550",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "多多石"
+    ],
+    "description": "攻击目标造成伤害。",
+    "file": "217_x_scissor.png"
+  },
+  {
+    "index": 218,
+    "name_cn": "自我再生",
+    "name_en": "recover",
+    "type": "normal",
+    "category": "status",
+    "power": "0",
+    "cooldown": "9",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "让细胞获得再生，从而回复自己的体力。",
+    "file": "218_recover.png"
+  },
+  {
+    "index": 219,
+    "name_cn": "污泥波",
+    "name_en": "sludge_wave",
+    "type": "poison",
+    "category": "special",
+    "power": "420",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石"
+    ],
+    "description": "用污泥波攻击自己周围所有的宝可梦。有时会陷入中毒状态。",
+    "file": "219_sludge_wave.png"
+  },
+  {
+    "index": 220,
+    "name_cn": "求雨",
+    "name_en": "rain_dance",
+    "type": "water",
+    "category": "status",
+    "power": "0",
+    "cooldown": "5",
+    "stones": [
+      "快快石"
+    ],
+    "description": "触发一段时间的降雨，提高水属性招式威力，火属性的招式威力则降低。",
+    "file": "220_rain_dance.png"
+  },
+  {
+    "index": 221,
+    "name_cn": "过热",
+    "name_en": "overheat",
+    "type": "fire",
+    "category": "special",
+    "power": "500",
+    "cooldown": "7",
+    "stones": [
+      "快快石",
+      "连连石",
+      "多多石"
+    ],
+    "description": "攻击目标造成伤害，使用后一段时间内降低自己的攻击。",
+    "file": "221_overheat.png"
+  },
+  {
+    "index": 222,
+    "name_cn": "时光咆哮",
+    "name_en": "roar_of_time",
+    "type": "dragon",
+    "category": "special",
+    "power": "1200",
+    "cooldown": "8",
+    "stones": [
+      "快快石",
+      "多多石"
+    ],
+    "description": "释放出扭曲时间般的强大力量攻击对手，释放后自己在一定时间内无法行动。",
+    "file": "222_roar_of_time.png"
+  },
+  {
+    "index": 223,
+    "name_cn": "亚空裂斩",
+    "name_en": "spacial_rend",
+    "type": "dragon",
+    "category": "special",
+    "power": "660",
+    "cooldown": "6",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "将对手连同周围的空间一起撕裂并给予伤害，容易击中要害。",
+    "file": "223_spacial_rend.png"
+  },
+  {
+    "index": null,
+    "name_cn": "迷昏拳",
+    "name_en": "dizzy_punch",
+    "type": "normal",
+    "category": "physical",
+    "power": "275",
+    "cooldown": "5",
+    "stones": [
+      "快快石",
+      "连连石",
+      "展展石",
+      "恒恒石"
+    ],
+    "description": "向前方的敌人挥出充满迷惑性的一拳，有较高概率会让敌人陷入混乱状态。",
+    "file": "223_dizzy_punch.png"
+  }
+]

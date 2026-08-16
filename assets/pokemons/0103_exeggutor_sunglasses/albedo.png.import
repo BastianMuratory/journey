@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://btr2wrt1vte4x"
 path.s3tc="res://.godot/imported/albedo.png-b303da0ab2e1a7260de0c2540b1afd62.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-b303da0ab2e1a7260de0c2540b1afd62.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0103_exeggutor_sunglasses/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-b303da0ab2e1a7260de0c2540b1afd62.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-b303da0ab2e1a7260de0c2540b1afd62.s3tc.ctex", "res://.godot/imported/albedo.png-b303da0ab2e1a7260de0c2540b1afd62.etc2.ctex"]
 
 [params]
 

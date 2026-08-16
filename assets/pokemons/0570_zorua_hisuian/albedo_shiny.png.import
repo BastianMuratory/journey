@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bq387nf3k8jh7"
 path.s3tc="res://.godot/imported/albedo_shiny.png-3fba4d78e4829b7c35fdf35837b13e17.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-3fba4d78e4829b7c35fdf35837b13e17.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0570_zorua_hisuian/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-3fba4d78e4829b7c35fdf35837b13e17.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-3fba4d78e4829b7c35fdf35837b13e17.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-3fba4d78e4829b7c35fdf35837b13e17.etc2.ctex"]
 
 [params]
 

@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 PokemonRegistry="*res://systems/pokemon_registry.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=4
+
 [input]
 
 mega_evolve={
@@ -30,4 +36,5 @@ mega_evolve={
 [rendering]
 
 renderer/rendering_method="mobile"
-anti_aliasing/quality/msaa_3d=3
+textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_3d=2

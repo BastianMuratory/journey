@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dms331pj8v8q2"
 path.s3tc="res://.godot/imported/albedo_shiny.png-01169c3f2bc07bb9931e736f7bfa119c.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-01169c3f2bc07bb9931e736f7bfa119c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0080_slowbro/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-01169c3f2bc07bb9931e736f7bfa119c.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-01169c3f2bc07bb9931e736f7bfa119c.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-01169c3f2bc07bb9931e736f7bfa119c.etc2.ctex"]
 
 [params]
 

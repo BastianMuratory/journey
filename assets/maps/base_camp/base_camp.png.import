@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://5pv7kelnffym"
 path.s3tc="res://.godot/imported/base_camp.png-fa49866a432f94d7c97b901f32af4d92.s3tc.ctex"
+path.etc2="res://.godot/imported/base_camp.png-fa49866a432f94d7c97b901f32af4d92.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/maps/base_camp/base_camp.png"
-dest_files=["res://.godot/imported/base_camp.png-fa49866a432f94d7c97b901f32af4d92.s3tc.ctex"]
+dest_files=["res://.godot/imported/base_camp.png-fa49866a432f94d7c97b901f32af4d92.s3tc.ctex", "res://.godot/imported/base_camp.png-fa49866a432f94d7c97b901f32af4d92.etc2.ctex"]
 
 [params]
 

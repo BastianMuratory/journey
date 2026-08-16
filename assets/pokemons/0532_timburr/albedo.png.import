@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3g8iqwnhkkei"
 path.s3tc="res://.godot/imported/albedo.png-7db1b54e37858b7c3df48843828a8fa9.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-7db1b54e37858b7c3df48843828a8fa9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0532_timburr/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-7db1b54e37858b7c3df48843828a8fa9.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-7db1b54e37858b7c3df48843828a8fa9.s3tc.ctex", "res://.godot/imported/albedo.png-7db1b54e37858b7c3df48843828a8fa9.etc2.ctex"]
 
 [params]
 

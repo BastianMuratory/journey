@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cufs02v8afvh2"
 path.s3tc="res://.godot/imported/albedo.png-4a8c3043bc576aa3442d80764c8a0aeb.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-4a8c3043bc576aa3442d80764c8a0aeb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0253_grovyle/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-4a8c3043bc576aa3442d80764c8a0aeb.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-4a8c3043bc576aa3442d80764c8a0aeb.s3tc.ctex", "res://.godot/imported/albedo.png-4a8c3043bc576aa3442d80764c8a0aeb.etc2.ctex"]
 
 [params]
 

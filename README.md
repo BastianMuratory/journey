@@ -22,7 +22,7 @@ To look at the animations on their own, pick **ANIMATION TEST** on the main menu
 
 ### Animation test scene
 
-Every species with a `PokemonData` is browsable here, alternate forms and costumes included, and you can reclassify any of them on the spot.
+Every species with a `PokemonData` is browsable here, alternate forms and costumes included, and you can retune any of them on the spot.
 
 | Key | Action |
 | --- | --- |
@@ -32,15 +32,19 @@ Every species with a `PokemonData` is browsable here, alternate forms and costum
 | `Home` `End` | First / last |
 | `/` | Search by name or id |
 | `B` / `Shift+B` | Cycle this species' body type |
-| `Ctrl+S` | Save body type edits to disk |
-| `↑` `↓` | Speed multiplier |
-| `[` `]` | Amplitude multiplier |
+| `↑` `↓` | Animation speed (`anim_speed_scale`) |
+| `[` `]` | Animation amplitude (`anim_amplitude`) |
+| `,` `.` | Hover height (`hover_height`) |
+| `Shift` | ×5 step, held with any of the three above |
+| `R` / `Shift+R` | Revert this species / every edited one |
+| `Ctrl+S` | Save edits to disk |
 | `G` | Grid mode — a row of species animating together |
 | `S` | Toggle shiny |
-| `R` | Reset the multipliers |
 | `Esc` | Back to the main menu |
 
-Speed and amplitude are viewing aids and are never saved. Body type edits are: `Ctrl+S` writes them into the species' own `.tres` so the game uses them immediately, and records them in `data/body_type_overrides.json`, which `classify_body_types.py` reads as its highest-priority source — so a re-classify never undoes work you did by eye.
+The tuning keys edit the focused species' `PokemonData` in place — there is no preview multiplier in between, so what you see is what the game will play. In grid mode the focused species is the leftmost one, the same one `B` applies to. Values are clamped to the same ranges the inspector exports and snapped to the same steps.
+
+Edits stay in memory until `Ctrl+S`, which writes them into the species' own `.tres` so the game uses them immediately, and records them in `data/body_type_overrides.json`, which `classify_body_types.py` reads as its highest-priority source — so a re-classify never undoes work you did by eye. `R` puts a species back to what is on disk, however many nudges ago that was, and the info panel shows `(was …)` next to anything you have moved.
 
 ## Animation
 

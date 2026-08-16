@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b88e0yxdbl1cu"
 path.s3tc="res://.godot/imported/albedo_shiny.png-12fe084a3936687381850697d1b86419.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-12fe084a3936687381850697d1b86419.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0031_nidoqueen_bride/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-12fe084a3936687381850697d1b86419.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-12fe084a3936687381850697d1b86419.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-12fe084a3936687381850697d1b86419.etc2.ctex"]
 
 [params]
 

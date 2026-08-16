@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl563m38fqjsh"
 path.s3tc="res://.godot/imported/albedo.png-77680b62d10bbd11de26af0c6b19578b.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-77680b62d10bbd11de26af0c6b19578b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0337_lunatone/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-77680b62d10bbd11de26af0c6b19578b.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-77680b62d10bbd11de26af0c6b19578b.s3tc.ctex", "res://.godot/imported/albedo.png-77680b62d10bbd11de26af0c6b19578b.etc2.ctex"]
 
 [params]
 

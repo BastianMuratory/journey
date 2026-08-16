@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhu13xsimyknl"
 path.s3tc="res://.godot/imported/albedo.png-31f03dfdd7eb701542f64f4d512d8927.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-31f03dfdd7eb701542f64f4d512d8927.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0086_seel/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-31f03dfdd7eb701542f64f4d512d8927.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-31f03dfdd7eb701542f64f4d512d8927.s3tc.ctex", "res://.godot/imported/albedo.png-31f03dfdd7eb701542f64f4d512d8927.etc2.ctex"]
 
 [params]
 

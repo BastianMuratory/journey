@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://vf6a6p74b0qe"
 path.s3tc="res://.godot/imported/albedo_shiny.png-a347da05c9d42264679dbdc330a82ba6.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-a347da05c9d42264679dbdc330a82ba6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0225_delibird/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-a347da05c9d42264679dbdc330a82ba6.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-a347da05c9d42264679dbdc330a82ba6.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-a347da05c9d42264679dbdc330a82ba6.etc2.ctex"]
 
 [params]
 

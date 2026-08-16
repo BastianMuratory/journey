@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://plewhg18x40c"
 path.s3tc="res://.godot/imported/albedo.png-8189dacbae69103cf542918aaf851133.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-8189dacbae69103cf542918aaf851133.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0096_drowzee/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-8189dacbae69103cf542918aaf851133.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-8189dacbae69103cf542918aaf851133.s3tc.ctex", "res://.godot/imported/albedo.png-8189dacbae69103cf542918aaf851133.etc2.ctex"]
 
 [params]
 

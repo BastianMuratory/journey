@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmyip82fn6a2o"
 path.s3tc="res://.godot/imported/albedo.png-a06d682d341bc4da73583270058e602d.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-a06d682d341bc4da73583270058e602d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0143_snorlax/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-a06d682d341bc4da73583270058e602d.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-a06d682d341bc4da73583270058e602d.s3tc.ctex", "res://.godot/imported/albedo.png-a06d682d341bc4da73583270058e602d.etc2.ctex"]
 
 [params]
 

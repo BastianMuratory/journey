@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvv2q68y0upx8"
 path.s3tc="res://.godot/imported/albedo.png-2874c027525bafb880332c12a41370dd.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-2874c027525bafb880332c12a41370dd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0014_kakuna/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-2874c027525bafb880332c12a41370dd.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-2874c027525bafb880332c12a41370dd.s3tc.ctex", "res://.godot/imported/albedo.png-2874c027525bafb880332c12a41370dd.etc2.ctex"]
 
 [params]
 

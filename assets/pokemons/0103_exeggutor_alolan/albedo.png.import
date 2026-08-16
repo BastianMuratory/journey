@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjwpaa4wgqrr2"
 path.s3tc="res://.godot/imported/albedo.png-438a7f97d6c918f1aa649369c6fff9c4.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-438a7f97d6c918f1aa649369c6fff9c4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0103_exeggutor_alolan/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-438a7f97d6c918f1aa649369c6fff9c4.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-438a7f97d6c918f1aa649369c6fff9c4.s3tc.ctex", "res://.godot/imported/albedo.png-438a7f97d6c918f1aa649369c6fff9c4.etc2.ctex"]
 
 [params]
 

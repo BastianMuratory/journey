@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://da5ou2i2tj0eh"
 path.s3tc="res://.godot/imported/albedo_shiny.png-25db3067cbce694deb4fc1ff83971578.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-25db3067cbce694deb4fc1ff83971578.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0367_huntail/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-25db3067cbce694deb4fc1ff83971578.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-25db3067cbce694deb4fc1ff83971578.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-25db3067cbce694deb4fc1ff83971578.etc2.ctex"]
 
 [params]
 

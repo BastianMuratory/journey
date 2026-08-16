@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://mistq2xk7ndd"
 path.s3tc="res://.godot/imported/albedo.png-3d679f20391f63ed321a2e688984c366.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-3d679f20391f63ed321a2e688984c366.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0075_graveler/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-3d679f20391f63ed321a2e688984c366.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-3d679f20391f63ed321a2e688984c366.s3tc.ctex", "res://.godot/imported/albedo.png-3d679f20391f63ed321a2e688984c366.etc2.ctex"]
 
 [params]
 

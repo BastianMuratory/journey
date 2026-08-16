@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://qvkj2k8040cq"
 path.s3tc="res://.godot/imported/albedo.png-2e60a36c73bc86756a1b6956f90c89a2.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-2e60a36c73bc86756a1b6956f90c89a2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0126_magmar/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-2e60a36c73bc86756a1b6956f90c89a2.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-2e60a36c73bc86756a1b6956f90c89a2.s3tc.ctex", "res://.godot/imported/albedo.png-2e60a36c73bc86756a1b6956f90c89a2.etc2.ctex"]
 
 [params]
 

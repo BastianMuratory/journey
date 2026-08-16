@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxkym3ub1f8e8"
 path.s3tc="res://.godot/imported/albedo.png-ae798216e3b86cff650a58d35f3f25c1.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-ae798216e3b86cff650a58d35f3f25c1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0845_cramorant/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-ae798216e3b86cff650a58d35f3f25c1.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-ae798216e3b86cff650a58d35f3f25c1.s3tc.ctex", "res://.godot/imported/albedo.png-ae798216e3b86cff650a58d35f3f25c1.etc2.ctex"]
 
 [params]
 

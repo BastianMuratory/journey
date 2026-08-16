@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cktypch27eqlu"
 path.s3tc="res://.godot/imported/albedo.png-ee7e8cf194482ab36c484128de9e5c33.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-ee7e8cf194482ab36c484128de9e5c33.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0282_gardevoir/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-ee7e8cf194482ab36c484128de9e5c33.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-ee7e8cf194482ab36c484128de9e5c33.s3tc.ctex", "res://.godot/imported/albedo.png-ee7e8cf194482ab36c484128de9e5c33.etc2.ctex"]
 
 [params]
 

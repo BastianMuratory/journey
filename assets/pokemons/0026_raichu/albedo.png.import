@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtm6e036fa2im"
 path.s3tc="res://.godot/imported/albedo.png-0e1e830d79c3a7df3d946aa2a69fded3.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-0e1e830d79c3a7df3d946aa2a69fded3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0026_raichu/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-0e1e830d79c3a7df3d946aa2a69fded3.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-0e1e830d79c3a7df3d946aa2a69fded3.s3tc.ctex", "res://.godot/imported/albedo.png-0e1e830d79c3a7df3d946aa2a69fded3.etc2.ctex"]
 
 [params]
 

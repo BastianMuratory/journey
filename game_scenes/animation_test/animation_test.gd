@@ -1,6 +1,6 @@
 extends Node3D
 
-## Animation sandbox and body-type editor. Not part of the game -- pick
+## Animation sandbox and tuning editor. Not part of the game -- pick
 ## ANIMATION TEST on the main menu, or open this scene and press F6.
 ##
 ## Every species with a [PokemonData] shows up in the list on the right, forms
@@ -13,22 +13,27 @@ extends Node3D
 ## Home, End      first / last
 ## /              search by name or id
 ## B, Shift+B     cycle this species' body type
-## Ctrl+S         save body type edits to disk
-## Up, Down       speed multiplier
-## [ ]            amplitude multiplier
+## Up, Down       animation speed
+## [ ]            animation amplitude
+## , .            hover height
+## Shift          x5 step on speed, amplitude and hover
+## R, Shift+R     revert this species / every edited species
+## Ctrl+S         save edits to disk
 ## G              grid mode -- a row of species, all animating together
 ## S              toggle shiny
-## R              reset the multipliers
 ## Esc            back to the main menu
 ## [/codeblock]
 ##
-## The speed and amplitude multipliers stack on top of whatever each species has
-## in its [PokemonData], so 1.00/1.00 shows you exactly what the game will play.
-## They are a viewing aid and are never saved.
+## The four tuning keys edit the focused species' [PokemonData] in place, so what
+## you see is exactly what the game will play -- there is no preview multiplier
+## sitting between the two. In grid mode the focused species is the leftmost one,
+## the same one B applies to, so there is never any doubt what is being edited.
 ##
-## Body type edits ARE saved, by Ctrl+S, to two places: the species' own .tres so
-## the game picks it up immediately, and data/body_type_overrides.json so that
-## re-running tools/classify_body_types.py will not undo your work.
+## Edits are held in memory until Ctrl+S, which writes them to two places: the
+## species' own .tres so the game picks them up immediately, and
+## data/body_type_overrides.json so that re-running
+## tools/classify_body_types.py will not undo your work. R puts a species back to
+## what is on disk, however many nudges ago that was.
 
 ## How many species stand side by side in grid mode.
 const GRID_COUNT := 6
@@ -39,11 +44,25 @@ const PAGE_STRIDE := 25
 ## How long a status message stays on screen.
 const MESSAGE_SECONDS := 4.0
 
+## Nudge sizes, matching the @export_range steps on [PokemonData] so a value
+## tuned here is one the inspector can also express.
+const SPEED_STEP := 0.05
+const AMPLITUDE_STEP := 0.05
+const HOVER_STEP := 0.02
+## What holding Shift multiplies a nudge by, for crossing the range quickly.
+const COARSE_STEP := 5.0
+
+## The fields Ctrl+S writes, and the ones R puts back. Kept in one place because
+## the baseline snapshot, the revert and the overrides file must agree on them.
+const TUNED_FIELDS := [
+	"body_type", "anim_speed_scale", "anim_amplitude", "hover_height",
+]
+
 const POKEMON_SCENE := preload("res://entities/pokemon/pokemon.tscn")
 const MAIN_MENU_SCENE := "res://game_scenes/main_menu/main_menu.tscn"
 const DATA_DIR := "res://data/pokemon/"
 ## Read by tools/classify_body_types.py, which treats it as the highest-priority
-## source for these fields.
+## source for every field in [constant TUNED_FIELDS].
 const OVERRIDES_PATH := "res://data/body_type_overrides.json"
 
 @onready var _camera: Camera3D = $Camera3D
@@ -65,13 +84,14 @@ var _meta: Dictionary[String, Dictionary] = {}
 var _shiny := false
 var _grid := false
 
-## User multipliers on top of the per-species values. 1.0 = exactly what the
-## game would play.
-var _speed_multiplier := 1.0
-var _amplitude_multiplier := 1.0
-
-## id -> body type, for edits not yet written to disk.
-var _pending: Dictionary[String, int] = {}
+## id -> the [constant TUNED_FIELDS] values that species had on disk, snapshotted
+## just before its first edit of the session.
+##
+## Being in here means "has unsaved edits" -- the current values are not copied,
+## they live on the [PokemonData] itself, which is what the spawned Pokémon and
+## the save both read. Keeping only the baseline means R can undo a whole run of
+## nudges exactly, with no drift.
+var _pending: Dictionary[String, Dictionary] = {}
 ## Set by the first Esc when there are unsaved edits, so the second one leaves.
 var _exit_armed := false
 
@@ -191,7 +211,6 @@ func _respawn() -> void:
 		widths.append(_footprint(pokemon))
 
 	_lay_out(widths)
-	_apply_tuning()
 	_frame_camera()
 	_refresh_info()
 	_sync_list_selection()
@@ -289,10 +308,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		KEY_END: _jump_to(_visible_ids.size() - 1)
 		KEY_SLASH: _open_search()
 		KEY_B: _cycle_body_type(-1 if key.shift_pressed else 1)
-		KEY_UP: _nudge_speed(0.1)
-		KEY_DOWN: _nudge_speed(-0.1)
-		KEY_BRACKETRIGHT: _nudge_amplitude(0.1)
-		KEY_BRACKETLEFT: _nudge_amplitude(-0.1)
+		KEY_UP: _nudge("anim_speed_scale", 1, SPEED_STEP, 0.25, 3.0, key.shift_pressed)
+		KEY_DOWN: _nudge("anim_speed_scale", -1, SPEED_STEP, 0.25, 3.0, key.shift_pressed)
+		KEY_BRACKETRIGHT: _nudge("anim_amplitude", 1, AMPLITUDE_STEP, 0.0, 3.0, key.shift_pressed)
+		KEY_BRACKETLEFT: _nudge("anim_amplitude", -1, AMPLITUDE_STEP, 0.0, 3.0, key.shift_pressed)
+		KEY_PERIOD: _nudge("hover_height", 1, HOVER_STEP, 0.0, 2.0, key.shift_pressed)
+		KEY_COMMA: _nudge("hover_height", -1, HOVER_STEP, 0.0, 2.0, key.shift_pressed)
 		KEY_G:
 			_grid = not _grid
 			_respawn()
@@ -300,10 +321,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			_shiny = not _shiny
 			_respawn()
 		KEY_R:
-			_speed_multiplier = 1.0
-			_amplitude_multiplier = 1.0
-			_apply_tuning()
-			_refresh_info()
+			if key.shift_pressed:
+				_revert_all()
+			else:
+				_revert_focused()
 		KEY_ESCAPE:
 			_leave()
 		_:
@@ -318,7 +339,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _leave() -> void:
 	if not _pending.is_empty() and not _exit_armed:
 		_exit_armed = true
-		_show_message("%d unsaved edit(s) -- Ctrl+S to save, Esc again to discard"
+		_show_message("%d species edited -- Ctrl+S to save, Esc again to discard"
 			% _pending.size())
 		return
 	get_tree().change_scene_to_file(MAIN_MENU_SCENE)
@@ -353,35 +374,32 @@ func _jump_to(index: int) -> void:
 		_play(PokemonAnimator.Anim.RUN)
 
 
-func _nudge_speed(amount: float) -> void:
-	_speed_multiplier = clampf(_speed_multiplier + amount, 0.1, 3.0)
-	_apply_tuning()
-	_refresh_info()
-
-
-func _nudge_amplitude(amount: float) -> void:
-	_amplitude_multiplier = clampf(_amplitude_multiplier + amount, 0.0, 3.0)
-	_apply_tuning()
-	_refresh_info()
-
-
-## Re-derives each animator's values from its species, then scales by the
-## multipliers -- so the tuning never compounds on itself across key presses.
-func _apply_tuning() -> void:
-	for pokemon in _spawned:
-		var data := pokemon.data
-		if data == null:
-			continue
-		pokemon.animator.speed_scale = data.anim_speed_scale * _speed_multiplier
-		pokemon.animator.amplitude = data.anim_amplitude * _amplitude_multiplier
-
-
-# ------------------------------------------------------------ body type edits
+# ----------------------------------------------------------- species editing
 
 ## The species being edited. In grid mode that is the leftmost one, so there is
-## always exactly one thing B applies to.
+## always exactly one thing the tuning keys apply to.
 func _focused_id() -> String:
 	return _visible_ids[_index] if not _visible_ids.is_empty() else ""
+
+
+## Moves one float field on the focused species by [param direction] steps,
+## clamped to the same range [PokemonData] exports.
+func _nudge(field: String, direction: int, step: float, low: float, high: float,
+		coarse: bool) -> void:
+	var id := _focused_id()
+	if id == "":
+		return
+	var data := PokemonRegistry.get_pokemon_by_id(id)
+	if data == null:
+		return
+
+	_snapshot(id, data)
+	var moved: float = float(data.get(field)) \
+		+ step * direction * (COARSE_STEP if coarse else 1.0)
+	# Snapped to the step, so a long run of presses lands on round numbers
+	# instead of accumulating float error into the .tres.
+	data.set(field, snappedf(clampf(moved, low, high), step))
+	_after_edit(id)
 
 
 func _cycle_body_type(step: int) -> void:
@@ -392,24 +410,107 @@ func _cycle_body_type(step: int) -> void:
 	if data == null:
 		return
 
+	_snapshot(id, data)
 	var count: int = PokemonData.BodyType.keys().size()
-	var next_body: int = wrapi(int(data.body_type) + step, 0, count)
-	data.body_type = next_body
+	data.body_type = wrapi(int(data.body_type) + step, 0, count)
 	# A species that just became a flier needs somewhere to fly. Body type and
-	# resting altitude move together; tune the altitude separately afterwards.
+	# resting altitude move together; tune the altitude with , and . afterwards.
 	data.hover_height = PokemonData.default_hover_height(data.body_type)
 
-	_pending[id] = next_body
-	_exit_armed = false
-	var entry := _meta_of(id)
-	entry["body"] = next_body
-	_meta[id] = entry
-
 	# The pivot height depends on body type, so the model has to be re-measured.
-	_spawned[0].refresh_animation()
-	_apply_tuning()
+	_after_edit(id, true)
+
+
+## Records what a species looked like on disk, once, before its first edit.
+func _snapshot(id: String, data: PokemonData) -> void:
+	if _pending.has(id):
+		return
+	var baseline: Dictionary = {}
+	for field: String in TUNED_FIELDS:
+		baseline[field] = data.get(field)
+	_pending[id] = baseline
+
+
+## Everything that has to happen after any field on a species changes.
+## [param reshape] re-measures the model, which only a body type change needs.
+func _after_edit(id: String, reshape := false) -> void:
+	_forget_if_unchanged(id)
+	_exit_armed = false
+
+	var entry := _meta_of(id)
+	var data := PokemonRegistry.get_pokemon_by_id(id)
+	if data != null:
+		entry["body"] = int(data.body_type)
+		_meta[id] = entry
+
+	if reshape and not _spawned.is_empty():
+		_spawned[0].refresh_animation()
+	_sync_animators()
 	_refresh_info()
+	_refresh_list_row(id)
+
+
+## Pushes each spawned Pokémon's tuning back out of its [PokemonData], which the
+## edits above have already changed in place.
+func _sync_animators() -> void:
+	for pokemon in _spawned:
+		var data := pokemon.data
+		if data == null:
+			continue
+		pokemon.animator.speed_scale = data.anim_speed_scale
+		pokemon.animator.amplitude = data.anim_amplitude
+		pokemon.animator.hover_height = data.hover_height
+
+
+## Drops a species from the pending set once it has been nudged back to exactly
+## what is on disk, so the * marker and the unsaved count never overstate things.
+func _forget_if_unchanged(id: String) -> void:
+	var baseline: Dictionary = _pending.get(id, {})
+	if baseline.is_empty():
+		return
+	var data := PokemonRegistry.get_pokemon_by_id(id)
+	if data == null:
+		return
+	for field: String in baseline:
+		if not is_equal_approx(float(data.get(field)), float(baseline[field])):
+			return
+	_pending.erase(id)
+
+
+## Puts one species back to its snapshot and clears its pending mark.
+func _revert(id: String) -> void:
+	var baseline: Dictionary = _pending.get(id, {})
+	if baseline.is_empty():
+		return
+	var data := PokemonRegistry.get_pokemon_by_id(id)
+	if data != null:
+		for field: String in baseline:
+			data.set(field, baseline[field])
+	_pending.erase(id)
+
+
+func _revert_focused() -> void:
+	var id := _focused_id()
+	if not _pending.has(id):
+		_show_message("nothing to revert on this species")
+		return
+	_revert(id)
+	_after_edit(id, true)
+	_show_message("reverted %s" % _meta_of(id)["name"])
+
+
+func _revert_all() -> void:
+	if _pending.is_empty():
+		_show_message("nothing to revert")
+		return
+	var count := _pending.size()
+	# keys() is a snapshot, so erasing as we go is safe.
+	for id: String in _pending.keys():
+		_revert(id)
+	_after_edit(_focused_id(), true)
+	# This one touched rows all over the list, not just the focused one.
 	_rebuild_list_labels()
+	_show_message("reverted %d species" % count)
 
 
 func _save_edits() -> void:
@@ -468,8 +569,13 @@ func _write_overrides() -> bool:
 		var data := PokemonRegistry.get_pokemon_by_id(id)
 		if data == null:
 			continue
+		# All four fields go in, not just the ones that moved: the point of an
+		# entry here is to pin down exactly what you saw on screen, and a partial
+		# one would let the script's tables fill in the rest on the next run.
 		species[id] = {
 			"body_type": _body_name(data.body_type),
+			"anim_speed_scale": data.anim_speed_scale,
+			"anim_amplitude": data.anim_amplitude,
 			"hover_height": data.hover_height,
 		}
 
@@ -563,8 +669,9 @@ func _build_hud() -> void:
 	var help := Label.new()
 	help.text = """1-5  idle / run / attack / hit / spin
 <- ->  species     PgUp/PgDn  x25     /  search
-B / Shift+B  body type     Ctrl+S  save edits
-up/dn  speed     [ ]  amplitude     R  reset
+B / Shift+B  body type     up/dn  speed
+[ ]  amplitude     , .  hover     Shift  x5 step
+R  revert     Shift+R  revert all     Ctrl+S  save
 G  grid     S  shiny     Esc  menu"""
 	help.add_theme_color_override("font_color", Color(0.65, 0.65, 0.7))
 	column.add_child(help)
@@ -616,12 +723,23 @@ func _rebuild_list() -> void:
 	_sync_list_selection()
 
 
-## Cheaper than a full rebuild when only the body types changed.
+## Cheaper than a full rebuild when only the labels changed.
 func _rebuild_list_labels() -> void:
 	if _list == null:
 		return
 	for i in mini(_visible_ids.size(), _list.item_count):
 		_list.set_item_text(i, _list_label(_visible_ids[i]))
+
+
+## Repaints a single row, which is all one edit can affect. Worth having as its
+## own thing: the tuning keys get pressed a lot, and relabelling 400 rows on
+## every nudge is work nobody asked for.
+func _refresh_list_row(id: String) -> void:
+	if _list == null:
+		return
+	var row := _visible_ids.find(id)
+	if row >= 0 and row < _list.item_count:
+		_list.set_item_text(row, _list_label(id))
 
 
 func _list_label(id: String) -> String:
@@ -662,23 +780,37 @@ func _refresh_info() -> void:
 	if _visible_ids.size() != _all_ids.size():
 		filtered = "  (filtered from %d)" % _all_ids.size()
 
+	var baseline: Dictionary = _pending.get(_focused_id(), {})
 	var lines := [
 		"#%d  %s" % [data.dex_number, data.display_name],
 		"%d of %d%s" % [_index + 1, _visible_ids.size(), filtered],
 		"body type   %s%s" % [_body_name(data.body_type),
-			"  (edited)" if _pending.has(_focused_id()) else ""],
-		"speed       %.2f  (species %.2f x %.2f)"
-			% [data.anim_speed_scale * _speed_multiplier, data.anim_speed_scale, _speed_multiplier],
-		"amplitude   %.2f  (species %.2f x %.2f)"
-			% [data.anim_amplitude * _amplitude_multiplier, data.anim_amplitude, _amplitude_multiplier],
+			_was(data, baseline, "body_type")],
+		"speed       %.2f%s" % [data.anim_speed_scale,
+			_was(data, baseline, "anim_speed_scale")],
+		"amplitude   %.2f%s" % [data.anim_amplitude,
+			_was(data, baseline, "anim_amplitude")],
+		"hover       %.2f%s" % [data.hover_height,
+			_was(data, baseline, "hover_height")],
 	]
-	if data.hover_height > 0.0:
-		lines.append("hover       %.2f body heights" % data.hover_height)
 	if _grid:
 		lines.append("grid        %d species" % _spawned.size())
 	if not _pending.is_empty():
 		lines.append("unsaved     %d species  (Ctrl+S)" % _pending.size())
 	_info.text = "\n".join(lines)
+
+
+## "  (was 1.00)" for a field edited this session, "" for one still at its
+## on-disk value -- so you can always see how far you have moved it, and back.
+func _was(data: PokemonData, baseline: Dictionary, field: String) -> String:
+	if not baseline.has(field):
+		return ""
+	var before := float(baseline[field])
+	if is_equal_approx(before, float(data.get(field))):
+		return ""
+	if field == "body_type":
+		return "  (was %s)" % _body_name(int(before))
+	return "  (was %.2f)" % before
 
 
 func _status_text() -> String:

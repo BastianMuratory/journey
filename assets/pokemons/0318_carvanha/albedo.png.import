@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://2e8jrkvx432d"
 path.s3tc="res://.godot/imported/albedo.png-9d90017c029a29ec700f55c007114790.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-9d90017c029a29ec700f55c007114790.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0318_carvanha/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-9d90017c029a29ec700f55c007114790.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-9d90017c029a29ec700f55c007114790.s3tc.ctex", "res://.godot/imported/albedo.png-9d90017c029a29ec700f55c007114790.etc2.ctex"]
 
 [params]
 

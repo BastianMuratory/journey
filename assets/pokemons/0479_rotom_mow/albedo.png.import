@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dr36g5v05vkiy"
 path.s3tc="res://.godot/imported/albedo.png-bded901cce735ed715d0aa83b9c2b9a1.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-bded901cce735ed715d0aa83b9c2b9a1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0479_rotom_mow/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-bded901cce735ed715d0aa83b9c2b9a1.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-bded901cce735ed715d0aa83b9c2b9a1.s3tc.ctex", "res://.godot/imported/albedo.png-bded901cce735ed715d0aa83b9c2b9a1.etc2.ctex"]
 
 [params]
 

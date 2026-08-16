@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ticwrwnwh6ta"
 path.s3tc="res://.godot/imported/albedo.png-c76b77fff9084290d68f56c930fdb24e.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-c76b77fff9084290d68f56c930fdb24e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0608_lampent/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-c76b77fff9084290d68f56c930fdb24e.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-c76b77fff9084290d68f56c930fdb24e.s3tc.ctex", "res://.godot/imported/albedo.png-c76b77fff9084290d68f56c930fdb24e.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvl4ye3qsb17f"
 path.s3tc="res://.godot/imported/albedo_shiny.png-cba14fddbed02b3d7ad901699ef115ec.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-cba14fddbed02b3d7ad901699ef115ec.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0133_eevee_christmas_hat/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-cba14fddbed02b3d7ad901699ef115ec.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-cba14fddbed02b3d7ad901699ef115ec.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-cba14fddbed02b3d7ad901699ef115ec.etc2.ctex"]
 
 [params]
 

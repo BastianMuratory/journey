@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://u0vi8oci4fkb"
 path.s3tc="res://.godot/imported/albedo_shiny.png-b3dd2a1d5be477534279653808c1ad0c.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-b3dd2a1d5be477534279653808c1ad0c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0160_feraligatr/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-b3dd2a1d5be477534279653808c1ad0c.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-b3dd2a1d5be477534279653808c1ad0c.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-b3dd2a1d5be477534279653808c1ad0c.etc2.ctex"]
 
 [params]
 

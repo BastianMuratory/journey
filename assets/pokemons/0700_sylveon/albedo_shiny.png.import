@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://sl2btdug3d6w"
 path.s3tc="res://.godot/imported/albedo_shiny.png-c5ba551d2df8aaf26c4e01e8d4f9d120.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-c5ba551d2df8aaf26c4e01e8d4f9d120.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0700_sylveon/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-c5ba551d2df8aaf26c4e01e8d4f9d120.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-c5ba551d2df8aaf26c4e01e8d4f9d120.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-c5ba551d2df8aaf26c4e01e8d4f9d120.etc2.ctex"]
 
 [params]
 

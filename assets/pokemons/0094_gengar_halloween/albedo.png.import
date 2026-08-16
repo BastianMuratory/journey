@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://u51in64i5wud"
 path.s3tc="res://.godot/imported/albedo.png-7f3a6d8c3fd7118ff09bccf613d82034.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-7f3a6d8c3fd7118ff09bccf613d82034.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0094_gengar_halloween/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-7f3a6d8c3fd7118ff09bccf613d82034.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-7f3a6d8c3fd7118ff09bccf613d82034.s3tc.ctex", "res://.godot/imported/albedo.png-7f3a6d8c3fd7118ff09bccf613d82034.etc2.ctex"]
 
 [params]
 

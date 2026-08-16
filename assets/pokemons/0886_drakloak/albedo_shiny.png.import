@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d38chdttq2yy8"
 path.s3tc="res://.godot/imported/albedo_shiny.png-6828a45f2dbda44abce6a0fa882cc58a.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-6828a45f2dbda44abce6a0fa882cc58a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0886_drakloak/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-6828a45f2dbda44abce6a0fa882cc58a.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-6828a45f2dbda44abce6a0fa882cc58a.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-6828a45f2dbda44abce6a0fa882cc58a.etc2.ctex"]
 
 [params]
 

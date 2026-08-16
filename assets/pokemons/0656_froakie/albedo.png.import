@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bua8ibs6lg2tl"
 path.s3tc="res://.godot/imported/albedo.png-cf65af51b0602d540428252a6cd018ec.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-cf65af51b0602d540428252a6cd018ec.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0656_froakie/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-cf65af51b0602d540428252a6cd018ec.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-cf65af51b0602d540428252a6cd018ec.s3tc.ctex", "res://.godot/imported/albedo.png-cf65af51b0602d540428252a6cd018ec.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7dx10t3dj5ys"
 path.s3tc="res://.godot/imported/albedo.png-38cec8155d251d1df344b9f0d8713f6b.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-38cec8155d251d1df344b9f0d8713f6b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0530_excadrill/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-38cec8155d251d1df344b9f0d8713f6b.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-38cec8155d251d1df344b9f0d8713f6b.s3tc.ctex", "res://.godot/imported/albedo.png-38cec8155d251d1df344b9f0d8713f6b.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bign80hj5l5kh"
 path.s3tc="res://.godot/imported/albedo.png-8eca1b091f23f5e1ba6a3c352b4008be.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-8eca1b091f23f5e1ba6a3c352b4008be.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0465_tangrowth/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-8eca1b091f23f5e1ba6a3c352b4008be.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-8eca1b091f23f5e1ba6a3c352b4008be.s3tc.ctex", "res://.godot/imported/albedo.png-8eca1b091f23f5e1ba6a3c352b4008be.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6owidgfxojvu"
 path.s3tc="res://.godot/imported/albedo_shiny.png-48d7e244006e4ab5dbf04e7e6f743374.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-48d7e244006e4ab5dbf04e7e6f743374.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0222_corsola/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-48d7e244006e4ab5dbf04e7e6f743374.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-48d7e244006e4ab5dbf04e7e6f743374.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-48d7e244006e4ab5dbf04e7e6f743374.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://btwwb2oc7rogc"
 path.s3tc="res://.godot/imported/albedo_shiny.png-8a1d77520134325a68758c24a3e5d8ef.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-8a1d77520134325a68758c24a3e5d8ef.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0114_tangela_garland/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-8a1d77520134325a68758c24a3e5d8ef.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-8a1d77520134325a68758c24a3e5d8ef.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-8a1d77520134325a68758c24a3e5d8ef.etc2.ctex"]
 
 [params]
 

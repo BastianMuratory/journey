@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv6s77ify1mtk"
 path.s3tc="res://.godot/imported/albedo.png-e7f89e5db0a814e88a90a211e9001c59.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-e7f89e5db0a814e88a90a211e9001c59.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0109_koffing/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-e7f89e5db0a814e88a90a211e9001c59.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-e7f89e5db0a814e88a90a211e9001c59.s3tc.ctex", "res://.godot/imported/albedo.png-e7f89e5db0a814e88a90a211e9001c59.etc2.ctex"]
 
 [params]
 

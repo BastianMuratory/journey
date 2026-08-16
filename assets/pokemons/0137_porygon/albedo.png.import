@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://tuerpe8q63od"
 path.s3tc="res://.godot/imported/albedo.png-851fa9ecd4a5dcd760ed0cf283777fee.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-851fa9ecd4a5dcd760ed0cf283777fee.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0137_porygon/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-851fa9ecd4a5dcd760ed0cf283777fee.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-851fa9ecd4a5dcd760ed0cf283777fee.s3tc.ctex", "res://.godot/imported/albedo.png-851fa9ecd4a5dcd760ed0cf283777fee.etc2.ctex"]
 
 [params]
 

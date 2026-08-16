@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck6pyiv55m0p3"
 path.s3tc="res://.godot/imported/albedo.png-a3344228475e5d3a996097ecf08a96f0.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-a3344228475e5d3a996097ecf08a96f0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0031_nidoqueen/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-a3344228475e5d3a996097ecf08a96f0.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-a3344228475e5d3a996097ecf08a96f0.s3tc.ctex", "res://.godot/imported/albedo.png-a3344228475e5d3a996097ecf08a96f0.etc2.ctex"]
 
 [params]
 

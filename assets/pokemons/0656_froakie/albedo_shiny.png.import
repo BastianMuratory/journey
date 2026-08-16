@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdqhm0h27e4vf"
 path.s3tc="res://.godot/imported/albedo_shiny.png-c5b8cb609318040892b0404975d8958b.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-c5b8cb609318040892b0404975d8958b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0656_froakie/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-c5b8cb609318040892b0404975d8958b.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-c5b8cb609318040892b0404975d8958b.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-c5b8cb609318040892b0404975d8958b.etc2.ctex"]
 
 [params]
 

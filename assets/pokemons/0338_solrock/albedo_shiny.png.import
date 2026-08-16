@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsdqhuhd81n7v"
 path.s3tc="res://.godot/imported/albedo_shiny.png-f7b550a064b4549092182cf536661070.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-f7b550a064b4549092182cf536661070.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0338_solrock/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-f7b550a064b4549092182cf536661070.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-f7b550a064b4549092182cf536661070.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-f7b550a064b4549092182cf536661070.etc2.ctex"]
 
 [params]
 

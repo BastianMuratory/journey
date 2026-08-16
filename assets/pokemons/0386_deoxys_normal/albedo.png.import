@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvk8inspvj43h"
 path.s3tc="res://.godot/imported/albedo.png-052a929cab3e5e5e3f2a1ae84c9333b9.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-052a929cab3e5e5e3f2a1ae84c9333b9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0386_deoxys_normal/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-052a929cab3e5e5e3f2a1ae84c9333b9.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-052a929cab3e5e5e3f2a1ae84c9333b9.s3tc.ctex", "res://.godot/imported/albedo.png-052a929cab3e5e5e3f2a1ae84c9333b9.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://5elbi5l3xli0"
 path.s3tc="res://.godot/imported/albedo.png-e7962f33ae4500dd8f7e49a96035ccfa.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-e7962f33ae4500dd8f7e49a96035ccfa.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0053_persian/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-e7962f33ae4500dd8f7e49a96035ccfa.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-e7962f33ae4500dd8f7e49a96035ccfa.s3tc.ctex", "res://.godot/imported/albedo.png-e7962f33ae4500dd8f7e49a96035ccfa.etc2.ctex"]
 
 [params]
 

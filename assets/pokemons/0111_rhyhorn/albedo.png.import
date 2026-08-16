@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://jl47dtgjq868"
 path.s3tc="res://.godot/imported/albedo.png-f0a077de6c766ffe6378a3fe0e653334.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-f0a077de6c766ffe6378a3fe0e653334.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0111_rhyhorn/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-f0a077de6c766ffe6378a3fe0e653334.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-f0a077de6c766ffe6378a3fe0e653334.s3tc.ctex", "res://.godot/imported/albedo.png-f0a077de6c766ffe6378a3fe0e653334.etc2.ctex"]
 
 [params]
 

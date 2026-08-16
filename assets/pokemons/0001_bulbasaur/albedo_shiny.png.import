@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://du1wg42vtfltm"
 path.s3tc="res://.godot/imported/albedo_shiny.png-62fecac216b0df78a3b6686710e793cc.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-62fecac216b0df78a3b6686710e793cc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0001_bulbasaur/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-62fecac216b0df78a3b6686710e793cc.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-62fecac216b0df78a3b6686710e793cc.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-62fecac216b0df78a3b6686710e793cc.etc2.ctex"]
 
 [params]
 

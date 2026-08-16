@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6n4v7ikyxnei"
 path.s3tc="res://.godot/imported/albedo.png-0454938c38ded2a99521fda59aa69354.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-0454938c38ded2a99521fda59aa69354.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0071_victreebel/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-0454938c38ded2a99521fda59aa69354.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-0454938c38ded2a99521fda59aa69354.s3tc.ctex", "res://.godot/imported/albedo.png-0454938c38ded2a99521fda59aa69354.etc2.ctex"]
 
 [params]
 

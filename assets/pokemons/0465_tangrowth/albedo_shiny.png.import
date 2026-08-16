@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://2k0t7k7xh1nn"
 path.s3tc="res://.godot/imported/albedo_shiny.png-97e9ea4c6b4bd76dad71eeaca4e86fac.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-97e9ea4c6b4bd76dad71eeaca4e86fac.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0465_tangrowth/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-97e9ea4c6b4bd76dad71eeaca4e86fac.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-97e9ea4c6b4bd76dad71eeaca4e86fac.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-97e9ea4c6b4bd76dad71eeaca4e86fac.etc2.ctex"]
 
 [params]
 

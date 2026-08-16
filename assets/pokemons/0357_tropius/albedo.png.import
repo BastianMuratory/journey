@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsc5snrnfl0d7"
 path.s3tc="res://.godot/imported/albedo.png-5c60ba7459a5b3cbec32a9a2c3730066.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-5c60ba7459a5b3cbec32a9a2c3730066.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0357_tropius/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-5c60ba7459a5b3cbec32a9a2c3730066.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-5c60ba7459a5b3cbec32a9a2c3730066.s3tc.ctex", "res://.godot/imported/albedo.png-5c60ba7459a5b3cbec32a9a2c3730066.etc2.ctex"]
 
 [params]
 

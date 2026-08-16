@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cut6qaxhmy1c6"
 path.s3tc="res://.godot/imported/albedo_shiny.png-a96376adfad5fffb3e4321d735d4e4c6.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo_shiny.png-a96376adfad5fffb3e4321d735d4e4c6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0425_drifloon/albedo_shiny.png"
-dest_files=["res://.godot/imported/albedo_shiny.png-a96376adfad5fffb3e4321d735d4e4c6.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo_shiny.png-a96376adfad5fffb3e4321d735d4e4c6.s3tc.ctex", "res://.godot/imported/albedo_shiny.png-a96376adfad5fffb3e4321d735d4e4c6.etc2.ctex"]
 
 [params]
 

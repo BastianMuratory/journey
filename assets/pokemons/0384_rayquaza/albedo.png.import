@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://j5g0wrn3771c"
 path.s3tc="res://.godot/imported/albedo.png-9777e438d09394041ce0449c712c48c9.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-9777e438d09394041ce0449c712c48c9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0384_rayquaza/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-9777e438d09394041ce0449c712c48c9.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-9777e438d09394041ce0449c712c48c9.s3tc.ctex", "res://.godot/imported/albedo.png-9777e438d09394041ce0449c712c48c9.etc2.ctex"]
 
 [params]
 

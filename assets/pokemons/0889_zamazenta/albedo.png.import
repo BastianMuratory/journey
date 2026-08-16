@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://baa7chfo77xo8"
 path.s3tc="res://.godot/imported/albedo.png-9066efc3e77c5b36cb0c337332df988c.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-9066efc3e77c5b36cb0c337332df988c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0889_zamazenta/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-9066efc3e77c5b36cb0c337332df988c.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-9066efc3e77c5b36cb0c337332df988c.s3tc.ctex", "res://.godot/imported/albedo.png-9066efc3e77c5b36cb0c337332df988c.etc2.ctex"]
 
 [params]
 

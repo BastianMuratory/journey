@@ -1,0 +1,1112 @@
+[
+  {
+    "index": 1,
+    "kind": "permanent",
+    "name_cn": "方可乐大乱炖",
+    "name_en": "",
+    "recipe": "喜欢什么放什么",
+    "attracts": "方可乐宝可梦",
+    "notes": "无",
+    "file": "001.png"
+  },
+  {
+    "index": 2,
+    "kind": "permanent",
+    "name_cn": "方可乐红烩汤",
+    "name_en": "",
+    "recipe": "放足量的红色",
+    "attracts": "红色类宝可梦",
+    "notes": "红色材料≥4份",
+    "file": "002.png"
+  },
+  {
+    "index": 3,
+    "kind": "permanent",
+    "name_cn": "方可乐蓝梦汁",
+    "name_en": "",
+    "recipe": "放足量的蓝色",
+    "attracts": "蓝色类宝可梦",
+    "notes": "蓝色材料≥4份",
+    "file": "003.png"
+  },
+  {
+    "index": 4,
+    "kind": "permanent",
+    "name_cn": "方可乐黄焖锅",
+    "name_en": "",
+    "recipe": "放足量的黄色",
+    "attracts": "黄色类宝可梦",
+    "notes": "黄色材料≥4份",
+    "file": "004.png"
+  },
+  {
+    "index": 5,
+    "kind": "permanent",
+    "name_cn": "方可乐白焗饭",
+    "name_en": "",
+    "recipe": "放足量的灰色",
+    "attracts": "灰色类宝可梦",
+    "notes": "灰色材料≥4份",
+    "file": "005.png"
+  },
+  {
+    "index": 6,
+    "kind": "permanent",
+    "name_cn": "方可乐海鲜锅",
+    "name_en": "",
+    "recipe": "放足量柔软的东西<br>外加多放点蓝色",
+    "attracts": "水属性宝可梦",
+    "notes": "柔软材料≥4份；蓝色材料≥3份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "006.png"
+  },
+  {
+    "index": 7,
+    "kind": "permanent",
+    "name_cn": "方可乐奶油煮",
+    "name_en": "",
+    "recipe": "多放点甜的东西<br>外加少许灰色",
+    "attracts": "一般属性的宝可梦",
+    "notes": "甜的材料≥3份；灰色材料≥2份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "007.png"
+  },
+  {
+    "index": 8,
+    "kind": "permanent",
+    "name_cn": "方可乐黏黏糊",
+    "name_en": "",
+    "recipe": "放足量的蘑菇<br>外加多放点柔软的东西",
+    "attracts": "毒属性宝可梦",
+    "notes": "蘑菇材料≥4份；柔软材料≥3份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "008.png"
+  },
+  {
+    "index": 9,
+    "kind": "permanent",
+    "name_cn": "方可乐大地煮",
+    "name_en": "",
+    "recipe": "多放点柔软的东西<br>外加少许矿物",
+    "attracts": "地面属性宝可梦",
+    "notes": "柔软材料≥3份；矿物材料≥2份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "009.png"
+  },
+  {
+    "index": 10,
+    "kind": "permanent",
+    "name_cn": "方可乐青草汤",
+    "name_en": "",
+    "recipe": "放足量的植物<br>外加少许柔软的东西",
+    "attracts": "草属性宝可梦",
+    "notes": "植物材料≥4份；柔软材料≥2份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "010.png"
+  },
+  {
+    "index": 11,
+    "kind": "permanent",
+    "name_cn": "方可乐蜂蜜甜汤",
+    "name_en": "",
+    "recipe": "放足量甜的东西<br>外加黄色多一点",
+    "attracts": "虫属性宝可梦",
+    "notes": "甜的材料≥4份；黄色材料≥3份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "011.png"
+  },
+  {
+    "index": 12,
+    "kind": "permanent",
+    "name_cn": "方可乐念力年糕",
+    "name_en": "",
+    "recipe": "多放点甜的东西<br>外加少许坚硬的东西",
+    "attracts": "超能力属性宝可梦",
+    "notes": "甜的材料≥3份；坚硬材料≥2份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "012.png"
+  },
+  {
+    "index": 13,
+    "kind": "permanent",
+    "name_cn": "方可乐顽石锅",
+    "name_en": "",
+    "recipe": "放足量坚硬的东西<br>外加少许矿物",
+    "attracts": "岩石属性宝可梦",
+    "notes": "坚硬材料≥4份；矿物材料≥2份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "013.png"
+  },
+  {
+    "index": 14,
+    "kind": "permanent",
+    "name_cn": "方可乐旋风小炒",
+    "name_en": "",
+    "recipe": "多放点矿物<br>外加少许植物",
+    "attracts": "飞行属性的宝可梦",
+    "notes": "矿物材料≥3份；植物材料≥2份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "014.png"
+  },
+  {
+    "index": 15,
+    "kind": "permanent",
+    "name_cn": "方可乐火焰烧",
+    "name_en": "",
+    "recipe": "多放点蘑菇<br>外加少许红色",
+    "attracts": "火属性宝可梦",
+    "notes": "蘑菇材料≥3份；红色材料≥2份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "015.png"
+  },
+  {
+    "index": 16,
+    "kind": "permanent",
+    "name_cn": "方可乐麻麻锅",
+    "name_en": "",
+    "recipe": "放足量柔软的东西<br>外加黄色多一点",
+    "attracts": "电属性宝可梦",
+    "notes": "柔软材料≥4份；黄色材料≥3份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "016.png"
+  },
+  {
+    "index": 17,
+    "kind": "permanent",
+    "name_cn": "方可乐壮壮煮",
+    "name_en": "",
+    "recipe": "多放点甜的东西<br>外加少许蘑菇",
+    "attracts": "格斗属性宝可梦",
+    "notes": "甜的材料≥3份；蘑菇材料≥2份<br>一个配方食材满足多个食谱条件时，食谱编号靠前的优先级更高。",
+    "file": "017.png"
+  },
+  {
+    "index": 18,
+    "kind": "permanent",
+    "name_cn": "方可乐传奇料理",
+    "name_en": "",
+    "recipe": "放足量神秘的东西",
+    "attracts": "传说宝可梦",
+    "notes": "神秘贝壳≥5份",
+    "file": "018.png"
+  },
+  {
+    "index": 19,
+    "kind": "permanent",
+    "name_cn": "方可乐白沙焗饭",
+    "name_en": "",
+    "recipe": "放三个白色的东西<br>外加任意材料",
+    "attracts": "纯净海滩的宝可梦",
+    "notes": "白色材料≥3份",
+    "file": "019.png"
+  },
+  {
+    "index": 20,
+    "kind": "permanent",
+    "name_cn": "方可乐粉酪布丁",
+    "name_en": "",
+    "recipe": "放三个粉色的东西<br>外加任意材料",
+    "attracts": "砂砾平原的宝可梦",
+    "notes": "粉色材料≥3份",
+    "file": "020.png"
+  },
+  {
+    "index": 21,
+    "kind": "permanent",
+    "name_cn": "方可乐雨林蒸糕",
+    "name_en": "",
+    "recipe": "放三个橙色的东西<br>外加任意材料",
+    "attracts": "热带雨林的宝可梦",
+    "notes": "橙色材料≥3份",
+    "file": "021.png"
+  },
+  {
+    "index": 22,
+    "kind": "permanent",
+    "name_cn": "方可乐火岩烤派",
+    "name_en": "",
+    "recipe": "放三个棕色的东西<br>外加任意材料",
+    "attracts": "熔岩丘陵的宝可梦",
+    "notes": "棕色材料≥3份",
+    "file": "022.png"
+  },
+  {
+    "index": 23,
+    "kind": "permanent",
+    "name_cn": "方可乐荧青焖锅",
+    "name_en": "",
+    "recipe": "放三个绿色的东西<br>外加任意材料",
+    "attracts": "火山溶洞的宝可梦",
+    "notes": "绿色材料≥3份",
+    "file": "023.png"
+  },
+  {
+    "index": 1,
+    "kind": "limited",
+    "name_cn": "方可乐气泡饮",
+    "name_en": "",
+    "recipe": "只放入泡泡岩",
+    "attracts": "",
+    "notes": "",
+    "file": "001.png"
+  },
+  {
+    "index": 2,
+    "kind": "limited",
+    "name_cn": "方可乐缤纷果捞",
+    "name_en": "",
+    "recipe": "只放入斑纹瓜",
+    "attracts": "",
+    "notes": "",
+    "file": "002.png"
+  },
+  {
+    "index": 3,
+    "kind": "limited",
+    "name_cn": "方可乐逆袭能量饮料",
+    "name_en": "",
+    "recipe": "只放入逆袭能量",
+    "attracts": "",
+    "notes": "",
+    "file": "003.png"
+  },
+  {
+    "index": 4,
+    "kind": "limited",
+    "name_cn": "方可乐野营蒸菜",
+    "name_en": "",
+    "recipe": "只放入风茄果",
+    "attracts": "",
+    "notes": "",
+    "file": "004.png"
+  },
+  {
+    "index": 5,
+    "kind": "limited",
+    "name_cn": "方可乐甜心蛋糕",
+    "name_en": "",
+    "recipe": "只放入甜心岩",
+    "attracts": "",
+    "notes": "",
+    "file": "005.png"
+  },
+  {
+    "index": 6,
+    "kind": "limited",
+    "name_cn": "方可乐浮游菇汤",
+    "name_en": "",
+    "recipe": "只放入浮游菇",
+    "attracts": "",
+    "notes": "",
+    "file": "006.png"
+  },
+  {
+    "index": 7,
+    "kind": "limited",
+    "name_cn": "方可乐飘叶汤",
+    "name_en": "",
+    "recipe": "只放入枫糖叶",
+    "attracts": "",
+    "notes": "",
+    "file": "007.png"
+  },
+  {
+    "index": 8,
+    "kind": "limited",
+    "name_cn": "方可乐叮铃铃果羹",
+    "name_en": "",
+    "recipe": "只放入椰铃球果",
+    "attracts": "",
+    "notes": "",
+    "file": "008.png"
+  },
+  {
+    "index": 9,
+    "kind": "limited",
+    "name_cn": "方可乐八宝蒸",
+    "name_en": "",
+    "recipe": "只放入金喜桔",
+    "attracts": "",
+    "notes": "",
+    "file": "009.png"
+  },
+  {
+    "index": 10,
+    "kind": "limited",
+    "name_cn": "方可乐樱子果团",
+    "name_en": "",
+    "recipe": "只放入樱球果",
+    "attracts": "",
+    "notes": "",
+    "file": "010.png"
+  },
+  {
+    "index": 11,
+    "kind": "limited",
+    "name_cn": "方可乐青青团子",
+    "name_en": "",
+    "recipe": "只放入青绿叶",
+    "attracts": "",
+    "notes": "",
+    "file": "011.png"
+  },
+  {
+    "index": 12,
+    "kind": "limited",
+    "name_cn": "方可乐逆袭能量饮料（一周年）",
+    "name_en": "",
+    "recipe": "只放入逆袭能量",
+    "attracts": "",
+    "notes": "",
+    "file": "012.png"
+  },
+  {
+    "index": 13,
+    "kind": "limited",
+    "name_cn": "方可乐糯糯包蒸",
+    "name_en": "",
+    "recipe": "只放入糯糯果",
+    "attracts": "",
+    "notes": "",
+    "file": "013.png"
+  },
+  {
+    "index": 14,
+    "kind": "limited",
+    "name_cn": "方可乐热热炖锅",
+    "name_en": "",
+    "recipe": "只放入大地菇",
+    "attracts": "",
+    "notes": "",
+    "file": "014.png"
+  },
+  {
+    "index": 15,
+    "kind": "limited",
+    "name_cn": "方可乐深海汽水",
+    "name_en": "",
+    "recipe": "只放入泡泡晶珠",
+    "attracts": "",
+    "notes": "",
+    "file": "015.png"
+  },
+  {
+    "index": 16,
+    "kind": "limited",
+    "name_cn": "方可乐爱心甜汤",
+    "name_en": "",
+    "recipe": "只放入甜古力",
+    "attracts": "",
+    "notes": "",
+    "file": "016.png"
+  },
+  {
+    "index": 17,
+    "kind": "limited",
+    "name_cn": "方可乐青果饮",
+    "name_en": "",
+    "recipe": "只放入青草果",
+    "attracts": "",
+    "notes": "",
+    "file": "017.png"
+  },
+  {
+    "index": 18,
+    "kind": "limited",
+    "name_cn": "方可乐团圆饼",
+    "name_en": "",
+    "recipe": "只放入圆月果",
+    "attracts": "",
+    "notes": "",
+    "file": "018.png"
+  },
+  {
+    "index": 19,
+    "kind": "limited",
+    "name_cn": "方可乐海鲜粥",
+    "name_en": "",
+    "recipe": "只放入暴雨贝壳",
+    "attracts": "",
+    "notes": "",
+    "file": "019.png"
+  },
+  {
+    "index": 20,
+    "kind": "limited",
+    "name_cn": "方可乐怪味烤派",
+    "name_en": "",
+    "recipe": "只放入捣蛋瓜",
+    "attracts": "",
+    "notes": "",
+    "file": "020.png"
+  },
+  {
+    "index": 21,
+    "kind": "limited",
+    "name_cn": "方可乐甘芋团子",
+    "name_en": "",
+    "recipe": "只放入甜甘芋",
+    "attracts": "",
+    "notes": "",
+    "file": "021.png"
+  },
+  {
+    "index": 23,
+    "kind": "limited",
+    "name_cn": "方可乐七彩浓汤",
+    "name_en": "",
+    "recipe": "只放入七彩贝壳",
+    "attracts": "",
+    "notes": "",
+    "file": "023.png"
+  },
+  {
+    "index": 24,
+    "kind": "limited",
+    "name_cn": "方可乐甜心蛋糕（2023）",
+    "name_en": "",
+    "recipe": "只放入甜心岩",
+    "attracts": "",
+    "notes": "",
+    "file": "024.png"
+  },
+  {
+    "index": 25,
+    "kind": "limited",
+    "name_cn": "方可乐秘境蛋糕",
+    "name_en": "",
+    "recipe": "只放入古晶岩<br>（活动期间[[友好商店]]购买食材）",
+    "attracts": "",
+    "notes": "",
+    "file": "025.png"
+  },
+  {
+    "index": 26,
+    "kind": "limited",
+    "name_cn": "方可乐樱子果团（2023）",
+    "name_en": "",
+    "recipe": "只放入樱球果",
+    "attracts": "",
+    "notes": "",
+    "file": "026.png"
+  },
+  {
+    "index": 27,
+    "kind": "limited",
+    "name_cn": "方可乐暖花饼",
+    "name_en": "",
+    "recipe": "只放入暖暖花",
+    "attracts": "",
+    "notes": "",
+    "file": "027.png"
+  },
+  {
+    "index": 28,
+    "kind": "limited",
+    "name_cn": "方可乐黄金果派",
+    "name_en": "",
+    "recipe": "只放入黄金种子",
+    "attracts": "",
+    "notes": "",
+    "file": "028.png"
+  },
+  {
+    "index": 29,
+    "kind": "limited",
+    "name_cn": "方可乐逆袭能量饮料（二周年）",
+    "name_en": "",
+    "recipe": "只放入逆袭能量（活动期间[[友好商店]]购买食材）",
+    "attracts": "",
+    "notes": "",
+    "file": "029.png"
+  },
+  {
+    "index": 30,
+    "kind": "limited",
+    "name_cn": "方可乐定胜果卷",
+    "name_en": "",
+    "recipe": "只放入强者果",
+    "attracts": "",
+    "notes": "",
+    "file": "030.png"
+  },
+  {
+    "index": 32,
+    "kind": "limited",
+    "name_cn": "方可乐秘境浓汤",
+    "name_en": "",
+    "recipe": "只放入时间碎片",
+    "attracts": "",
+    "notes": "",
+    "file": "032.png"
+  },
+  {
+    "index": 33,
+    "kind": "limited",
+    "name_cn": "方可乐珍珠冻饮",
+    "name_en": "",
+    "recipe": "只放入星晶珍珠",
+    "attracts": "",
+    "notes": "",
+    "file": "033.png"
+  },
+  {
+    "index": 34,
+    "kind": "limited",
+    "name_cn": "方可乐幽幽蛋糕",
+    "name_en": "",
+    "recipe": "只放入影幽木",
+    "attracts": "",
+    "notes": "",
+    "file": "034.png"
+  },
+  {
+    "index": 35,
+    "kind": "limited",
+    "name_cn": "方可乐节节糕",
+    "name_en": "",
+    "recipe": "只放入玉节果",
+    "attracts": "",
+    "notes": "",
+    "file": "035.png"
+  },
+  {
+    "index": 36,
+    "kind": "limited",
+    "name_cn": "方可乐月牙粿",
+    "name_en": "",
+    "recipe": "只放入月牙豆",
+    "attracts": "",
+    "notes": "",
+    "file": "036.png"
+  },
+  {
+    "index": 37,
+    "kind": "limited",
+    "name_cn": "方可乐能量棒",
+    "name_en": "",
+    "recipe": "只放入能量颗粒",
+    "attracts": "",
+    "notes": "",
+    "file": "037.png"
+  },
+  {
+    "index": 38,
+    "kind": "limited",
+    "name_cn": "方可乐石锅煲",
+    "name_en": "",
+    "recipe": "只放入陨星石",
+    "attracts": "",
+    "notes": "",
+    "file": "038.png"
+  },
+  {
+    "index": 39,
+    "kind": "limited",
+    "name_cn": "方可乐雪冰冻饮",
+    "name_en": "",
+    "recipe": "只放入雪冰晶",
+    "attracts": "",
+    "notes": "",
+    "file": "039.png"
+  },
+  {
+    "index": 40,
+    "kind": "limited",
+    "name_cn": "方可乐福气果冻",
+    "name_en": "",
+    "recipe": "只放入福气果",
+    "attracts": "",
+    "notes": "",
+    "file": "040.png"
+  },
+  {
+    "index": 41,
+    "kind": "limited",
+    "name_cn": "方可乐叶烙饼",
+    "name_en": "",
+    "recipe": "只放入芬芳叶",
+    "attracts": "",
+    "notes": "",
+    "file": "041.png"
+  },
+  {
+    "index": 42,
+    "kind": "limited",
+    "name_cn": "方可乐金丸果饮",
+    "name_en": "",
+    "recipe": "只放入金丸果",
+    "attracts": "",
+    "notes": "",
+    "file": "042.png"
+  },
+  {
+    "index": 43,
+    "kind": "limited",
+    "name_cn": "方可乐红焰特饮",
+    "name_en": "",
+    "recipe": "只放入红焰果",
+    "attracts": "",
+    "notes": "",
+    "file": "043.png"
+  },
+  {
+    "index": 44,
+    "kind": "limited",
+    "name_cn": "方可乐心灵果派",
+    "name_en": "",
+    "recipe": "只放入心灵种子",
+    "attracts": "",
+    "notes": "",
+    "file": "044.png"
+  },
+  {
+    "index": 45,
+    "kind": "limited",
+    "name_cn": "方可乐酷酷蛋糕",
+    "name_en": "",
+    "recipe": "只放入酷酷果",
+    "attracts": "",
+    "notes": "",
+    "file": "045.png"
+  },
+  {
+    "index": 46,
+    "kind": "limited",
+    "name_cn": "方可乐幻境冻饮",
+    "name_en": "",
+    "recipe": "只放入幻境碎片",
+    "attracts": "",
+    "notes": "",
+    "file": "046.png"
+  },
+  {
+    "index": 47,
+    "kind": "limited",
+    "name_cn": "方可乐未来浓汤",
+    "name_en": "",
+    "recipe": "只放入预知果实",
+    "attracts": "",
+    "notes": "",
+    "file": "047.png"
+  },
+  {
+    "index": 48,
+    "kind": "limited",
+    "name_cn": "方可乐去去冻饮",
+    "name_en": "",
+    "recipe": "只放入回溯果实",
+    "attracts": "",
+    "notes": "",
+    "file": "048.png"
+  },
+  {
+    "index": 49,
+    "kind": "limited",
+    "name_cn": "方可乐奇幻糖糕",
+    "name_en": "",
+    "recipe": "只放入魔力果实",
+    "attracts": "",
+    "notes": "",
+    "file": "049.png"
+  },
+  {
+    "index": 50,
+    "kind": "limited",
+    "name_cn": "方可乐怪味地果咖喱",
+    "name_en": "",
+    "recipe": "只放入怪味地果",
+    "attracts": "",
+    "notes": "",
+    "file": "050.png"
+  },
+  {
+    "index": 1,
+    "kind": "special",
+    "name_cn": "特别流光蛋糕",
+    "name_en": "",
+    "recipe": "友好商店购买<br>周年特别料理",
+    "attracts": "",
+    "notes": "",
+    "file": "001.png"
+  },
+  {
+    "index": 2,
+    "kind": "special",
+    "name_cn": "特别热热炖锅",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间限购5次",
+    "attracts": "",
+    "notes": "",
+    "file": "002.png"
+  },
+  {
+    "index": 3,
+    "kind": "special",
+    "name_cn": "特别深海汽水",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购5次",
+    "attracts": "",
+    "notes": "",
+    "file": "003.png"
+  },
+  {
+    "index": 4,
+    "kind": "special",
+    "name_cn": "特别爱心甜汤",
+    "name_en": "",
+    "recipe": "友好商店购买<br>限购1次",
+    "attracts": "",
+    "notes": "",
+    "file": "004.png"
+  },
+  {
+    "index": 5,
+    "kind": "special",
+    "name_cn": "特别青果饮",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间限购5次",
+    "attracts": "",
+    "notes": "",
+    "file": "005.png"
+  },
+  {
+    "index": 6,
+    "kind": "special",
+    "name_cn": "特别团圆饼",
+    "name_en": "",
+    "recipe": "友好商店购买<br>限购1次",
+    "attracts": "",
+    "notes": "",
+    "file": "006.png"
+  },
+  {
+    "index": 7,
+    "kind": "special",
+    "name_cn": "特别海鲜粥",
+    "name_en": "",
+    "recipe": "友好商店购买<br>不限购买次数",
+    "attracts": "",
+    "notes": "",
+    "file": "007.png"
+  },
+  {
+    "index": 8,
+    "kind": "special",
+    "name_cn": "特别怪味烤派",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购3次",
+    "attracts": "",
+    "notes": "",
+    "file": "008.png"
+  },
+  {
+    "index": 9,
+    "kind": "special",
+    "name_cn": "特别甘芋团子",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购3次",
+    "attracts": "",
+    "notes": "",
+    "file": "009.png"
+  },
+  {
+    "index": 10,
+    "kind": "special",
+    "name_cn": "感恩蛋糕",
+    "name_en": "",
+    "recipe": "友好商店限购1次<br>1.5周年特别料理",
+    "attracts": "",
+    "notes": "",
+    "file": "010.png"
+  },
+  {
+    "index": 11,
+    "kind": "special",
+    "name_cn": "特别叮铃铃果羹",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购3次",
+    "attracts": "",
+    "notes": "",
+    "file": "011.png"
+  },
+  {
+    "index": 12,
+    "kind": "special",
+    "name_cn": "特别七彩浓汤",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间不限购买次数",
+    "attracts": "",
+    "notes": "",
+    "file": "012.png"
+  },
+  {
+    "index": 13,
+    "kind": "special",
+    "name_cn": "特别甜心蛋糕",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购3次",
+    "attracts": "",
+    "notes": "",
+    "file": "013.png"
+  },
+  {
+    "index": 14,
+    "kind": "special",
+    "name_cn": "特别秘境蛋糕",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购3次和不限购买次数",
+    "attracts": "",
+    "notes": "",
+    "file": "014.png"
+  },
+  {
+    "index": 15,
+    "kind": "special",
+    "name_cn": "特别樱子果团",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购3次",
+    "attracts": "",
+    "notes": "",
+    "file": "015.png"
+  },
+  {
+    "index": 16,
+    "kind": "special",
+    "name_cn": "特别暖花饼",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购3次",
+    "attracts": "",
+    "notes": "",
+    "file": "016.png"
+  },
+  {
+    "index": 17,
+    "kind": "special",
+    "name_cn": "特别黄金果派",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购3次",
+    "attracts": "",
+    "notes": "",
+    "file": "017.png"
+  },
+  {
+    "index": 18,
+    "kind": "special",
+    "name_cn": "周年庆典传说蛋糕",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购1次",
+    "attracts": "",
+    "notes": "",
+    "file": "018.png"
+  },
+  {
+    "index": 19,
+    "kind": "special",
+    "name_cn": "周年庆典异色蛋糕",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购1次",
+    "attracts": "",
+    "notes": "",
+    "file": "019.png"
+  },
+  {
+    "index": 20,
+    "kind": "special",
+    "name_cn": "特别定胜果卷",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购5次",
+    "attracts": "",
+    "notes": "",
+    "file": "020.png"
+  },
+  {
+    "index": 21,
+    "kind": "special",
+    "name_cn": "特别糯糯包蒸",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购5次",
+    "attracts": "",
+    "notes": "",
+    "file": "021.png"
+  },
+  {
+    "index": 22,
+    "kind": "special",
+    "name_cn": "特别秘境浓汤",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购5次",
+    "attracts": "",
+    "notes": "",
+    "file": "022.png"
+  },
+  {
+    "index": 23,
+    "kind": "special",
+    "name_cn": "特别珍珠冻饮",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购5次",
+    "attracts": "",
+    "notes": "",
+    "file": "023.png"
+  },
+  {
+    "index": 24,
+    "kind": "special",
+    "name_cn": "特别幽幽蛋糕",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购5次",
+    "attracts": "",
+    "notes": "",
+    "file": "024.png"
+  },
+  {
+    "index": 25,
+    "kind": "special",
+    "name_cn": "特别节节糕",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周限购5次",
+    "attracts": "",
+    "notes": "",
+    "file": "025.png"
+  },
+  {
+    "index": 27,
+    "kind": "special",
+    "name_cn": "特别月牙粿",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间不限购买次数",
+    "attracts": "",
+    "notes": "",
+    "file": "027.png"
+  },
+  {
+    "index": 28,
+    "kind": "special",
+    "name_cn": "特别能量棒",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "028.png"
+  },
+  {
+    "index": 29,
+    "kind": "special",
+    "name_cn": "特别石锅煲",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "029.png"
+  },
+  {
+    "index": 30,
+    "kind": "special",
+    "name_cn": "特别雪冰冻饮",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "030.png"
+  },
+  {
+    "index": 31,
+    "kind": "special",
+    "name_cn": "特别福气果冻",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间不限购买次数",
+    "attracts": "",
+    "notes": "",
+    "file": "031.png"
+  },
+  {
+    "index": 32,
+    "kind": "special",
+    "name_cn": "特别叶烙饼",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "032.png"
+  },
+  {
+    "index": 33,
+    "kind": "special",
+    "name_cn": "特别金丸果饮",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "033.png"
+  },
+  {
+    "index": 34,
+    "kind": "special",
+    "name_cn": "特别红焰特饮",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "034.png"
+  },
+  {
+    "index": 35,
+    "kind": "special",
+    "name_cn": "特别心灵果派",
+    "name_en": "",
+    "recipe": "友好商店购买<br>周年庆活动期间不限购买次数",
+    "attracts": "",
+    "notes": "",
+    "file": "035.png"
+  },
+  {
+    "index": 36,
+    "kind": "special",
+    "name_cn": "特别酷酷蛋糕",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "036.png"
+  },
+  {
+    "index": 37,
+    "kind": "special",
+    "name_cn": "特别幻境冻饮",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "037.png"
+  },
+  {
+    "index": 38,
+    "kind": "special",
+    "name_cn": "特别未来浓汤",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "038.png"
+  },
+  {
+    "index": 39,
+    "kind": "special",
+    "name_cn": "特别去去冻饮",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "039.png"
+  },
+  {
+    "index": 40,
+    "kind": "special",
+    "name_cn": "特别奇幻糖糕",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "040.png"
+  },
+  {
+    "index": 41,
+    "kind": "special",
+    "name_cn": "特别怪味地果咖喱",
+    "name_en": "",
+    "recipe": "友好商店购买<br>活动期间每周购限买5次",
+    "attracts": "",
+    "notes": "",
+    "file": "041.png"
+  }
+]

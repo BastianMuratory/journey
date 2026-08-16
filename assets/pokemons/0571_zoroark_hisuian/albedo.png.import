@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo0l8fli7f6rl"
 path.s3tc="res://.godot/imported/albedo.png-b66921e9c5888ecdcb5008663c0d3cc7.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-b66921e9c5888ecdcb5008663c0d3cc7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0571_zoroark_hisuian/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-b66921e9c5888ecdcb5008663c0d3cc7.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-b66921e9c5888ecdcb5008663c0d3cc7.s3tc.ctex", "res://.godot/imported/albedo.png-b66921e9c5888ecdcb5008663c0d3cc7.etc2.ctex"]
 
 [params]
 

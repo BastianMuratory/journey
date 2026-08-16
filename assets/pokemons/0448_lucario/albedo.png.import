@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://pt0iocqabckv"
 path.s3tc="res://.godot/imported/albedo.png-65c8220c0730d1c0fceeb95a69a9c7f7.s3tc.ctex"
+path.etc2="res://.godot/imported/albedo.png-65c8220c0730d1c0fceeb95a69a9c7f7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/pokemons/0448_lucario/albedo.png"
-dest_files=["res://.godot/imported/albedo.png-65c8220c0730d1c0fceeb95a69a9c7f7.s3tc.ctex"]
+dest_files=["res://.godot/imported/albedo.png-65c8220c0730d1c0fceeb95a69a9c7f7.s3tc.ctex", "res://.godot/imported/albedo.png-65c8220c0730d1c0fceeb95a69a9c7f7.etc2.ctex"]
 
 [params]
 
