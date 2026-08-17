@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://d3egoncf28rxw" path="res://assets/pokemons/0050_diglett/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://cnc5qc3pwifrn" path="res://assets/pokemons/0050_diglett/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Resource" path="res://data/pokemon_base_data/0051_dugtrio.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://cywowrjeqa767" path="res://assets/pokemons/0050_diglett/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://p6ag5goaseeg" path="res://assets/pokemons/0050_diglett/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://dkug4ha0t58lp" path="res://assets/pokemons/0050_diglett/preview_shiny.png" id="7_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 50
+display_name = "Diglett"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
+evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+body_type = 1
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 5
+type2 = 0
+base_hp = 10
+base_attack = 55
+base_defense = 25
+base_special_attack = 35
+base_special_defense = 45
+base_speed = 95
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

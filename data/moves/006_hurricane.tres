@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://urp4t7686peq" path="res://assets/icons/attacks/006_hurricane.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Hurricane"
+description = "在自己的周围刮起狂风，从而使周围的敌人受到伤害。越靠近自身越容易让敌人陷入混乱状态。"
+type = 3
+category = 1
+power = 450
+cooldown = 7.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

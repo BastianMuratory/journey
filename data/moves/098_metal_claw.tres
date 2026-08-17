@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bayqpf3rg0hih" path="res://assets/icons/attacks/098_metal_claw.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Metal Claw"
+description = "用钢铁之爪撕裂自己前方的敌人，使其受到伤害。有时会提高给予敌人的伤害。"
+type = 9
+category = 0
+power = 360
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

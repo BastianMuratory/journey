@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://1jclhb4aa6s3" path="res://assets/icons/attacks/143_heat_wave.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Heat Wave"
+description = "将炎热的气息吹向前方，被喷到的敌人会受到伤害。有时会让敌人陷入灼伤状态。"
+type = 10
+category = 1
+power = 230
+cooldown = 7.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bh6k6qv7ix578" path="res://assets/icons/attacks/185_drain_punch.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Drain Punch"
+description = "向眼前的敌人出拳，使其受到伤害。而且还能通过拳头吸取敌人的力量用来回复自己的体力。"
+type = 2
+category = 0
+power = 360
+cooldown = 6.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

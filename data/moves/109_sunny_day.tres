@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bypfatua5kkyy" path="res://assets/icons/attacks/109_sunny_day.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Sunny Day"
+description = "使一段时间的天气变为大晴天，提高火属性招式威力，水属性的招式威力则降低。"
+type = 10
+category = 2
+power = 0
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

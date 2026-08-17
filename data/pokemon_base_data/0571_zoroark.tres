@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://dsrr66a8epk0x" path="res://assets/pokemons/0571_zoroark/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://d0mj5o3lqc5b3" path="res://assets/pokemons/0571_zoroark/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://56764ldooe81" path="res://assets/pokemons/0571_zoroark/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://ckmttf15jqqgp" path="res://assets/pokemons/0571_zoroark/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://b07joqs22vqs7" path="res://assets/pokemons/0571_zoroark/preview_shiny.png" id="6_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 571
+display_name = "Zoroark"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 17
+type2 = 0
+base_hp = 60
+base_attack = 105
+base_defense = 60
+base_special_attack = 120
+base_special_defense = 60
+base_speed = 105
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

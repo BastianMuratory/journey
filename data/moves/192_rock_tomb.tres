@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dnnwdb6uslmrc" path="res://assets/icons/attacks/192_rock_tomb.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Rock Tomb"
+description = "让岩石落在自己的眼前，被砸到的敌人会受到伤害。有时会降低敌人的移动速度。"
+type = 6
+category = 0
+power = 400
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

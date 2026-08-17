@@ -4,7 +4,7 @@ extends Node3D
 ##
 ## Nothing is hardcoded in the scene any more -- the Pokémon is spawned at
 ## runtime from [code]PokemonRegistry[/code] onto the SpawnPoint marker, and
-## the evolution target is read off its [PokemonData]. Change [constant
+## the evolution target is read off its [PokemonBaseData]. Change [constant
 ## SANDILE_DEX_NUMBER] and the whole thing follows.
 ##
 ## Space bar evolves; space again rewinds so you can watch it a second time.
@@ -21,8 +21,8 @@ const CATERPIE_DEX_NUMBER := 10
 ## One spawned Pokémon plus the effect bolted to it.
 class Entry:
 	var pokemon: PokemonModel
-	var base_data: PokemonData
-	var evolved_data: PokemonData
+	var base_data: PokemonBaseData
+	var evolved_data: PokemonBaseData
 	var mega: MegaEvolution
 
 
@@ -34,7 +34,7 @@ func _ready() -> void:
 
 ## Instantiates the shared Pokémon scene as the given species. Reusable for
 ## anything else you want to drop into the camp.
-func spawn_pokemon(data: PokemonData, marker: Marker3D, shiny := false) -> PokemonModel:
+func spawn_pokemon(data: PokemonBaseData, marker: Marker3D, shiny := false) -> PokemonModel:
 	var p: PokemonModel = POKEMON_MODEL_SCENE.instantiate()
 	p.data = data
 	p.shiny = shiny

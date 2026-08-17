@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://chi22ag0hk3qw" path="res://assets/pokemons/0487_giratina/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://brxim40ba47ym" path="res://assets/pokemons/0487_giratina/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://dssdbyhw2mtx3" path="res://assets/pokemons/0487_giratina/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://da3hnb0nha8mc" path="res://assets/pokemons/0487_giratina/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://bohekmnadaqe0" path="res://assets/pokemons/0487_giratina/preview_shiny.png" id="6_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 487
+display_name = "Giratina"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 1
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+anim_tuned = true
+evolves_into = Array[ExtResource("3_script")]([])
+type1 = 8
+type2 = 16
+base_hp = 150
+base_attack = 100
+base_defense = 120
+base_special_attack = 100
+base_special_defense = 120
+base_speed = 90
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

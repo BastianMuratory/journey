@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://m214dvcatn77" path="res://assets/icons/attacks/188_play_rough.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Play Rough"
+description = "和前方的敌人嬉闹，使其受到伤害。有时还会降低敌人给予的伤害。"
+type = 18
+category = 0
+power = 450
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

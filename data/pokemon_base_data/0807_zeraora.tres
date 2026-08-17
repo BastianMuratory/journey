@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://04qqwcuveybk" path="res://assets/pokemons/0807_zeraora/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://boep1i826owvt" path="res://assets/pokemons/0807_zeraora/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://d1dkgwsgyjjvi" path="res://assets/pokemons/0807_zeraora/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://x1s88uvqi80t" path="res://assets/pokemons/0807_zeraora/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://bsuenya5dy4iv" path="res://assets/pokemons/0807_zeraora/preview_shiny.png" id="6_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 807
+display_name = "Zeraora"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 13
+type2 = 0
+base_hp = 88
+base_attack = 112
+base_defense = 75
+base_special_attack = 102
+base_special_defense = 80
+base_speed = 143
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

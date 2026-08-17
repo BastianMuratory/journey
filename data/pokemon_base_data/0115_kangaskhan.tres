@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://cujh3sbo20jg0" path="res://assets/pokemons/0115_kangaskhan/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://brtiqb541ikkp" path="res://assets/pokemons/0115_kangaskhan/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://ckq3wi8s8ti7e" path="res://assets/pokemons/0115_kangaskhan/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://cmde0w036qd02" path="res://assets/pokemons/0115_kangaskhan/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://b48ho86voukvw" path="res://assets/pokemons/0115_kangaskhan/preview_shiny.png" id="6_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 115
+display_name = "Kangaskhan"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 1
+type2 = 0
+base_hp = 105
+base_attack = 95
+base_defense = 80
+base_special_attack = 40
+base_special_defense = 80
+base_speed = 90
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://dwpdtynqkxxpi" path="res://assets/pokemons/0769_sandygast/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://55cubgd3yva2" path="res://assets/pokemons/0769_sandygast/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Resource" path="res://data/pokemon_base_data/0770_palossand.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://c3brdrk3e8vb8" path="res://assets/pokemons/0769_sandygast/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://bxh88gs2bu6ae" path="res://assets/pokemons/0769_sandygast/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://uffmuxor8ei0" path="res://assets/pokemons/0769_sandygast/preview_shiny.png" id="7_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 769
+display_name = "Sandygast"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
+evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+body_type = 1
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 8
+type2 = 5
+base_hp = 55
+base_attack = 55
+base_defense = 80
+base_special_attack = 70
+base_special_defense = 45
+base_speed = 15
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

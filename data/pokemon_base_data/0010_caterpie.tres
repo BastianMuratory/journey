@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3 uid="uid://cx8i3rou74qjw"]
+
+[ext_resource type="Resource" uid="uid://de0o5qm8ole21" path="res://data/pokemon_base_data/0384_rayquaza.tres" id="1_mega"]
+[ext_resource type="ArrayMesh" uid="uid://bqypdn678v6gj" path="res://assets/pokemons/0010_caterpie/model.obj" id="2_mesh"]
+[ext_resource type="Texture2D" uid="uid://dq71feg1gfsu4" path="res://assets/pokemons/0010_caterpie/albedo_shiny.png" id="3_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="4_script"]
+[ext_resource type="Resource" path="res://data/pokemon_base_data/0011_metapod.tres" id="5_evo"]
+[ext_resource type="Texture2D" uid="uid://cetla3rk72l4h" path="res://assets/pokemons/0010_caterpie/icon.png" id="6_icon"]
+[ext_resource type="Texture2D" uid="uid://cje2jq1cem117" path="res://assets/pokemons/0010_caterpie/preview.png" id="7_preview"]
+[ext_resource type="Texture2D" uid="uid://bwoko62qm22w1" path="res://assets/pokemons/0010_caterpie/preview_shiny.png" id="8_preview_shiny"]
+
+
+[resource]
+script = ExtResource("4_script")
+dex_number = 10
+display_name = "Caterpie"
+mesh = ExtResource("2_mesh")
+albedo_shiny = ExtResource("3_shiny")
+model_scale = 1.0
+icon = ExtResource("6_icon")
+preview = ExtResource("7_preview")
+preview_shiny = ExtResource("8_preview_shiny")
+evolves_into = Array[ExtResource("4_script")]([ExtResource("5_evo")])
+mega_evolves_into = ExtResource("1_mega")
+body_type = 1
+anim_speed_scale = 1.3
+anim_amplitude = 1.2
+hover_height = 0.0
+type1 = 7
+type2 = 0
+base_hp = 45
+base_attack = 30
+base_defense = 35
+base_special_attack = 20
+base_special_defense = 20
+base_speed = 45
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

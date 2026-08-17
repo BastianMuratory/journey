@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bkdeq6wcuoj25" path="res://assets/icons/attacks/061_aeroblast.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Aeroblast"
+description = "发射空气旋涡进行攻击。容易击中要害。"
+type = 3
+category = 1
+power = 450
+cooldown = 8.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=6 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://b5185uww62djo" path="res://assets/pokemons/0025_pikachu_ash_cap/model.obj" id="1_mesh"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Resource" path="res://data/pokemon_base_data/0026_raichu.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://c2ptnau2ddscg" path="res://assets/pokemons/0025_pikachu_ash_cap/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://bqxkhauc5lafh" path="res://assets/pokemons/0025_pikachu_ash_cap/preview.png" id="6_preview"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 25
+display_name = "Pikachu (Ash Cap)"
+mesh = ExtResource("1_mesh")
+model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+body_type = 1
+anim_speed_scale = 1.25
+anim_amplitude = 1.15
+hover_height = 0.0
+anim_tuned = true
+evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+type1 = 13
+type2 = 0
+base_hp = 35
+base_attack = 55
+base_defense = 40
+base_special_attack = 50
+base_special_defense = 50
+base_speed = 90
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

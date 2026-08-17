@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bm2oyex4d4s56" path="res://assets/icons/attacks/184_sludge_bomb.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Sludge Bomb"
+description = "发射毒块，其碰撞地面后会立刻爆裂，使周围的敌人受到伤害。有时会让敌人陷入中毒状态。"
+type = 4
+category = 1
+power = 380
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Moonblast"
+description = "从月光中吸取能量，往前方发射出一个光球，给予接触到的敌人伤害。"
+type = 18
+category = 1
+power = 400
+cooldown = 6.0
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

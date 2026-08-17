@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://cobhc0pe62uim" path="res://assets/pokemons/0280_ralts/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://dshg4x6saqbpn" path="res://assets/pokemons/0280_ralts/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Resource" path="res://data/pokemon_base_data/0281_kirlia.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://nvwdj1npgxki" path="res://assets/pokemons/0280_ralts/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://7wrhk30exv23" path="res://assets/pokemons/0280_ralts/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://drs45cuqejdm4" path="res://assets/pokemons/0280_ralts/preview_shiny.png" id="7_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 280
+display_name = "Ralts"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
+evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 14
+type2 = 18
+base_hp = 28
+base_attack = 25
+base_defense = 25
+base_special_attack = 45
+base_special_defense = 35
+base_speed = 40
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

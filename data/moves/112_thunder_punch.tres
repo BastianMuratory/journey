@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bs5k318br3rgq" path="res://assets/icons/attacks/112_thunder_punch.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Thunder Punch"
+description = "让自己的拳头充满电流，并朝眼前的敌人使出电麻之拳。有时会让敌人陷入麻痹状态。"
+type = 13
+category = 0
+power = 450
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://dp2kjqea42st8" path="res://assets/pokemons/0137_porygon/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://cp5x01bvwsl7w" path="res://assets/pokemons/0137_porygon/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://gg35p2cfdfq3" path="res://assets/pokemons/0137_porygon/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://db1b8wl562j2o" path="res://assets/pokemons/0137_porygon/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://cfgxdg6c2bi" path="res://assets/pokemons/0137_porygon/preview_shiny.png" id="6_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 137
+display_name = "Porygon"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 2
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.18
+type1 = 1
+type2 = 0
+base_hp = 65
+base_attack = 60
+base_defense = 70
+base_special_attack = 85
+base_special_defense = 75
+base_speed = 40
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

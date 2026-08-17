@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Spacial Rend"
+description = "将对手连同周围的空间一起撕裂并给予伤害，容易击中要害。"
+type = 16
+category = 1
+power = 660
+cooldown = 6.0
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://gno0riy6ickg" path="res://assets/pokemons/0202_wobbuffet/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://ceoak3ffeb64i" path="res://assets/pokemons/0202_wobbuffet/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://diwdcaa3oa4wh" path="res://assets/pokemons/0202_wobbuffet/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://calu2jy34t6qr" path="res://assets/pokemons/0202_wobbuffet/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://o673h1kssv81" path="res://assets/pokemons/0202_wobbuffet/preview_shiny.png" id="6_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 202
+display_name = "Wobbuffet"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 14
+type2 = 0
+base_hp = 190
+base_attack = 33
+base_defense = 58
+base_special_attack = 33
+base_special_defense = 58
+base_speed = 33
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

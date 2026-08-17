@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cdema42kkqodd" path="res://assets/icons/attacks/090_leech_seed.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Leech Seed"
+description = "在前方的地面上，种植寄生种子。种植范围内的敌人，会一点一点持续受到伤害，并且还会从给予的伤害中，吸取一部分体力，用来回复自己的体力。"
+type = 12
+category = 1
+power = 360
+cooldown = 6.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

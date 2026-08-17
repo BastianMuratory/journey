@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3 uid="uid://dt631ti5kf61l"]
+
+[ext_resource type="ArrayMesh" uid="uid://l408x6t310rc" path="res://assets/pokemons/0553_krookodile/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://4c0bucam58vb" path="res://assets/pokemons/0553_krookodile/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://c6gcemrlnqri3" path="res://assets/pokemons/0553_krookodile/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://bvt5rsaa83cmk" path="res://assets/pokemons/0553_krookodile/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://ddajb2t8vnyrt" path="res://assets/pokemons/0553_krookodile/preview_shiny.png" id="6_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 553
+display_name = "Krookodile"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 5
+type2 = 17
+base_hp = 95
+base_attack = 117
+base_defense = 80
+base_special_attack = 65
+base_special_defense = 70
+base_speed = 92
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cpy8rsagcm7qt" path="res://assets/icons/attacks/065_volt_tackle.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Volt Tackle"
+description = "让电流覆盖全身，朝敌人猛撞后跳起并放出电流。被击中的敌人会受到伤害，有时会让敌人陷入麻痹状态。"
+type = 13
+category = 0
+power = 300
+cooldown = 6.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

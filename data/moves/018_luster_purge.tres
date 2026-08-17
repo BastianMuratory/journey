@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://qvxdjd60po6c" path="res://assets/icons/attacks/018_luster_purge.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Luster Purge"
+description = "释放耀眼的光芒进行攻击，有时会降低对手的防御。"
+type = 14
+category = 1
+power = 360
+cooldown = 6.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

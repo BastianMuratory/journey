@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dfgrko14fd8xo" path="res://assets/icons/attacks/161_twineedle.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Twineedle"
+description = "发射两根针，刺中对手造成2次伤害，有时会让对手陷入中毒状态。"
+type = 7
+category = 0
+power = 200
+cooldown = 4.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

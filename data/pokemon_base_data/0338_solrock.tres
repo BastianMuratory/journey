@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://d2efunje8jdbr" path="res://assets/pokemons/0338_solrock/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://bsdqhuhd81n7v" path="res://assets/pokemons/0338_solrock/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://bhtps58jkb275" path="res://assets/pokemons/0338_solrock/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://d3mccso0bssv6" path="res://assets/pokemons/0338_solrock/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://db44yte8l0p34" path="res://assets/pokemons/0338_solrock/preview_shiny.png" id="6_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 338
+display_name = "Solrock"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 2
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.18
+type1 = 6
+type2 = 14
+base_hp = 90
+base_attack = 95
+base_defense = 85
+base_special_attack = 55
+base_special_defense = 65
+base_speed = 70
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

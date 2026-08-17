@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://drxc0l4k6ipq1" path="res://assets/icons/attacks/131_outrage.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Outrage"
+description = "横冲直撞，抓到路过的敌人就会攻击，使其受到伤害。有时会让自己陷入混乱状态。"
+type = 16
+category = 0
+power = 555
+cooldown = 7.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

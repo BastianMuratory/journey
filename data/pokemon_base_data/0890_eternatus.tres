@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://bm7ojhvdywei5" path="res://assets/pokemons/0890_eternatus/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://bdcw3b1sptqak" path="res://assets/pokemons/0890_eternatus/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://cbjsv424wcmht" path="res://assets/pokemons/0890_eternatus/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://dmawglfkjbs7d" path="res://assets/pokemons/0890_eternatus/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://bae2vboemm65x" path="res://assets/pokemons/0890_eternatus/preview_shiny.png" id="6_preview_shiny"]
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 890
+display_name = "Eternatus"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 3
+anim_speed_scale = 0.8
+anim_amplitude = 1.0
+hover_height = 0.3
+type1 = 4
+type2 = 16
+base_hp = 140
+base_attack = 85
+base_defense = 95
+base_special_attack = 145
+base_special_defense = 95
+base_speed = 130
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

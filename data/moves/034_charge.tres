@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bc7xqrhmm3ydj" path="res://assets/icons/attacks/034_charge.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Charge"
+description = "储存电流到自己身上，在一定时间内提高给予敌人伤害的同时，让自己的能力不容易下降。"
+type = 13
+category = 2
+power = 0
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dy6ao15dusiyv" path="res://assets/icons/attacks/110_focus_energy.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Focus Energy"
+description = "深深地吸口气，集中精神，使自己的攻击会变得容易击中要害。"
+type = 1
+category = 2
+power = 0
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

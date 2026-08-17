@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://b0wykud8ai5el" path="res://assets/icons/attacks/132_waterfall.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Waterfall"
+description = "靠近前方的敌人，然后让水柱从敌人的脚下喷出，被打到的敌人会受到伤害。"
+type = 11
+category = 0
+power = 300
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

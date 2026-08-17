@@ -1,7 +1,7 @@
 class_name PokemonModel
 extends Node3D
 
-## A Pokémon in the world. Reconfigures itself from whatever [PokemonData] it
+## A Pokémon in the world. Reconfigures itself from whatever [PokemonBaseData] it
 ## is given, so one scene covers every species:
 ## [codeblock]
 ## var p := POKEMON_MODEL_SCENE.instantiate() as PokemonModel
@@ -26,9 +26,9 @@ extends Node3D
 ## any per-species setup.
 
 ## Emitted after the mesh and material have been swapped to a new species.
-signal species_changed(new_data: PokemonData)
+signal species_changed(new_data: PokemonBaseData)
 
-@export var data: PokemonData:
+@export var data: PokemonBaseData:
 	set(value):
 		data = value
 		_apply()
@@ -68,14 +68,14 @@ func _ready() -> void:
 
 ## Swaps this Pokémon to another species in place, keeping its transform.
 ## Used by the evolution effect.
-func set_species(new_data: PokemonData) -> void:
+func set_species(new_data: PokemonBaseData) -> void:
 	if new_data == null:
 		return
 	data = new_data
 
 
 ## Re-reads the animation fields off [member data] without touching the mesh.
-## Call this after editing [member PokemonData.body_type] at runtime -- the pivot
+## Call this after editing [member PokemonBaseData.body_type] at runtime -- the pivot
 ## height depends on it, so simply setting the field is not enough.
 func refresh_animation() -> void:
 	if model == null or data == null:

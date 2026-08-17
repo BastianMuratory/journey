@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://cfyecfi06yqat" path="res://assets/pokemons/0711_gourgeist/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://b25tmitvlcvig" path="res://assets/pokemons/0711_gourgeist/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://bxwsg5xk8uryb" path="res://assets/pokemons/0711_gourgeist/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://bocq384dxuhxb" path="res://assets/pokemons/0711_gourgeist/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://ddgk0aaild570" path="res://assets/pokemons/0711_gourgeist/preview_shiny.png" id="6_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 711
+display_name = "Gourgeist"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 2
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.18
+type1 = 8
+type2 = 12
+base_hp = 65
+base_attack = 90
+base_defense = 122
+base_special_attack = 58
+base_special_defense = 75
+base_speed = 84
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

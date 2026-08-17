@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dhqj6ssig1dwp" path="res://assets/icons/attacks/222_roar_of_time.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Roar of Time"
+description = "释放出扭曲时间般的强大力量攻击对手，释放后自己在一定时间内无法行动。"
+type = 16
+category = 1
+power = 1200
+cooldown = 8.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

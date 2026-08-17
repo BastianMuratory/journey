@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bm40je4nv6w2c" path="res://assets/icons/attacks/171_withdraw.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Withdraw"
+description = "缩入坚硬的壳里，可以在一定时间内降低自己所受到的伤害。"
+type = 11
+category = 2
+power = 0
+cooldown = 6.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

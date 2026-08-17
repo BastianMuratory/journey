@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://b60marlm5sitb" path="res://assets/pokemons/1008_miraidon/model.obj" id="1_mesh"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://c1becol4jof8a" path="res://assets/pokemons/1008_miraidon/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://da1pnc4bh5qen" path="res://assets/pokemons/1008_miraidon/preview.png" id="5_preview"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 1008
+display_name = "Miraidon"
+mesh = ExtResource("1_mesh")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+body_type = 4
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+anim_tuned = true
+evolves_into = Array[ExtResource("3_script")]([])
+type1 = 13
+type2 = 16
+base_hp = 100
+base_attack = 85
+base_defense = 100
+base_special_attack = 135
+base_special_defense = 115
+base_speed = 135
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

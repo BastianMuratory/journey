@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dfpp80pjsmlws" path="res://assets/icons/attacks/183_shadow_force.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Shadow Force"
+description = "隐身于黑暗中，随后从黑暗中出现发动攻击。"
+type = 8
+category = 0
+power = 700
+cooldown = 8.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

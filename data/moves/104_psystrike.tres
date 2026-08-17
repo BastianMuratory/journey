@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://d3ypn1f0ld3r7" path="res://assets/icons/attacks/104_psystrike.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Psystrike"
+description = "在自己的前方制造出大大的光球。大光球会分裂出许多小光球，并朝四周飞散开来，被打到的敌人会受到伤害。"
+type = 14
+category = 1
+power = 450
+cooldown = 7.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://bgkj0n7cl06je" path="res://assets/pokemons/0104_cubone/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://bgsrbr3rn17c0" path="res://assets/pokemons/0104_cubone/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Resource" path="res://data/pokemon_base_data/0105_marowak.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://crb3qekeytq4r" path="res://assets/pokemons/0104_cubone/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://cgc0l0183hqyf" path="res://assets/pokemons/0104_cubone/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://4pak83i8cqb1" path="res://assets/pokemons/0104_cubone/preview_shiny.png" id="7_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 104
+display_name = "Cubone"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
+evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 5
+type2 = 0
+base_hp = 50
+base_attack = 50
+base_defense = 95
+base_special_attack = 40
+base_special_defense = 50
+base_speed = 35
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

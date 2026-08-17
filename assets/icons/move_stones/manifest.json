@@ -1,32 +1,26 @@
 [
   {
-    "name_cn": "团团石",
-    "name_en": "",
+    "name_en": "Sharing Stone",
     "file": "01.png"
   },
   {
-    "name_cn": "多多石",
-    "name_en": "",
+    "name_en": "Scattershot Stone",
     "file": "02.png"
   },
   {
-    "name_cn": "展展石",
-    "name_en": "",
+    "name_en": "Broadburst Stone",
     "file": "03.png"
   },
   {
-    "name_cn": "快快石",
-    "name_en": "",
+    "name_en": "Wait Less Stone",
     "file": "04.png"
   },
   {
-    "name_cn": "恒恒石",
-    "name_en": "",
+    "name_en": "Stay Strong Stone",
     "file": "05.png"
   },
   {
-    "name_cn": "连连石",
-    "name_en": "",
+    "name_en": "Whack-Whack Stone",
     "file": "06.png"
   }
 ]

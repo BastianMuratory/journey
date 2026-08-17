@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cqdwkt4aco4yu" path="res://assets/icons/attacks/196_silver_wind.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Silver Wind"
+description = "在风中掺入鳞粉挥撒在自己的周围。被撒到的敌人会受到伤害。有时会随机提高自己的所有能力。"
+type = 7
+category = 1
+power = 300
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

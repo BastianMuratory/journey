@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3 uid="uid://dr24royrs35lg"]
+
+[ext_resource type="ArrayMesh" uid="uid://qbpwxqarrtto" path="res://assets/pokemons/0551_sandile/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://co70r23v25712" path="res://assets/pokemons/0551_sandile/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="4_script"]
+[ext_resource type="Resource" uid="uid://dt631ti5kf61l" path="res://data/pokemon_base_data/0553_krookodile.tres" id="5_evo"]
+[ext_resource type="Texture2D" uid="uid://cq84dxfii8ga2" path="res://assets/pokemons/0551_sandile/icon.png" id="6_icon"]
+[ext_resource type="Texture2D" uid="uid://cwuxunxwfewhi" path="res://assets/pokemons/0551_sandile/preview.png" id="7_preview"]
+[ext_resource type="Texture2D" uid="uid://e62yu0dutrgh" path="res://assets/pokemons/0551_sandile/preview_shiny.png" id="8_preview_shiny"]
+
+
+[resource]
+script = ExtResource("4_script")
+dex_number = 551
+display_name = "Sandile"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("6_icon")
+preview = ExtResource("7_preview")
+preview_shiny = ExtResource("8_preview_shiny")
+evolves_into = Array[ExtResource("4_script")]([ExtResource("5_evo")])
+body_type = 1
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 5
+type2 = 17
+base_hp = 50
+base_attack = 72
+base_defense = 35
+base_special_attack = 35
+base_special_defense = 35
+base_speed = 65
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

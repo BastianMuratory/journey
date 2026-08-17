@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cwbkpxv6efixa" path="res://assets/icons/attacks/208_giga_drain.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Giga Drain"
+description = "对前方的对手进行攻击，造成伤害的同时，还能吸取大量HP。"
+type = 12
+category = 1
+power = 360
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

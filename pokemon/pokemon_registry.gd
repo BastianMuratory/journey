@@ -1,6 +1,6 @@
 extends Node
 
-## this gets autoloaded. Looks up [PokemonData] by dex number, or by id when you need a
+## this gets autoloaded. Looks up [PokemonBaseData] by dex number, or by id when you need a
 ## specific form.
 ##
 ## [codeblock]
@@ -18,12 +18,12 @@ extends Node
 ## listing only, so nothing is loaded off disk until you actually ask for a
 ## Pokémon. Meshes and textures come in one species at a time and stay cached.
 
-const DIR := "res://data/pokemon/"
+const DIR := "res://data/pokemon_base_data/"
 
 var _paths: Dictionary[String, String] = {} ## id -> res
 var _base_form: Dictionary[int, String] = {} ## dex number -> the id of that species' base form.
 var _forms: Dictionary[int, PackedStringArray] = {} ## dex number -> every id sharing it, base form first.
-var _cache: Dictionary[String, PokemonData] = {} ## id -> loaded resource. Filled lazily by [method get_pokemon_by_id].
+var _cache: Dictionary[String, PokemonBaseData] = {} ## id -> loaded resource. Filled lazily by [method get_pokemon_by_id].
 var _sorted_ids: PackedStringArray = [] ## Every id, ascending. Cached because the animation browser pages through it.
 
 
@@ -32,7 +32,7 @@ func _ready() -> void:
 
 
 ## The base form for a dex number, or null if there is no file for it.
-func get_pokemon(dex: int) -> PokemonData:
+func get_pokemon(dex: int) -> PokemonBaseData:
 	if not _base_form.has(dex):
 		push_warning("PokemonRegistry: no data file for dex #%d" % dex)
 		return null
@@ -40,7 +40,7 @@ func get_pokemon(dex: int) -> PokemonData:
 
 
 ## A specific resource by id, e.g. "0025_pikachu_ash_cap". Null if unknown.
-func get_pokemon_by_id(id: String) -> PokemonData:
+func get_pokemon_by_id(id: String) -> PokemonBaseData:
 	if _cache.has(id):
 		return _cache[id]
 
@@ -48,9 +48,9 @@ func get_pokemon_by_id(id: String) -> PokemonData:
 		push_warning("PokemonRegistry: no data file with id '%s'" % id)
 		return null
 
-	var res := load(_paths[id]) as PokemonData
+	var res := load(_paths[id]) as PokemonBaseData
 	if res == null:
-		push_warning("PokemonRegistry: %s is not a PokemonData" % _paths[id])
+		push_warning("PokemonRegistry: %s is not a PokemonBaseData" % _paths[id])
 		return null
 
 	_cache[id] = res
@@ -98,7 +98,7 @@ func get_path_for(id: String) -> String:
 
 ## Drops a cached resource so the next lookup re-reads it from disk. Used after
 ## something edits a .tres at runtime.
-func reload(id: String) -> PokemonData:
+func reload(id: String) -> PokemonBaseData:
 	_cache.erase(id)
 	return get_pokemon_by_id(id)
 

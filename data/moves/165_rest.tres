@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://diah3u7jxxikq" path="res://assets/icons/attacks/165_rest.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Rest"
+description = "在原地睡觉，从而大大地回复自己的体力。"
+type = 1
+category = 2
+power = 0
+cooldown = 9.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

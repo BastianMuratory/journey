@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dm4sd81iyjh6m" path="res://assets/icons/attacks/223_dizzy_punch.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Dizzy Punch"
+description = "向前方的敌人挥出充满迷惑性的一拳，有较高概率会让敌人陷入混乱状态。"
+type = 1
+category = 0
+power = 275
+cooldown = 5.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

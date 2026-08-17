@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://d146w6u4xle2k" path="res://assets/pokemons/0058_growlithe/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://dg61wg5vpiu7y" path="res://assets/pokemons/0058_growlithe/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Resource" path="res://data/pokemon_base_data/0059_arcanine.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://bmwpk4ui040td" path="res://assets/pokemons/0058_growlithe/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://2yeeim02xn7p" path="res://assets/pokemons/0058_growlithe/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://c62lhenrx3rbj" path="res://assets/pokemons/0058_growlithe/preview_shiny.png" id="7_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 58
+display_name = "Growlithe"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
+evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+body_type = 1
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 10
+type2 = 0
+base_hp = 55
+base_attack = 70
+base_defense = 45
+base_special_attack = 70
+base_special_defense = 50
+base_speed = 60
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

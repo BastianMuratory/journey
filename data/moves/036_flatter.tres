@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cblmb5oq3pomt" path="res://assets/icons/attacks/036_flatter.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Flatter"
+description = "吹捧自己前方的敌人，可能使其陷入混乱状态，有时会提高敌人的伤害。"
+type = 17
+category = 2
+power = 0
+cooldown = 6.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

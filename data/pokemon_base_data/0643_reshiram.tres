@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://1ulldl1jay16" path="res://assets/pokemons/0643_reshiram/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://b54a4emljr00a" path="res://assets/pokemons/0643_reshiram/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://bq0wyy8377ota" path="res://assets/pokemons/0643_reshiram/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://c8873ps3hq68k" path="res://assets/pokemons/0643_reshiram/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://c76kp55k2ktws" path="res://assets/pokemons/0643_reshiram/preview_shiny.png" id="6_preview_shiny"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 643
+display_name = "Reshiram"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 16
+type2 = 10
+base_hp = 100
+base_attack = 120
+base_defense = 100
+base_special_attack = 150
+base_special_defense = 120
+base_speed = 90
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

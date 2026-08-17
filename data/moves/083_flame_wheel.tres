@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bx72b0m0bci7r" path="res://assets/icons/attacks/083_flame_wheel.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Flame Wheel"
+description = "让火焰覆盖全身，猛撞前方的敌人。被撞到的敌人会受到伤害，有时会让敌人陷入灼伤状态。"
+type = 10
+category = 0
+power = 350
+cooldown = 6.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

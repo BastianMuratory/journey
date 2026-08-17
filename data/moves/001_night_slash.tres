@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3 uid="uid://cltcgmvwpbuy3"]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dsoihvt646co6" path="res://assets/icons/attacks/001_night_slash.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Night Slash"
+description = "向前方冲撞，切斩周围的敌人，使其受到伤害。容易击中要害。"
+type = 17
+category = 0
+power = 300
+wait_time = 5.0
+hit_repeat = 1
+spread = 0
+effect_duration = 0.0
+cooldown = 5.0
+icon = ExtResource("2_icon")
+model = ""
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://wkrp35hh7qff" path="res://assets/pokemons/0472_gliscor/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://bxopei1n5c15s" path="res://assets/pokemons/0472_gliscor/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://citsappvguu88" path="res://assets/pokemons/0472_gliscor/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://e7rffloiy7r0" path="res://assets/pokemons/0472_gliscor/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://by1pmrur6dsa7" path="res://assets/pokemons/0472_gliscor/preview_shiny.png" id="6_preview_shiny"]
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 472
+display_name = "Gliscor"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 3
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.4
+type1 = 5
+type2 = 3
+base_hp = 75
+base_attack = 95
+base_defense = 125
+base_special_attack = 45
+base_special_defense = 75
+base_speed = 95
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

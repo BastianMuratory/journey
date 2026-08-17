@@ -3,7 +3,7 @@ extends Node3D
 ## Animation sandbox and tuning editor. Not part of the game -- pick
 ## ANIMATION TEST on the main menu, or open this scene and press F6.
 ##
-## Every species with a [PokemonData] shows up in the list on the right, forms
+## Every species with a [PokemonBaseData] shows up in the list on the right, forms
 ## and costumes included. Everything is on the keyboard so you can keep one hand
 ## on it and just watch:
 ## [codeblock]
@@ -24,16 +24,16 @@ extends Node3D
 ## Esc            back to the main menu
 ## [/codeblock]
 ##
-## The four tuning keys edit the focused species' [PokemonData] in place, so what
+## The four tuning keys edit the focused species' [PokemonBaseData] in place, so what
 ## you see is exactly what the game will play -- there is no preview multiplier
 ## sitting between the two. In grid mode the focused species is the leftmost one,
 ## the same one B applies to, so there is never any doubt what is being edited.
 ##
-## Edits are held in memory until Ctrl+S, which writes them to two places: the
-## species' own .tres so the game picks them up immediately, and
-## data/body_type_overrides.json so that re-running
-## tools/classify_body_types.py will not undo your work. R puts a species back to
-## what is on disk, however many nudges ago that was.
+## Edits are held in memory until Ctrl+S, which writes them into the species' own
+## .tres -- the four tuned fields, plus [code]anim_tuned = true[/code], which is
+## what stops tools/classify_body_types.py and tools/generate_pokemon_data.py from
+## recomputing them on a later run. R puts a species back to what is on disk,
+## however many nudges ago that was.
 
 ## How many species stand side by side in grid mode.
 const GRID_COUNT := 6
@@ -44,7 +44,7 @@ const PAGE_STRIDE := 25
 ## How long a status message stays on screen.
 const MESSAGE_SECONDS := 4.0
 
-## Nudge sizes, matching the @export_range steps on [PokemonData] so a value
+## Nudge sizes, matching the @export_range steps on [PokemonBaseData] so a value
 ## tuned here is one the inspector can also express.
 const SPEED_STEP := 0.05
 const AMPLITUDE_STEP := 0.05
@@ -53,17 +53,18 @@ const HOVER_STEP := 0.02
 const COARSE_STEP := 5.0
 
 ## The fields Ctrl+S writes, and the ones R puts back. Kept in one place because
-## the baseline snapshot, the revert and the overrides file must agree on them.
+## the baseline snapshot and the revert must agree on them.
 const TUNED_FIELDS := [
 	"body_type", "anim_speed_scale", "anim_amplitude", "hover_height",
 ]
+## Written alongside [constant TUNED_FIELDS] on save, and inserted if the file has
+## no line for it yet. Mirrors PokemonBaseData.anim_tuned, and is read by
+## tools/classify_body_types.py as its do-not-touch marker.
+const TUNED_FLAG_FIELD := "anim_tuned"
 
 const POKEMON_MODEL_SCENE := preload("res://pokemon/pokemon_model.tscn")
 const MAIN_MENU_SCENE := "res://game_scenes/main_menu/main_menu.tscn"
-const DATA_DIR := "res://data/pokemon/"
-## Read by tools/classify_body_types.py, which treats it as the highest-priority
-## source for every field in [constant TUNED_FIELDS].
-const OVERRIDES_PATH := "res://data/body_type_overrides.json"
+const DATA_DIR := "res://data/pokemon_base_data/"
 
 @onready var _camera: Camera3D = $Camera3D
 
@@ -76,7 +77,7 @@ var _index := 0
 ## id -> {dex: int, name: String, body: int}.
 ##
 ## Read straight out of the .tres text rather than through the registry, because
-## loading a PokemonData pulls its mesh in with it -- and a 410-row list that
+## loading a PokemonBaseData pulls its mesh in with it -- and a 410-row list that
 ## loaded 410 models to draw itself would take seconds and hundreds of MB. The
 ## registry stays lazy; only the species actually on screen get loaded.
 var _meta: Dictionary[String, Dictionary] = {}
@@ -88,7 +89,7 @@ var _grid := false
 ## just before its first edit of the session.
 ##
 ## Being in here means "has unsaved edits" -- the current values are not copied,
-## they live on the [PokemonData] itself, which is what the spawned Pokémon and
+## they live on the [PokemonBaseData] itself, which is what the spawned Pokémon and
 ## the save both read. Keeping only the baseline means R can undo a whole run of
 ## nudges exactly, with no drift.
 var _pending: Dictionary[String, Dictionary] = {}
@@ -182,7 +183,7 @@ func _meta_of(id: String) -> Dictionary:
 
 
 func _body_name(body: int) -> String:
-	var names: Array = PokemonData.BodyType.keys()
+	var names: Array = PokemonBaseData.BodyType.keys()
 	return names[body] if body >= 0 and body < names.size() else "?"
 
 
@@ -383,7 +384,7 @@ func _focused_id() -> String:
 
 
 ## Moves one float field on the focused species by [param direction] steps,
-## clamped to the same range [PokemonData] exports.
+## clamped to the same range [PokemonBaseData] exports.
 func _nudge(field: String, direction: int, step: float, low: float, high: float,
 		coarse: bool) -> void:
 	var id := _focused_id()
@@ -411,18 +412,18 @@ func _cycle_body_type(step: int) -> void:
 		return
 
 	_snapshot(id, data)
-	var count: int = PokemonData.BodyType.keys().size()
+	var count: int = PokemonBaseData.BodyType.keys().size()
 	data.body_type = wrapi(int(data.body_type) + step, 0, count)
 	# A species that just became a flier needs somewhere to fly. Body type and
 	# resting altitude move together; tune the altitude with , and . afterwards.
-	data.hover_height = PokemonData.default_hover_height(data.body_type)
+	data.hover_height = PokemonBaseData.default_hover_height(data.body_type)
 
 	# The pivot height depends on body type, so the model has to be re-measured.
 	_after_edit(id, true)
 
 
 ## Records what a species looked like on disk, once, before its first edit.
-func _snapshot(id: String, data: PokemonData) -> void:
+func _snapshot(id: String, data: PokemonBaseData) -> void:
 	if _pending.has(id):
 		return
 	var baseline: Dictionary = {}
@@ -450,7 +451,7 @@ func _after_edit(id: String, reshape := false) -> void:
 	_refresh_list_row(id)
 
 
-## Pushes each spawned Pokémon's tuning back out of its [PokemonData], which the
+## Pushes each spawned Pokémon's tuning back out of its [PokemonBaseData], which the
 ## edits above have already changed in place.
 func _sync_animators() -> void:
 	for pokemon in _spawned:
@@ -535,7 +536,6 @@ func _save_edits() -> void:
 			continue
 		saved += 1
 
-	var wrote_overrides := _write_overrides()
 	_pending.clear()
 	_exit_armed = false
 	_rebuild_list_labels()
@@ -544,14 +544,18 @@ func _save_edits() -> void:
 	var note := "saved %d species" % saved
 	if failed > 0:
 		note += ", %d failed" % failed
-	if not wrote_overrides:
-		note += " (overrides file not written)"
 	_show_message(note)
 
 
 ## Writes this species' [constant TUNED_FIELDS] into its .tres by replacing those
-## four lines and leaving every other byte alone. False, with a pushed error, if
-## the file cannot be read, is missing one of the fields, or cannot be written.
+## four lines and leaving every other byte alone, then sets
+## [constant TUNED_FLAG_FIELD] so the tools stop recomputing them. False, with a
+## pushed error, if the file cannot be read, is missing one of the four fields, or
+## cannot be written.
+##
+## The flag line is inserted when the file has none, which is the case for every
+## species the first time it is tuned -- and again if Godot ever rewrites the file
+## and drops the line for sitting at its default.
 ##
 ## Deliberately not [method ResourceSaver.save]. That rebuilds the whole file
 ## from the in-memory resource and drops the [code]uid="uid://..."[/code] off
@@ -559,7 +563,7 @@ func _save_edits() -> void:
 ## reachable only by their paths -- so a later asset move breaks the species
 ## silently instead of following it. Patching lines in place keeps the uids, the
 ## field order and the evolution links exactly as they are.
-func _patch_tres(path: String, data: PokemonData) -> bool:
+func _patch_tres(path: String, data: PokemonBaseData) -> bool:
 	var text := FileAccess.get_file_as_string(path)
 	if text.is_empty():
 		push_error("AnimationTest: could not read %s" % path)
@@ -574,6 +578,10 @@ func _patch_tres(path: String, data: PokemonData) -> bool:
 	var lines := text.split("\n")
 	var written: Dictionary[String, bool] = {}
 	var in_resource := false
+	## Where the flag already sits, and where to put it if it does not: straight
+	## after the last of the four fields, keeping the group together.
+	var flag_index := -1
+	var last_field_index := -1
 
 	for i in lines.size():
 		var line := lines[i]
@@ -588,10 +596,14 @@ func _patch_tres(path: String, data: PokemonData) -> bool:
 		if equals < 0:
 			continue
 		var field := line.substr(0, equals).strip_edges()
+		if field == TUNED_FLAG_FIELD and flag_index < 0:
+			flag_index = i
+			continue
 		if not wanted.has(field) or written.has(field):
 			continue
 		lines[i] = wanted[field]
 		written[field] = true
+		last_field_index = i
 
 	# A missing field means the file is not shaped the way we think it is, so
 	# write nothing rather than a half-updated species.
@@ -604,51 +616,17 @@ func _patch_tres(path: String, data: PokemonData) -> bool:
 			% [path, ", ".join(missing)])
 		return false
 
+	var flag_line := "%s = true" % TUNED_FLAG_FIELD
+	if flag_index >= 0:
+		lines[flag_index] = flag_line
+	else:
+		lines.insert(last_field_index + 1, flag_line)
+
 	var file := FileAccess.open(path, FileAccess.WRITE)
 	if file == null:
 		push_error("AnimationTest: could not open %s for writing" % path)
 		return false
 	file.store_string("\n".join(lines))
-	return true
-
-
-## Merges this session's edits into the overrides file, so a later
-## classify_body_types.py run keeps them instead of reverting them.
-func _write_overrides() -> bool:
-	var doc: Dictionary = {}
-	if FileAccess.file_exists(OVERRIDES_PATH):
-		var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(OVERRIDES_PATH))
-		if parsed is Dictionary:
-			doc = parsed
-
-	var species: Dictionary = {}
-	if doc.get("species") is Dictionary:
-		species = doc["species"]
-
-	for id: String in _pending:
-		var data := PokemonRegistry.get_pokemon_by_id(id)
-		if data == null:
-			continue
-		# All four fields go in, not just the ones that moved: the point of an
-		# entry here is to pin down exactly what you saw on screen, and a partial
-		# one would let the script's tables fill in the rest on the next run.
-		species[id] = {
-			"body_type": _body_name(data.body_type),
-			"anim_speed_scale": data.anim_speed_scale,
-			"anim_amplitude": data.anim_amplitude,
-			"hover_height": data.hover_height,
-		}
-
-	doc["_comment"] = ("Hand edits from the animation test scene, keyed by species id. "
-		+ "tools/classify_body_types.py reads this first and will not overwrite "
-		+ "anything listed here.")
-	doc["species"] = species
-
-	var file := FileAccess.open(OVERRIDES_PATH, FileAccess.WRITE)
-	if file == null:
-		push_error("AnimationTest: could not open %s for writing" % OVERRIDES_PATH)
-		return false
-	file.store_string(JSON.stringify(doc, "  ") + "\n")
 	return true
 
 
@@ -862,7 +840,7 @@ func _refresh_info() -> void:
 
 ## "  (was 1.00)" for a field edited this session, "" for one still at its
 ## on-disk value -- so you can always see how far you have moved it, and back.
-func _was(data: PokemonData, baseline: Dictionary, field: String) -> String:
+func _was(data: PokemonBaseData, baseline: Dictionary, field: String) -> String:
 	if not baseline.has(field):
 		return ""
 	var before := float(baseline[field])

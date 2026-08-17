@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://o27lsv1c40b" path="res://assets/icons/attacks/064_rage_powder.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Rage Powder"
+description = "将令人烦躁的粉末撒在自己身上，使周围敌人的目标全部指向自己。"
+type = 7
+category = 2
+power = 0
+cooldown = 2.0
+icon = ExtResource("2_icon")
+metadata/_custom_type_script = "uid://w4mirlxnd1bt"
