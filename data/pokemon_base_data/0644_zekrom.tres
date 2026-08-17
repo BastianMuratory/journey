@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=15 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://kg1coay4abab" path="res://assets/pokemons/0644_zekrom/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://26mos2705733" path="res://assets/pokemons/0644_zekrom/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://b5p2m8keewjcx" path="res://assets/pokemons/0644_zekrom/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://c0ekdcg7ynnfl" path="res://assets/pokemons/0644_zekrom/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://vfyhkuf70iik" path="res://assets/pokemons/0644_zekrom/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/195_zen_headbutt.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/016_thunder_fang.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/038_thunder.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/117_dragon_claw.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/157_thunderbolt.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/194_crunch.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/131_outrage.tres" id="907_lm"]
 
 
 [resource]
@@ -30,4 +38,5 @@ base_defense = 120
 base_special_attack = 120
 base_special_defense = 100
 base_speed = 90
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

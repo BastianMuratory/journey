@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=16 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cw133rceq7jda" path="res://assets/pokemons/0084_doduo/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cod4r38avq3qj" path="res://assets/pokemons/0084_doduo/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://bkwprwnr7yf3e" path="res://assets/pokemons/0084_doduo/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://cw8go45xoufpf" path="res://assets/pokemons/0084_doduo/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://6bvqkovmfhfc" path="res://assets/pokemons/0084_doduo/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/046_leer.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/070_agility.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/093_swords_dance.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/095_growl.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/214_drill_peck.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/125_lunge.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/149_tri_attack.tres" id="907_lm"]
 
 
 [resource]
@@ -32,4 +40,5 @@ base_defense = 45
 base_special_attack = 35
 base_special_defense = 35
 base_speed = 75
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

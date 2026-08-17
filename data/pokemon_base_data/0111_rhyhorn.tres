@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=21 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://nury507jqjic" path="res://assets/pokemons/0111_rhyhorn/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://c044sb7kyk8jo" path="res://assets/pokemons/0111_rhyhorn/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,19 @@
 [ext_resource type="Texture2D" uid="uid://cuum718ca5n3a" path="res://assets/pokemons/0111_rhyhorn/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://bwq2sthnkp5yi" path="res://assets/pokemons/0111_rhyhorn/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://conmubq2rac8v" path="res://assets/pokemons/0111_rhyhorn/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/046_leer.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/170_rock_smash.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/127_take_down.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/212_tackle.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/023_stomp.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/123_rock_throw.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/048_earthquake.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/190_rock_blast.tres" id="908_lm"]
+[ext_resource type="Resource" path="res://data/moves/092_stone_edge.tres" id="909_lm"]
+[ext_resource type="Resource" path="res://data/moves/197_stealth_rock.tres" id="910_lm"]
+[ext_resource type="Resource" path="res://data/moves/207_giga_impact.tres" id="911_lm"]
+[ext_resource type="Resource" path="res://data/moves/026_megahorn.tres" id="912_lm"]
 
 
 [resource]
@@ -32,4 +45,5 @@ base_defense = 95
 base_special_attack = 30
 base_special_defense = 30
 base_speed = 25
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm"), ExtResource("909_lm"), ExtResource("910_lm"), ExtResource("911_lm"), ExtResource("912_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

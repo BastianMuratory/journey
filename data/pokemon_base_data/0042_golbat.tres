@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=18 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cn3ariad363c3" path="res://assets/pokemons/0042_golbat/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://bwv8saf4iso4k" path="res://assets/pokemons/0042_golbat/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,17 @@
 [ext_resource type="Texture2D" uid="uid://b2c5abfojspvn" path="res://assets/pokemons/0042_golbat/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://bu23roeinwcwu" path="res://assets/pokemons/0042_golbat/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://dw2uca4rc3dmm" path="res://assets/pokemons/0042_golbat/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/029_supersonic.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/035_whirlwind.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/037_hypnosis.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/140_confuse_ray.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/108_toxic.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/142_gust.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/102_astonish.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/063_air_slash.tres" id="908_lm"]
+[ext_resource type="Resource" path="res://data/moves/187_leech_life.tres" id="909_lm"]
+[ext_resource type="Resource" path="res://data/moves/194_crunch.tres" id="910_lm"]
 
 [resource]
 script = ExtResource("3_script")
@@ -29,4 +40,5 @@ base_defense = 70
 base_special_attack = 65
 base_special_defense = 75
 base_speed = 90
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm"), ExtResource("909_lm"), ExtResource("910_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

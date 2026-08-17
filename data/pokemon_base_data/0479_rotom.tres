@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=16 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://tk2nxbbauvu2" path="res://assets/pokemons/0479_rotom/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://f13a5hied4sr" path="res://assets/pokemons/0479_rotom/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://dve5gu0c77rqp" path="res://assets/pokemons/0479_rotom/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://by1x3t60ky0m3" path="res://assets/pokemons/0479_rotom/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://ig2m5ixqr3gx" path="res://assets/pokemons/0479_rotom/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/034_charge.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/140_confuse_ray.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/174_substitute.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/050_thunder_shock.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/102_astonish.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/038_thunder.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/002_shadow_ball.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/157_thunderbolt.tres" id="908_lm"]
 
 [resource]
 script = ExtResource("3_script")
@@ -31,4 +40,5 @@ base_defense = 77
 base_special_attack = 95
 base_special_defense = 77
 base_speed = 91
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

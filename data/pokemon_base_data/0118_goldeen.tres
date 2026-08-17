@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=15 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://s8ptxoh1oxhn" path="res://assets/pokemons/0118_goldeen/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cuoe3wqwh5063" path="res://assets/pokemons/0118_goldeen/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://ctdmfinyrh3mh" path="res://assets/pokemons/0118_goldeen/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://bca5k1deoswa8" path="res://assets/pokemons/0118_goldeen/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://bosbu1m27o558" path="res://assets/pokemons/0118_goldeen/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/029_supersonic.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/070_agility.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/162_aqua_ring.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/211_flail.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/132_waterfall.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/026_megahorn.tres" id="906_lm"]
 
 
 [resource]
@@ -32,4 +39,5 @@ base_defense = 60
 base_special_attack = 35
 base_special_defense = 50
 base_speed = 63
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

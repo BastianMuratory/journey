@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3 uid="uid://b3ojwq4vgmyjq"]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=13 format=3 uid="uid://b3ojwq4vgmyjq"]
 
 [ext_resource type="ArrayMesh" uid="uid://d1rvv20ag2x16" path="res://assets/pokemons/0014_kakuna/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://b5rd6n1s3vkkn" path="res://assets/pokemons/0014_kakuna/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://cswuyrkci1doo" path="res://assets/pokemons/0014_kakuna/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://d3tc7r7n3wu0o" path="res://assets/pokemons/0014_kakuna/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://blmc7xnrn8kii" path="res://assets/pokemons/0014_kakuna/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/010_harden.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/177_iron_defense.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/180_string_shot.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/052_electroweb.tres" id="904_lm"]
 
 
 [resource]
@@ -32,4 +37,5 @@ base_defense = 50
 base_special_attack = 25
 base_special_defense = 25
 base_speed = 35
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

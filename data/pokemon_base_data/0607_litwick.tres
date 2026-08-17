@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=17 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://clg5q8e5d4ybu" path="res://assets/pokemons/0607_litwick/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://dyevctaccrpud" path="res://assets/pokemons/0607_litwick/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,15 @@
 [ext_resource type="Texture2D" uid="uid://c1v2a2nhonxx3" path="res://assets/pokemons/0607_litwick/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://bvcpfdawghxa2" path="res://assets/pokemons/0607_litwick/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://b0y0y882u6u38" path="res://assets/pokemons/0607_litwick/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/140_confuse_ray.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/075_will_o_wisp.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/082_ember.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/085_fire_spin.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/213_smog.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/102_astonish.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/002_shadow_ball.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/221_overheat.tres" id="908_lm"]
 
 
 [resource]
@@ -32,4 +41,5 @@ base_defense = 55
 base_special_attack = 65
 base_special_defense = 55
 base_speed = 20
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -1,8 +1,16 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=12 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cl4oj88q8q13l" path="res://assets/pokemons/0978_tatsugiri_droopy/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://de226a40v15nq" path="res://assets/pokemons/0978_tatsugiri_droopy/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/010_harden.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/074_nasty_plot.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/107_mirror_coat.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/176_taunt.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/202_splash.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/118_dragon_pulse.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/032_muddy_water.tres" id="907_lm"]
 
 
 [resource]
@@ -24,4 +32,5 @@ base_defense = 60
 base_special_attack = 120
 base_special_defense = 95
 base_speed = 82
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

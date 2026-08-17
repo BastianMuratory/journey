@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=16 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://naf566yl2m37" path="res://assets/pokemons/0707_klefki/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://db0w4sw0g5er3" path="res://assets/pokemons/0707_klefki/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://dpsbca0dvg1iy" path="res://assets/pokemons/0707_klefki/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://c2sopib6uww3r" path="res://assets/pokemons/0707_klefki/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://kdypwxhkb5q2" path="res://assets/pokemons/0707_klefki/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/097_metal_sound.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/212_tackle.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/148_spikes.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/139_foul_play.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/186_draining_kiss.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/102_astonish.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/188_play_rough.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/091_flash_cannon.tres" id="908_lm"]
 
 
 [resource]
@@ -30,4 +39,5 @@ base_defense = 91
 base_special_attack = 80
 base_special_defense = 87
 base_speed = 75
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

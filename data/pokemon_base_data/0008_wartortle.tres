@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=15 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cgq0qgr6b4fr6" path="res://assets/pokemons/0008_wartortle/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://btu2pfp8wmeg4" path="res://assets/pokemons/0008_wartortle/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://8t3ags1yboxa" path="res://assets/pokemons/0008_wartortle/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://rqnjv1623ow1" path="res://assets/pokemons/0008_wartortle/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://ba0gbsw7meu7e" path="res://assets/pokemons/0008_wartortle/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/171_withdraw.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/177_iron_defense.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/220_rain_dance.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/133_bubble.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/212_tackle.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/164_hydro_pump.tres" id="906_lm"]
 
 
 [resource]
@@ -32,4 +39,5 @@ base_defense = 80
 base_special_attack = 65
 base_special_defense = 80
 base_speed = 58
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

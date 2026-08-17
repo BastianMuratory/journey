@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=13 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://chi22ag0hk3qw" path="res://assets/pokemons/0487_giratina/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://brxim40ba47ym" path="res://assets/pokemons/0487_giratina/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://dssdbyhw2mtx3" path="res://assets/pokemons/0487_giratina/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://da3hnb0nha8mc" path="res://assets/pokemons/0487_giratina/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://bohekmnadaqe0" path="res://assets/pokemons/0487_giratina/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/004_shadow_claw.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/042_earth_power.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/117_dragon_claw.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/119_aura_sphere.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/183_shadow_force.tres" id="905_lm"]
 
 
 [resource]
@@ -32,4 +38,5 @@ base_defense = 120
 base_special_attack = 100
 base_special_defense = 120
 base_speed = 90
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

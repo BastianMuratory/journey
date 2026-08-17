@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=15 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cj3tjvprr7nq5" path="res://assets/pokemons/0342_crawdaunt/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://xr1xw1ms00o8" path="res://assets/pokemons/0342_crawdaunt/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://bskm801bo31q0" path="res://assets/pokemons/0342_crawdaunt/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://du86uelineihf" path="res://assets/pokemons/0342_crawdaunt/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://cxg46kc7e8trf" path="res://assets/pokemons/0342_crawdaunt/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/010_harden.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/046_leer.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/093_swords_dance.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/176_taunt.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/133_bubble.tres" id="905_lm"]
+[ext_resource type="Resource" uid="uid://cltcgmvwpbuy3" path="res://data/moves/001_night_slash.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/194_crunch.tres" id="907_lm"]
 
 
 [resource]
@@ -30,4 +38,5 @@ base_defense = 85
 base_special_attack = 90
 base_special_defense = 55
 base_speed = 55
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=17 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://ceq0f8ohyqnov" path="res://assets/pokemons/0331_cacnea/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cgu7uh86tolmk" path="res://assets/pokemons/0331_cacnea/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,15 @@
 [ext_resource type="Texture2D" uid="uid://nqwm64aogbn3" path="res://assets/pokemons/0331_cacnea/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://clbeq3jdggx0h" path="res://assets/pokemons/0331_cacnea/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://cpq8okvqtivad" path="res://assets/pokemons/0331_cacnea/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/046_leer.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/150_sandstorm.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/148_spikes.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/055_poison_sting.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/056_pin_missile.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/179_sucker_punch.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/209_bullet_seed.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/090_leech_seed.tres" id="908_lm"]
 
 
 [resource]
@@ -32,4 +41,5 @@ base_defense = 40
 base_special_attack = 85
 base_special_defense = 40
 base_speed = 35
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

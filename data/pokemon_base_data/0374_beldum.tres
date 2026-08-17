@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=13 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://xquea0y08ig4" path="res://assets/pokemons/0374_beldum/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cpp7hjyiq8uon" path="res://assets/pokemons/0374_beldum/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://b4ysw2hpansvm" path="res://assets/pokemons/0374_beldum/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://4cx50xq37kqb" path="res://assets/pokemons/0374_beldum/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://x5gou573cu4x" path="res://assets/pokemons/0374_beldum/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/177_iron_defense.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/127_take_down.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/212_tackle.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/033_iron_head.tres" id="904_lm"]
 
 
 [resource]
@@ -32,4 +37,5 @@ base_defense = 80
 base_special_attack = 35
 base_special_defense = 60
 base_speed = 30
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

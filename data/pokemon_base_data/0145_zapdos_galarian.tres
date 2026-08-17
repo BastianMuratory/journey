@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=15 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://bshnguoxg27kt" path="res://assets/pokemons/0145_zapdos_galarian/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://481xh1jm154e" path="res://assets/pokemons/0145_zapdos_galarian/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://book45o0xm7ux" path="res://assets/pokemons/0145_zapdos_galarian/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://vnr3126m5tar" path="res://assets/pokemons/0145_zapdos_galarian/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://cb5jxqr1ljyw1" path="res://assets/pokemons/0145_zapdos_galarian/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/070_agility.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/073_light_screen.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/094_bulk_up.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/110_focus_energy.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/170_rock_smash.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/214_drill_peck.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/101_close_combat.tres" id="907_lm"]
 
 
 [resource]
@@ -30,4 +38,5 @@ base_defense = 90
 base_special_attack = 85
 base_special_defense = 90
 base_speed = 100
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

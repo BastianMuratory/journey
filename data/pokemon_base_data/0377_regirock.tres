@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=14 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://bf0mqlsswch3q" path="res://assets/pokemons/0377_regirock/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://c5dpi6juib4jd" path="res://assets/pokemons/0377_regirock/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://bu718ww34fbe6" path="res://assets/pokemons/0377_regirock/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://gnlyw7bwa8ol" path="res://assets/pokemons/0377_regirock/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://dpnuc2rom54ec" path="res://assets/pokemons/0377_regirock/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/177_iron_defense.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/023_stomp.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/123_rock_throw.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/092_stone_edge.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/138_hyper_beam.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/041_explosion.tres" id="906_lm"]
 
 
 [resource]
@@ -30,4 +37,5 @@ base_defense = 200
 base_special_attack = 50
 base_special_defense = 100
 base_speed = 50
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

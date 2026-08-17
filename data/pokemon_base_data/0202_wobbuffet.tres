@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=12 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://gno0riy6ickg" path="res://assets/pokemons/0202_wobbuffet/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://ceoak3ffeb64i" path="res://assets/pokemons/0202_wobbuffet/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://diwdcaa3oa4wh" path="res://assets/pokemons/0202_wobbuffet/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://calu2jy34t6qr" path="res://assets/pokemons/0202_wobbuffet/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://o673h1kssv81" path="res://assets/pokemons/0202_wobbuffet/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/107_mirror_coat.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/147_charm.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/167_amnesia.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/202_splash.tres" id="904_lm"]
 
 
 [resource]
@@ -30,4 +35,5 @@ base_defense = 58
 base_special_attack = 33
 base_special_defense = 58
 base_speed = 33
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

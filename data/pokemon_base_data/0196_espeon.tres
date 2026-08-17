@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=16 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://c1mnl0p7tyes1" path="res://assets/pokemons/0196_espeon/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://d4k0lxcaphof0" path="res://assets/pokemons/0196_espeon/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://cod0wx3bydrf8" path="res://assets/pokemons/0196_espeon/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://c1m4x5w6m05cm" path="res://assets/pokemons/0196_espeon/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://yjgb8k7olii4" path="res://assets/pokemons/0196_espeon/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/095_growl.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/147_charm.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/172_calm_mind.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/127_take_down.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/212_tackle.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/079_psybeam.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/015_future_sight.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/106_psychic.tres" id="908_lm"]
 
 
 [resource]
@@ -30,4 +39,5 @@ base_defense = 60
 base_special_attack = 130
 base_special_defense = 95
 base_speed = 110
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

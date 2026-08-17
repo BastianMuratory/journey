@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=16 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://i2esfegr2gie" path="res://assets/pokemons/0279_pelipper/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cwglr5f6axan4" path="res://assets/pokemons/0279_pelipper/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://g44kk11vqeg2" path="res://assets/pokemons/0279_pelipper/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://wso3fytf8eqx" path="res://assets/pokemons/0279_pelipper/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://cmtisy6oyxepo" path="res://assets/pokemons/0279_pelipper/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/029_supersonic.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/070_agility.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/095_growl.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/166_tailwind.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/199_roost.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/063_air_slash.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/006_hurricane.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/164_hydro_pump.tres" id="908_lm"]
 
 [resource]
 script = ExtResource("3_script")
@@ -29,4 +38,5 @@ base_defense = 100
 base_special_attack = 95
 base_special_defense = 70
 base_speed = 65
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

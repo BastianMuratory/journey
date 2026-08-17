@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=12 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://bqkn0y2uthneh" path="res://assets/pokemons/0251_celebi/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cdcdcsjftxrxk" path="res://assets/pokemons/0251_celebi/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://cfd1fupi2jvcl" path="res://assets/pokemons/0251_celebi/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://cqfyfiymk2thn" path="res://assets/pokemons/0251_celebi/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://cm7jnmcj3q2lt" path="res://assets/pokemons/0251_celebi/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/218_recover.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/060_leaf_storm.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/090_leech_seed.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/015_future_sight.tres" id="904_lm"]
 
 [resource]
 script = ExtResource("3_script")
@@ -29,4 +34,5 @@ base_defense = 100
 base_special_attack = 100
 base_special_defense = 100
 base_speed = 100
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

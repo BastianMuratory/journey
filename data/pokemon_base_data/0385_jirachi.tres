@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=13 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://c2ayoxx42k8du" path="res://assets/pokemons/0385_jirachi/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://dim2ijccwmtcv" path="res://assets/pokemons/0385_jirachi/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://bxjmxkls07rq0" path="res://assets/pokemons/0385_jirachi/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://h5s1itsx4jp2" path="res://assets/pokemons/0385_jirachi/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://dpp4v5hlf6dlo" path="res://assets/pokemons/0385_jirachi/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/165_rest.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/168_cosmic_power.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/195_zen_headbutt.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/015_future_sight.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/106_psychic.tres" id="905_lm"]
 
 
 [resource]
@@ -30,4 +36,5 @@ base_defense = 100
 base_special_attack = 100
 base_special_defense = 100
 base_speed = 100
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

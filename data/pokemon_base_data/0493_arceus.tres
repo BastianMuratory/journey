@@ -1,10 +1,19 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=6 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=15 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://dcfkdnw01kwyd" path="res://assets/pokemons/0493_arceus/model.obj" id="1_mesh"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
 [ext_resource type="Texture2D" uid="uid://cdahey63fhsik" path="res://assets/pokemons/0493_arceus/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://cbbw3gqdfusig" path="res://assets/pokemons/0493_arceus/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://ch6m2b624l4mt" path="res://assets/pokemons/0493_arceus/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/168_cosmic_power.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/172_calm_mind.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/218_recover.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/155_extreme_speed.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/015_future_sight.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/042_earth_power.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/138_hyper_beam.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/057_judgment.tres" id="908_lm"]
 
 
 [resource]
@@ -28,4 +37,5 @@ base_defense = 120
 base_special_attack = 120
 base_special_defense = 120
 base_speed = 120
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

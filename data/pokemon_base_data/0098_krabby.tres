@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=17 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cgx7mgv8rl0qe" path="res://assets/pokemons/0098_krabby/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://nv6mw70ohswl" path="res://assets/pokemons/0098_krabby/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,15 @@
 [ext_resource type="Texture2D" uid="uid://dtg73l2rlnpdv" path="res://assets/pokemons/0098_krabby/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://co2qklexcc153" path="res://assets/pokemons/0098_krabby/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://54jm1aypd0i3" path="res://assets/pokemons/0098_krabby/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/010_harden.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/046_leer.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/093_swords_dance.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/211_flail.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/133_bubble.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/160_slam.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/023_stomp.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/098_metal_claw.tres" id="908_lm"]
 
 
 [resource]
@@ -32,4 +41,5 @@ base_defense = 90
 base_special_attack = 25
 base_special_defense = 25
 base_speed = 50
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

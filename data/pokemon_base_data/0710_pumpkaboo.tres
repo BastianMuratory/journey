@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=15 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://c2t6v2r5evm1d" path="res://assets/pokemons/0710_pumpkaboo/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cg5db0uulf3t5" path="res://assets/pokemons/0710_pumpkaboo/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://0os4fp4wdp2g" path="res://assets/pokemons/0710_pumpkaboo/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://b2tae0dxcnwh8" path="res://assets/pokemons/0710_pumpkaboo/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://cncg4cdt8ukku" path="res://assets/pokemons/0710_pumpkaboo/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/140_confuse_ray.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/062_razor_leaf.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/209_bullet_seed.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/102_astonish.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/090_leech_seed.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/002_shadow_ball.tres" id="906_lm"]
 
 
 [resource]
@@ -32,4 +39,5 @@ base_defense = 70
 base_special_attack = 44
 base_special_defense = 55
 base_speed = 51
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

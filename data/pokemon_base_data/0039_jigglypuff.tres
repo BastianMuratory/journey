@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=18 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://bbfb7vdek73g7" path="res://assets/pokemons/0039_jigglypuff/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://bv7qr1vvt5nqx" path="res://assets/pokemons/0039_jigglypuff/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,16 @@
 [ext_resource type="Texture2D" uid="uid://dx1q8kmkkxb6s" path="res://assets/pokemons/0039_jigglypuff/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://cxk11cu7aii7h" path="res://assets/pokemons/0039_jigglypuff/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://cf6pktlvelhvw" path="res://assets/pokemons/0039_jigglypuff/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/025_sing.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/147_charm.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/165_rest.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/175_sweet_kiss.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/181_gyro_ball.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/076_rollout.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/200_disarming_voice.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/126_body_slam.tres" id="908_lm"]
+[ext_resource type="Resource" path="res://data/moves/188_play_rough.tres" id="909_lm"]
 
 
 [resource]
@@ -32,4 +42,5 @@ base_defense = 20
 base_special_attack = 45
 base_special_defense = 25
 base_speed = 20
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm"), ExtResource("909_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

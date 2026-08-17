@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=24 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://b0v4v5qcc8u5v" path="res://assets/pokemons/0130_gyarados/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://dqs5gkxl2fbu8" path="res://assets/pokemons/0130_gyarados/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,23 @@
 [ext_resource type="Texture2D" uid="uid://5dvib7mhg01m" path="res://assets/pokemons/0130_gyarados/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://dw30pdmllvbim" path="res://assets/pokemons/0130_gyarados/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://cqjtplrp58ca1" path="res://assets/pokemons/0130_gyarados/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/046_leer.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/110_focus_energy.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/121_dragon_dance.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/220_rain_dance.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/202_splash.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/211_flail.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/212_tackle.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/030_whirlpool.tres" id="908_lm"]
+[ext_resource type="Resource" path="res://data/moves/132_waterfall.tres" id="909_lm"]
+[ext_resource type="Resource" path="res://data/moves/116_twister.tres" id="910_lm"]
+[ext_resource type="Resource" path="res://data/moves/006_hurricane.tres" id="911_lm"]
+[ext_resource type="Resource" path="res://data/moves/014_ice_fang.tres" id="912_lm"]
+[ext_resource type="Resource" path="res://data/moves/138_hyper_beam.tres" id="913_lm"]
+[ext_resource type="Resource" path="res://data/moves/194_crunch.tres" id="914_lm"]
+[ext_resource type="Resource" path="res://data/moves/131_outrage.tres" id="915_lm"]
+[ext_resource type="Resource" path="res://data/moves/164_hydro_pump.tres" id="916_lm"]
 
 
 [resource]
@@ -30,4 +47,5 @@ base_defense = 79
 base_special_attack = 60
 base_special_defense = 100
 base_speed = 81
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm"), ExtResource("909_lm"), ExtResource("910_lm"), ExtResource("911_lm"), ExtResource("912_lm"), ExtResource("913_lm"), ExtResource("914_lm"), ExtResource("915_lm"), ExtResource("916_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

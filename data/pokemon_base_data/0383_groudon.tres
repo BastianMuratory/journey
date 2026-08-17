@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=16 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://sgr8nmgvdpjv" path="res://assets/pokemons/0383_groudon/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cvb1c7lastf8i" path="res://assets/pokemons/0383_groudon/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://chj3mkqro4xwh" path="res://assets/pokemons/0383_groudon/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://osu5nberxw47" path="res://assets/pokemons/0383_groudon/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://c6svlmxudo8x1" path="res://assets/pokemons/0383_groudon/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/094_bulk_up.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/165_rest.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/136_lava_plume.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/042_earth_power.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/048_earthquake.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/043_fire_blast.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/145_solar_beam.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/040_precipice_blades.tres" id="908_lm"]
 
 
 [resource]
@@ -30,4 +39,5 @@ base_defense = 140
 base_special_attack = 100
 base_special_defense = 90
 base_speed = 90
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

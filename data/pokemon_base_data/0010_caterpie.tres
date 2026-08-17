@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3 uid="uid://cx8i3rou74qjw"]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=13 format=3 uid="uid://cx8i3rou74qjw"]
 
 [ext_resource type="Resource" uid="uid://de0o5qm8ole21" path="res://data/pokemon_base_data/0384_rayquaza.tres" id="1_mega"]
 [ext_resource type="ArrayMesh" uid="uid://bqypdn678v6gj" path="res://assets/pokemons/0010_caterpie/model.obj" id="2_mesh"]
@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cetla3rk72l4h" path="res://assets/pokemons/0010_caterpie/icon.png" id="6_icon"]
 [ext_resource type="Texture2D" uid="uid://cje2jq1cem117" path="res://assets/pokemons/0010_caterpie/preview.png" id="7_preview"]
 [ext_resource type="Texture2D" uid="uid://bwoko62qm22w1" path="res://assets/pokemons/0010_caterpie/preview_shiny.png" id="8_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/212_tackle.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/180_string_shot.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/052_electroweb.tres" id="903_lm"]
 
 
 [resource]
@@ -34,4 +38,5 @@ base_defense = 35
 base_special_attack = 20
 base_special_defense = 20
 base_speed = 45
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

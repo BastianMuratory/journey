@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=16 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://2nwcw447giuj" path="res://assets/pokemons/0194_wooper/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://b0an1r8b1rh2v" path="res://assets/pokemons/0194_wooper/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://bn6ck4qswgtfa" path="res://assets/pokemons/0194_wooper/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://c0wmr5jyw1er8" path="res://assets/pokemons/0194_wooper/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://bhqngxhnyn2uc" path="res://assets/pokemons/0194_wooper/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/167_amnesia.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/220_rain_dance.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/160_slam.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/108_toxic.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/032_muddy_water.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/130_mud_bomb.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/048_earthquake.tres" id="907_lm"]
 
 
 [resource]
@@ -33,4 +41,5 @@ base_defense = 45
 base_special_attack = 25
 base_special_defense = 25
 base_speed = 15
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

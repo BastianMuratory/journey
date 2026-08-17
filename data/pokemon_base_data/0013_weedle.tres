@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=12 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cpaf5cgh08ypb" path="res://assets/pokemons/0013_weedle/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cdod21gow55y8" path="res://assets/pokemons/0013_weedle/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://dja6f5s1dfq1e" path="res://assets/pokemons/0013_weedle/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://dxpkct6bno8bn" path="res://assets/pokemons/0013_weedle/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://cwwkffw5aoeci" path="res://assets/pokemons/0013_weedle/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/180_string_shot.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/055_poison_sting.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/052_electroweb.tres" id="903_lm"]
 
 
 [resource]
@@ -33,4 +37,5 @@ base_defense = 30
 base_special_attack = 20
 base_special_defense = 20
 base_speed = 50
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

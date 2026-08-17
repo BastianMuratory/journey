@@ -1,9 +1,20 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=16 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://dg6c1tlqkeaxb" path="res://assets/pokemons/1007_koraidon/model.obj" id="1_mesh"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
 [ext_resource type="Texture2D" uid="uid://ca0cwv71cv6bo" path="res://assets/pokemons/1007_koraidon/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://cym5u4dfvokk8" path="res://assets/pokemons/1007_koraidon/preview.png" id="5_preview"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/070_agility.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/109_sunny_day.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/170_rock_smash.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/152_flare_blitz.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/185_drain_punch.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/117_dragon_claw.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/134_flamethrower.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/101_close_combat.tres" id="908_lm"]
+[ext_resource type="Resource" path="res://data/moves/131_outrage.tres" id="909_lm"]
+[ext_resource type="Resource" path="res://data/moves/207_giga_impact.tres" id="910_lm"]
 
 
 [resource]
@@ -28,4 +39,5 @@ base_defense = 115
 base_special_attack = 85
 base_special_defense = 100
 base_speed = 135
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm"), ExtResource("909_lm"), ExtResource("910_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

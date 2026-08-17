@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=22 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://bnnh75bqdaa4e" path="res://assets/pokemons/0049_venomoth/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://pqno8cyxqfab" path="res://assets/pokemons/0049_venomoth/albedo_shiny.png" id="2_shiny"]
@@ -6,6 +6,21 @@
 [ext_resource type="Texture2D" uid="uid://dxopwxhf4yg4x" path="res://assets/pokemons/0049_venomoth/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://blssg8k08n3pb" path="res://assets/pokemons/0049_venomoth/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://dr4w1b4w0lrbt" path="res://assets/pokemons/0049_venomoth/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/029_supersonic.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/035_whirlwind.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/053_poison_powder.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/070_agility.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/124_stun_spore.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/212_tackle.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/028_mega_drain.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/079_psybeam.tres" id="908_lm"]
+[ext_resource type="Resource" path="res://data/moves/195_zen_headbutt.tres" id="909_lm"]
+[ext_resource type="Resource" path="res://data/moves/142_gust.tres" id="910_lm"]
+[ext_resource type="Resource" path="res://data/moves/196_silver_wind.tres" id="911_lm"]
+[ext_resource type="Resource" path="res://data/moves/063_air_slash.tres" id="912_lm"]
+[ext_resource type="Resource" path="res://data/moves/187_leech_life.tres" id="913_lm"]
+[ext_resource type="Resource" path="res://data/moves/106_psychic.tres" id="914_lm"]
 
 [resource]
 script = ExtResource("3_script")
@@ -29,4 +44,5 @@ base_defense = 60
 base_special_attack = 90
 base_special_defense = 75
 base_speed = 90
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm"), ExtResource("909_lm"), ExtResource("910_lm"), ExtResource("911_lm"), ExtResource("912_lm"), ExtResource("913_lm"), ExtResource("914_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

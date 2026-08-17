@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=17 format=3]
 
 [ext_resource type="ArrayMesh" uid="uid://cccuiiuskril2" path="res://assets/pokemons/0041_zubat/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://bq0d1j8wrfdd1" path="res://assets/pokemons/0041_zubat/albedo_shiny.png" id="2_shiny"]
@@ -7,6 +7,15 @@
 [ext_resource type="Texture2D" uid="uid://68hq33i77oni" path="res://assets/pokemons/0041_zubat/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://dsy8tlet2c7xv" path="res://assets/pokemons/0041_zubat/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://b8ts523803iib" path="res://assets/pokemons/0041_zubat/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://data/moves/029_supersonic.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://data/moves/037_hypnosis.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://data/moves/140_confuse_ray.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://data/moves/108_toxic.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://data/moves/142_gust.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://data/moves/102_astonish.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://data/moves/063_air_slash.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://data/moves/187_leech_life.tres" id="908_lm"]
 
 [resource]
 script = ExtResource("3_script")
@@ -31,4 +40,5 @@ base_defense = 35
 base_special_attack = 30
 base_special_defense = 40
 base_speed = 55
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"
