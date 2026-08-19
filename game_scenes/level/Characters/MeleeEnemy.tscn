@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7dyp0astxyja"]
+
+[ext_resource type="Script" path="res://game_scenes/level/Characters/enemy.gd" id="1_enemy_script"]
+[ext_resource type="PackedScene" uid="uid://6r1xtnwsp0sa" path="res://pokemon/pokemon_model.tscn" id="2_pokemon_model"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_health_back"]
+size = Vector3(1.15, 0.08, 0.16)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_health_back"]
+albedo_color = Color(0.12, 0.05, 0.05, 1)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="BoxMesh_health_fill"]
+size = Vector3(1, 0.09, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_health_fill"]
+albedo_color = Color(0.85, 0.1, 0.1, 1)
+roughness = 0.55
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_collision"]
+size = Vector3(0.8, 0.8, 0.8)
+
+[node name="MeleeEnemy" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 6
+script = ExtResource("1_enemy_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_collision")
+
+[node name="Visual" parent="." instance=ExtResource("2_pokemon_model")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="HealthBar" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 1.25, 0.15)
+
+[node name="Back" type="MeshInstance3D" parent="HealthBar"]
+mesh = SubResource("BoxMesh_health_back")
+surface_material_override/0 = SubResource("StandardMaterial3D_health_back")
+
+[node name="Fill" type="MeshInstance3D" parent="HealthBar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+mesh = SubResource("BoxMesh_health_fill")
+surface_material_override/0 = SubResource("StandardMaterial3D_health_fill")

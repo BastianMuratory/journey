@@ -1,0 +1,93 @@
+[gd_scene load_steps=11 format=3 uid="uid://bfv35frhrutty"]
+
+[ext_resource type="Script" path="res://game_scenes/level/Characters/ally.gd" id="1_player_script"]
+[ext_resource type="PackedScene" uid="uid://6r1xtnwsp0sa" path="res://pokemon/pokemon_model.tscn" id="2_pokemon_model"]
+
+[sub_resource type="Animation" id="Animation_hop_run"]
+resource_name = "hop_run"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visual")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "scale_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visual")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array()
+
+[sub_resource type="Animation" id="Animation_idle"]
+resource_name = "idle"
+length = 0.1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visual")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "scale_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visual")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array()
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_player"]
+_data = {
+"hop_run": SubResource("Animation_hop_run"),
+"idle": SubResource("Animation_idle")
+}
+
+[sub_resource type="BoxMesh" id="BoxMesh_health_back"]
+size = Vector3(1.15, 0.08, 0.16)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_health_back"]
+albedo_color = Color(0.12, 0.05, 0.05, 1)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="BoxMesh_health_fill"]
+size = Vector3(1, 0.09, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_health_fill"]
+albedo_color = Color(0.15, 0.85, 0.22, 1)
+roughness = 0.55
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_collision"]
+size = Vector3(0.56, 0.8, 0.56)
+
+[node name="MeleePlayer" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_player_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_collision")
+
+[node name="Visual" parent="." instance=ExtResource("2_pokemon_model")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_player")
+}
+
+[node name="HealthBar" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 1.25, 0.15)
+
+[node name="Back" type="MeshInstance3D" parent="HealthBar"]
+mesh = SubResource("BoxMesh_health_back")
+surface_material_override/0 = SubResource("StandardMaterial3D_health_back")
+
+[node name="Fill" type="MeshInstance3D" parent="HealthBar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+mesh = SubResource("BoxMesh_health_fill")
+surface_material_override/0 = SubResource("StandardMaterial3D_health_fill")
