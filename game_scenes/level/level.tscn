@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://b012lxyyb4773"]
+
+[ext_resource type="Script" uid="uid://liolk2a788xs" path="res://game_scenes/level/level.gd" id="1_main_script"]
+[ext_resource type="Script" uid="uid://11cb5451bs6d" path="res://game_scenes/level/UI/character_panel.gd" id="2_character_panel"]
+
+[sub_resource type="Environment" id="Environment_world"]
+background_mode = 1
+background_color = Color(0.62, 0.77, 0.9, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.6
+
+[sub_resource type="BoxMesh" id="BoxMesh_floor"]
+size = Vector3(21, 0.2, 21)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
+albedo_color = Color(0.34, 0.47, 0.32, 1)
+roughness = 0.8
+
+[node name="Level" type="Node3D"]
+script = ExtResource("1_main_script")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_world")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0, 8, 0)
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("BoxMesh_floor")
+surface_material_override/0 = SubResource("StandardMaterial3D_floor")
+
+[node name="Players" type="Node3D" parent="."]
+
+[node name="Enemies" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 9, 9)
+current = true
+fov = 45.0
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="BottomPanel" type="MarginContainer" parent="HUD"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -98.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="PanelRow" type="HBoxContainer" parent="HUD/BottomPanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="AutoButton" type="Button" parent="HUD/BottomPanel/PanelRow"]
+custom_minimum_size = Vector2(48, 86)
+layout_mode = 2
+focus_mode = 0
+text = "AUTO"
+
+[node name="CharacterPanel" type="HBoxContainer" parent="HUD/BottomPanel/PanelRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_character_panel")
