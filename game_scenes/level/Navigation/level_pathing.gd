@@ -4,6 +4,7 @@ const MOVE_COLLISION_RADIUS := 0.45
 const MOVE_SEGMENT_SAMPLE_DISTANCE := 0.2
 const ATTACK_SLOT_COUNT := 24
 const ATTACK_SLOT_SEPARATION := 0.75
+const ATTACK_SLOT_DEDUPLICATION_DISTANCE := 0.12
 
 var grid_navigation
 var cell_size: float
@@ -48,7 +49,7 @@ func path_to_enemy(
 		return path
 
 	path = grid_navigation.find_path_to_enemy(player, enemy, enemies, empty_blocked_cells)
-	if not path.is_empty():
+	if not path.is_empty() and not is_position_claimed(path[path.size() - 1], claimed_positions):
 		return path
 
 	if direct_path_safe:
@@ -74,7 +75,7 @@ func navigation_attack_position_for(from_position: Vector3, target_position: Vec
 			continue
 		if is_position_claimed(candidate, claimed_positions):
 			continue
-		if not candidate in candidates:
+		if not _has_nearby_position(candidate, candidates, ATTACK_SLOT_DEDUPLICATION_DISTANCE):
 			candidates.append(candidate)
 
 	candidates.sort_custom(func(a: Vector3, b: Vector3) -> bool:
@@ -88,9 +89,16 @@ func navigation_attack_position_for(from_position: Vector3, target_position: Vec
 
 
 func is_position_claimed(position: Vector3, claimed_positions: Array[Vector3]) -> bool:
-	var minimum_distance := maxf(MOVE_COLLISION_RADIUS * 2.0, cell_size * ATTACK_SLOT_SEPARATION)
+	var minimum_distance := maxf(MOVE_COLLISION_RADIUS * 2.35, cell_size * ATTACK_SLOT_SEPARATION)
 	for claimed_position in claimed_positions:
 		if Vector2(position.x, position.z).distance_to(Vector2(claimed_position.x, claimed_position.z)) < minimum_distance:
+			return true
+	return false
+
+
+func _has_nearby_position(position: Vector3, positions: Array[Vector3], distance: float) -> bool:
+	for existing_position in positions:
+		if Vector2(position.x, position.z).distance_to(Vector2(existing_position.x, existing_position.z)) <= distance:
 			return true
 	return false
 

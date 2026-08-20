@@ -12,6 +12,7 @@ const LEVEL_NAVIGATION_REGION_SCRIPT := preload("res://game_scenes/level/Navigat
 const LEVEL_PATHING_SCRIPT := preload("res://game_scenes/level/Navigation/level_pathing.gd")
 const SKILL_EFFECTS_SCRIPT := preload("res://game_scenes/level/UI/skill_effects.gd")
 const PLAYER_SCENES := [PLAYER_SCENE, RANGED_PLAYER_SCENE, RANGED_PLAYER_SCENE]
+const PLAYER_SPAWN_SLOT_ORDER := [1, 0, 2]
 const IDLE_RETARGET_INTERVAL := 0.25
 const PLAYER_REPATH_INTERVAL := 0.22
 const PLAYER_STUCK_DISTANCE := 0.04
@@ -35,7 +36,7 @@ const AUTO_SKILL_INTERVAL := 0.35
 @export_range(0.0, 1.0) var ranged_enemy_chance: float = 0.35
 @export var camera_follow_speed: float = 8.0
 @export var camera_offset: Vector3 = Vector3(0.0, 9.0, 9.0)
-@export var show_debug_walking_lines: bool = true
+@export var show_debug_walking_lines: bool = false
 @export var ally_pokemon_paths: Array[String] = [
 	"res://data/pokemon_base_data/0002_ivysaur.tres",
 	"res://data/pokemon_base_data/0255_torchic.tres",
@@ -240,14 +241,24 @@ func _player_spawn_position(index: int) -> Vector3:
 		var spawn_cells := _level_cells.duplicate()
 		spawn_cells.sort_custom(func(a: Vector2i, b: Vector2i) -> bool:
 			if a.y == b.y:
-				return abs(a.x) < abs(b.x)
+				return a.x < b.x
 			return a.y < b.y
 		)
-		var cell: Vector2i = spawn_cells[mini(index, spawn_cells.size() - 1)]
+		var player_spawn_cells := spawn_cells.slice(0, mini(PLAYER_SCENES.size(), spawn_cells.size()))
+		player_spawn_cells.sort_custom(func(a: Vector2i, b: Vector2i) -> bool:
+			return a.x < b.x
+		)
+		var spawn_index := index
+		if PLAYER_SCENES.size() == 3:
+			spawn_index = PLAYER_SPAWN_SLOT_ORDER[index]
+		var cell: Vector2i = player_spawn_cells[mini(spawn_index, player_spawn_cells.size() - 1)]
 		return Vector3(float(cell.x) * cell_size, 0.0, float(cell.y) * cell_size)
 
 	var spacing := 1.2
-	var offset := float(index) - float(PLAYER_SCENES.size() - 1) * 0.5
+	var spawn_index := index
+	if PLAYER_SCENES.size() == 3:
+		spawn_index = PLAYER_SPAWN_SLOT_ORDER[index]
+	var offset := float(spawn_index) - float(PLAYER_SCENES.size() - 1) * 0.5
 	return Vector3(offset * spacing, 0.0, -float(grid_half_extents.y) * 0.5)
 
 
@@ -450,13 +461,17 @@ func _is_player_at_attack_slot(player: Node3D) -> bool:
 
 func _claimed_attack_slots(player: Node3D) -> Array[Vector3]:
 	var slots: Array[Vector3] = []
-	for slot_player in _player_attack_slots.keys():
-		if slot_player == player or not is_instance_valid(slot_player) or slot_player.is_defeated():
+	for other_player in _players:
+		if other_player == player or not is_instance_valid(other_player) or other_player.is_defeated():
 			continue
-		var slot_target = _player_slot_targets.get(slot_player)
-		if slot_target == null or not is_instance_valid(slot_target) or slot_target.is_defeated():
+
+		var slot_target = _player_slot_targets.get(other_player)
+		if _player_attack_slots.has(other_player) and slot_target != null and is_instance_valid(slot_target) and not slot_target.is_defeated():
+			slots.append(_player_attack_slots[other_player])
 			continue
-		slots.append(_player_attack_slots[slot_player])
+
+		if other_player.is_moving() and other_player.has_method("current_walk_target"):
+			slots.append(other_player.current_walk_target())
 	return slots
 
 
