@@ -54,9 +54,9 @@ enum AttackStyle {
 
 @export_group("Animation")
 @export var body_type: BodyType = BodyType.QUADRUPED
-@export_range(0.25, 3.0, 0.05) var anim_speed_scale: float = 1.0
-@export_range(0.0, 3.0, 0.05) var anim_amplitude: float = 1.0
-@export_range(0.0, 2.0, 0.05) var hover_height: float = 0.0
+@export var anim_speed_scale: float = 1.0
+@export var anim_amplitude: float = 1.0
+@export var hover_height: float = 0.0
 ## What this Pokémon does between moves: melee closes to contact, ranged fires
 ## from where it stands.
 @export var attack_style: AttackStyle = AttackStyle.MELEE

@@ -8,7 +8,7 @@ signal edit_team_pressed
 signal party_slot_pressed(slot_index: int)
 
 ## For now, let's open the develloper menu
-const OPTIONS_SCENE := "res://game_scenes/animation_test/animation_test.tscn"
+const OPTIONS_SCENE := "res://game_scenes/admin_menu/admin_menu.tscn"
 
 ## This one starts a level
 const LEVEL_SCENE := "res://game_scenes/level/level.tscn"

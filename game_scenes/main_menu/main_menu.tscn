@@ -38,9 +38,9 @@ layout_mode = 2
 text = "PLAY"
 flat = true
 
-[node name="AnimationTestButton" type="Button" parent="MarginContainer/MenuOptions"]
+[node name="AdminMenuButton" type="Button" parent="MarginContainer/MenuOptions"]
 layout_mode = 2
-text = "ANIMATION TEST"
+text = "ADMIN MENU"
 flat = true
 
 [node name="QuitButton" type="Button" parent="MarginContainer/MenuOptions"]

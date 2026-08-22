@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dtjmal2xvccgp"]
+[gd_scene load_steps=9 format=3 uid="uid://dtjmal2xvccgp"]
 
-[ext_resource type="Script" uid="uid://ccca3jauj1xr3" path="res://game_scenes/animation_test/animation_test.gd" id="1_test"]
+[ext_resource type="Script" uid="uid://ccca3jauj1xr3" path="res://game_scenes/admin_menu/admin_menu.gd" id="1_test"]
 [ext_resource type="ArrayMesh" uid="uid://dls7nc5btmx11" path="res://assets/maps/base_camp/base_camp.obj" id="2_7s7on"]
+[ext_resource type="PackedScene" uid="uid://vu8s2fp8y50n" path="res://game_scenes/admin_menu/admin_menu_ui.tscn" id="3_ui"]
 
 [sub_resource type="Gradient" id="Gradient_7s7on"]
 offsets = PackedFloat32Array(0, 0.00847458, 1)
@@ -28,7 +29,7 @@ adjustment_enabled = true
 adjustment_contrast = 1.05
 adjustment_saturation = 1.2
 
-[node name="AnimationTest" type="Node3D"]
+[node name="AdminMenu" type="Node3D"]
 script = ExtResource("1_test")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -44,3 +45,5 @@ transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 
 
 [node name="BaseCamp" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_7s7on")
+
+[node name="AdminMenuUI" parent="." instance=ExtResource("3_ui")]

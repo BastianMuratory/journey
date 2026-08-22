@@ -23,7 +23,7 @@ static func generate(species: PokemonBaseData, level: int = 1) -> PokemonInstanc
 	var instance := PokemonInstance.new()
 	instance.species = species
 	instance.level = level
-	instance.move = PokemonBaseData.learnable_moves[0]
+	instance.move = species.learnable_moves[0]
 	return instance
 
 var display_name: String:
@@ -42,11 +42,7 @@ func preview() -> Texture2D:
 	return species.get_preview(shiny) if species != null else null
 
 func gain_levels(count: int) -> int:
-	level += MIN(count, Quest.MAX_LEVEL)
 	return level
-
-func is_max_level() -> bool:
-	return level >= Quest.MAX_LEVEL
 
 ## The Pokémon's own HP
 func actual_max_hp() -> int:
@@ -84,7 +80,3 @@ func duplicate_instance() -> PokemonInstance:
 	copy.experience = experience
 	copy.shiny = shiny
 	return copy
-
-
-func _to_string() -> String:
-	return "%s Lv.%d  HP %d  ATK %d" % [display_name, level, block.hp, block.attack]

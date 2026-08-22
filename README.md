@@ -10,7 +10,7 @@ Godot 4.4 (Mobile renderer). No other dependencies.
 
 Open the project folder in Godot and press **F5**. It boots to the main menu — hit **Play**.
 
-To look at the animations on their own, pick **ANIMATION TEST** on the main menu, or open `game_scenes/animation_test/animation_test.tscn` and press **F6**. `Esc` goes back.
+To look at the animations on their own, pick **ADMIN MENU** on the main menu, or open `game_scenes/admin_menu/admin_menu.tscn` and press **F6**. The `menu` button goes back.
 
 ## Controls
 
@@ -20,31 +20,48 @@ To look at the animations on their own, pick **ANIMATION TEST** on the main menu
 | --- | --- |
 | `Space` | Mega evolve Sandile into Krookodile (press again to rewind) |
 
-### Animation test scene
+### Admin menu
 
-Every species with a `PokemonData` is browsable here, alternate forms and costumes included, and you can retune any of them on the spot.
+Every species with a `PokemonData` is browsable here, alternate forms and costumes included, and you can retune any of them on the spot. Nothing is bound to the keyboard — every control is an on-screen button, so the same screen works under a mouse now and under a finger once there is a touch build.
 
-| Key | Action |
+The bar across the bottom:
+
+| Button | What it does |
 | --- | --- |
-| `1`–`5` | Idle / run / attack / hit / spin |
-| `←` `→` | Previous / next species |
-| `PgUp` `PgDn` | Jump 25 at a time |
-| `Home` `End` | First / last |
-| `/` | Search by name or id |
-| `B` / `Shift+B` | Cycle this species' body type |
-| `↑` `↓` | Animation speed (`anim_speed_scale`) |
-| `[` `]` | Animation amplitude (`anim_amplitude`) |
-| `,` `.` | Hover height (`hover_height`) |
-| `Shift` | ×5 step, held with any of the three above |
-| `R` / `Shift+R` | Revert this species / every edited one |
-| `Ctrl+S` | Save edits to disk |
-| `G` | Grid mode — a row of species animating together |
-| `S` | Toggle shiny |
-| `Esc` | Back to the main menu |
+| `idle` `run` `attack` `hit` `spin` | Play that animation on everything on screen |
+| `grid` | Three species side by side, animating together |
+| `shiny` | Swap to the shiny material |
+| `info` | The read-only half of a species — previews, typing, traits, base stats, quest stats, and every move it can learn |
+| `revert` / `revert all` | Put the focused species, or every edited one, back to what is on disk |
+| `save` | Write the edits into each edited species' own `.tres` |
+| `menu` | Back to the main menu |
+| `tuning` | Fold the second row away when even that is between you and the model |
 
-The tuning keys edit the focused species' `PokemonData` in place — there is no preview multiplier in between, so what you see is what the game will play. In grid mode the focused species is the leftmost one, the same one `B` applies to. Values are clamped to the same ranges the inspector exports and snapped to the same steps.
+The second row tunes the focused species, each field a `−` / `+` pair around its current value:
 
-Edits stay in memory until `Ctrl+S`, which writes them into the species' own `.tres` so the game uses them immediately, and sets `anim_tuned` on it — the flag `classify_body_types.py` and `generate_pokemon_data.py` both read as do-not-touch, so a re-classify never undoes work you did by eye. `R` puts a species back to what is on disk, however many nudges ago that was, and the info panel shows `(was …)` next to anything you have moved.
+| Pair | Field | Range, by step |
+| --- | --- | --- |
+| `body` | `body_type` | cycles the enum; hover height follows the new body type |
+| `speed` | `anim_speed_scale` | 0.25 – 3.00, by 0.05 |
+| `amplitude` | `anim_amplitude` | 0.00 – 3.00, by 0.05 |
+| `hover` | `hover_height` | 0.00 – 2.00, by 0.02 |
+| `x5 steps` | — | multiplies every step above, and the level box, by five |
+
+Hold a `−` or `+` down and it keeps firing, which is how you cross a whole range without tapping forty times.
+
+Down the right-hand side:
+
+| Control | What it does |
+| --- | --- |
+| search box, `×` | Filter by name or id — `0092`, `gastly` and `alolan` all match; `×` clears it |
+| `\|«` `«25` `−` `+` `25»` `»\|` | First, back 25, one at a time, forward 25, last |
+| the list | Tap a row: `#0001  Bulbasaur  QUADRUPED`, with a `*` while it has unsaved edits |
+| `level` `−` box `+` | 1 – 100, the level `add to collection` would use |
+| `add to collection` | Emits `add_to_collection(id, level)` and reports what it would have done — the collection itself is not wired up yet |
+
+The `−` / `+` pairs edit the focused species' `PokemonData` in place — there is no preview multiplier in between, so what you see is what the game will play. In grid mode the focused species is the leftmost one. Values are clamped to the same ranges the inspector exports and snapped to the same steps.
+
+Edits stay in memory until `save`, which writes them into the species' own `.tres` so the game uses them immediately — it needs the editor, since `res://` is read-only in an export. `revert` puts a species back to what is on disk, however many nudges ago that was, and the readout top left shows `(was …)` next to anything you have moved. `menu` asks twice when there are unsaved edits: the first press warns, the second leaves.
 
 ## Animation
 
@@ -90,15 +107,6 @@ PokemonRegistry.get_forms(25)                          # every id sharing the de
 PokemonRegistry.get_all_ids()                          # everything, dex order
 ```
 
-Four scripts maintain that folder, all with a read-only plan and an explicit `--apply`:
-
-- `tools/generate_pokemon_data.py` — creates a `.tres` for any asset folder that lacks one. Existing files are left alone by default, so hand-set evolution links survive; `--refresh-animation` updates only the animation fields.
-- `tools/classify_body_types.py` — sets `body_type` and the animation tuning on every `.tres`.
-- `tools/link_evolutions.py` — sets `evolves_into` on every `.tres` that has a target in the project.
-- `tools/add_preview_textures.py` — points `icon`, `preview` and `preview_shiny` at the images in the asset folder. Run it after new art lands; it only fills in what is missing, so re-running is free.
-
-Priority runs the script's per-dex tables → body-type defaults, and a species whose `.tres` has `anim_tuned = true` sits out entirely. That flag is what keeps hand-tuning and re-classifying from fighting: the animation test scene sets it on save, `classify_body_types.py apply` skips those files, and `generate_pokemon_data.py` refuses to `--refresh-animation` or `--overwrite` them. Clear it to hand a species back to the script.
-
 ### Portraits
 
 Every species carries its own 2D art, so UI code never builds a `res://` path by hand:
@@ -110,7 +118,7 @@ species.get_preview(shiny)    # full render, shiny when there is one
 species.has_shiny_preview()   # false for costume forms -- hide the toggle
 ```
 
-Read the previews through `get_preview()` rather than touching `preview_shiny` directly. Only the standard forms were rendered shiny, so the costumes and the clones fall back to the ordinary preview instead of handing back a null that every call site would have to catch. `tools/missing_art.md` lists what is still missing — 29 forms have no icon or preview, 37 have no shiny render.
+Read the previews through `get_preview()` rather than touching `preview_shiny` directly. Only the standard forms were rendered shiny, so the costumes and the clones fall back to the ordinary preview instead of handing back a null that every call site would have to catch. 29 forms still have no icon or preview, and 37 have no shiny render.
 
 ### Evolution links
 
@@ -125,7 +133,7 @@ eevee.evolves_into                # all eight, dex order
 
 Forms keep their own suffix across the evolution when a file exists for it — Alolan Vulpix → Alolan Ninetales, Hisuian Zorua → Hisuian Zoroark, sunglasses Exeggcute → sunglasses Exeggutor. Otherwise they fall back to the base form, so Ash-cap Pikachu evolves into an ordinary Raichu.
 
-A species whose evolution has no model in the project is left empty rather than pointed somewhere wrong — there is no Steelix here, so Onix has no link. Deliberate deviations live in `MANUAL_LINKS` at the top of the script; that is where Sandile → Krookodile is kept, skipping Krokorok so the base camp demo stays dramatic. Rewriting is idempotent, and files that already have a link are skipped unless you pass `--overwrite`.
+A species whose evolution has no model in the project is left empty rather than pointed somewhere wrong — there is no Steelix here, so Onix has no link. Sandile → Krookodile is a deliberate deviation, skipping Krokorok so the base camp demo stays dramatic.
 
 ## Pokémon instances
 
@@ -210,9 +218,8 @@ All of the above was checked against a level 100 gold-pot Dragonite: 834 / 990 o
 assets/            3D models and textures (maps, Pokémon, cooking pots)
 data/              PokemonData + ItemData, and one .tres per species in pokemon/
 data/move_stones/  the six Move Stones
-game_scenes/       main_menu, base_camp, animation_test
+game_scenes/       main_menu, base_camp, admin_menu
 pokemon/           the shared Pokémon scene and registry, plus the Quest rules:
 				   Quest, PokemonInstance, PowerCharm, PowerStone, PokemonStats
 systems/vfx/       mega_evolution effect + energy shader
-tools/             asset import, classification and evolution-linking scripts
 ```

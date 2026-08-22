@@ -90,7 +90,7 @@ func has_id(id: String) -> bool:
 	return _paths.has(id)
 
 
-## The path a resource was loaded from. The animation test scene needs this to
+## The path a resource was loaded from. The admin menu needs this to
 ## write edits back to disk.
 func get_path_for(id: String) -> String:
 	return _paths.get(id, "")

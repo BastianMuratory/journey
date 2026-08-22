@@ -1,0 +1,540 @@
+[gd_scene load_steps=2 format=3 uid="uid://vu8s2fp8y50n"]
+
+[ext_resource type="Script" uid="uid://dsar7qfgsj0xt" path="res://game_scenes/admin_menu/admin_menu_ui.gd" id="1_nwis2"]
+
+[node name="AdminMenuUI" type="CanvasLayer"]
+script = ExtResource("1_nwis2")
+
+[node name="ReadoutPanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(380, 0)
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="Margin" type="MarginContainer" parent="ReadoutPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Column" type="VBoxContainer" parent="ReadoutPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Header" type="HBoxContainer" parent="ReadoutPanel/Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ReadoutIcon" type="TextureRect" parent="ReadoutPanel/Margin/Column/Header"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 2
+size_flags_vertical = 0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Readout" type="Label" parent="ReadoutPanel/Margin/Column/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Status" type="Label" parent="ReadoutPanel/Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.9, 1, 1)
+
+[node name="Message" type="Label" parent="ReadoutPanel/Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.4, 1)
+
+[node name="Browser" type="PanelContainer" parent="."]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -356.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+
+[node name="Margin" type="MarginContainer" parent="Browser"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Column" type="VBoxContainer" parent="Browser/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="SearchRow" type="HBoxContainer" parent="Browser/Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Search" type="LineEdit" parent="Browser/Margin/Column/SearchRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "search name or id"
+
+[node name="ClearButton" type="Button" parent="Browser/Margin/Column/SearchRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+focus_mode = 0
+text = "×"
+
+[node name="NavRow" type="HBoxContainer" parent="Browser/Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="FirstButton" type="Button" parent="Browser/Margin/Column/NavRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "|«"
+
+[node name="PageBackButton" type="Button" parent="Browser/Margin/Column/NavRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "«25"
+
+[node name="StepBackButton" type="Button" parent="Browser/Margin/Column/NavRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "−"
+
+[node name="StepForwardButton" type="Button" parent="Browser/Margin/Column/NavRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="PageForwardButton" type="Button" parent="Browser/Margin/Column/NavRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "25»"
+
+[node name="LastButton" type="Button" parent="Browser/Margin/Column/NavRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "»|"
+
+[node name="List" type="ItemList" parent="Browser/Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+
+[node name="Separator" type="HSeparator" parent="Browser/Margin/Column"]
+layout_mode = 2
+
+[node name="LevelRow" type="HBoxContainer" parent="Browser/Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Caption" type="Label" parent="Browser/Margin/Column/LevelRow"]
+custom_minimum_size = Vector2(52, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.65, 0.72, 1)
+text = "level"
+vertical_alignment = 1
+
+[node name="LevelDownButton" type="Button" parent="Browser/Margin/Column/LevelRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "−"
+
+[node name="LevelEdit" type="LineEdit" parent="Browser/Margin/Column/LevelRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5"
+alignment = 1
+max_length = 3
+virtual_keyboard_type = 2
+
+[node name="LevelUpButton" type="Button" parent="Browser/Margin/Column/LevelRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="AddButton" type="Button" parent="Browser/Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.6, 1, 0.72, 1)
+text = "add to collection"
+
+[node name="Bar" type="PanelContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_right = -372.0
+offset_bottom = -16.0
+grow_vertical = 0
+
+[node name="Margin" type="MarginContainer" parent="Bar"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Column" type="VBoxContainer" parent="Bar/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ActionRow" type="HFlowContainer" parent="Bar/Margin/Column"]
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+
+[node name="IdleButton" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+text = "idle"
+
+[node name="RunButton" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+text = "run"
+
+[node name="AttackButton" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+text = "attack"
+
+[node name="HitButton" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+text = "hit"
+
+[node name="SpinButton" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+text = "spin"
+
+[node name="Sep1" type="VSeparator" parent="Bar/Margin/Column/ActionRow"]
+layout_mode = 2
+
+[node name="GridToggle" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "grid"
+
+[node name="ShinyToggle" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "shiny"
+
+[node name="InfoToggle" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "info"
+
+[node name="Sep2" type="VSeparator" parent="Bar/Margin/Column/ActionRow"]
+layout_mode = 2
+
+[node name="RevertButton" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+text = "revert"
+
+[node name="RevertAllButton" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+text = "revert all"
+
+[node name="SaveButton" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+text = "save"
+
+[node name="MenuButton" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+text = "menu"
+
+[node name="Sep3" type="VSeparator" parent="Bar/Margin/Column/ActionRow"]
+layout_mode = 2
+
+[node name="TuningToggle" type="Button" parent="Bar/Margin/Column/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 44)
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+button_pressed = true
+text = "tuning"
+
+[node name="TuningRow" type="HFlowContainer" parent="Bar/Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 6
+
+[node name="BodyStepper" type="HBoxContainer" parent="Bar/Margin/Column/TuningRow"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Caption" type="Label" parent="Bar/Margin/Column/TuningRow/BodyStepper"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.65, 0.72, 1)
+text = "body"
+vertical_alignment = 1
+
+[node name="BodyDown" type="Button" parent="Bar/Margin/Column/TuningRow/BodyStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "−"
+
+[node name="BodyValue" type="Label" parent="Bar/Margin/Column/TuningRow/BodyStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(116, 44)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BodyUp" type="Button" parent="Bar/Margin/Column/TuningRow/BodyStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="SpeedStepper" type="HBoxContainer" parent="Bar/Margin/Column/TuningRow"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Caption" type="Label" parent="Bar/Margin/Column/TuningRow/SpeedStepper"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.65, 0.72, 1)
+text = "speed"
+vertical_alignment = 1
+
+[node name="SpeedDown" type="Button" parent="Bar/Margin/Column/TuningRow/SpeedStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "−"
+
+[node name="SpeedValue" type="Label" parent="Bar/Margin/Column/TuningRow/SpeedStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 44)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpeedUp" type="Button" parent="Bar/Margin/Column/TuningRow/SpeedStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="AmplitudeStepper" type="HBoxContainer" parent="Bar/Margin/Column/TuningRow"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Caption" type="Label" parent="Bar/Margin/Column/TuningRow/AmplitudeStepper"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.65, 0.72, 1)
+text = "amplitude"
+vertical_alignment = 1
+
+[node name="AmplitudeDown" type="Button" parent="Bar/Margin/Column/TuningRow/AmplitudeStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "−"
+
+[node name="AmplitudeValue" type="Label" parent="Bar/Margin/Column/TuningRow/AmplitudeStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 44)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmplitudeUp" type="Button" parent="Bar/Margin/Column/TuningRow/AmplitudeStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="HoverStepper" type="HBoxContainer" parent="Bar/Margin/Column/TuningRow"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Caption" type="Label" parent="Bar/Margin/Column/TuningRow/HoverStepper"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.65, 0.72, 1)
+text = "hover"
+vertical_alignment = 1
+
+[node name="HoverDown" type="Button" parent="Bar/Margin/Column/TuningRow/HoverStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "−"
+
+[node name="HoverValue" type="Label" parent="Bar/Margin/Column/TuningRow/HoverStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 44)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HoverUp" type="Button" parent="Bar/Margin/Column/TuningRow/HoverStepper"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="CoarseToggle" type="Button" parent="Bar/Margin/Column/TuningRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 44)
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "x5 steps"
+
+[node name="InfoPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(560, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_right = -186.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="InfoPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Column" type="VBoxContainer" parent="InfoPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Header" type="HBoxContainer" parent="InfoPanel/Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="InfoIcon" type="TextureRect" parent="InfoPanel/Margin/Column/Header"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InfoTitle" type="Label" parent="InfoPanel/Margin/Column/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="InfoPanel/Margin/Column/Header"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 44)
+layout_mode = 2
+focus_mode = 0
+text = "close"
+
+[node name="Scroll" type="ScrollContainer" parent="InfoPanel/Margin/Column"]
+custom_minimum_size = Vector2(0, 380)
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="InfoBody" type="VBoxContainer" parent="InfoPanel/Margin/Column/Scroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
