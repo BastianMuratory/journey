@@ -16,7 +16,6 @@ const ANIMATION_TEST_SCENE := "res://game_scenes/animation_test/animation_test.t
 
 func _ready() -> void:
 	play_button.pressed.connect(_on_play_pressed)
-	option_button.pressed.connect(_on_options_pressed)
 	animation_test_button.pressed.connect(_on_animation_test_pressed)
 	quit_button.pressed.connect(_on_quit_pressed)
 	play_button.grab_focus()
@@ -26,9 +25,6 @@ func _on_play_pressed() -> void:
 
 func _on_animation_test_pressed() -> void:
 	get_tree().change_scene_to_file(ANIMATION_TEST_SCENE)
-
-func _on_options_pressed() -> void:
-	get_tree().change_scene_to_file(OPTION_SCENE)
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()

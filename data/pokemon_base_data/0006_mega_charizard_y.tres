@@ -1,12 +1,7 @@
-[gd_resource type="Resource" script_class="PokemonBaseData" load_steps=24 format=3 uid="uid://4kcu8835ofvs"]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=19 format=3]
 
-[ext_resource type="Resource" path="res://data/pokemon_base_data/0006_mega_charizard_y.tres" id="1_mega"]
-[ext_resource type="ArrayMesh" uid="uid://dhiylhukc8stl" path="res://assets/pokemons/0006_charizard/model.obj" id="1_mesh"]
-[ext_resource type="Texture2D" uid="uid://cguorqgf0i0so" path="res://assets/pokemons/0006_charizard/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="ArrayMesh" uid="uid://cadl31caenrxl" path="res://assets/pokemons/0006_mega_charizard_y/model.obj" id="1_mesh"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://data/pokemon_base_data.gd" id="3_script"]
-[ext_resource type="Texture2D" uid="uid://du4lbfnnbnpia" path="res://assets/pokemons/0006_charizard/icon.png" id="4_icon"]
-[ext_resource type="Texture2D" uid="uid://dopt3ik6my3gf" path="res://assets/pokemons/0006_charizard/preview.png" id="5_preview"]
-[ext_resource type="Texture2D" uid="uid://bqxogjwjinmyl" path="res://assets/pokemons/0006_charizard/preview_shiny.png" id="6_preview_shiny"]
 [ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://data/move.gd" id="900_lm_script"]
 [ext_resource type="Resource" path="res://data/moves/046_leer.tres" id="901_lm"]
 [ext_resource type="Resource" path="res://data/moves/095_growl.tres" id="902_lm"]
@@ -24,33 +19,24 @@
 [ext_resource type="Resource" path="res://data/moves/134_flamethrower.tres" id="914_lm"]
 [ext_resource type="Resource" path="res://data/moves/194_crunch.tres" id="915_lm"]
 
+
 [resource]
 script = ExtResource("3_script")
 dex_number = 6
-display_name = "Charizard"
+display_name = "Mega Charizard Y"
 mesh = ExtResource("1_mesh")
-albedo_shiny = ExtResource("2_shiny")
-model_scale = 1.0
-icon = ExtResource("4_icon")
-preview = ExtResource("5_preview")
-preview_shiny = ExtResource("6_preview_shiny")
+model_scale = 2.8
 body_type = 0
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.0
-attack_style = 1
-evolves_into = Array[ExtResource("3_script")]([])
-mega_evolves_into = ExtResource("1_mega")
 type1 = 10
 type2 = 3
 base_hp = 78
-base_attack = 84
+base_attack = 104
 base_defense = 78
-base_special_attack = 109
-base_special_defense = 85
+base_special_attack = 159
+base_special_defense = 115
 base_speed = 100
-quest_base_hp = 0
-quest_base_attack = 0
-quest_base_speed = 0
 learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm"), ExtResource("909_lm"), ExtResource("910_lm"), ExtResource("911_lm"), ExtResource("912_lm"), ExtResource("913_lm"), ExtResource("914_lm"), ExtResource("915_lm")])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

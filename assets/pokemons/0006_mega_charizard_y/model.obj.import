@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cadl31caenrxl"
+path="res://.godot/imported/model.obj-cfb22d6f9dc7484017787b3afa0c94fb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-cfb22d6f9dc7484017787b3afa0c94fb.mesh"]
+
+source_file="res://assets/pokemons/0006_mega_charizard_y/model.obj"
+dest_files=["res://.godot/imported/model.obj-cfb22d6f9dc7484017787b3afa0c94fb.mesh", "res://.godot/imported/model.obj-cfb22d6f9dc7484017787b3afa0c94fb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

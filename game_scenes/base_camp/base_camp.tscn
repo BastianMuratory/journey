@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://hkbwr68qqvqe"]
+[gd_scene load_steps=6 format=3 uid="uid://hkbwr68qqvqe"]
 
 [ext_resource type="Script" uid="uid://bx04tvydy5dop" path="res://game_scenes/base_camp/base_camp.gd" id="1_kyqny"]
 [ext_resource type="ArrayMesh" uid="uid://dls7nc5btmx11" path="res://assets/maps/base_camp/base_camp.obj" id="2_56lis"]
 [ext_resource type="ArrayMesh" uid="uid://baedbt7ksrv50" path="res://assets/cooking_pot/cauldron_basic.obj" id="3_a7uuf"]
+[ext_resource type="PackedScene" uid="uid://df8jkhp2u4xag" path="res://game_scenes/base_camp/base_camp_ui.tscn" id="4_ui"]
 
 [sub_resource type="Environment" id="Environment_amm8a"]
 ambient_light_source = 2
@@ -36,3 +37,5 @@ transform = Transform3D(0.990557, 0, 0.137099, 0, 1, 0, -0.137099, 0, 0.990557, 
 
 [node name="SpawnPoint" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.31031, 0, 3.38231)
+
+[node name="BaseCampUI" parent="." instance=ExtResource("4_ui")]

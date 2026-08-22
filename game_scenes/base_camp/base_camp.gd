@@ -12,8 +12,8 @@ extends Node3D
 const POKEMON_MODEL_SCENE := preload("res://pokemon/pokemon_model.tscn")
 
 ## Which species the camp starts with. 551 = Sandile.
-const SANDILE_DEX_NUMBER := 551
-const CATERPIE_DEX_NUMBER := 10
+const CHARIZARD_DEX_NUMBER := 6
+const BLASTOISE_DEX_NUMBER := 9
 
 @onready var _spawn_point: Marker3D = $SpawnPoint
 @onready var _spawn_point2: Marker3D = $SpawnPoint2
@@ -29,8 +29,8 @@ class Entry:
 var _entries: Array[Entry] = []
 
 func _ready() -> void:
-	_add_pokemon(SANDILE_DEX_NUMBER, _spawn_point)
-	_add_pokemon(10, _spawn_point2)
+	_add_pokemon(CHARIZARD_DEX_NUMBER, _spawn_point)
+	_add_pokemon(BLASTOISE_DEX_NUMBER, _spawn_point2)
 
 ## Instantiates the shared Pokémon scene as the given species. Reusable for
 ## anything else you want to drop into the camp.
