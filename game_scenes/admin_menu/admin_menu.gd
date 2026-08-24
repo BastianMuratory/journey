@@ -14,7 +14,6 @@ const TUNED_FIELDS := [
 ]
 
 const POKEMON_MODEL_SCENE := preload("res://pokemon/pokemon_model.tscn")
-const MAIN_MENU_SCENE := "res://game_scenes/main_menu/main_menu.tscn"
 
 @onready var _camera: Camera3D = $Camera3D
 @onready var _ui: AdminMenuUI = $AdminMenuUI
@@ -251,7 +250,7 @@ func _leave() -> void:
 		_ui.show_message("%d species edited -- SAVE first, or MENU again to discard"
 			% _pending.size())
 		return
-	get_tree().change_scene_to_file(MAIN_MENU_SCENE)
+	SceneManager.go_to(SceneManager.Scenes.MAIN_MENU)
 
 
 func _play(anim: PokemonAnimator.Anim) -> void:

@@ -10,8 +10,6 @@ Godot 4.4 (Mobile renderer). No other dependencies.
 
 Open the project folder in Godot and press **F5**. It boots to the main menu — hit **Play**.
 
-To look at the animations on their own, pick **ADMIN MENU** on the main menu, or open `game_scenes/admin_menu/admin_menu.tscn` and press **F6**. The `menu` button goes back.
-
 ## Controls
 
 ### Base camp

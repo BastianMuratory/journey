@@ -1,17 +1,6 @@
 class_name BaseCampUI
 extends CanvasLayer
 
-# Buttons signals
-signal pokedex_button_pressed
-signal quests_pressed
-signal edit_team_pressed
-signal party_slot_pressed(slot_index: int)
-
-## For now, let's open the develloper menu
-const OPTIONS_SCENE := "res://game_scenes/admin_menu/admin_menu.tscn"
-
-## This one starts a level
-const LEVEL_SCENE := "res://game_scenes/level/level.tscn"
 
 ## Title on top left.
 @export var scene_title: String = "Base Camp"
@@ -29,7 +18,8 @@ func _ready() -> void:
 	start_button.pressed.connect(on_start_pressed)
 
 func on_pokedex_pressed() -> void:
-	get_tree().change_scene_to_file(OPTIONS_SCENE)
+	return
+	# For now don't do anything
 
 func on_edit_team_pressed() -> void:
 	return
@@ -37,8 +27,7 @@ func on_edit_team_pressed() -> void:
 	# get_tree().change_scene_to_file(OPTIONS_SCENE)
 
 func on_options_pressed() -> void:
-	get_tree().change_scene_to_file(OPTIONS_SCENE)
-
+	SceneManager.go_to(SceneManager.Scenes.ADMIN_MENU)
 
 func on_start_pressed() -> void:
-	get_tree().change_scene_to_file(LEVEL_SCENE)
+	SceneManager.go_to(SceneManager.Scenes.LEVEL)
