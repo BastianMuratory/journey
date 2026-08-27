@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 PokemonRegistry="*res://pokemon/pokemon_registry.gd"
 SceneManager="*res://game_scenes/scene_manager.gd"
-Pokedex="*res://pokemon/Pokedex/pokedex.gd"
+Pokedex="*res://game_scenes/Pokedex/pokedex.gd"
 
 [display]
 

@@ -1,0 +1,175 @@
+[gd_scene load_steps=8 format=3 uid="uid://btillhmlpwyi6"]
+
+[ext_resource type="Script" uid="uid://dtfw5w00s21du" path="res://game_scenes/Pokedex/pokedexView.gd" id="1_ip58y"]
+[ext_resource type="Texture2D" uid="uid://di4bcmqnfk3cf" path="res://assets/reference_ui/Pokedex_empty.png" id="2_se450"]
+[ext_resource type="Texture2D" uid="uid://040b0f2e3ktw" path="res://assets/pokemons/0001_bulbasaur/icon.png" id="3_1da5n"]
+[ext_resource type="Texture2D" uid="uid://gxi331m238fg" path="res://assets/pokemons/0001_bulbasaur/preview.png" id="4_66cgv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qa38c"]
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c3tyx"]
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iafi6"]
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+
+[node name="Pokedex" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ip58y")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_se450")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 15
+
+[node name="Book" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="MarginContainer" parent="MarginContainer/Book"]
+custom_minimum_size = Vector2(0, 60.14)
+layout_mode = 2
+theme_override_constants/margin_left = 910
+theme_override_constants/margin_right = 45
+
+[node name="PokedexProgress" type="VBoxContainer" parent="MarginContainer/Book/Header"]
+layout_mode = 2
+
+[node name="PokedexProgressText" type="HBoxContainer" parent="MarginContainer/Book/Header/PokedexProgress"]
+layout_mode = 2
+alignment = 2
+
+[node name="PokemonCaught" type="Label" parent="MarginContainer/Book/Header/PokedexProgress/PokedexProgressText"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "129"
+
+[node name="slash" type="Label" parent="MarginContainer/Book/Header/PokedexProgress/PokedexProgressText"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "/"
+
+[node name="PokemonTotal" type="Label" parent="MarginContainer/Book/Header/PokedexProgress/PokedexProgressText"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "151"
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/Book/Header/PokedexProgress"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+max_value = 151.0
+step = 1.0
+value = 129.0
+show_percentage = false
+
+[node name="Pages" type="HSplitContainer" parent="MarginContainer/Book"]
+layout_mode = 2
+split_offset = 430
+
+[node name="LeftContainer" type="MarginContainer" parent="MarginContainer/Book/Pages"]
+layout_mode = 2
+theme_override_constants/margin_top = 45
+
+[node name="InfoPage" type="VBoxContainer" parent="MarginContainer/Book/Pages/LeftContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Icon&Number" type="HBoxContainer" parent="MarginContainer/Book/Pages/LeftContainer/InfoPage"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="PokemonIcon" type="TextureRect" parent="MarginContainer/Book/Pages/LeftContainer/InfoPage/Icon&Number"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("3_1da5n")
+expand_mode = 1
+
+[node name="No_" type="Label" parent="MarginContainer/Book/Pages/LeftContainer/InfoPage/Icon&Number"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "No."
+label_settings = SubResource("LabelSettings_qa38c")
+
+[node name="PokemonNumber" type="Label" parent="MarginContainer/Book/Pages/LeftContainer/InfoPage/Icon&Number"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "001"
+label_settings = SubResource("LabelSettings_c3tyx")
+
+[node name="Preview" type="Control" parent="MarginContainer/Book/Pages/LeftContainer/InfoPage"]
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 2
+
+[node name="PreviewBackground" type="ColorRect" parent="MarginContainer/Book/Pages/LeftContainer/InfoPage/Preview"]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 320.0
+color = Color(0.94902, 0.929412, 0.843137, 1)
+
+[node name="PokemonPreview" type="TextureRect" parent="MarginContainer/Book/Pages/LeftContainer/InfoPage/Preview"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 320.0
+texture = ExtResource("4_66cgv")
+expand_mode = 1
+
+[node name="PokemonName" type="Label" parent="MarginContainer/Book/Pages/LeftContainer/InfoPage"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Bulbasaur"
+label_settings = SubResource("LabelSettings_iafi6")
+
+[node name="NavigationPage" type="VBoxContainer" parent="MarginContainer/Book/Pages"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="PokedexGrid" type="GridContainer" parent="MarginContainer/Book/Pages/NavigationPage"]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 5
+
+[node name="PagesButtons" type="HBoxContainer" parent="MarginContainer/Book/Pages/NavigationPage"]
+layout_mode = 2
+
+[node name="LeftButton" type="Button" parent="MarginContainer/Book/Pages/NavigationPage/PagesButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "left
+<-"
+
+[node name="RightButton" type="Button" parent="MarginContainer/Book/Pages/NavigationPage/PagesButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "right
+->
+"

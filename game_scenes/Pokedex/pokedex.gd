@@ -51,7 +51,11 @@ func _load_pokedex() -> void :
 		# todo convert string into array for each key and assign it
 		pokedex_file.close()
 	else:
-		for i in PokemonRegistry.get_all_dex_numbers():
+		
+		print("banane")
+		print(PokemonRegistry.all_dex_numbers)
+		print("banane")
+		for i in PokemonRegistry.all_dex_numbers:
 			var stats : Array = [0, 0, 0, 0, 0, 0, 0, 0]
 			_pokedex.set(i, stats)
 
@@ -89,6 +93,7 @@ func deal_damage(id : int, number : int) -> void :
 	_pokedex.get(id)[PokedexStats.DAMAGE_DEALT] += number
 
 func is_seen(id : int) -> bool:
+	print(id)
 	return _pokedex.get(id)[PokedexStats.NUMBER_SEEN] > 0
 
 func is_caught(id : int) -> bool:

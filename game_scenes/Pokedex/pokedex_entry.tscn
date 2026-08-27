@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvp2uti2xrarv"]
+[gd_scene load_steps=5 format=3 uid="uid://cvp2uti2xrarv"]
 
 [ext_resource type="Script" uid="uid://l0pu4mvpvy02" path="res://game_scenes/Pokedex/pokedex_entry.gd" id="1_7374f"]
+[ext_resource type="Texture2D" uid="uid://040b0f2e3ktw" path="res://assets/pokemons/0001_bulbasaur/icon.png" id="2_k87bd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tn6p4"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bo3w7"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="PokedexEntry" type="Button"]
 script = ExtResource("1_7374f")
@@ -12,19 +19,32 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -39.0
+offset_top = -52.0
+offset_right = 39.0
+offset_bottom = 52.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
 [node name="PokemonNumber" type="Label" parent="PokemonInfos"]
+unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+text = "001"
+label_settings = SubResource("LabelSettings_tn6p4")
 
 [node name="PokemonIcon" type="TextureRect" parent="PokemonInfos"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_k87bd")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="PokemonName" type="Label" parent="PokemonInfos"]
+unique_name_in_owner = true
 layout_mode = 2
+text = "bulbasaur"
+label_settings = SubResource("LabelSettings_bo3w7")
