@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvp2uti2xrarv"]
+
+[ext_resource type="Script" uid="uid://l0pu4mvpvy02" path="res://game_scenes/Pokedex/pokedex_entry.gd" id="1_7374f"]
+
+[node name="PokedexEntry" type="Button"]
+script = ExtResource("1_7374f")
+
+[node name="PokemonInfos" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PokemonNumber" type="Label" parent="PokemonInfos"]
+layout_mode = 2
+
+[node name="PokemonIcon" type="TextureRect" parent="PokemonInfos"]
+layout_mode = 2
+
+[node name="PokemonName" type="Label" parent="PokemonInfos"]
+layout_mode = 2

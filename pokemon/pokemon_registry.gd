@@ -102,6 +102,14 @@ func reload(id: String) -> PokemonBaseData:
 	_cache.erase(id)
 	return get_pokemon_by_id(id)
 
+func getIcon(dex_number: int) -> Texture2D:
+	var data : PokemonBaseData = get_pokemon(dex_number)
+	if data != null && data.has_icon():
+		return data.icon;
+	push_warning("PokemonRegistry: no data file for dex #%d" % dex_number)
+	var errorIcon : Texture2D = preload("uid://cs1inf50u1m5e")
+	return errorIcon
+
 
 ## Scans the data folder and maps each id to its file. Filenames only need to
 ## [i]start[/i] with the zero-padded dex number, so "0551_sandile.tres" and
