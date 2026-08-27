@@ -152,10 +152,14 @@ label_settings = SubResource("LabelSettings_iafi6")
 [node name="NavigationPage" type="VBoxContainer" parent="MarginContainer/Book/Pages"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_constants/separation = 16
 
 [node name="PokedexGrid" type="GridContainer" parent="MarginContainer/Book/Pages/NavigationPage"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
 columns = 5
 
 [node name="PagesButtons" type="HBoxContainer" parent="MarginContainer/Book/Pages/NavigationPage"]
@@ -173,3 +177,21 @@ layout_mode = 2
 text = "right
 ->
 "
+
+[node name="BackButton" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 60)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -110.0
+offset_top = -80.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+text = "back"

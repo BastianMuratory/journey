@@ -5,6 +5,7 @@ extends Control
 @onready var _displayIcon: TextureRect = %PokemonIcon
 @onready var _displayPreview: TextureRect = %PokemonPreview
 @onready var _displayName: Label = %PokemonName
+@onready var _back_button: Button = %BackButton
 
 var _unknown_icon = load("uid://b8o5cgof5njom")
 var _error_icon = load("uid://b8o5cgof5njom")
@@ -34,6 +35,8 @@ func _display_left(pokemon_index : int) -> void:
 	return
 
 func _ready() -> void:
+	_back_button.pressed.connect(_on_back_pressed)
+
 	for entry_index in range(15):
 		print(entry_index)
 		var entry : PokedexEntry = _pokemon_entry.instantiate()
@@ -45,3 +48,7 @@ func _ready() -> void:
 
 func _entry_pressed(id : int):
 	_display_left(id)
+
+# go back to previous scene
+func _on_back_pressed() -> void:
+	SceneManager.go_back()

@@ -30,10 +30,6 @@ var all_dex_numbers : Array[int] = []
 
 func _ready() -> void:
 	_build_index()
-	for dex in _base_form:
-		all_dex_numbers.append(dex)
-	all_dex_numbers.sort()
-	
 
 
 ## The base form for a dex number, or null if there is no file for it.
@@ -62,6 +58,9 @@ func get_pokemon_by_id(id: String) -> PokemonBaseData:
 
 	_cache[id] = res
 	return res
+
+func get_all_dex_numbers() -> Array[int]:
+	return all_dex_numbers
 
 
 ## Every id, ascending -- which is dex order, with each species' forms grouped
@@ -175,9 +174,12 @@ func _build_index() -> void:
 		_forms[dex] = ordered
 		_base_form[dex] = ordered[0]
 
+	all_dex_numbers.clear()
+	for dex in _base_form:
+		all_dex_numbers.append(dex)
+	all_dex_numbers.sort()
+
 	var all := PackedStringArray()
-	
-	var dex_numbers := all_dex_numbers
-	for dex in dex_numbers:
+	for dex in all_dex_numbers:
 		all.append_array(_forms[dex])
 	_sorted_ids = all
