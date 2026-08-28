@@ -18,6 +18,7 @@ func _ready() -> void:
 	start_button.pressed.connect(on_start_pressed)
 
 func on_pokedex_pressed() -> void:
+	SceneManager.go_to(SceneManager.Scenes.POKEDEX)
 	return
 	# For now don't do anything
 

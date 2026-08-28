@@ -242,15 +242,15 @@ func _frame_camera() -> void:
 
 # ------------------------------------------------------------------- actions
 
-## The second press of MENU with unsaved edits is the one that leaves. Losing a
+## The second press of BACK with unsaved edits is the one that leaves. Losing a
 ## tuning session to a stray tap would be a miserable way to end it.
 func _leave() -> void:
 	if not _pending.is_empty() and not _exit_armed:
 		_exit_armed = true
-		_ui.show_message("%d species edited -- SAVE first, or MENU again to discard"
+		_ui.show_message("%d species edited -- SAVE first, or BACK again to discard"
 			% _pending.size())
 		return
-	SceneManager.go_to(SceneManager.Scenes.MAIN_MENU)
+	SceneManager.go_back()
 
 
 func _play(anim: PokemonAnimator.Anim) -> void:

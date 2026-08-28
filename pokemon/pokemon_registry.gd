@@ -20,12 +20,13 @@ extends Node
 
 const DIR := "res://data/pokemon_base_data/"
 
-var _paths: Dictionary[String, String] = {} ## id -> res
-var _base_form: Dictionary[int, String] = {} ## dex number -> the id of that species' base form.
-var _forms: Dictionary[int, PackedStringArray] = {} ## dex number -> every id sharing it, base form first.
-var _cache: Dictionary[String, PokemonBaseData] = {} ## id -> loaded resource. Filled lazily by [method get_pokemon_by_id].
-var _sorted_ids: PackedStringArray = [] ## Every id, ascending. Cached because the animation browser pages through it.
+var _paths : Dictionary[String, String] = {} ## id -> res
+var _base_form : Dictionary[int, String] = {} ## dex number -> the id of that species' base form.
+var _forms : Dictionary[int, PackedStringArray] = {} ## dex number -> every id sharing it, base form first.
+var _cache : Dictionary[String, PokemonBaseData] = {} ## id -> loaded resource. Filled lazily by [method get_pokemon_by_id].
+var _sorted_ids : PackedStringArray = [] ## Every id, ascending. Cached because the animation browser pages through it.
 
+var all_dex_numbers : Array[int] = []
 
 func _ready() -> void:
 	_build_index()
@@ -33,6 +34,8 @@ func _ready() -> void:
 
 ## The base form for a dex number, or null if there is no file for it.
 func get_pokemon(dex: int) -> PokemonBaseData:
+	if dex <= 0:
+		push_warning("PokemonRegistry: Invalid dex number #%d" % dex)
 	if not _base_form.has(dex):
 		push_warning("PokemonRegistry: no data file for dex #%d" % dex)
 		return null
@@ -56,14 +59,8 @@ func get_pokemon_by_id(id: String) -> PokemonBaseData:
 	_cache[id] = res
 	return res
 
-
-## Every dex number that has a data file, ascending.
 func get_all_dex_numbers() -> Array[int]:
-	var out: Array[int] = []
-	for dex in _base_form:
-		out.append(dex)
-	out.sort()
-	return out
+	return all_dex_numbers
 
 
 ## Every id, ascending -- which is dex order, with each species' forms grouped
@@ -101,6 +98,14 @@ func get_path_for(id: String) -> String:
 func reload(id: String) -> PokemonBaseData:
 	_cache.erase(id)
 	return get_pokemon_by_id(id)
+
+func getIcon(dex_number: int) -> Texture2D:
+	var data : PokemonBaseData = get_pokemon(dex_number)
+	if data != null && data.has_icon():
+		return data.icon;
+	push_warning("PokemonRegistry: no data file for dex #%d" % dex_number)
+	var errorIcon : Texture2D = preload("uid://cs1inf50u1m5e")
+	return errorIcon
 
 
 ## Scans the data folder and maps each id to its file. Filenames only need to
@@ -169,8 +174,12 @@ func _build_index() -> void:
 		_forms[dex] = ordered
 		_base_form[dex] = ordered[0]
 
+	all_dex_numbers.clear()
+	for dex in _base_form:
+		all_dex_numbers.append(dex)
+	all_dex_numbers.sort()
+
 	var all := PackedStringArray()
-	var dex_numbers := get_all_dex_numbers()
-	for dex in dex_numbers:
+	for dex in all_dex_numbers:
 		all.append_array(_forms[dex])
 	_sorted_ids = all

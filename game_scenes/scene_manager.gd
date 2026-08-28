@@ -1,6 +1,6 @@
 extends Node
 
-enum Scenes { NONE, MAIN_MENU, BASE_CAMP, LEVEL, ADMIN_MENU }
+enum Scenes { NONE, MAIN_MENU, BASE_CAMP, LEVEL, ADMIN_MENU, POKEDEX }
 
 const PATHS := {
 	Scenes.NONE:"",
@@ -8,6 +8,7 @@ const PATHS := {
 	Scenes.BASE_CAMP: "uid://hkbwr68qqvqe",
 	Scenes.LEVEL: "uid://b012lxyyb4773",
 	Scenes.ADMIN_MENU: "uid://dtjmal2xvccgp",
+	Scenes.POKEDEX: "uid://btillhmlpwyi6",
 }
 
 signal scene_entered(id: Scenes)

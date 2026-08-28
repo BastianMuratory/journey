@@ -314,7 +314,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 44)
 layout_mode = 2
 focus_mode = 0
-text = "menu"
+text = "back"
 
 [node name="Sep3" type="VSeparator" parent="Bar/Margin/Column/ActionRow"]
 layout_mode = 2
