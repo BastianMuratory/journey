@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://btillhmlpwyi6"]
+[gd_scene load_steps=8 format=3 uid="uid://btillhmlpwyi6"]
 
 [ext_resource type="Script" uid="uid://dtfw5w00s21du" path="res://game_scenes/Pokedex/pokedexView.gd" id="1_ip58y"]
 [ext_resource type="Texture2D" uid="uid://di4bcmqnfk3cf" path="res://assets/reference_ui/Pokedex_empty.png" id="2_se450"]
@@ -17,15 +17,6 @@ shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_iafi6"]
 font_size = 36
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_ip58y"]
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_se450"]
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_1da5n"]
 font_color = Color(0, 0, 0, 1)
 
 [node name="Pokedex" type="Control"]
@@ -72,8 +63,7 @@ layout_mode = 2
 layout_mode = 2
 alignment = 2
 
-[node name="PokemonSeen" type="Label" parent="MarginContainer/Book/Header/PokedexProgress/PokedexProgressText"]
-unique_name_in_owner = true
+[node name="PokemonCaught" type="Label" parent="MarginContainer/Book/Header/PokedexProgress/PokedexProgressText"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "129"
@@ -84,7 +74,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "/"
 
 [node name="PokemonTotal" type="Label" parent="MarginContainer/Book/Header/PokedexProgress/PokedexProgressText"]
-unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "151"
@@ -175,29 +164,12 @@ columns = 5
 
 [node name="PagesButtons" type="HBoxContainer" parent="MarginContainer/Book/Pages/NavigationPage"]
 layout_mode = 2
-size_flags_horizontal = 4
 
 [node name="LeftButton" type="Button" parent="MarginContainer/Book/Pages/NavigationPage/PagesButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "left
 <-"
-
-[node name="CurrentPage" type="Label" parent="MarginContainer/Book/Pages/NavigationPage/PagesButtons"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "0"
-label_settings = SubResource("LabelSettings_ip58y")
-
-[node name="slash" type="Label" parent="MarginContainer/Book/Pages/NavigationPage/PagesButtons"]
-layout_mode = 2
-text = "/"
-label_settings = SubResource("LabelSettings_se450")
-
-[node name="MaxPage" type="Label" parent="MarginContainer/Book/Pages/NavigationPage/PagesButtons"]
-layout_mode = 2
-text = "25"
-label_settings = SubResource("LabelSettings_1da5n")
 
 [node name="RightButton" type="Button" parent="MarginContainer/Book/Pages/NavigationPage/PagesButtons"]
 unique_name_in_owner = true

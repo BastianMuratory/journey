@@ -12,6 +12,7 @@ const _POKEDEX_SAVE_FILE_PATH = "user://pokedex.json"
 #  Damage_Dealt # Ammount of damage dealt with this pokemon
 #]
 var _pokedex : Dictionary[int, Array]
+var _progress : int = 0
 
 enum PokedexStats {
 	NUMBER_SEEN,
@@ -56,7 +57,9 @@ func _load_pokedex() -> void :
 		print(PokemonRegistry.all_dex_numbers)
 		print("banane")
 		for i in PokemonRegistry.all_dex_numbers:
-			var stats : Array = [0, 0, 0, 0, 0, 0, 0, 0]
+			var stats : Array = [1, 0, 0, 0, 0, 0, 0, 0]
+			if stats[PokedexStats.NUMBER_SEEN] > 0:
+				_progress += 1
 			_pokedex.set(i, stats)
 
 func save_pokedex() -> void :
@@ -93,8 +96,11 @@ func deal_damage(id : int, number : int) -> void :
 	_pokedex.get(id)[PokedexStats.DAMAGE_DEALT] += number
 
 func is_seen(id : int) -> bool:
-	print(id)
 	return _pokedex.get(id)[PokedexStats.NUMBER_SEEN] > 0
 
 func is_caught(id : int) -> bool:
 	return _pokedex.get(id)[PokedexStats.NUMBER_CAUGHT] > 0
+
+func get_progress() -> int :
+	return _progress
+	

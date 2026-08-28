@@ -13,8 +13,9 @@ const _error_icon : String = "uid://cs1inf50u1m5e"
 var dex_number : int = 0
 
 func bind(pokedex_number : int, seen : bool) -> void:
+	visible = true
 	dex_number = pokedex_number
-	_pokemon_number.text = String.num(pokedex_number)
+	_pokemon_number.text = String.num(pokedex_number,0)
 	if seen:
 		var data : PokemonBaseData = PokemonRegistry.get_pokemon(pokedex_number)
 		_pokemon_icon.texture = data.icon if data.has_icon() else preload(_unknown_icon)
@@ -22,7 +23,8 @@ func bind(pokedex_number : int, seen : bool) -> void:
 	else:
 		_pokemon_icon.texture = preload(_unknown_icon)
 		_pokemon_name.text = ""
-
+	
+	
 func _ready() -> void:
 	pressed.connect(_entry_pressed)
 

@@ -6,13 +6,15 @@
 [sub_resource type="LabelSettings" id="LabelSettings_tn6p4"]
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_bo3w7"]
+[sub_resource type="LabelSettings" id="LabelSettings_k87bd"]
 font_color = Color(0, 0, 0, 1)
+outline_color = Color(0.813258, 0.813258, 0.813258, 1)
 
 [node name="PokedexEntry" type="Button"]
 custom_minimum_size = Vector2(96, 124)
 offset_right = 96.0
 offset_bottom = 124.0
+flat = true
 script = ExtResource("1_7374f")
 
 [node name="PokemonInfos" type="VBoxContainer" parent="."]
@@ -48,9 +50,10 @@ stretch_mode = 4
 
 [node name="PokemonName" type="Label" parent="PokemonInfos"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 23.315)
 layout_mode = 2
 text = "bulbasaur"
-label_settings = SubResource("LabelSettings_bo3w7")
+label_settings = SubResource("LabelSettings_k87bd")
 horizontal_alignment = 1
 autowrap_mode = 2
 clip_text = true
