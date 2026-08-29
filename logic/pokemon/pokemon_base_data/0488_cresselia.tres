@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=16 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://ulmbsqwfe3q4" path="res://assets/pokemons/0488_cresselia/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://bseydq8ipgida" path="res://assets/pokemons/0488_cresselia/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://logic/pokemon/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://b2fvhxal4axnh" path="res://assets/pokemons/0488_cresselia/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://d0ekph7066fyt" path="res://assets/pokemons/0488_cresselia/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://ntsehgq4fv3v" path="res://assets/pokemons/0488_cresselia/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/068_lunar_dance.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/218_recover.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/212_tackle.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/079_psybeam.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/015_future_sight.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/200_moonblast.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/105_psycho_cut.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/106_psychic.tres" id="908_lm"]
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 488
+display_name = "Cresselia"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 3
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.4
+type1 = 14
+type2 = 0
+base_hp = 120
+base_attack = 70
+base_defense = 110
+base_special_attack = 75
+base_special_defense = 120
+base_speed = 85
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

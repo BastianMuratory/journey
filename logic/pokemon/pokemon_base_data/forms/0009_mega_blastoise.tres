@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=12 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://bpimoqld8hu4i" path="res://assets/pokemons/forms/0009_mega_blastoise/model.obj" id="1_mesh"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://logic/pokemon/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/171_withdraw.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/177_iron_defense.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/220_rain_dance.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/133_bubble.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/212_tackle.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/163_aqua_jet.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/091_flash_cannon.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/164_hydro_pump.tres" id="908_lm"]
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 9
+display_name = "Mega Blastoise"
+mesh = ExtResource("1_mesh")
+model_scale = 1.9
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 11
+type2 = 0
+base_hp = 79
+base_attack = 103
+base_defense = 120
+base_special_attack = 135
+base_special_defense = 115
+base_speed = 78
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm")])
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

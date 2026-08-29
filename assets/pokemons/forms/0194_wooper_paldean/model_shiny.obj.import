@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://monl1b5w0jib"
+path="res://.godot/imported/model_shiny.obj-c612189cbc7d77f62a7c69ffc856ef3f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model_shiny.obj-c612189cbc7d77f62a7c69ffc856ef3f.mesh"]
+
+source_file="res://assets/pokemons/forms/0194_wooper_paldean/model_shiny.obj"
+dest_files=["res://.godot/imported/model_shiny.obj-c612189cbc7d77f62a7c69ffc856ef3f.mesh", "res://.godot/imported/model_shiny.obj-c612189cbc7d77f62a7c69ffc856ef3f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

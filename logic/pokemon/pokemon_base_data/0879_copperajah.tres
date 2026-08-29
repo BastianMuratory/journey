@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=17 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://xjxdme1tgslx" path="res://assets/pokemons/0879_copperajah/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://dt7isukdyqgg5" path="res://assets/pokemons/0879_copperajah/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://logic/pokemon/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://d1ypl524thhmh" path="res://assets/pokemons/0879_copperajah/icon.png" id="4_icon"]
+[ext_resource type="Texture2D" uid="uid://cfsvvdv17k8fm" path="res://assets/pokemons/0879_copperajah/preview.png" id="5_preview"]
+[ext_resource type="Texture2D" uid="uid://b2s1gkt07ixf0" path="res://assets/pokemons/0879_copperajah/preview_shiny.png" id="6_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/095_growl.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/177_iron_defense.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/170_rock_smash.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/212_tackle.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/023_stomp.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/076_rollout.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/182_dig.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/188_play_rough.tres" id="908_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/033_iron_head.tres" id="909_lm"]
+
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 879
+display_name = "Copperajah"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("4_icon")
+preview = ExtResource("5_preview")
+preview_shiny = ExtResource("6_preview_shiny")
+body_type = 1
+anim_speed_scale = 0.7
+anim_amplitude = 0.7
+hover_height = 0.0
+type1 = 9
+type2 = 0
+base_hp = 122
+base_attack = 130
+base_defense = 69
+base_special_attack = 80
+base_special_defense = 69
+base_speed = 30
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm"), ExtResource("909_lm")])
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

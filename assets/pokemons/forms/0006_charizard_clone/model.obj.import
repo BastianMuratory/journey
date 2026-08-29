@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bjghrftm0m85s"
+path="res://.godot/imported/model.obj-2e223e2637c5731f7cb40daf5df0d857.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-2e223e2637c5731f7cb40daf5df0d857.mesh"]
+
+source_file="res://assets/pokemons/forms/0006_charizard_clone/model.obj"
+dest_files=["res://.godot/imported/model.obj-2e223e2637c5731f7cb40daf5df0d857.mesh", "res://.godot/imported/model.obj-2e223e2637c5731f7cb40daf5df0d857.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

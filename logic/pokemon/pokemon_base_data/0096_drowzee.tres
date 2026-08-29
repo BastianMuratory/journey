@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=18 format=3]
+
+[ext_resource type="ArrayMesh" uid="uid://cuobh2lteh2su" path="res://assets/pokemons/0096_drowzee/model.obj" id="1_mesh"]
+[ext_resource type="Texture2D" uid="uid://dlgtawmsd2vhp" path="res://assets/pokemons/0096_drowzee/albedo_shiny.png" id="2_shiny"]
+[ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://logic/pokemon/pokemon_base_data.gd" id="3_script"]
+[ext_resource type="Resource" path="res://logic/pokemon/pokemon_base_data/0097_hypno.tres" id="4_evo"]
+[ext_resource type="Texture2D" uid="uid://bmgkolluu7tde" path="res://assets/pokemons/0096_drowzee/icon.png" id="5_icon"]
+[ext_resource type="Texture2D" uid="uid://cygp1vacegvvi" path="res://assets/pokemons/0096_drowzee/preview.png" id="6_preview"]
+[ext_resource type="Texture2D" uid="uid://b1qoaghl4kiws" path="res://assets/pokemons/0096_drowzee/preview_shiny.png" id="7_preview_shiny"]
+[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="900_lm_script"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/037_hypnosis.tres" id="901_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/074_nasty_plot.tres" id="902_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/198_meditate.tres" id="903_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/079_psybeam.tres" id="904_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/195_zen_headbutt.tres" id="905_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/103_psyshock.tres" id="906_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/015_future_sight.tres" id="907_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/159_dream_eater.tres" id="908_lm"]
+[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/106_psychic.tres" id="909_lm"]
+
+
+
+[resource]
+script = ExtResource("3_script")
+dex_number = 96
+display_name = "Drowzee"
+mesh = ExtResource("1_mesh")
+albedo_shiny = ExtResource("2_shiny")
+model_scale = 1.0
+icon = ExtResource("5_icon")
+preview = ExtResource("6_preview")
+preview_shiny = ExtResource("7_preview_shiny")
+evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+body_type = 0
+anim_speed_scale = 1.0
+anim_amplitude = 1.0
+hover_height = 0.0
+type1 = 14
+type2 = 0
+base_hp = 60
+base_attack = 48
+base_defense = 45
+base_special_attack = 43
+base_special_defense = 90
+base_speed = 42
+learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm"), ExtResource("909_lm")])
+metadata/_custom_type_script = "uid://8hbuolxqt8i1"

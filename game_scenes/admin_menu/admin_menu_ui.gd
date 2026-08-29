@@ -16,26 +16,10 @@ signal shiny_toggled(on: bool)
 signal search_changed(text: String)
 signal species_index_requested(index: int)
 signal species_step_requested(delta: int) # show the pokemon delta spaces after or before the current one 
-## One tuned float moved. [param amount] already has the x5 multiplier in it;
-## [param step] is the unmultiplied step, passed so the sandbox can snap the
-## result to it, and [param low] and [param high] are the field's range.
-signal nudge_requested(field: String, amount: float, step: float, low: float, high: float)
-signal body_type_step_requested(step: int)
-signal revert_requested
-signal revert_all_requested
-signal save_requested
 signal menu_requested
-## ADD TO COLLECTION, with the level box already clamped into range.
+
 signal add_to_collection(level: int)
 
-# ---------------------------------------------------------------- constants
-
-# Used to tell how much an animation variable can changes afetr a button press
-const NUDGE_FIELDS := {
-	"anim_speed_scale": [0.05, 0.25, 3.0],
-	"anim_amplitude": [0.05, 0.0, 3.0],
-	"hover_height": [0.02, 0.0, 2.0],
-}
 ## How far the «25 and 25» buttons move through the list. Their labels are in the
 ## scene, so change both or they will disagree.
 const PAGE_STRIDE := 25
@@ -136,7 +120,6 @@ const TEXT_STATUS := Color(0.55, 0.90, 1.00)
 @onready var _level_edit: LineEdit = %LevelEdit
 
 ## The second row of the bar, which the TUNING button folds away.
-@onready var _tuning_row: HFlowContainer = %TuningRow
 @onready var _info_button: Button = %InfoToggle
 
 @onready var _info_panel: PanelContainer = %InfoPanel
@@ -150,10 +133,6 @@ const TEXT_STATUS := Color(0.55, 0.90, 1.00)
 ## Handed over by [method show_species]; never read from anywhere else.
 var _focus: PokemonBaseData = null
 
-## Set by the x5 button. Stands in for the Shift key the tuning keys used to
-## read, and is applied here so the sandbox never has to know about it.
-var _coarse := false
-
 ## The - or + currently held down, and the countdown to its next repeat. An
 ## invalid Callable means nothing is held, which is the state between presses.
 var _held := Callable()
@@ -166,9 +145,6 @@ var _message_seconds := 0.0
 ## shut panel, cleared when the panel is next rebuilt.
 var _info_dirty := true
 
-## Field name -> the label between that field's - and + buttons.
-var _value_labels: Dictionary[String, Label] = {}
-
 ## Type -> its icon, or null when no file was found. Misses are cached too: a
 ## project with no type icons at all should not re-check the disk every rebuild.
 var _type_icons: Dictionary[int, Texture2D] = {}
@@ -176,7 +152,6 @@ var _type_icons: Dictionary[int, Texture2D] = {}
 
 func _ready() -> void:
 	_wire_bar()
-	_wire_tuning()
 	_wire_browser()
 	_wire_info()
 
@@ -220,32 +195,7 @@ func _wire_bar() -> void:
 	_control("ShinyToggle").toggled.connect(shiny_toggled.emit)
 	_info_button.toggled.connect(_set_info_visible)
 
-	_control("RevertButton").pressed.connect(revert_requested.emit)
-	_control("RevertAllButton").pressed.connect(revert_all_requested.emit)
-	_control("SaveButton").pressed.connect(save_requested.emit)
 	_control("MenuButton").pressed.connect(menu_requested.emit)
-
-	_control("TuningToggle").toggled.connect(_set_tuning_visible)
-
-
-func _wire_tuning() -> void:
-	_value_labels["body_type"] = %BodyValue as Label
-	_value_labels["anim_speed_scale"] = %SpeedValue as Label
-	_value_labels["anim_amplitude"] = %AmplitudeValue as Label
-	_value_labels["hover_height"] = %HoverValue as Label
-
-	# Body type respawns the model, so it repeats at the slower rate.
-	_wire_hold(_control("BodyDown"), _emit_body_step.bind(-1), HOLD_RATE_HEAVY)
-	_wire_hold(_control("BodyUp"), _emit_body_step.bind(1), HOLD_RATE_HEAVY)
-
-	_wire_hold(_control("SpeedDown"), _emit_nudge.bind("anim_speed_scale", -1))
-	_wire_hold(_control("SpeedUp"), _emit_nudge.bind("anim_speed_scale", 1))
-	_wire_hold(_control("AmplitudeDown"), _emit_nudge.bind("anim_amplitude", -1))
-	_wire_hold(_control("AmplitudeUp"), _emit_nudge.bind("anim_amplitude", 1))
-	_wire_hold(_control("HoverDown"), _emit_nudge.bind("hover_height", -1))
-	_wire_hold(_control("HoverUp"), _emit_nudge.bind("hover_height", 1))
-
-	_control("CoarseToggle").toggled.connect(_set_coarse)
 
 
 func _wire_browser() -> void:
@@ -284,23 +234,6 @@ func set_rows(labels: PackedStringArray) -> void:
 	for label in labels:
 		_list.add_item(label)
 
-
-## Relabels every row without rebuilding it. Cheaper than [method set_rows], and
-## what a save or a revert-all wants.
-func set_row_labels(labels: PackedStringArray) -> void:
-	for i in mini(labels.size(), _list.item_count):
-		_list.set_item_text(i, labels[i])
-
-
-## Relabels one row, which is all a single edit can affect. Worth having: the
-## tuning buttons get pressed a lot, and relabelling 400 rows on every nudge is
-## work nobody asked for.
-func set_row_label(row: int, label: String) -> void:
-	if row < 0 or row >= _list.item_count:
-		return
-	_list.set_item_text(row, label)
-
-
 func select_row(row: int) -> void:
 	if row < 0 or row >= _list.item_count:
 		return
@@ -319,16 +252,6 @@ func show_species(data: PokemonBaseData) -> void:
 	# Hidden rather than left blank, so the text is not indented past an empty
 	# square on a species that has no icon yet.
 	_readout_icon.visible = icon != null
-
-	for field: String in _value_labels:
-		var label: Label = _value_labels[field]
-		if data == null:
-			label.text = "--"
-		elif field == "body_type":
-			label.text = body_name(data.body_type)
-		else:
-			label.text = "%.2f" % float(data.get(field))
-
 
 ## Top left, under the icon: what you are looking at and how far each field has
 ## been moved. The sandbox writes the lines, since it is the one holding the
@@ -384,21 +307,6 @@ func _jump_last() -> void:
 	if _list.item_count > 0:
 		species_index_requested.emit(_list.item_count - 1)
 
-
-## The step, the range and the x5 multiplier are all applied here rather than at
-## the far end, so the coarse toggle stays a fact about this screen and the
-## buttons in the scene carry nothing but a field name and a direction.
-func _emit_nudge(field: String, direction: int) -> void:
-	var spec: Array = NUDGE_FIELDS[field]
-	var step: float = spec[0]
-	var amount := step * direction * 5 # multiply by 5 so it goes faster
-	nudge_requested.emit(field, amount, step, float(spec[1]), float(spec[2]))
-
-
-func _emit_body_step(step: int) -> void:
-	body_type_step_requested.emit(step)
-
-
 func _emit_add() -> void:
 	add_to_collection.emit(_commit_level())
 
@@ -413,17 +321,6 @@ func _begin_hold(action: Callable, rate := HOLD_RATE) -> void:
 
 func _end_hold() -> void:
 	_held = Callable()
-
-
-func _set_coarse(on: bool) -> void:
-	_coarse = on
-
-
-## Folds the tuning row away. The bar is two rows already; this is for when even
-## the second one is between you and the model.
-func _set_tuning_visible(on: bool) -> void:
-	_tuning_row.visible = on
-
 
 func _clear_search() -> void:
 	if _search.text.is_empty():
@@ -641,14 +538,11 @@ func _trait_block(data: PokemonBaseData) -> VBoxContainer:
 	column.add_child(_pair("model scale", "%.2f" % data.model_scale))
 
 	var evolutions := PackedStringArray()
-	for next in data.evolves_into:
+	for next in data.evolutions:
 		if next != null:
 			evolutions.append(next.display_name)
 	column.add_child(_pair("evolves into",
 		", ".join(evolutions) if not evolutions.is_empty() else "-"))
-
-	if data.can_mega_evolve():
-		column.add_child(_pair("mega", data.mega_evolves_into.display_name))
 	return column
 
 

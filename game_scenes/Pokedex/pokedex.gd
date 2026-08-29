@@ -54,9 +54,9 @@ func _load_pokedex() -> void :
 	else:
 		
 		print("banane")
-		print(PokemonRegistry.all_dex_numbers)
+		print(PokemonRegistry.get_all_dex_numbers())
 		print("banane")
-		for i in PokemonRegistry.all_dex_numbers:
+		for i in PokemonRegistry.get_all_dex_numbers():
 			var stats : Array = [1, 0, 0, 0, 0, 0, 0, 0]
 			if stats[PokedexStats.NUMBER_SEEN] > 0:
 				_progress += 1

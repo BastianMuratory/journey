@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bfv35frhrutty"]
 
-[ext_resource type="Script" path="res://game_scenes/level/Characters/ally.gd" id="1_player_script"]
-[ext_resource type="PackedScene" uid="uid://6r1xtnwsp0sa" path="res://pokemon/pokemon_model.tscn" id="2_pokemon_model"]
+[ext_resource type="Script" uid="uid://wtw7ru212x78" path="res://game_scenes/level/Characters/ally.gd" id="1_player_script"]
+[ext_resource type="PackedScene" uid="uid://6r1xtnwsp0sa" path="res://logic/pokemon/pokemon_model.tscn" id="2_pokemon_model"]
 
 [sub_resource type="Animation" id="Animation_hop_run"]
 resource_name = "hop_run"

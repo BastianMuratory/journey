@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bmtm4f3m8o5fy"]
 
-[ext_resource type="Script" path="res://game_scenes/level/Characters/enemy.gd" id="1_enemy_script"]
-[ext_resource type="PackedScene" uid="uid://6r1xtnwsp0sa" path="res://pokemon/pokemon_model.tscn" id="2_pokemon_model"]
+[ext_resource type="Script" uid="uid://dxju87bx577si" path="res://game_scenes/level/Characters/enemy.gd" id="1_enemy_script"]
+[ext_resource type="PackedScene" uid="uid://6r1xtnwsp0sa" path="res://logic/pokemon/pokemon_model.tscn" id="2_pokemon_model"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_health_back"]
 size = Vector3(1.15, 0.08, 0.16)
