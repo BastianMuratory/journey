@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxr8wjg3nokwv"]
+
+[ext_resource type="Texture2D" uid="uid://dcixfe2qwoojd" path="res://assets/reference_ui/Box_review_empty.png" id="1_drlwh"]
+
+[node name="CollectionView" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_drlwh")
+expand_mode = 1

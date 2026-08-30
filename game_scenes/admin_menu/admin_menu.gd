@@ -1,8 +1,6 @@
 extends Node3D
 
-## Admin menu: an animation sandbox and tuning editor. Not part of the game
-
-signal add_to_collection(id: int, level: int)
+## Admin menu: let's put everything we need for debugging here
 
 const GRID_COUNT := 3 ## to view a full evolution familly 
 const GRID_SPACING := 1.6
@@ -250,12 +248,7 @@ func _add_to_collection(level: int) -> void:
 	if dex_number < 0:
 		_ui.show_message("no species selected")
 		return
-
-	add_to_collection.emit(dex_number, level)
-
-	# TODO: wire the collection here.
-	_ui.show_message("would add %s at level %d -- collection not wired yet"
-		% [_meta_of(dex_number)["name"], level])
+	SignalBus.add_to_collection.emit(PokemonInstance.generate(dex_number, level, _shiny))
 
 # ----------------------------------------------------------------- searching
 

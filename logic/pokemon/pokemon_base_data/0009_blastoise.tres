@@ -1,18 +1,8 @@
-[gd_resource type="Resource" script_class="PokemonBaseData" load_steps=16 format=3 uid="uid://bcmgjetn7t3ue"]
+[gd_resource type="Resource" script_class="PokemonBaseData" load_steps=6 format=3 uid="uid://bcmgjetn7t3ue"]
 
 [ext_resource type="Texture2D" uid="uid://bg7vsoqo047dq" path="res://assets/pokemons/0009_blastoise/albedo_shiny.png" id="1_c18kr"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://logic/pokemon/pokemon_base_data.gd" id="2_jhod6"]
 [ext_resource type="Texture2D" uid="uid://ccbwqmnvc8r8" path="res://assets/pokemons/0009_blastoise/icon.png" id="3_wn3xt"]
-[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="4_8c5k7"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/171_withdraw.tres" id="5_7ay5i"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/177_iron_defense.tres" id="6_iy7q6"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/220_rain_dance.tres" id="7_oqdfl"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/133_bubble.tres" id="8_p166x"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/212_tackle.tres" id="9_cr1nu"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/163_aqua_jet.tres" id="10_m7cdl"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/091_flash_cannon.tres" id="11_s1q6m"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/164_hydro_pump.tres" id="12_dmas0"]
-[ext_resource type="ArrayMesh" uid="uid://cu6omdo3jm5c8" path="res://assets/pokemons/0009_blastoise/model.obj" id="13_emexm"]
 [ext_resource type="Texture2D" uid="uid://du3vbi6ousl7n" path="res://assets/pokemons/0009_blastoise/preview.png" id="14_ds3fi"]
 [ext_resource type="Texture2D" uid="uid://28sx2c35g38d" path="res://assets/pokemons/0009_blastoise/preview_shiny.png" id="15_g7uvu"]
 
@@ -20,7 +10,7 @@
 script = ExtResource("2_jhod6")
 dex_number = 9
 display_name = "Blastoise"
-mesh = ExtResource("13_emexm")
+mesh_path = "res://assets/pokemons/0009_blastoise/model.obj"
 albedo_shiny = ExtResource("1_c18kr")
 model_scale = 1.0
 icon = ExtResource("3_wn3xt")
@@ -43,5 +33,5 @@ base_speed = 78
 quest_base_hp = 0
 quest_base_attack = 0
 quest_base_speed = 0
-learnable_moves = Array[ExtResource("4_8c5k7")]([ExtResource("5_7ay5i"), ExtResource("6_iy7q6"), ExtResource("7_oqdfl"), ExtResource("8_p166x"), ExtResource("9_cr1nu"), ExtResource("10_m7cdl"), ExtResource("11_s1q6m"), ExtResource("12_dmas0")])
+learnable_moves = Array[int]([171, 177, 220, 133, 212, 163, 91, 164])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3 uid="uid://cu6rdayifn4ew"]
 
 [ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://s4kh76fsaqrf" path="res://assets/icons/attacks/004_shadow_claw.png" id="2_icon"]
@@ -10,6 +10,11 @@ description = "用环绕暗影之力的爪子抓击前方的敌人，对其造�
 type = 8
 category = 0
 power = 360
+wait_time = 5.0
+hit_repeat = 1
+spread = 0
+effect_duration = 0.0
 cooldown = 5.0
 icon = ExtResource("2_icon")
+model = ""
 metadata/_custom_type_script = "uid://w4mirlxnd1bt"

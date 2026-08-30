@@ -14,8 +14,6 @@ extends Control
 @onready var _number_seen: Label = %PokemonSeen
 @onready var _number_total: Label = %PokemonTotal
 
-var _unknown_icon = load("uid://b8o5cgof5njom")
-var _error_icon = load("uid://b8o5cgof5njom")
 var _current_page = 0
 
 const _pokedex_entry_scene = "uid://cvp2uti2xrarv"
@@ -30,8 +28,6 @@ func _show_page(pageNumber : int) -> void:
 	
 	for i in range(15):
 		if startIndex + i < PokemonRegistry.get_all_dex_numbers().size():
-			print(startIndex + i)
-			print( PokemonRegistry.get_all_dex_numbers().size() -1)
 			index_array.push_back(PokemonRegistry.get_all_dex_numbers()[startIndex + i])
 	
 	var id = 0
@@ -49,7 +45,7 @@ func _display_left(pokemon_index : int) -> void:
 	_displayNumber.text = str(pokemon_index)
 	var data : PokemonBaseData = PokemonRegistry.get_pokemon(pokemon_index)
 	_displayName.text = str(data.display_name)
-	_displayIcon.texture = data.icon if data.has_icon() else _unknown_icon
+	_displayIcon.texture = data.icon if data.has_icon() else preload(GlobalConstants.UNKNOW_POKEMON_ICON)
 	_displayPreview.texture = data.preview
 	return
 
@@ -62,7 +58,6 @@ func _ready() -> void:
 	
 
 	for entry_index in range(15):
-		print(entry_index)
 		var entry : PokedexEntry = _pokemon_entry.instantiate()
 		entry.pressed_entry.connect(_entry_pressed)
 		_grid.add_child(entry)

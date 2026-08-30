@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://by4lx1s3vap16"]
+
+[ext_resource type="Script" uid="uid://bgoc7et1xmnlc" path="res://game_scenes/Collection/collection_entry.gd" id="1_b86fb"]
+[ext_resource type="Texture2D" uid="uid://040b0f2e3ktw" path="res://assets/pokemons/0001_bulbasaur/icon.png" id="2_hja1x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cipfu"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0u14u"]
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0.813258, 0.813258, 0.813258, 1)
+
+[node name="CollectionEntry" type="Button"]
+script = ExtResource("1_b86fb")
+
+[node name="PokemonInfos" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="PokemonLevel" type="Label" parent="PokemonInfos"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "001"
+label_settings = SubResource("LabelSettings_cipfu")
+
+[node name="PokemonIcon" type="TextureRect" parent="PokemonInfos"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+texture = ExtResource("2_hja1x")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="PokemonName" type="Label" parent="PokemonInfos"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 23.315)
+layout_mode = 2
+text = "bulbasaur"
+label_settings = SubResource("LabelSettings_0u14u")
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true

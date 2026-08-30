@@ -1,27 +1,16 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=17 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=6 format=3]
 
-[ext_resource type="ArrayMesh" uid="uid://du72qfijxygg7" path="res://assets/pokemons/0083_farfetchd/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://cnsf0q6r5ywnt" path="res://assets/pokemons/0083_farfetchd/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://logic/pokemon/pokemon_base_data.gd" id="3_script"]
 [ext_resource type="Texture2D" uid="uid://m7m7wwgf8fjm" path="res://assets/pokemons/0083_farfetchd/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://bya2d4h8buoam" path="res://assets/pokemons/0083_farfetchd/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://evxjoljdf0xy" path="res://assets/pokemons/0083_farfetchd/preview_shiny.png" id="6_preview_shiny"]
-[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="900_lm_script"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/046_leer.tres" id="901_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/070_agility.tres" id="902_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/093_swords_dance.tres" id="903_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/110_focus_energy.tres" id="904_lm"]
-[ext_resource type="Resource" uid="uid://cltcgmvwpbuy3" path="res://logic/pokemon_moves/moves/001_night_slash.tres" id="905_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/062_razor_leaf.tres" id="906_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/193_aerial_ace.tres" id="907_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/154_sky_attack.tres" id="908_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/063_air_slash.tres" id="909_lm"]
 
 [resource]
 script = ExtResource("3_script")
 dex_number = 83
 display_name = "Farfetchd"
-mesh = ExtResource("1_mesh")
+mesh_path = "res://assets/pokemons/0083_farfetchd/model.obj"
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
 icon = ExtResource("4_icon")
@@ -31,7 +20,7 @@ body_type = 3
 anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.4
-evolves_into = Array[ExtResource("3_script")]([])
+evolutions = Array[ExtResource("3_script")]([])
 type1 = 1
 type2 = 3
 base_hp = 52
@@ -40,5 +29,5 @@ base_defense = 55
 base_special_attack = 58
 base_special_defense = 62
 base_speed = 60
-learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm"), ExtResource("908_lm"), ExtResource("909_lm")])
+learnable_moves = Array[int]([46, 70, 93, 110, 1, 62, 193, 154, 63])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

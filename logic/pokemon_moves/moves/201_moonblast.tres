@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveData" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://b0sf6ekhdudxe"]
 
 [ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="1_script"]
 
@@ -9,5 +9,10 @@ description = "从月光中吸取能量，往前方发射出一个光球，给�
 type = 18
 category = 1
 power = 400
+wait_time = 5.0
+hit_repeat = 1
+spread = 0
+effect_duration = 0.0
 cooldown = 6.0
+model = ""
 metadata/_custom_type_script = "uid://w4mirlxnd1bt"

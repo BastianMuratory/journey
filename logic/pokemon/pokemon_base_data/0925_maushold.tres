@@ -1,16 +1,10 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=12 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=6 format=3]
 
-[ext_resource type="ArrayMesh" uid="uid://bwdu5njqu2kxk" path="res://assets/pokemons/0925_maushold/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://d23rmj818ciyd" path="res://assets/pokemons/0925_maushold/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://logic/pokemon/pokemon_base_data.gd" id="3_script"]
 [ext_resource type="Texture2D" uid="uid://brvfub2kli12u" path="res://assets/pokemons/0925_maushold/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://lraxj6ly3uhg" path="res://assets/pokemons/0925_maushold/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://iiopy6ugvmik" path="res://assets/pokemons/0925_maushold/preview_shiny.png" id="6_preview_shiny"]
-[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="900_lm_script"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/111_follow_me.tres" id="901_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/147_charm.tres" id="902_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/209_bullet_seed.tres" id="903_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/188_play_rough.tres" id="904_lm"]
 
 
 
@@ -18,7 +12,7 @@
 script = ExtResource("3_script")
 dex_number = 925
 display_name = "Maushold"
-mesh = ExtResource("1_mesh")
+mesh_path = "res://assets/pokemons/0925_maushold/model.obj"
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
 icon = ExtResource("4_icon")
@@ -36,5 +30,5 @@ base_defense = 70
 base_special_attack = 65
 base_special_defense = 75
 base_speed = 111
-learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm")])
+learnable_moves = Array[int]([111, 147, 209, 188])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -1,16 +1,10 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=12 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=6 format=3]
 
-[ext_resource type="ArrayMesh" uid="uid://d33e713mkvrqg" path="res://assets/pokemons/0767_wimpod/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://bkhgf6jxbqmj" path="res://assets/pokemons/0767_wimpod/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://logic/pokemon/pokemon_base_data.gd" id="3_script"]
 [ext_resource type="Texture2D" uid="uid://ggwk1repf3j2" path="res://assets/pokemons/0767_wimpod/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://fw7uptfpjxm5" path="res://assets/pokemons/0767_wimpod/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://600x5y61voso" path="res://assets/pokemons/0767_wimpod/preview_shiny.png" id="6_preview_shiny"]
-[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="900_lm_script"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/010_harden.tres" id="901_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/163_aqua_jet.tres" id="902_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/076_rollout.tres" id="903_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/098_metal_claw.tres" id="904_lm"]
 
 
 
@@ -18,7 +12,7 @@
 script = ExtResource("3_script")
 dex_number = 767
 display_name = "Wimpod"
-mesh = ExtResource("1_mesh")
+mesh_path = "res://assets/pokemons/0767_wimpod/model.obj"
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
 icon = ExtResource("4_icon")
@@ -36,5 +30,5 @@ base_defense = 40
 base_special_attack = 20
 base_special_defense = 30
 base_speed = 80
-learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm")])
+learnable_moves = Array[int]([10, 163, 76, 98])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3 uid="uid://sj6ppnvwfvor"]
 
 [ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://ceu0qcj2bpp22" path="res://assets/icons/attacks/002_shadow_ball.png" id="2_icon"]
@@ -10,6 +10,11 @@ description = "朝自己的前方投掷一团黑影进行攻击，被打到的�
 type = 8
 category = 1
 power = 380
+wait_time = 5.0
+hit_repeat = 1
+spread = 0
+effect_duration = 0.0
 cooldown = 7.0
 icon = ExtResource("2_icon")
+model = ""
 metadata/_custom_type_script = "uid://w4mirlxnd1bt"

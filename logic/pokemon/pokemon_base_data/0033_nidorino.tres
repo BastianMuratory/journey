@@ -1,26 +1,17 @@
-[gd_resource type="Resource" script_class="PokemonBaseData" load_steps=16 format=3 uid="uid://ckfpuawku1etv"]
+[gd_resource type="Resource" script_class="PokemonBaseData" load_steps=7 format=3 uid="uid://ckfpuawku1etv"]
 
-[ext_resource type="ArrayMesh" uid="uid://0f38fu4dffp8" path="res://assets/pokemons/0033_nidorino/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://dt7idwk5i6w1b" path="res://assets/pokemons/0033_nidorino/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://logic/pokemon/pokemon_base_data.gd" id="3_script"]
 [ext_resource type="Resource" path="res://logic/pokemon/pokemon_base_data/0034_nidoking.tres" id="4_evo"]
 [ext_resource type="Texture2D" uid="uid://bh5e4gdegb86e" path="res://assets/pokemons/0033_nidorino/icon.png" id="5_icon"]
 [ext_resource type="Texture2D" uid="uid://ctakpp5wne7yi" path="res://assets/pokemons/0033_nidorino/preview.png" id="6_preview"]
 [ext_resource type="Texture2D" uid="uid://8kirpjenrvwf" path="res://assets/pokemons/0033_nidorino/preview_shiny.png" id="7_preview_shiny"]
-[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="900_lm_script"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/036_flatter.tres" id="901_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/046_leer.tres" id="902_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/110_focus_energy.tres" id="903_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/212_tackle.tres" id="904_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/055_poison_sting.tres" id="905_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/108_toxic.tres" id="906_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/042_earth_power.tres" id="907_lm"]
 
 [resource]
 script = ExtResource("3_script")
 dex_number = 33
 display_name = "Nidorino"
-mesh = ExtResource("1_mesh")
+mesh_path = "res://assets/pokemons/0033_nidorino/model.obj"
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
 icon = ExtResource("5_icon")
@@ -31,7 +22,7 @@ anim_speed_scale = 1.0
 anim_amplitude = 1.0
 hover_height = 0.0
 attack_style = 1
-evolves_into = Array[ExtResource("3_script")]([ExtResource("4_evo")])
+evolutions = Array[ExtResource("3_script")]([ExtResource("4_evo")])
 type1 = 4
 type2 = 0
 base_hp = 61
@@ -43,5 +34,5 @@ base_speed = 65
 quest_base_hp = 0
 quest_base_attack = 0
 quest_base_speed = 0
-learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm"), ExtResource("907_lm")])
+learnable_moves = Array[int]([36, 46, 110, 212, 55, 108, 42])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

@@ -17,7 +17,6 @@ signal search_changed(text: String)
 signal species_index_requested(index: int)
 signal species_step_requested(delta: int) # show the pokemon delta spaces after or before the current one 
 signal menu_requested
-
 signal add_to_collection(level: int)
 
 ## How far the «25 and 25» buttons move through the list. Their labels are in the
@@ -71,30 +70,6 @@ const TYPE_ICON_PATTERNS := [
 ## point -- bars are comparable across species instead of being rescaled per row.
 const STAT_BAR_MAX := 255.0
 
-## One colour per [enum PokemonBaseData.Type], in the enum's own order, so a type
-## can be looked up by its value. Written as components rather than hex strings
-## because only the component form is a constant expression.
-const TYPE_COLORS := [
-	Color(0.45, 0.45, 0.50),  # NONE
-	Color(0.659, 0.659, 0.471),  # NORMAL
-	Color(0.753, 0.188, 0.157),  # FIGHTING
-	Color(0.659, 0.565, 0.941),  # FLYING
-	Color(0.627, 0.251, 0.627),  # POISON
-	Color(0.878, 0.753, 0.408),  # GROUND
-	Color(0.722, 0.627, 0.220),  # ROCK
-	Color(0.659, 0.722, 0.125),  # BUG
-	Color(0.439, 0.345, 0.596),  # GHOST
-	Color(0.722, 0.722, 0.816),  # STEEL
-	Color(0.941, 0.502, 0.188),  # FIRE
-	Color(0.408, 0.565, 0.941),  # WATER
-	Color(0.471, 0.784, 0.314),  # GRASS
-	Color(0.973, 0.816, 0.188),  # ELECTRIC
-	Color(0.973, 0.345, 0.533),  # PSYCHIC
-	Color(0.596, 0.847, 0.847),  # ICE
-	Color(0.439, 0.220, 0.973),  # DRAGON
-	Color(0.439, 0.345, 0.282),  # DARK
-	Color(0.933, 0.600, 0.675),  # FAIRY
-]
 
 ## The Move class is not this screen's to know, so its fields are looked for by
 ## name and quietly skipped when absent -- a move with no icon still gets a chip,
@@ -531,7 +506,7 @@ func _trait_block(data: PokemonBaseData) -> VBoxContainer:
 	var column := VBoxContainer.new()
 	column.add_theme_constant_override("separation", 4)
 
-	var styles: Array = PokemonBaseData.AttackStyle.keys()
+	var styles: Array = Enums.AttackStyle.keys()
 	var style: String = styles[data.attack_style] if data.attack_style < styles.size() else "?"
 	column.add_child(_pair("body type", body_name(data.body_type)))
 	column.add_child(_pair("attack style", style))
@@ -639,11 +614,10 @@ func _move_block(data: PokemonBaseData) -> HFlowContainer:
 
 	var drawn := 0
 	for entry in data.learnable_moves:
-		var move := entry as Resource
+		var move := MoveRegistry.get_move(entry)
 		if move == null:
 			continue
-		row.add_child(_chip(_move_name(move), type_color(_move_type(move)),
-			_move_icon(move)))
+		row.add_child(_chip(_move_name(move), type_color(_move_type(move)), _move_icon(move)))
 		drawn += 1
 
 	if drawn == 0:
@@ -683,28 +657,27 @@ func _move_type(move: Resource) -> int:
 			var value: Variant = move.get(field)
 			if value is int:
 				return int(value)
-	return PokemonBaseData.Type.NONE
+	return Enums.TypeID.NONE
 
 
 # ------------------------------------------------------------------- naming
 
 ## Static, because the sandbox needs the same names for its list rows and its
 ## readout, and one spelling of them beats two.
-
 static func body_name(body: int) -> String:
-	var names: Array = PokemonBaseData.BodyType.keys()
+	var names: Array = Enums.BodyType.keys()
 	return names[body] if body >= 0 and body < names.size() else "?"
 
 
 static func type_name(type: int) -> String:
-	var names: Array = PokemonBaseData.Type.keys()
+	var names: Array = Enums.TypeID.keys()
 	return names[type] if type >= 0 and type < names.size() else "?"
 
 
 static func type_color(type: int) -> Color:
-	if type >= 0 and type < TYPE_COLORS.size():
-		return TYPE_COLORS[type]
-	return TYPE_COLORS[0]
+	if type >= 0 and type < Enums.TYPE_COLORS.size():
+		return Enums.TYPE_COLORS[type]
+	return Enums.TYPE_COLORS[0]
 
 
 ## This type's icon, or null if the project has none where it was looked for.

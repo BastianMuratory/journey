@@ -7,9 +7,6 @@ class_name PokedexEntry
 
 signal pressed_entry(dex : int)
 
-const _unknown_icon : String = "uid://b8o5cgof5njom"
-const _error_icon : String = "uid://cs1inf50u1m5e"
-
 var dex_number : int = 0
 
 func bind(pokedex_number : int, seen : bool) -> void:
@@ -18,10 +15,10 @@ func bind(pokedex_number : int, seen : bool) -> void:
 	_pokemon_number.text = String.num(pokedex_number,0)
 	if seen:
 		var data : PokemonBaseData = PokemonRegistry.get_pokemon(pokedex_number)
-		_pokemon_icon.texture = data.icon if data.has_icon() else preload(_unknown_icon)
+		_pokemon_icon.texture = data.icon if data.has_icon() else preload(GlobalConstants.UNKNOW_POKEMON_ICON)
 		_pokemon_name.text = data.display_name
 	else:
-		_pokemon_icon.texture = preload(_unknown_icon)
+		_pokemon_icon.texture = preload(GlobalConstants.UNKNOW_POKEMON_ICON)
 		_pokemon_name.text = ""
 	
 	

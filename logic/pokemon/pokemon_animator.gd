@@ -65,7 +65,7 @@ const SPIN_TIME := 0.55
 
 @export_group("Tuning")
 ## Decides which idle and run style plays.
-@export var body_type: PokemonBaseData.BodyType = PokemonBaseData.BodyType.QUADRUPED
+@export var body_type: Enums.BodyType = Enums.BodyType.QUADRUPED
 ## The creature's world-space height. Every offset is expressed as a fraction of
 ## this, so a Caterpie and an Onix wobble by the same *relative* amount.
 @export var height := 1.0:
@@ -240,7 +240,7 @@ func _pose_idle(t: float) -> void:
 	var beat := 0.0
 
 	match body_type:
-		PokemonBaseData.BodyType.BIPED:
+		Enums.BodyType.BIPED:
 			# Top-heavy: breathes vertically and sways a little on its feet.
 			w = t * TAU * 0.55
 			s = sin(w)
@@ -249,7 +249,7 @@ func _pose_idle(t: float) -> void:
 			_rot.z = sin(w * 0.5) * deg_to_rad(3.0) * a
 			_rot.y = sin(w * 0.37) * deg_to_rad(2.5) * a
 
-		PokemonBaseData.BodyType.QUADRUPED:
+		Enums.BodyType.QUADRUPED:
 			# Wider stance, so less sway and a shallower breath.
 			w = t * TAU * 0.48
 			s = sin(w)
@@ -258,7 +258,7 @@ func _pose_idle(t: float) -> void:
 			_rot.x = sin(w * 0.5) * deg_to_rad(2.5) * a
 			_rot.y = sin(w * 0.29) * deg_to_rad(2.0) * a
 
-		PokemonBaseData.BodyType.HOVER:
+		Enums.BodyType.HOVER:
 			# Never lands, so no squash at all -- it just drifts.
 			w = t * TAU * 0.32
 			_off.y = hover_height * h + sin(w) * 0.055 * h * a
@@ -266,7 +266,7 @@ func _pose_idle(t: float) -> void:
 			_rot.z = sin(w * 0.63) * deg_to_rad(4.0) * a
 			_rot.y = sin(w * 0.31) * deg_to_rad(6.0) * a
 
-		PokemonBaseData.BodyType.FLYER:
+		Enums.BodyType.FLYER:
 			# Slow bank riding on a much faster wing beat.
 			w = t * TAU * 0.28
 			beat = t * TAU * 1.6
@@ -276,7 +276,7 @@ func _pose_idle(t: float) -> void:
 			_rot.z = sin(w * 0.7) * deg_to_rad(5.0) * a
 			_rot.y = sin(w * 0.41) * deg_to_rad(4.0) * a
 
-		PokemonBaseData.BodyType.SERPENTINE:
+		Enums.BodyType.SERPENTINE:
 			# A slow S travelling down the body, faked with offset yaw and roll.
 			w = t * TAU * 0.40
 			_off.y = hover_height * h + sin(w) * 0.025 * h * a
@@ -293,7 +293,7 @@ func _pose_run(t: float) -> void:
 	var beat := 0.0
 
 	match body_type:
-		PokemonBaseData.BodyType.BIPED:
+		Enums.BodyType.BIPED:
 			# Rolls left and right over each planted foot.
 			w = t * TAU * 1.30
 			bounce = absf(sin(w))               # two footfalls per roll cycle
@@ -304,7 +304,7 @@ func _pose_run(t: float) -> void:
 			# Stretched at the top of the hop, squashed on contact.
 			_scl = _squash((bounce - 0.5) * 0.18 * a)
 
-		PokemonBaseData.BodyType.QUADRUPED:
+		Enums.BodyType.QUADRUPED:
 			# Rocks front to back instead, like a bounding animal.
 			w = t * TAU * 1.45
 			bounce = absf(sin(w))
@@ -314,7 +314,7 @@ func _pose_run(t: float) -> void:
 			_off.z = sin(w) * 0.030 * h * a
 			_scl = _squash((bounce - 0.5) * 0.15 * a)
 
-		PokemonBaseData.BodyType.HOVER:
+		Enums.BodyType.HOVER:
 			# No footfalls, so it leans into the drift and banks instead.
 			w = t * TAU * 0.85
 			_off.y = hover_height * h + sin(w) * 0.045 * h * a
@@ -323,7 +323,7 @@ func _pose_run(t: float) -> void:
 			_rot.z = sin(w * 0.5) * deg_to_rad(6.0) * a
 			_rot.y = sin(w * 0.5) * deg_to_rad(4.0) * a
 
-		PokemonBaseData.BodyType.FLYER:
+		Enums.BodyType.FLYER:
 			# Hard forward lean and a wing beat you can actually count.
 			w = t * TAU * 0.60
 			beat = t * TAU * 2.4
@@ -333,7 +333,7 @@ func _pose_run(t: float) -> void:
 			_rot.y = sin(w) * deg_to_rad(5.0) * a
 			_scl = Vector3(1.0 - sin(beat) * 0.09 * a, 1.0 + sin(beat) * 0.05 * a, 1.0)
 
-		PokemonBaseData.BodyType.SERPENTINE:
+		Enums.BodyType.SERPENTINE:
 			# Slithers: the yaw wave leads, the roll follows a beat behind.
 			w = t * TAU * 1.05
 			_off.y = hover_height * h + absf(sin(w)) * 0.045 * h * a
@@ -367,11 +367,11 @@ func _pose_attack(k: float) -> void:
 	_scl = _squash(reach * 0.14 * a)
 
 	match body_type:
-		PokemonBaseData.BodyType.FLYER, PokemonBaseData.BodyType.HOVER:
+		Enums.BodyType.FLYER, Enums.BodyType.HOVER:
 			# Swoops down into the hit rather than hopping into it.
 			_off.y -= strike * 0.18 * h * a
 			_rot.x = _lean(reach * 30.0 * a)
-		PokemonBaseData.BodyType.SERPENTINE:
+		Enums.BodyType.SERPENTINE:
 			# Coils away, then whips through with the head leading.
 			_rot.y = -reach * deg_to_rad(28.0) * a
 			_rot.z = reach * deg_to_rad(14.0) * a
@@ -399,7 +399,7 @@ func _pose_hit(k: float) -> void:
 	_off.x = sin(k * 90.0) * impact * 0.055 * h * a
 	_rot.z = sin(k * 70.0) * impact * deg_to_rad(8.0) * a
 
-	if body_type == PokemonBaseData.BodyType.FLYER or body_type == PokemonBaseData.BodyType.HOVER:
+	if body_type == Enums.BodyType.FLYER or body_type == Enums.BodyType.HOVER:
 		# Knocked off its cushion of air, then recovers altitude.
 		_off.y -= impact * 0.12 * h * a
 
@@ -425,7 +425,7 @@ func _pose_spin(k: float) -> void:
 	_rot.z = arc * deg_to_rad(12.0) * a
 	_off.y = hover_height * h
 
-	if body_type == PokemonBaseData.BodyType.FLYER or body_type == PokemonBaseData.BodyType.HOVER:
+	if body_type == Enums.BodyType.FLYER or body_type == Enums.BodyType.HOVER:
 		# Already airborne -- it climbs slightly instead of hopping.
 		_off.y += arc * 0.06 * h * a
 		_scl = _squash(arc * 0.05 * a)

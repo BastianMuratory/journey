@@ -17,9 +17,13 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Enums="*res://logic/enums.gd"
+SignalBus="*res://logic/signal_bus.gd"
+GlobalConstants="*res://logic/GlobalConstants.gd"
 PokemonRegistry="*res://logic/pokemon/pokemon_registry.gd"
 SceneManager="*res://game_scenes/scene_manager.gd"
 Pokedex="*res://game_scenes/Pokedex/pokedex.gd"
+MoveRegistry="*res://logic/pokemon_moves/move_registry.gd"
 PokemonPlayer="*res://logic/Player/player.gd"
 
 [display]

@@ -1,18 +1,10 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=14 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=6 format=3]
 
-[ext_resource type="ArrayMesh" uid="uid://co2b8pynud7o2" path="res://assets/pokemons/0778_mimikyu/model.obj" id="1_mesh"]
 [ext_resource type="Texture2D" uid="uid://dyiqn8iht6k2p" path="res://assets/pokemons/0778_mimikyu/albedo_shiny.png" id="2_shiny"]
 [ext_resource type="Script" uid="uid://8hbuolxqt8i1" path="res://logic/pokemon/pokemon_base_data.gd" id="3_script"]
 [ext_resource type="Texture2D" uid="uid://devmnn0lbw58" path="res://assets/pokemons/0778_mimikyu/icon.png" id="4_icon"]
 [ext_resource type="Texture2D" uid="uid://2gjsd2di6ppo" path="res://assets/pokemons/0778_mimikyu/preview.png" id="5_preview"]
 [ext_resource type="Texture2D" uid="uid://f75np0xdfw18" path="res://assets/pokemons/0778_mimikyu/preview_shiny.png" id="6_preview_shiny"]
-[ext_resource type="Script" uid="uid://w4mirlxnd1bt" path="res://logic/pokemon_moves/move.gd" id="900_lm_script"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/147_charm.tres" id="901_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/202_splash.tres" id="902_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/210_scratch.tres" id="903_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/102_astonish.tres" id="904_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/004_shadow_claw.tres" id="905_lm"]
-[ext_resource type="Resource" path="res://logic/pokemon_moves/moves/188_play_rough.tres" id="906_lm"]
 
 
 
@@ -20,7 +12,7 @@
 script = ExtResource("3_script")
 dex_number = 778
 display_name = "Mimikyu"
-mesh = ExtResource("1_mesh")
+mesh_path = "res://assets/pokemons/0778_mimikyu/model.obj"
 albedo_shiny = ExtResource("2_shiny")
 model_scale = 1.0
 icon = ExtResource("4_icon")
@@ -38,5 +30,5 @@ base_defense = 80
 base_special_attack = 50
 base_special_defense = 105
 base_speed = 96
-learnable_moves = Array[ExtResource("900_lm_script")]([ExtResource("901_lm"), ExtResource("902_lm"), ExtResource("903_lm"), ExtResource("904_lm"), ExtResource("905_lm"), ExtResource("906_lm")])
+learnable_moves = Array[int]([147, 202, 210, 102, 4, 188])
 metadata/_custom_type_script = "uid://8hbuolxqt8i1"

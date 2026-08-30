@@ -38,18 +38,18 @@ const AUTO_SKILL_INTERVAL := 0.35
 @export var camera_offset: Vector3 = Vector3(0.0, 9.0, 9.0)
 @export var show_debug_walking_lines: bool = false
 @export var ally_pokemon_paths: Array[String] = [
-	"res://data/pokemon_base_data/0002_ivysaur.tres",
-	"res://data/pokemon_base_data/0255_torchic.tres",
-	"res://data/pokemon_base_data/0194_wooper.tres",
+	"res://logic/pokemon/pokemon_base_data/0002_ivysaur.tres",
+	"res://logic/pokemon/pokemon_base_data/0255_torchic.tres",
+	"res://logic/pokemon/pokemon_base_data/0194_wooper.tres",
 ]
 @export var melee_enemy_pokemon_paths: Array[String] = [
-	"res://data/pokemon_base_data/0371_bagon.tres",
-	"res://data/pokemon_base_data/0231_phanpy.tres",
-	"res://data/pokemon_base_data/0372_shelgon.tres",
+	"res://logic/pokemon/pokemon_base_data/0371_bagon.tres",
+	"res://logic/pokemon/pokemon_base_data/0231_phanpy.tres",
+	"res://logic/pokemon/pokemon_base_data/0372_shelgon.tres",
 ]
 @export var ranged_enemy_pokemon_paths: Array[String] = [
-	"res://data/pokemon_base_data/0044_gloom.tres",
-	"res://data/pokemon_base_data/0069_bellsprout.tres",
+	"res://logic/pokemon/pokemon_base_data/0044_gloom.tres",
+	"res://logic/pokemon/pokemon_base_data/0069_bellsprout.tres",
 ]
 
 @onready var players_root: Node3D = $Players
@@ -828,7 +828,6 @@ func _on_enemy_defeated(enemy: Node3D) -> void:
 	else:
 		_assign_all_players()
 
-
 func _schedule_next_enemy_group() -> void:
 	if _is_spawning_enemies:
 		return
@@ -836,7 +835,6 @@ func _schedule_next_enemy_group() -> void:
 	_is_spawning_enemies = true
 	await get_tree().create_timer(enemy_spawn_delay).timeout
 	_spawn_enemy_group()
-
 
 func _path_to_enemy(player: Node3D, enemy) -> Array[Vector3]:
 	return _level_pathing.path_to_enemy(player, enemy, _enemies, _players, _claimed_attack_slots(player))

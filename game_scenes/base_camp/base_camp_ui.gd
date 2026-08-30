@@ -23,9 +23,7 @@ func on_pokedex_pressed() -> void:
 	# For now don't do anything
 
 func on_edit_team_pressed() -> void:
-	return
-	# For now don't do anything
-	# get_tree().change_scene_to_file(OPTIONS_SCENE)
+	SceneManager.go_to(SceneManager.Scenes.COLLECTION)
 
 func on_options_pressed() -> void:
 	SceneManager.go_to(SceneManager.Scenes.ADMIN_MENU)

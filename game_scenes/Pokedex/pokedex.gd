@@ -14,17 +14,6 @@ const _POKEDEX_SAVE_FILE_PATH = "user://pokedex.json"
 var _pokedex : Dictionary[int, Array]
 var _progress : int = 0
 
-enum PokedexStats {
-	NUMBER_SEEN,
-	NUMBER_CAUGHT,
-	NUMBER_DEFEATED,
-	MAX_LEVEL,
-	LEVELS_PLAYED,
-	DAMAGE_DEALT,
-	SHINY_SEEN,
-	SHINY_CAUGHT,
-}
-
 # signals
 signal pokedex_see
 signal pokedex_catch
@@ -52,13 +41,9 @@ func _load_pokedex() -> void :
 		# todo convert string into array for each key and assign it
 		pokedex_file.close()
 	else:
-		
-		print("banane")
-		print(PokemonRegistry.get_all_dex_numbers())
-		print("banane")
 		for i in PokemonRegistry.get_all_dex_numbers():
 			var stats : Array = [1, 0, 0, 0, 0, 0, 0, 0]
-			if stats[PokedexStats.NUMBER_SEEN] > 0:
+			if stats[Enums.PokedexStats.NUMBER_SEEN] > 0:
 				_progress += 1
 			_pokedex.set(i, stats)
 
@@ -71,35 +56,35 @@ func save_pokedex() -> void :
 
 
 func see(id : int, number : int = 1, shiny : bool = false) -> void :
-	_pokedex.get(id)[PokedexStats.NUMBER_SEEN] += number
+	_pokedex.get(id)[Enums.PokedexStats.NUMBER_SEEN] += number
 	if shiny : 
-		_pokedex.get(id)[PokedexStats.SHINY_SEEN] += number
+		_pokedex.get(id)[Enums.PokedexStats.SHINY_SEEN] += number
 
 func catch(id : int, number : int = 1, shiny : bool = false) -> void :
-	_pokedex.get(id)[PokedexStats.NUMBER_CAUGHT] += number
-	_pokedex.get(id)[PokedexStats.NUMBER_SEEN] += number
+	_pokedex.get(id)[Enums.PokedexStats.NUMBER_CAUGHT] += number
+	_pokedex.get(id)[Enums.PokedexStats.NUMBER_SEEN] += number
 	if shiny : 
-		_pokedex.get(id)[PokedexStats.SHINY_SEEN] += number
-		_pokedex.get(id)[PokedexStats.SHINY_CAUGHT] += number
+		_pokedex.get(id)[Enums.PokedexStats.SHINY_SEEN] += number
+		_pokedex.get(id)[Enums.PokedexStats.SHINY_CAUGHT] += number
 
 func defeat(id : int, number : int = 1) -> void :
-	_pokedex.get(id)[PokedexStats.NUMBER_DEFEATED] += number
+	_pokedex.get(id)[Enums.PokedexStats.NUMBER_DEFEATED] += number
 
 func update_max_level(id : int, level : int = 1) -> void :
-	if level > _pokedex.get(id)[PokedexStats.MAX_LEVEL] :
-		_pokedex.get(id)[PokedexStats.MAX_LEVEL] = level
+	if level > _pokedex.get(id)[Enums.PokedexStats.MAX_LEVEL] :
+		_pokedex.get(id)[Enums.PokedexStats.MAX_LEVEL] = level
 
 func start_level(id : int, number : int = 1) -> void :
-	_pokedex.get(id)[PokedexStats.LEVELS_PLAYED] += number
+	_pokedex.get(id)[Enums.PokedexStats.LEVELS_PLAYED] += number
 
 func deal_damage(id : int, number : int) -> void :
-	_pokedex.get(id)[PokedexStats.DAMAGE_DEALT] += number
+	_pokedex.get(id)[Enums.PokedexStats.DAMAGE_DEALT] += number
 
 func is_seen(id : int) -> bool:
-	return _pokedex.get(id)[PokedexStats.NUMBER_SEEN] > 0
+	return _pokedex.get(id)[Enums.PokedexStats.NUMBER_SEEN] > 0
 
 func is_caught(id : int) -> bool:
-	return _pokedex.get(id)[PokedexStats.NUMBER_CAUGHT] > 0
+	return _pokedex.get(id)[Enums.PokedexStats.NUMBER_CAUGHT] > 0
 
 func get_progress() -> int :
 	return _progress
