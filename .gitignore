@@ -22,3 +22,10 @@ mono_crash.*.json
 Pokemons_not_ready/
 .vscode/settings.json
 tools/*
+assets/pokemons/forms/0*/icon_*.png
+assets/pokemons/forms/*/icon_*.png.import
+assets/pokemons/*/icon_*.png.import
+assets/pokemons/*/icon_*.png
+tool/*
+game_scenes/level2/*
+*.tmp

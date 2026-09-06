@@ -10,13 +10,20 @@ signal pressed_entry(uid : int)
 var uid : int = 0
 
 func bind(pokemon_uid : int) -> void:
-	visible = true
+	disabled = false
 	uid = pokemon_uid
 	var instance : PokemonInstance = PokemonPlayer.collection.get_pokemon(pokemon_uid)
 	_pokemon_level.text = String.num(instance.level,0)
 	var data : PokemonBaseData = instance.base_data
 	_pokemon_icon.texture = data.icon if data.has_icon() else preload(GlobalConstants.UNKNOW_POKEMON_ICON)
 	_pokemon_name.text = instance.display_name
+
+func clear() -> void:
+	disabled = true
+	uid = -1
+	_pokemon_level.text = ""
+	_pokemon_icon.texture = null
+	_pokemon_name.text = ""
 
 func _ready() -> void:
 	pressed.connect(_entry_pressed)

@@ -5,7 +5,6 @@ class_name PokemonCollection
 var _by_uid: Dictionary[int, PokemonInstance]
 var _next_uid : int = 1
 
-const DEFAULT_CAPACITY := 40
 const VERSION := 1
 const COLLECTION_SAVE_PATH = "user://collection_save.json"
 const TMP_COLLECTION_SAVE_PATH = "user://collection_save.json.tmp"
@@ -18,14 +17,15 @@ const NEW_SAVE_DICT = {
 signal box_full()
 
 func add(instance: PokemonInstance) -> int:
-	if self.is_full():
+	if not self.is_full():
+		print("Pokemon ", instance.display_name, " added to collection!")
 		instance.uid = _next_uid
 		_by_uid[_next_uid] = instance
 		_next_uid += 1
 		print("Added to collection: " , instance.to_dict())
-		return instance.uid
 		SignalBus.collection_changed.emit()
-	
+		return instance.uid
+	Pokedex.pokedex_catch.emit(instance.dex_number)
 	box_full.emit()
 	return -1
 
@@ -52,12 +52,13 @@ func size() -> int:
 	return _by_uid.size()
 
 func is_full() -> bool:
-	return _by_uid.size() >= DEFAULT_CAPACITY
+	return _by_uid.size() >= GlobalConstants.COLLECTION_CAPACITY
 
 func sorted_uids() -> Array[int]:
-	var sorted_uids : Array[int] = Array(_by_uid.keys())
-	sorted_uids.sort()
-	return sorted_uids
+	var out: Array[int] = []
+	out.assign(_by_uid.keys())
+	out.sort()
+	return out
 
 func all() -> Array[PokemonInstance]:
 	return _by_uid.values()

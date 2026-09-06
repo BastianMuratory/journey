@@ -13,7 +13,7 @@ config_version=5
 config/name="Journey"
 run/main_scene="uid://bw285vjy5x27t"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://clbmbj3f5p0pp"
 
 [autoload]
 

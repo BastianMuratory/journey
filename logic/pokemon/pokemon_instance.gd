@@ -1,8 +1,6 @@
 class_name PokemonInstance
 extends Resource
 
-signal levelled_up(new_level: int)
-
 @export_group("Info")
 # Not sure if I keep a PokemonBaseData there or just the int dex_number
 @export var base_data: PokemonBaseData
@@ -12,17 +10,17 @@ signal levelled_up(new_level: int)
 @export var shiny: bool = false
 
 @export_group("Moves") # only one for now
-@export var move: Enums.AttackID
-@export var move_cooldown: float
+@export var move: Enums.AttackID = Enums.AttackID.TACKLE
+@export var move_cooldown: float = 0
 
 var uid: int = -1 # assigned when joining the collection
 
 
-static func generate(dex_number: Enums.PokemonID, level: int = 1, shiny: bool = false) -> PokemonInstance:
+static func generate(dex: Enums.PokemonID, lvl: int = 1, shy: bool = false) -> PokemonInstance:
 	var instance := PokemonInstance.new()
-	instance.base_data = PokemonRegistry.get_pokemon(dex_number)
-	instance.level = level
-	instance.shiny = shiny
+	instance.base_data = PokemonRegistry.get_pokemon(dex)
+	instance.level = lvl
+	instance.shiny = shy
 	instance.move = instance.base_data.learnable_moves[0]
 	return instance
 
@@ -40,9 +38,6 @@ func icon() -> Texture2D:
 
 func preview() -> Texture2D:
 	return base_data.get_preview(shiny) if base_data != null else null
-
-func gain_levels(count: int) -> int:
-	return level
 
 ## The Pokémon's own HP
 func actual_max_hp() -> int:
@@ -70,13 +65,13 @@ func evolve(into: PokemonBaseData = null) -> bool:
 
 func to_dict() -> Dictionary:       # { uid, dex, nick, lvl, xp, shiny, move }
 	var dict = {}
-	dict["uid"] = uid
-	dict["dex"] = dex_number
+	dict["uid"] = int(uid)
+	dict["dex"] = int(dex_number)
 	dict["nick"] = nickname
-	dict["lvl"] = level
-	dict["xp"] = experience
+	dict["lvl"] = int(level)
+	dict["xp"] = int(experience)
 	dict["shiny"] = shiny
-	dict["move"] = move
+	dict["move"] = int(move)
 	return dict
 
 static func from_dict(dict: Dictionary) -> PokemonInstance:
@@ -87,7 +82,7 @@ static func from_dict(dict: Dictionary) -> PokemonInstance:
 	instance.level = int(dict["lvl"])
 	instance.experience = int(dict["xp"])
 	instance.shiny = dict["shiny"]
-	instance.move = Enums.AttackID.get(int(dict["move"]))
+	instance.move = int(dict["move"])
 	return instance
 
 func duplicate_instance() -> PokemonInstance:

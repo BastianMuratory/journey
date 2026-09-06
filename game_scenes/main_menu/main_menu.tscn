@@ -1,26 +1,34 @@
 [gd_scene load_steps=3 format=3 uid="uid://bw285vjy5x27t"]
 
 [ext_resource type="Script" uid="uid://cmanjt7vllm4o" path="res://game_scenes/main_menu/main_menu.gd" id="1_6bdo1"]
-[ext_resource type="Texture2D" uid="uid://ct42fjvor7cf6" path="res://assets/maps/base_camp/Pokemon-Quest-Title-Screen.jpg" id="1_454la"]
+[ext_resource type="Texture2D" uid="uid://be86k007184yu" path="res://game_scenes/main_menu/Intro_background.jpg" id="2_6bdo1"]
 
-[node name="MainMenuNode" type="Node2D"]
-script = ExtResource("1_6bdo1")
-
-[node name="Background" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TitleScreen" type="Sprite2D" parent="Background"]
-position = Vector2(576, 324)
-scale = Vector2(0.6, 0.675)
-texture = ExtResource("1_454la")
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MainMenuNode" type="Control"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6bdo1")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_6bdo1")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 120
